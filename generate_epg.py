@@ -13,8 +13,7 @@ import xml.etree.ElementTree as ET
 OFFSET_CONFIG = {
     "464956": -8,  # Screenpix (epg.pw)
     "464775": -8,  # Screenpix Action (epg.pw)
-    "aztv.ar": -2, # AZTV (sheet) 
-   # "Canal.Cinema.Platino.mx": -1, # Cinema Platino (MX1) 
+   # "aztv.ar": -2, # AZTV (sheet) 
 }
 
 # 1. CANALES DESDE GOOGLE SHEETS
@@ -27,17 +26,17 @@ CHANNELS = [
     {"id": "ciudadmagica.ar", "name": "Ciudad Magica", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=314883977&single=true&output=csv"},
     {"id": "retromagico.ar", "name": "Retro Magico", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1067661478&single=true&output=csv"},
     {"id": "magickids.ar", "name": "Magic Kids", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1797674806&single=true&output=csv"},
-    {"id": "locomotion1.ar", "name": "Locomotion 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=309534154&single=true&output=csv"},
-    {"id": "aztv.ar", "name": "AZTV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=955136670&single=true&output=csv"},
+   # {"id": "locomotion1.ar", "name": "Locomotion 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=309534154&single=true&output=csv"},
+   # {"id": "aztv.ar", "name": "AZTV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=955136670&single=true&output=csv"},
     {"id": "mitv.ar", "name": "MiTV 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1227571137&single=true&output=csv"},
-    {"id": "animestation.ar", "name": "Animestation", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=446220036&single=true&output=csv"},
+   # {"id": "animestation.ar", "name": "Animestation", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=446220036&single=true&output=csv"},
     {"id": "retroblast", "name": "retroblast", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=441139638&single=true&output=csv"},
     {"id": "cncity", "name": "cncity", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1501419241&single=true&output=csv"},
     {"id": "telered.ar", "name": "Telered", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=763195247&single=true&output=csv"},
     {"id": "telesistema.ar", "name": "telesistema", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=503971923&single=true&output=csv"},
 ]
 
-# 2. FUENTES XML EXTERNAS (Soporta .gz y .xml)
+# 2. FUENTES XML EXTERNAS
 EXTERNAL_SOURCES = [
     {
         "url": "https://raw.githubusercontent.com/Puticastillo/EPGCL/refs/heads/main/vilma/guia-de-programacion.xml",
@@ -101,10 +100,6 @@ EXTERNAL_SOURCES = [
         "url": "https://epg.pw/xmltv/epg_US.xml.gz",
         "ids": ["464956", "464775"]
     },
-    #{
-    #    "url": "https://epgshare01.online/epgshare01/epg_ripper_MX1.xml.gz",
-     #   "ids": ["Canal.Cinema.Platino.mx"]
-   # },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
         "ids": ["Be.Mad.es", "C.Hollywood.es", "XTRM.es", "Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
@@ -114,11 +109,10 @@ EXTERNAL_SOURCES = [
         "ids": ["that-s-80s", "that-s-90s00s", "that-s-rock", "filmrise-sci-fi-es", "sci-fi-rakuten-tv", "action-rakuten-tv", "thriller-rakuten-tv", "fifa-plus-es-new", "cine-western-es",
                "grjngo-es","stingray-remember-the-80-s", "stingray-naturescape", "top-movies-rakuten-tv"]
     },
-        {
+    {
         "url": "https://helmerluzo.github.io/RuntimeTV_HL/epg/RuntimeTV.xml.gz",
         "ids": ["sangre-fria"]
     }
-
 ]
 
 TIMEZONE = "America/Argentina/Buenos_Aires"
@@ -127,13 +121,10 @@ OUTPUT_FILE = "epg.xml"
 # ─── FUNCIONES DE APOYO ──────────────────────────────────────────────────────
 
 def fetch_url(url):
-    """Descarga contenido y lo descomprime automáticamente si es GZIP."""
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept-Encoding': 'gzip'})
         with urllib.request.urlopen(req) as r:
             content = r.read()
-            
-            # Verificar firma de GZIP (Magic number 0x1f 0x8b)
             if content.startswith(b'\x1f\x8b'):
                 with gzip.GzipFile(fileobj=io.BytesIO(content)) as gz:
                     return gz.read()
@@ -162,16 +153,10 @@ def get_days_from_type(tipo):
         "lunes": 0, "martes": 1, "miercoles": 2, "miércoles": 2,
         "jueves": 3, "viernes": 4, "sabado": 5, "sábado": 5, "domingo": 6,
     }
-    
-    if tipo == "weekdays": 
-        return [0, 1, 2, 3, 4]
-    elif tipo == "weekend": 
-        return [5, 6]
-    elif tipo == "madr_esp": 
-        return [1, 2, 3, 4, 5]  # Martes a Sábado
-    elif tipo in days_map: 
-        return [days_map[tipo]]
-    
+    if tipo == "weekdays": return [0, 1, 2, 3, 4]
+    elif tipo == "weekend": return [5, 6]
+    elif tipo == "madr_esp": return [1, 2, 3, 4, 5]
+    elif tipo in days_map: return [days_map[tipo]]
     return []
 
 # ─── PROCESAMIENTO EPG EXTERNA ───────────────────────────────────────────────
@@ -179,11 +164,12 @@ def get_days_from_type(tipo):
 def process_external_sources(sources):
     data = []
     tz_arg = pytz.timezone(TIMEZONE)
+    now = datetime.now(tz_arg)
+    limit_time = now + timedelta(hours=55) # FILTRO 55 HORAS
     
     for source in sources:
         url = source["url"]
         target_ids = source["ids"]
-        
         print(f"\nDescargando EPG externa de {url}...")
         raw_xml = fetch_url(url)
         if not raw_xml: continue
@@ -206,11 +192,12 @@ def process_external_sources(sources):
                             s_dt += timedelta(hours=hour_offset)
                             e_dt += timedelta(hours=hour_offset)
                         
-                        title = prog.find("title").text if prog.find("title") is not None else "Sin título"
-                        desc = prog.find("desc").text if prog.find("desc") is not None else ""
-                        programmes.append((s_dt, e_dt, title, desc, ch_id))
-                    except:
-                        continue
+                        # FILTRO CRÍTICO: Entre ahora y +55 horas
+                        if e_dt > now and s_dt < limit_time:
+                            title = prog.find("title").text if prog.find("title") is not None else "Sin título"
+                            desc = prog.find("desc").text if prog.find("desc") is not None else ""
+                            programmes.append((s_dt, e_dt, title, desc, ch_id))
+                    except: continue
                 
                 if programmes:
                     offset_msg = f" [Ajuste: {hour_offset}hs]" if hour_offset != 0 else ""
@@ -219,7 +206,7 @@ def process_external_sources(sources):
         except Exception as e:
             print(f"  ❌ Error procesando XML: {e}")
     return data
-    
+
 # ─── CONSTRUCCIÓN EPG DESDE SHEETS ──────────────────────────────────────────
 
 def build_epg_from_sheets(rows, channel_id):
@@ -227,10 +214,8 @@ def build_epg_from_sheets(rows, channel_id):
     monday = get_monday()
     programmes = []
     now = datetime.now(tz)
-    today = now.date()
-    limit_date = today + timedelta(days=3)
+    limit_time = now + timedelta(hours=55) # FILTRO 55 HORAS
 
-    # Buscar Offset para el canal de Sheet
     sheet_offset = OFFSET_CONFIG.get(channel_id, 0)
 
     for row in rows:
@@ -242,23 +227,22 @@ def build_epg_from_sheets(rows, channel_id):
 
         for day_offset in days_to_apply:
             target_date = monday + timedelta(days=day_offset)
-            if not (today <= target_date <= limit_date):
-                continue
             try:
                 s_t, e_t = parse_time(start_raw), parse_time(end_raw)
                 s_dt = tz.localize(datetime.combine(target_date, s_t))
                 e_dt = tz.localize(datetime.combine(target_date, e_t))
+                
                 if e_dt <= s_dt:
                     e_dt += timedelta(days=1)
                 
-                # APLICAR OFFSET A CANALES DE SHEET
                 if sheet_offset != 0:
                     s_dt += timedelta(hours=sheet_offset)
                     e_dt += timedelta(hours=sheet_offset)
-                
-                programmes.append((s_dt, e_dt, title, desc, channel_id))
-            except:
-                continue
+
+                # FILTRO CRÍTICO: Entre ahora y +55 horas
+                if e_dt > now and s_dt < limit_time:
+                    programmes.append((s_dt, e_dt, title, desc, channel_id))
+            except: continue
     
     programmes.sort(key=lambda x: x[0])
     return programmes
@@ -274,20 +258,16 @@ def write_final_xml(channels_data):
 
     for ch in channels_data:
         name = ch.get("name") or "Canal sin nombre"
-        lines.append(f'  <channel id="{ch["id"]}">')
-        lines.append(f'    <display-name>{html.escape(str(name))}</display-name>')
-        lines.append('  </channel>')
+        lines.append(f'  <channel id="{ch["id"]}"><display-name>{html.escape(str(name))}</display-name></channel>')
 
     total_prog_count = 0
     for ch in channels_data:
         for start, end, title, desc, channel_id in ch["programmes"]:
             safe_title = html.escape(str(title)) if title is not None else "Sin título"
             safe_desc = html.escape(str(desc)) if desc is not None else ""
-
             lines.append(f'  <programme start="{xmltv_ts(start)}" stop="{xmltv_ts(end)}" channel="{channel_id}">')
             lines.append(f'    <title lang="es">{safe_title}</title>')
-            if safe_desc:
-                lines.append(f'    <desc lang="es">{safe_desc}</desc>')
+            if safe_desc: lines.append(f'    <desc lang="es">{safe_desc}</desc>')
             lines.append('  </programme>')
             total_prog_count += 1
 
@@ -298,7 +278,7 @@ def write_final_xml(channels_data):
 
 def main():
     final_data = []
-    print("🚀 Iniciando generación de EPG unificada con soporte GZ...\n")
+    print("🚀 Iniciando generación de EPG (Límite: 55 horas)...\n")
 
     for ch in CHANNELS:
         content = fetch_url(ch["url"])
@@ -307,12 +287,9 @@ def main():
             csv_lines = content.decode("utf-8").splitlines()
             rows = list(csv.reader(csv_lines))[1:]
             progs = build_epg_from_sheets(rows, ch["id"])
-            
-            offset_val = OFFSET_CONFIG.get(ch["id"], 0)
-            offset_txt = f" [Ajuste: {offset_val}hs]" if offset_val != 0 else ""
-            
-            print(f"  📁 Sheet: {ch['name']} → {len(progs)} programas{offset_txt}")
-            final_data.append({"id": ch["id"], "name": ch["name"], "programmes": progs})
+            if progs:
+                print(f"  📁 Sheet: {ch['name']} → {len(progs)} programas")
+                final_data.append({"id": ch["id"], "name": ch["name"], "programmes": progs})
         except Exception as e:
             print(f"  ❌ Error en sheet {ch['name']}: {e}")
 
