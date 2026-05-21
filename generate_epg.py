@@ -29,7 +29,7 @@ CHANNELS = [
    # {"id": "locomotion1.ar", "name": "Locomotion 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=309534154&single=true&output=csv"},
    # {"id": "aztv.ar", "name": "AZTV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=955136670&single=true&output=csv"},
     {"id": "mitv.ar", "name": "MiTV 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1227571137&single=true&output=csv"},
-   # {"id": "animestation.ar", "name": "Animestation", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=446220036&single=true&output=csv"},
+    {"id": "animestation.ar", "name": "Animestation", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=446220036&single=true&output=csv"},
     {"id": "retroblast", "name": "retroblast", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=441139638&single=true&output=csv"},
     {"id": "cncity", "name": "cncity", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=1501419241&single=true&output=csv"},
     {"id": "telered.ar", "name": "Telered", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=763195247&single=true&output=csv"},
@@ -43,7 +43,8 @@ EXTERNAL_SOURCES = [
         "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0604", "0621", "0629", "0302", "0308",
                 "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0827", "0838", "0839", "0842", "0851", "0855", "0856", "0859", "0860", "0812",
                 "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0932", "0934", "0935", "1806", "1810", "1814", "2701", "1625", "1832",
-                "2813", "XXX8", "0831", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704"]
+                "2813", "XXX8", "0831", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704", "0703",
+                "0605", "1436"]
     },
     {
         "url": "https://epg.programadorx.cl/mdiaz/gratis.xml",
@@ -104,7 +105,7 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
-        "ids": ["Be.Mad.es", "C.Hollywood.es", "XTRM.es", "Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
+        "ids": ["XTRM.es", "Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
     },
     {
         "url": "https://github.com/HelmerLuzo/RakutenTV_HL/raw/refs/heads/main/epg/RakutenTV.xml.gz",
