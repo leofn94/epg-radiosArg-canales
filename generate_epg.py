@@ -59,11 +59,12 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/es.xml",
-        "ids": ["ES3400004SS", "ES300029LP", "ES3000288I", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248"]
+        "ids": ["ES3400004SS", "ES300029LP", "ES3000288I", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO"]
     },
     {
         "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/us.xml",
-        "ids": ["USBD3500008IJ","USBD35000149S", "USBD35000180U", "US2600019IC","USBD1200009JI", "US2200001IY", "US5000053YV", "USAJ3504502A", "US1900002QK", "US1800014CG", "USBD12000255B"]
+        "ids": ["USBD3500008IJ","USBD35000149S", "USBD35000180U", "US2600019IC","USBD1200009JI", "US2200001IY", "US5000053YV", "USAJ3504502A", "US1900002QK", "US1800014CG", "USBD12000255B",
+               "USAK3508705A", "US700012OU", "USBA3800004EL"]
     },
     {
         "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/gb.xml",
@@ -105,12 +106,12 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
-        "ids": ["XTRM.es", "Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
+        "ids": ["Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
     },
     {
         "url": "https://github.com/HelmerLuzo/RakutenTV_HL/raw/refs/heads/main/epg/RakutenTV.xml.gz",
         "ids": ["that-s-80s", "that-s-90s00s", "that-s-rock", "filmrise-sci-fi-es", "sci-fi-rakuten-tv", "action-rakuten-tv", "thriller-rakuten-tv", "fifa-plus-es-new", "cine-western-es",
-               "grjngo-es","stingray-remember-the-80-s", "stingray-naturescape", "top-movies-rakuten-tv"]
+               "stingray-remember-the-80-s", "top-movies-rakuten-tv"]
     },
     {
         "url": "https://helmerluzo.github.io/RuntimeTV_HL/epg/RuntimeTV.xml.gz",
