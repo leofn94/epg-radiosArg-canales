@@ -13,6 +13,60 @@ import xml.etree.ElementTree as ET
 OFFSET_CONFIG = {
     "464956": -8,  # Screenpix (epg.pw)
     "464775": -8,  # Screenpix Action (epg.pw)
+    "0605": +1, #love nature (visor)
+    "1604": +1, #ID (visor)
+    "0629": -1, #canal luz (visor)
+    "0222": -1, # A24(visor)
+    "0915": -4, # El trece(visor)
+    "0934": -4, # Crónica(visor)
+    "0917": -4, # Canal 26(visor)
+    "0904": -1, # Ln+(visor)
+    "0935": -1, # América TV(visor)
+    "0916": -4, # Canal 9(visor)
+    "0905": -4, # TN(visor)
+    "0932": -4, # C5N(visor)
+    "0210": -4, # CNN esp(visor)
+    "0215": -4, # CNN(visor)
+    "0205": -4, # Dw(visor)
+    "0643": -1, # Hispantv(visor)
+    "0533": -4, # Allegro(visor)
+    "0920": -4, # Encuentro(visor)
+    "0707": -4, # History 2(visor)
+    "1610": -4, # El gourmet(visor)
+    "0704": -4, # Discovery theater(visor)
+    "0703": -4, # Discovery science(visor)
+    "2701": -1, # Discovery chanel(visor)
+    "0850": -4, # Adult swim(visor)
+    "0318": -4, # Bitme(visor)
+    "0302": -4, # Etc(visor)
+    "0308": -1, # Tooncast(visor)
+    "0812": -4, # Comedy central(visor)
+    "Cinemax HD.cl": -1, # Cinemax (crazy epg)
+    "0821": -1, # Golden(visor)
+    "0822": -4, # Golden plus(visor)
+    "0823": -1, # Golden edge(visor)
+    "0824": -4, # Golden premier(visor)
+    "1813": -4, # HBO(visor)
+    "2813": -4, # HBO oeste(visor)
+    "0815": -4, # HBO +(visor)
+    "1814": -4, # HBO 2(visor)
+    "0820": -4, # HBO Xtreme(visor)
+    "0818": -4, # HBO mundo(visor)
+    "1806": -1, # Sony(visor)
+    "1810": -4, # Sony movies(visor)
+    "1832": -5, # Warner(visor)
+    "0838": -4, # Multi premier(visor)
+    "0839": -4, # Multi cinema(visor)
+    "0851": -4, # Film & arts(visor)
+    "0622": -4, # Europa Europa(visor)
+    "0855": -4, # Pánico(visor)
+    "0859": -4, # Mórbido(visor)
+    "0807": -4, # TCM latam(visor)
+    "1625": -4, #EWTN (visor)
+    "MeTV (KCSG) St. George, UT HD.us": -1, # Metv(crazy epg)
+    "MeTV+.us": -1, # metv plus (crazy epg)
+    "Heroes And Icons.us": -1 # h&i(crazy epg)
+
    # "aztv.ar": -2, # AZTV (sheet) 
 }
 
@@ -41,15 +95,15 @@ CHANNELS = [
 EXTERNAL_SOURCES = [
     {
         "url": "https://raw.githubusercontent.com/Puticastillo/EPGCL/refs/heads/main/vilma/guia-de-programacion.xml",
-        "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0604", "0621", "0629", "0302", "0308",
-                "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0827", "0838", "0839", "0842", "0851", "0855", "0856", "0859", "0860", "0812",
+        "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0621", "0629", "0302", "0308",
+                "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0838", "0839", "0842", "0851", "0855", "0856", "0859", "0860", "0812", "1604",
                 "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0932", "0934", "0935", "1806", "1810", "1814", "2701", "1625", "1832",
                 "2813", "XXX8", "0831", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704", "0703",
                 "0605", "1436"]
     },
     {
         "url": "https://epg.programadorx.cl/mdiaz/gratis.xml",
-        "ids": ["504", "531", "532", "536", "537", "538", "539", "567", "568", "569", "581", "663", "664", "609", "633"]
+        "ids": ["531", "532", "536", "537", "538", "539", "567", "568", "569", "581", "663", "664", "609", "633"]
     },
     {
         "url": "https://i.mjh.nz/PlutoTV/mx.xml",
