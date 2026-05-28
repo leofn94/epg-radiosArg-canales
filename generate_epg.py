@@ -14,7 +14,7 @@ OFFSET_CONFIG = {
     "464956": -8,  # Screenpix (epg.pw)
     "464775": -8,  # Screenpix Action (epg.pw)
     "0605": +1, #love nature (visor)
-    "1604": +1, #ID (visor)
+    "1604": +2, #ID (visor)
     "0629": -1, #canal luz (visor)
     "0222": -1, # A24(visor)
     "0915": -4, # El trece(visor)
