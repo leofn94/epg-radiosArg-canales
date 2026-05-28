@@ -113,30 +113,29 @@ EXTERNAL_SOURCES = [
                 "5f2817d3d7573a00080f9175","5dcde437229eff00091b6c30", "5e972a21ad709d00074195ba", "5dcb62e63d4d8f0009f36881","5ddc4e8bcbb9010009b4e84f", "5dcddf1ed95e740009fef7ab","66997d18a1b69e00082ee85f"]
     },
     {
-        "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/es.xml",
+        "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
         "ids": ["ES3400004SS", "ES300029LP", "ES3000288I", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO"]
     },
     {
-        "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/us.xml",
+        "url": "https://i.mjh.nz/SamsungTVPlus/us.xml.gz",
         "ids": ["USBD3500008IJ","USBD35000149S", "USBD35000180U", "US2600019IC","USBD1200009JI", "US2200001IY", "US5000053YV", "USAJ3504502A", "US1900002QK", "US1800014CG", "USBD12000255B",
                "USAK3508705A", "US700012OU", "USBA3800004EL"]
     },
     {
-        "url": "https://raw.github.com/matthuisman/i.mjh.nz/master/SamsungTVPlus/gb.xml",
+        "url": "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz",
         "ids": ["GB2300005ML", "GBBD4900001RG", "GBBD1900009UD", "GBBC2100002HP", "GB500007VM"]
     },
     {
-        "url": "https://i.mjh.nz/Plex/us.xml",
-        "ids": ["5e20b730f2f8d5003d739db7-64b710b44612b1f48e9ad31a", "5e20b730f2f8d5003d739db7-6876f76054325376973fd314", "5e20b730f2f8d5003d739db7-69727a4631b12b32a91db6b3",
-                "5e20b730f2f8d5003d739db7-689fb7110a486aeba3c7917c", "5e20b730f2f8d5003d739db7-5ef4e1b40d9ad000423c442a", "5e20b730f2f8d5003d739db7-66a2d1390b91165254efdb3e",
-                "5e20b730f2f8d5003d739db7-688006e7015fe7e375a1a0ac", "5e20b730f2f8d5003d739db7-6889430a3b7708975e7c07e3", "5e20b730f2f8d5003d739db7-63dea56a2a2abb171ff6dadf",
-                "5e20b730f2f8d5003d739db7-62d1efa6c33948ea4ceedbcf", "5e20b730f2f8d5003d739db7-5eea605574085f0040ddc791", "5e20b730f2f8d5003d739db7-671a924b79fce6628115432c",
-                "5e20b730f2f8d5003d739db7-5fc70600dd53a6002d8f93ca", "5e20b730f2f8d5003d739db7-6478acb5c83f56da796f166c", "5e20b730f2f8d5003d739db7-6571f43a1d2aae780d597196",
-                "5e20b730f2f8d5003d739db7-646fab0e43d6d6838db81a6a", "5e20b730f2f8d5003d739db7-68fafc6e558214386ab7ca3a", "5e20b730f2f8d5003d739db7-62d7f68fb19cbf65dc7bef7d",
-                "5e20b730f2f8d5003d739db7-5f170d61b898490041b49369"]
+        "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/us.xml.gz",
+        "ids": ["6a1610bebdf296985fd95603-6478acb5c83f56da796f166c", "6a1610bebdf296985fd95603-6571f43a1d2aae780d597196", "6a1610bebdf296985fd95603-5fc70600dd53a6002d8f93ca",
+                "6a1610bebdf296985fd95603-646fab0e43d6d6838db81a6a", "6a1610bebdf296985fd95603-68fafc6e558214386ab7ca3a", "6a1610bebdf296985fd95603-688006e7015fe7e375a1a0ac",
+                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-62d7f68fb19cbf65dc7bef7d", "6a1610bebdf296985fd95603-5f170d61b898490041b49369",
+                "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-6876fa82e50e77c59c8940c2",
+                "6a1610bebdf296985fd95603-5ef4e1b40d9ad000423c442a", "6a1610bebdf296985fd95603-63dea56a2a2abb171ff6dadf", "6a1610bebdf296985fd95603-62d1efa6c33948ea4ceedbcf", 
+                "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-66a1acc577649467da169f0c"]
     },
     {
-        "url": "https://i.mjh.nz/Plex/gb.xml",
+        "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/gb.xml.gz",
         "ids": ["64305451fc3be5947773c339-66855a2a714fe577eb7db920"]
     },
     {
@@ -146,11 +145,11 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/Plex/es.xml",
-        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-6683fcdf702b9db9f8177252", "643054b1fc3be59477853717-66841b30702b9db9f8177258",
+        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66841b30702b9db9f18177258",
                "643054b1fc3be59477853717-692235265cbe620c1f9b6bc7","643054b1fc3be59477853717-692234015028288613484a8a","643054b1fc3be59477853717-6922322350fe592fd6d5b7e6",
                 "643054b1fc3be59477853717-66840253cd6f1d394094114f","643054b1fc3be59477853717-6490e17c18a55242eea95991","643054b1fc3be59477853717-668420c2cd6f1d3940941157",
                "643054b1fc3be59477853717-6922338150fe592fd6d5b7e8"]
-    },
+    }, 
     {
         "url": "https://raw.githubusercontent.com/luisms123/tdt/refs/heads/master/guiacanales.xml",
         "ids": ["Magic Kids Tv", "Ani Retro", "El Chavo", "Cine Sony"]
@@ -161,10 +160,10 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
-        "ids": ["Dark.es", "TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
+        "ids": ["TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
     },
     {
-        "url": "https://github.com/HelmerLuzo/RakutenTV_HL/raw/refs/heads/main/epg/RakutenTV.xml.gz",
+        "url": "https://raw.githubusercontent.com/HelmerLuzo/RakutenTV_HL/main/epg/RakutenTV.xml.gz",
         "ids": ["that-s-80s", "that-s-90s00s", "that-s-rock", "filmrise-sci-fi-es", "sci-fi-rakuten-tv", "action-rakuten-tv", "thriller-rakuten-tv", "fifa-plus-es-new", "cine-western-es",
                "stingray-remember-the-80-s", "top-movies-rakuten-tv"]
     }
@@ -172,6 +171,8 @@ EXTERNAL_SOURCES = [
 
 TIMEZONE = "America/Argentina/Buenos_Aires"
 OUTPUT_FILE = "epg.xml"
+
+
 
 # ─── FUNCIONES DE APOYO ──────────────────────────────────────────────────────
 
