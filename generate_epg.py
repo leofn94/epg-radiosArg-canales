@@ -81,7 +81,7 @@ OFFSET_CONFIG = {
     "0431": -4, #Dsports (Visor)
     "0841": -2, #Universal Cinema (visor)
     "0844": -1, #universal premiere (visor)
-    "0845": -1, #universal comedy (visor)
+    "0845": -1 #universal comedy (visor)
    # "aztv.ar": -2, # AZTV (sheet) 
 }
 
