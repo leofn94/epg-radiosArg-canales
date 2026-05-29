@@ -28,7 +28,9 @@ OFFSET_CONFIG = {
     "0210": -4, # CNN esp(visor)
     "0215": -4, # CNN(visor)
     "0205": -4, # Dw(visor)
+    "0636": -5, #TVE(visor
     "0643": -1, # Hispantv(visor)
+    "0206": -3.5, #F24 (visor)
     "0533": -4, # Allegro(visor)
     "0920": -4, # Encuentro(visor)
     "0707": -4, # History 2(visor)
@@ -36,16 +38,19 @@ OFFSET_CONFIG = {
     "0704": -4, # Discovery theater(visor)
     "0703": -4, # Discovery science(visor)
     "2701": -1, # Discovery chanel(visor)
+    "0705": -3 # Animal Planet (visor)
     "0850": -4, # Adult swim(visor)
     "0318": -4, # Bitme(visor)
     "0302": -4, # Etc(visor)
     "0308": -1, # Tooncast(visor)
-    "0812": -4, # Comedy central(visor)
+    "0812": -4.1833, # Comedy central(visor) 4horas y 11 min
     "Cinemax HD.cl": -1, # Cinemax (crazy epg)
     "0821": -1, # Golden(visor)
     "0822": -4, # Golden plus(visor)
     "0823": -1, # Golden edge(visor)
     "0824": -4, # Golden premier(visor)
+    "1824": -4, # Golden premier 2 (visor)
+    "0621": -4, #EuroChannel (visor)
     "1813": -4, # HBO(visor)
     "2813": -4, # HBO oeste(visor)
     "0815": -4, # HBO +(visor)
@@ -64,9 +69,19 @@ OFFSET_CONFIG = {
     "0807": -4, # TCM latam(visor)
     "1625": -4, #EWTN (visor)
     "MeTV (KCSG) St. George, UT HD.us": -1, # Metv(crazy epg)
-    "MeTV+.us": -1, # metv plus (crazy epg)
-    "Heroes And Icons.us": -1 # h&i(crazy epg)
-
+    "MeTV+.us": -2, # metv plus (crazy epg)
+    "Heroes And Icons.us": -2, # h&i(crazy epg)
+    "1409": -1, #TYC (Visor)
+    "1436 ": -1, #FOXSPOPRTS (Visor)    
+    "1411": -4, #ESPN (Visor)
+    "1412": -1, #ESPN2 (Visor)
+    "2413": -1, #ESPN3 (Visor)
+    "1418": -1, #ESPN Premium (Visor)
+    "0927": -1, #Deportv (Visor)    
+    "0431": -4, #Dsports (Visor)
+    "0841": -2, #Universal Cinema (visor)
+    "0844": -1, #universal premiere (visor)
+    "0845": -1, #universal comedy (visor)
    # "aztv.ar": -2, # AZTV (sheet) 
 }
 
@@ -95,11 +110,11 @@ CHANNELS = [
 EXTERNAL_SOURCES = [
     {
         "url": "https://raw.githubusercontent.com/Puticastillo/EPGCL/refs/heads/main/vilma/guia-de-programacion.xml",
-        "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0621", "0629", "0302", "0308",
-                "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0838", "0839", "0842", "0851", "0855", "0856", "0859", "0860", "0812", "1604",
+        "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0621", "0629", "0302", "0308", "0705",
+                "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0838", "0839", "0842", "0851", "0855", "0859", "0860", "0812", "1604", "0621",
                 "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0932", "0934", "0935", "1806", "1810", "1814", "2701", "1625", "1832",
-                "2813", "XXX8", "0831", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704", "0703",
-                "0605", "1436"]
+                "2813", "XXX8", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704", "0703", "0841",
+                "0605", "1436", "0401", "0429", "1824", "0845", "0844"]
     },
     {
         "url": "https://epg.programadorx.cl/mdiaz/gratis.xml",
@@ -114,7 +129,7 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
-        "ids": ["ES3400004SS", "ES300029LP", "ES3000288I", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO"]
+        "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO"]
     },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/us.xml.gz",
@@ -145,7 +160,7 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/Plex/es.xml",
-        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66841b30702b9db9f18177258",
+        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66841b30702b9db9f18177258",
                "643054b1fc3be59477853717-692235265cbe620c1f9b6bc7","643054b1fc3be59477853717-692234015028288613484a8a","643054b1fc3be59477853717-6922322350fe592fd6d5b7e6",
                 "643054b1fc3be59477853717-66840253cd6f1d394094114f","643054b1fc3be59477853717-6490e17c18a55242eea95991","643054b1fc3be59477853717-668420c2cd6f1d3940941157",
                "643054b1fc3be59477853717-6922338150fe592fd6d5b7e8"]
@@ -163,9 +178,9 @@ EXTERNAL_SOURCES = [
         "ids": ["TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
     },
     {
-        "url": "https://raw.githubusercontent.com/HelmerLuzo/RakutenTV_HL/main/epg/RakutenTV.xml.gz",
+        "url": "https://helmerluzo.github.io/RakutenTV_HL/epg/RakutenTV.xml.gz",
         "ids": ["that-s-80s", "that-s-90s00s", "that-s-rock", "filmrise-sci-fi-es", "sci-fi-rakuten-tv", "action-rakuten-tv", "thriller-rakuten-tv", "fifa-plus-es-new", "cine-western-es",
-               "stingray-remember-the-80-s", "top-movies-rakuten-tv"]
+               "stingray-remember-the-80-s", "top-movies-rakuten-tv", "filmrise-unsolved-mysteries-es", "todo-crimen", "crimenes-reales", "animevision", "animevision-classics"]
     }
 ]
 
@@ -216,7 +231,6 @@ def get_days_from_type(tipo):
     return []
 
 # ─── PROCESAMIENTO EPG EXTERNA ───────────────────────────────────────────────
-
 def process_external_sources(sources):
     data = []
     tz_arg = pytz.timezone(TIMEZONE)
@@ -232,37 +246,66 @@ def process_external_sources(sources):
         
         try:
             root = ET.fromstring(raw_xml)
+            
+            # 1. Mapear canales ignorando por completo los namespaces del XML
+            channel_names = {}
+            for channel in root.iter():
+                if channel.tag.endswith('channel'):
+                    ch_id = channel.get('id')
+                    if ch_id in target_ids:
+                        disp_name = channel.find('.//{*}display-name')
+                        channel_names[ch_id] = disp_name.text if disp_name is not None else f"Extra {ch_id}"
+
+            # 2. Agrupar los programas por ID de canal de forma eficiente e inmune a namespaces
+            programmes_by_ch = {ch_id: [] for ch_id in target_ids}
+            
+            for prog in root.iter():
+                if prog.tag.endswith('programme'):
+                    ch_id = prog.get('channel')
+                    if ch_id in programmes_by_ch:
+                        try:
+                            start_str = prog.get("start").strip()
+                            stop_str = prog.get("stop").strip()
+                            
+                            # Manejo flexible de formatos de fecha con/sin espacios
+                            fmt = "%Y%m%d%H%M%S %z" if " " in start_str else "%Y%m%d%H%M%S%z"
+                            
+                            s_dt = datetime.strptime(start_str, fmt).astimezone(tz_arg)
+                            e_dt = datetime.strptime(stop_str, fmt).astimezone(tz_arg)
+                            
+                            # Aplicar desfase convirtiendo a float para soportar minutos (ej: -3.5)
+                            hour_offset = OFFSET_CONFIG.get(ch_id, 0)
+                            if hour_offset != 0:
+                                s_dt += timedelta(hours=float(hour_offset))
+                                e_dt += timedelta(hours=float(hour_offset))
+                            
+                            # FILTRO TOLERANTE: Ahora permite programas que terminaron hace hasta 24hs
+                            if e_dt > (now - timedelta(hours=24)) and s_dt < limit_time:
+                                title_node = prog.find('.//{*}title')
+                                desc_node = prog.find('.//{*}desc')
+                                
+                                title = title_node.text if title_node is not None else "Sin título"
+                                desc = desc_node.text if desc_node is not None else ""
+                                
+                                programmes_by_ch[ch_id].append((s_dt, e_dt, title, desc, ch_id))
+                        except:
+                            continue
+
+            # 3. Empaquetar los datos para el retorno conservando tus prints
             for ch_id in target_ids:
-                ch_node = root.find(f"./channel[@id='{ch_id}']")
-                ch_name = ch_node.find("display-name").text if ch_node is not None else f"Extra {ch_id}"
-                
-                hour_offset = OFFSET_CONFIG.get(ch_id, 0)
-                programmes = []
-                for prog in root.findall(f"./programme[@channel='{ch_id}']"):
-                    fmt = "%Y%m%d%H%M%S %z"
-                    try:
-                        s_dt = datetime.strptime(prog.get("start"), fmt).astimezone(tz_arg)
-                        e_dt = datetime.strptime(prog.get("stop"), fmt).astimezone(tz_arg)
-                        
-                        if hour_offset != 0:
-                            s_dt += timedelta(hours=hour_offset)
-                            e_dt += timedelta(hours=hour_offset)
-                        
-                        # FILTRO CRÍTICO: Entre ahora y +55 horas
-                        if e_dt > now and s_dt < limit_time:
-                            title = prog.find("title").text if prog.find("title") is not None else "Sin título"
-                            desc = prog.find("desc").text if prog.find("desc") is not None else ""
-                            programmes.append((s_dt, e_dt, title, desc, ch_id))
-                    except: continue
-                
+                programmes = programmes_by_ch[ch_id]
                 if programmes:
+                    ch_name = channel_names.get(ch_id, f"Extra {ch_id}")
+                    hour_offset = OFFSET_CONFIG.get(ch_id, 0)
                     offset_msg = f" [Ajuste: {hour_offset}hs]" if hour_offset != 0 else ""
                     print(f"  ✅ Canal Externo: {ch_name} [{ch_id}] → {len(programmes)} programas{offset_msg}")
                     data.append({"id": ch_id, "name": ch_name, "programmes": programmes})
+                    
         except Exception as e:
             print(f"  ❌ Error procesando XML: {e}")
+            
     return data
-
+    
 # ─── CONSTRUCCIÓN EPG DESDE SHEETS ──────────────────────────────────────────
 
 def build_epg_from_sheets(rows, channel_id):
