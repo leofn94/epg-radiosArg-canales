@@ -38,7 +38,7 @@ OFFSET_CONFIG = {
     "0704": -4, # Discovery theater(visor)
     "0703": -4, # Discovery science(visor)
     "2701": -1, # Discovery chanel(visor)
-    "0705": -3 # Animal Planet (visor)
+    "0705": -3, # Animal Planet (visor)
     "0850": -4, # Adult swim(visor)
     "0318": -4, # Bitme(visor)
     "0302": -4, # Etc(visor)
