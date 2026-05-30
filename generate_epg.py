@@ -43,7 +43,7 @@ OFFSET_CONFIG = {
     "0318": -4, # Bitme(visor)
     "0302": -4, # Etc(visor)
     "0308": -1, # Tooncast(visor)
-    "0812": -4.1833, # Comedy central(visor) 4horas y 11 min
+    "0812": -4, # Comedy central(visor) 4horas 
     "Cinemax HD.cl": -1, # Cinemax (crazy epg)
     "0821": -1, # Golden(visor)
     "0822": -4, # Golden plus(visor)
@@ -69,7 +69,8 @@ OFFSET_CONFIG = {
     "0807": -4, # TCM latam(visor)
     "1625": -4, #EWTN (visor)
     "MeTV (KCSG) St. George, UT HD.us": -1, # Metv(crazy epg)
-    "MeTV+.us": -2, # metv plus (crazy epg)
+    "Silver Screen Classics HD.us": +1, #silver screen classics (crazy epg)
+    "MeTV+.us": -3, # metv plus (crazy epg)
     "Heroes And Icons.us": -2, # h&i(crazy epg)
     "1409": -1, #TYC (Visor)
     "1436 ": -1, #FOXSPOPRTS (Visor)    
@@ -112,9 +113,9 @@ EXTERNAL_SOURCES = [
         "url": "https://raw.githubusercontent.com/Puticastillo/EPGCL/refs/heads/main/vilma/guia-de-programacion.xml",
         "ids": ["0204", "0205", "0206", "0209", "0210", "0215", "0222", "0318", "0431", "0432", "0433", "0528", "0533", "0621", "0629", "0302", "0308", "0705",
                 "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0838", "0839", "0842", "0851", "0855", "0859", "0860", "0812", "1604", "0621",
-                "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0932", "0934", "0935", "1806", "1810", "1814", "2701", "1625", "1832",
+                "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0932", "0934", "0935", "1806", "1810", "1814", "2701", "1832",
                 "2813", "XXX8", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1418", "1411", "1412", "2413", "1610", "0704", "0703", "0841",
-                "0605", "1436", "0401", "0429", "1824", "0845", "0844"]
+                "0605", "1436", "0401", "0429", "1824", "0845", "0844", "0805", "0625"]
     },
     {
         "url": "https://epg.programadorx.cl/mdiaz/gratis.xml",
@@ -158,7 +159,7 @@ EXTERNAL_SOURCES = [
             "plex.tv.The.Pet.Collective.plex","plex.tv.Deal.Or.No.Deal.plex","plex.tv.Family.Feud.Classic.plex","plex.tv.Cirque.du.Soleil.plex",
             "plex.tv.FailArmy.plex","plex.tv.Pink.Panther.plex","plex.tv.RetroCrush.plex","plex.tv.ANIME.x.HIDIVE.plex",
             "plex.tv.AMC.en.Español.plex","plex.tv.Mr..Bean.Live.Action.plex","plex.tv.Runtime.Español.plex","plex.tv.The.Addams.Family.plex",
-             "plex.tv.Stingray.Naturescape.plex","plex.tv.Family.Feud.plex","plex.tv.Anime.24/7.plex"]
+             "plex.tv.Stingray.Naturescape.plex","plex.tv.Family.Feud.plex"]
      },
     {
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/gb.xml.gz",
@@ -189,9 +190,11 @@ EXTERNAL_SOURCES = [
         "ids": ["TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
     },
     {
-        "url": "https://helmerluzo.github.io/RakutenTV_HL/epg/RakutenTV.xml.gz",
-        "ids": ["that-s-80s", "that-s-90s00s", "that-s-rock", "filmrise-sci-fi-es", "sci-fi-rakuten-tv", "action-rakuten-tv", "thriller-rakuten-tv", "fifa-plus-es-new", "cine-western-es",
-               "stingray-remember-the-80-s", "top-movies-rakuten-tv", "filmrise-unsolved-mysteries-es", "todo-crimen", "crimenes-reales", "animevision", "animevision-classics"]
+        "url": "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
+        "ids": ["ES:.That`s.80s.be", "ES:.That`s.90s00s.be", "ES:.That`s.ROCK.be", "ES:.FilmRise.Sci-Fi.be", "ES:.Sci-Fi.-.Rakuten.TV.be", 
+                "ES:.Películas.de.Acción.-.Rakuten.TV.be", "ES:.Thrillers.-.Rakuten.TV.be", "ES:.FIFA+.be", "ES:.Cine.Western.be",
+               "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be", "ES:.Misterios.sin.resolver.be", "ES:.Todo.Crimen.be", 
+                "ES:.Crímenes.Reales.be", "ES:.AnimeVisión.be", "ES:.AnimeVisión.Classics.be", "ES:.Cine.Friki.be", "ES:.Dark.Matter.be"]
     }
 ]
 
