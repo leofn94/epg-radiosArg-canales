@@ -140,15 +140,26 @@ EXTERNAL_SOURCES = [
         "url": "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz",
         "ids": ["GB2300005ML", "GBBD4900001RG", "GBBD1900009UD", "GBBC2100002HP", "GB500007VM"]
     },
-    {
-        "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/us.xml.gz",
-        "ids": ["6a1610bebdf296985fd95603-6478acb5c83f56da796f166c", "6a1610bebdf296985fd95603-6571f43a1d2aae780d597196", "6a1610bebdf296985fd95603-5fc70600dd53a6002d8f93ca",
-                "6a1610bebdf296985fd95603-646fab0e43d6d6838db81a6a", "6a1610bebdf296985fd95603-68fafc6e558214386ab7ca3a", "6a1610bebdf296985fd95603-688006e7015fe7e375a1a0ac",
-                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-62d7f68fb19cbf65dc7bef7d", "6a1610bebdf296985fd95603-5f170d61b898490041b49369",
-                "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-6876fa82e50e77c59c8940c2",
-                "6a1610bebdf296985fd95603-5ef4e1b40d9ad000423c442a", "6a1610bebdf296985fd95603-63dea56a2a2abb171ff6dadf", "6a1610bebdf296985fd95603-62d1efa6c33948ea4ceedbcf", 
-                "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-66a1acc577649467da169f0c"]
-    },
+
+    
+   # {
+   #     "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/us.xml.gz",
+   #     "ids": ["6a1610bebdf296985fd95603-6478acb5c83f56da796f166c", "6a1610bebdf296985fd95603-6571f43a1d2aae780d597196", "6a1610bebdf296985fd95603-5fc70600dd53a6002d8f93ca",
+   #             "6a1610bebdf296985fd95603-646fab0e43d6d6838db81a6a", "6a1610bebdf296985fd95603-68fafc6e558214386ab7ca3a", "6a1610bebdf296985fd95603-688006e7015fe7e375a1a0ac",
+   #             "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-62d7f68fb19cbf65dc7bef7d", "6a1610bebdf296985fd95603-5f170d61b898490041b49369",
+   #             "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-6876fa82e50e77c59c8940c2",
+   #             "6a1610bebdf296985fd95603-5ef4e1b40d9ad000423c442a", "6a1610bebdf296985fd95603-63dea56a2a2abb171ff6dadf", "6a1610bebdf296985fd95603-62d1efa6c33948ea4ceedbcf", 
+   #             "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-66a1acc577649467da169f0c"]
+   # },
+     {
+         "url": "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
+         "ids": ["plex.tv.Noticias.Telemundo.AHORA.plex", "plex.tv.CBS.News.plex", "plex.tv.NBC.News.NOW.plex", "plex.tv.BBC.News.(North.America).plex", 
+            "plex.tv.Bloomberg.TV.plex", "plex.tv.XITE.80s.Flashback.plex", "plex.tv.XITE.90s.Throwback.plex", "plex.tv.Stingray.Classica.Stream.plex",
+            "plex.tv.The.Pet.Collective.plex","plex.tv.Deal.Or.No.Deal.plex","plex.tv.Family.Feud.Classic.plex","plex.tv.Cirque.du.Soleil.plex",
+            "plex.tv.FailArmy.plex","plex.tv.Pink.Panther.plex","plex.tv.RetroCrush.plex","plex.tv.ANIME.x.HIDIVE.plex",
+            "plex.tv.AMC.en.Español.plex","plex.tv.Mr..Bean.Live.Action.plex","plex.tv.Runtime.Español.plex","plex.tv.The.Addams.Family.plex",
+             "plex.tv.Stingray.Naturescape.plex","plex.tv.Family.Feud.plex","plex.tv.Anime.24/7.plex"]
+     },
     {
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/gb.xml.gz",
         "ids": ["64305451fc3be5947773c339-66855a2a714fe577eb7db920"]
