@@ -722,10 +722,6 @@
     <title lang="es">Cine en Casa</title>
     <desc lang="es">Ciclo de películas para acompañar la madrugada.</desc>
   </programme>
-  <programme start="20260601230000 -0300" stop="20260601233000 -0300" channel="retromagico.ar">
-    <title lang="es">Pokemon</title>
-    <desc lang="es">Ash y Pikachu recorren el mundo capturando y entrenando Pokémon.</desc>
-  </programme>
   <programme start="20260601233000 -0300" stop="20260602000000 -0300" channel="retromagico.ar">
     <title lang="es">Digimon</title>
     <desc lang="es">Aventuras digitales de niños y sus compañeros monstruos en el mundo digital.</desc>
@@ -1166,9 +1162,9 @@
     <title lang="es">El Mundo de Beakman</title>
     <desc lang="es">El excéntrico científico Beakman explica de forma divertida los misterios de la ciencia.</desc>
   </programme>
-  <programme start="20260601230000 -0300" stop="20260601233000 -0300" channel="magickids.ar">
-    <title lang="es">Dragon Ball Z</title>
-    <desc lang="es">Goku y sus amigos defienden la Tierra de los guerreros más poderosos del universo.</desc>
+  <programme start="20260604063000 -0300" stop="20260604070000 -0300" channel="retromagico.ar">
+    <title lang="es">Conan El Niño del Futuro</title>
+    <desc lang="es">El joven Conan lucha por salvar a la humanidad en un mundo postapocalíptico.</desc>
   </programme>
   <programme start="20260601233000 -0300" stop="20260602000000 -0300" channel="magickids.ar">
     <title lang="es">Escuela de Detectives</title>
@@ -1610,9 +1606,9 @@
     <title lang="es">Medabots</title>
     <desc lang="es">Competencias de robots personalizados con sus dueños en busca de la medalla rara.</desc>
   </programme>
-  <programme start="20260601222500 -0300" stop="20260601232000 -0300" channel="mitv.ar">
-    <title lang="es">Bonanza</title>
-    <desc lang="es">La historia de la familia Cartwright en el rancho La Ponderosa, protegiendo sus tierras y enfrentando dilemas morales en el Nevada del siglo XIX.</desc>
+  <programme start="20260604063000 -0300" stop="20260604070000 -0300" channel="magickids.ar">
+    <title lang="es">Yu Yu Hakusho</title>
+    <desc lang="es">Yusuke Urameshi un joven que se convierte en detective del mundo espiritual.</desc>
   </programme>
   <programme start="20260601232000 -0300" stop="20260602000000 -0300" channel="mitv.ar">
     <title lang="es">Los Dukes de Hazzard</title>
@@ -1966,9 +1962,9 @@
     <title lang="es">Full House</title>
     <desc lang="es">Un padre viudo cría a sus tres hijas con la ayuda de su mejor amigo y su cuñado, compartiendo lecciones de vida y mucha diversión en San Francisco.</desc>
   </programme>
-  <programme start="20260601230000 -0300" stop="20260601233000 -0300" channel="animestation.ar">
-    <title lang="es">Alexander Senki</title>
-    <desc lang="es">Una reinterpretación oscura y visionaria de la vida de Alejandro Magno narrada desde el punto de vista de un ser del futuro que observa cómo el joven rey macedonio conquista el mundo conocido.</desc>
+  <programme start="20260604063000 -0300" stop="20260604071500 -0300" channel="mitv.ar">
+    <title lang="es">Patrulla Motorizada</title>
+    <desc lang="es">Dos oficiales de la patrulla de caminos de California recorren las autopistas en sus motocicletas, resolviendo crímenes y ayudando a los ciudadanos.</desc>
   </programme>
   <programme start="20260601233000 -0300" stop="20260602000000 -0300" channel="animestation.ar">
     <title lang="es">Hellsing</title>
@@ -2410,9 +2406,9 @@
     <title lang="es">Serial Experiments Lain</title>
     <desc lang="es">Lain Iwakami una adolescente introvertida recibe un correo de una compañera muerta que la lleva a adentrarse en The Wired una red digital donde las fronteras entre realidad identidad y existencia se disuelven.</desc>
   </programme>
-  <programme start="20260601230000 -0300" stop="20260601233000 -0300" channel="retroblast">
-    <title lang="es">One Piece</title>
-    <desc lang="es">Aventuras maritimas de una tripulacion pirata que explora islas peligrosas en busca de un tesoro legendario.</desc>
+  <programme start="20260604063000 -0300" stop="20260604070000 -0300" channel="animestation.ar">
+    <title lang="es">Gun Frontier</title>
+    <desc lang="es">En un salvaje oeste espacial el samurai Tochiro Oyama y el pirata Harlock viajan por planetas fronterizos en busca de los compatriotas de Tochiro enfrentando bandidos y conspiraciones en cada parada.</desc>
   </programme>
   <programme start="20260601233000 -0300" stop="20260602000000 -0300" channel="retroblast">
     <title lang="es">Dragon Ball Z Run B</title>
@@ -2942,6 +2938,10 @@
     <title lang="es">Lupin the Third Part II</title>
     <desc lang="es">Serie animada que sigue a un ladron maestro internacional realizando robos espectaculares mientras evade constantemente a la policia.</desc>
   </programme>
+  <programme start="20260604063000 -0300" stop="20260604070000 -0300" channel="retroblast">
+    <title lang="es">Case Closed</title>
+    <desc lang="es">Anime de misterio que sigue a un joven detective atrapado en el cuerpo de un niño que resuelve complejos crimenes usando inteligencia y deduccion.</desc>
+  </programme>
   <programme start="20260601231500 -0300" stop="20260601234500 -0300" channel="cncity">
     <title lang="es">Las sombrías aventuras de Billy y Mandy</title>
     <desc lang="es">Dos niños ganan una apuesta a la Muerte y la obligan a ser su mejor amiga para siempre en locas y oscuras aventuras.</desc>
@@ -3353,6 +3353,10 @@
   <programme start="20260604060000 -0300" stop="20260604063000 -0300" channel="cncity">
     <title lang="es">Fantasma del Espacio de costa a costa</title>
     <desc lang="es">Un antiguo superhéroe conduce un talk-show bizarro entrevistando a celebridades reales en un formato surrealista.</desc>
+  </programme>
+  <programme start="20260604063000 -0300" stop="20260604070000 -0300" channel="cncity">
+    <title lang="es">Secundaria de clones</title>
+    <desc lang="es">Clones de figuras históricas famosas navegan por los dramas y desafíos típicos de la vida en una escuela secundaria moderna.</desc>
   </programme>
   <programme start="20260601230000 -0300" stop="20260602000000 -0300" channel="telered.ar">
     <title lang="es">Codigo R</title>
@@ -3986,10 +3990,6 @@
     <title lang="es">Amanecer Andino</title>
     <desc lang="es">Un espacio dedicado a la música las costumbres y los paisajes tradicionales del mundo andino ideal para comenzar el día.</desc>
   </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0204">
-    <title lang="es">Realidades • Emisión del día 30/05/26</title>
-    <desc lang="es">Emisión del día 30/05/26 ║ Más allá de los titulares y las informaciones de último minuto, este espacio semanal analiza el contexto político, económico, social y cultural de las realidades de nuestros pueblos, narradas por los verdaderos protagonistas.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0204">
     <title lang="es">Telesur Noticias</title>
     <desc lang="es">Noticias al momento desde los diversos escenarios de interés de la vida política, económica y social de toda América Latina, integrando así al mundo en una sola voz informativa. Con 12 corresponsalías y colaboradores especializados, extendidos a lo largo y ancho del continente, teleSUR Noticias emite minuto a minuto una perspectiva global de los procesos que deciden la historia de los pueblos de América Latina.</desc>
@@ -4377,10 +4377,6 @@
   <programme start="20260604003000 -0300" stop="20260604011000 -0300" channel="0204">
     <title lang="es">Texto y contexto</title>
     <desc lang="es">Un espacio dedicado al análisis crítico de los diferentes procesos sociales, políticos y económicos que impactan las distintas regiones, especialmente Latinoamérica. Con un grupo de destacados penalistas, cada semana se coloca un argumento sobre la mesa y la opinión se la forma usted.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0205">
-    <title lang="es">Global es</title>
-    <desc lang="es">Un tercio de la superficie terrestre es terreno de cultivo. Con frecuencia, las prácticas agrícolas destruyen el suelo, sin embargo, hay muchas alternativas que permiten alimentar al mundo sin acabar con el planeta.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0205">
     <title lang="es">Enfoque Europa: Países, gente, destinos</title>
@@ -4957,18 +4953,6 @@
   <programme start="20260603203000 -0300" stop="20260603210000 -0300" channel="0205">
     <title lang="es">Enlaces- Ventana abierta al mundo digital</title>
     <desc lang="es">Riguroso y entretenido a la vez, presenta temas relevantes del mundo digital con un profundo enfoque periodístico: los desafíos de las redes sociales, la seguridad en Internet o la red como plataforma de agitación política.</desc>
-  </programme>
-  <programme start="20260531231000 -0300" stop="20260531232400 -0300" channel="0206">
-    <title lang="es">Reporteros</title>
-    <desc lang="es">Un equipo de reporteros de France 24 aborda un tema en profundidad o analiza un hecho destacado de la actualidad.</desc>
-  </programme>
-  <programme start="20260531232400 -0300" stop="20260531232900 -0300" channel="0206">
-    <title lang="es">En foco</title>
-    <desc lang="es">Un reportaje breve que aborda temas que frecuentemente son obviados en las noticias.</desc>
-  </programme>
-  <programme start="20260531232900 -0300" stop="20260531233000 -0300" channel="0206">
-    <title lang="es">El tiempo</title>
-    <desc lang="es">Toda la informacion meteorológica del país.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260531234000 -0300" channel="0206">
     <title lang="es">Noticias</title>
@@ -6777,10 +6761,6 @@
   <programme start="20260604005900 -0300" stop="20260604010000 -0300" channel="0206">
     <title lang="es">El tiempo</title>
     <desc lang="es">Toda la informacion meteorológica del país.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0209">
-    <title lang="es">Noticias</title>
-    <desc lang="es">Un programa que aborda los hechos más destacados de la agenda de noticias nacional e internacional. Un equipo de periodistas analiza los acontecimientos diarios en Chile y el mundo para que el público se informe de la forma más completa.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0209">
     <title lang="es">El África de Lumumba</title>
@@ -9058,10 +9038,6 @@
     <title lang="es">LaLiga • Barcelona vs Real Madrid, Fecha 35, Estadio Camp Nou</title>
     <desc lang="es">Barcelona vs Real Madrid, Fecha 35, Estadio Camp Nou ║ Barcelona recibe a Real Madrid en el Camp Nou por la fecha 35 de LaLiga EA Sports. Un clásico que promete ser emocionante y decisivo en la lucha por el título. ¡El espectáculo está garantizado!.</desc>
   </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0433">
-    <title lang="es">Atlas, la otra pasión</title>
-    <desc lang="es">Docu-reality sobre la vida y la historia de un club de fútbol oficial. Se trata de un club muy particular, ATLAS el último de los últimos de la primera división D. El Club Atlético Atlas es quien por haber quedado último en El Campeonato de Primera División D, perdió la afiliación a AFA por un año y durante ese período perdió también a los jugadores, cuerpo técnico, camisetas, pelotas, redes. Absolutamente todo. El desenlace será la consagración o la frustración de este grupo de jóvenes y de dirigentes que todo lo hacen impulsados por la pasión.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0433">
     <title lang="es">FIFA WC - Stories from the Cities • San Francisco Bay Area</title>
     <desc lang="es">San Francisco Bay Area ║ Mira el nuevo contenido que ofrece la FIFA para conocer toda la historia de las ciudades que albergan los distintos partidos en la Copa Mundial en su edición del 2026.</desc>
@@ -9558,10 +9534,6 @@
     <title lang="es">Música del Recuerdo</title>
     <desc lang="es">Un viaje a través del tiempo con los videos de los más grandes éxitos de la música en español.</desc>
   </programme>
-  <programme start="20260531214500 -0300" stop="20260531232000 -0300" channel="0533">
-    <title lang="es">Ravel, Chaikovski: Seong-Jin Cho - Orquesta Filarmónica Checa, Semyon Bychkov</title>
-    <desc lang="es">Maurice Ravel: Concierto para piano en sol mayor; Mouvement de Menuet; Piotr Ilich Thchaiokovsky: Sinfonía n.º 5 en mi menor, Op. 64. Seong-Jin Cho and Filarmónica Checa - Semyon Bychkov. Rudolfinum, Praga. 2025.</desc>
-  </programme>
   <programme start="20260531232000 -0300" stop="20260601015000 -0300" channel="0533">
     <title lang="es">Nabucco, ópera en cuatro actos de Giuseppe Verdi - Teatro Real de Madrid</title>
     <desc lang="es">G. Verdi: Nabucco. G. Gagnidze, M. Fabiano, A. Vinogradov, S. Hernández, E. Maximova, S. Lim, F. Lara, M. Ortega; A. Homoki ; Orquesta and Coro del Teatro Real / N. Luisotti. Teatro Real, Madrid. 2022.</desc>
@@ -9849,10 +9821,6 @@
   <programme start="20260603204500 -0300" stop="20260603222500 -0300" channel="0621">
     <title lang="es">Muerte en el alma</title>
     <desc lang="es">Un hombre admite haber matado a su amado hijo sin dar explicación. Su abogado, decidido a descubrir la verdad, destapa oscuros secretos familiares y una inquietante conexión con una serie de asesinatos sin resolver.</desc>
-  </programme>
-  <programme start="20260531223000 -0300" stop="20260531233000 -0300" channel="0629">
-    <title lang="es">Día de bendición</title>
-    <desc lang="es">El pastor Omar Olier conduce este segmento en el cual realiza algunas prédicas y exhortaciones inspiradas en el contenido de las Sagradas Escrituras, para dar un mensaje de fe, esperanza y bendición a tu vida.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601003000 -0300" channel="0629">
     <title lang="es">Rey de reyes</title>
@@ -10301,10 +10269,6 @@
   <programme start="20260603230000 -0300" stop="20260604000000 -0300" channel="0629">
     <title lang="es">Visión de futuro</title>
     <desc lang="es">Acompaña al reverendo Omar Cabrera en esta edición en la que presenta algunos mensajes de fe y esperanza inspirados en las enseñanzas bíblicas, para que puedas edificar tu alma a través del encuentro con Cristo.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531232400 -0300" channel="0302">
-    <title lang="es">The Pilot&#x27;s Love Song • Tu nombre</title>
-    <desc lang="es">Tu nombre ║ Los estudiantes lloran la pérdida de algunos de sus amigos, pero un nuevo descubrimiento hará caer a Kal a un abismo del que le parecerá no poder salir. Y no será el único con problemas.</desc>
   </programme>
   <programme start="20260531232400 -0300" stop="20260531234800 -0300" channel="0302">
     <title lang="es">The Pilot&#x27;s Love Song • Vuelo con valentía</title>
@@ -10901,10 +10865,6 @@
   <programme start="20260603205100 -0300" stop="20260604025100 -0300" channel="0302">
     <title lang="es">ETC TV</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260531225800 -0300" stop="20260531232400 -0300" channel="0308">
-    <title lang="es">Los sábados secretos • Lunes negro</title>
-    <desc lang="es">Lunes negro ║ Después de que Zak toca el místico Espejo de humo de Tezcatlipoca, descubre que ha liberado a un perverso doble suyo: Zak Lunes. Y cuando Drew comienza a actuar extrañamente, los temores de Zak se incrementan al pensar que tal vez, su doble malvado no sea el único que salió del espejo...</desc>
   </programme>
   <programme start="20260531232400 -0300" stop="20260531233400 -0300" channel="0308">
     <title lang="es">Los pequeños Looney Tunes • Taz in Toyland</title>
@@ -12338,10 +12298,6 @@
     <title lang="es">Los pequeños Looney Tunes • Shadow of a Doubt</title>
     <desc lang="es">Shadow of a Doubt ║ Piolín &#x27;arroja algo de luz&#x27; sobre lo que es una sombra.</desc>
   </programme>
-  <programme start="20260531223600 -0300" stop="20260531232400 -0300" channel="0705">
-    <title lang="es">Piscinas increíbles • ¿Qué pasa, amigo?</title>
-    <desc lang="es">¿Qué pasa, amigo? ║ Lucas emprende un gran proyecto: la construcción de una piscina para un amigo que ahora es cliente. Crea un patio de ensueño con un muelle, un bar y una fogata.</desc>
-  </programme>
   <programme start="20260531232400 -0300" stop="20260601001400 -0300" channel="0705">
     <title lang="es">Los Irwin • El corazón maltratado de Terri</title>
     <desc lang="es">El corazón maltratado de Terri ║ Terri asiste al examen de Charlie, el tigre, para determinar si sus tumores fueron tratados exitosamente; Bindi y el Equipo de Mamíferos Pequeños ayudan a desarrollar una vacuna para Edén, un demonio de Tasmania.</desc>
@@ -12681,10 +12637,6 @@
   <programme start="20260603215400 -0300" stop="20260603222000 -0300" channel="0705">
     <title lang="es">Coyote Peterson: Aventuras salvajes • Dragones urbanos</title>
     <desc lang="es">Dragones urbanos ║ El equipo viaja al desierto de Australia en busca de varias especies de dragones. Su mayor desafío es encontrar a todas las criaturas para determinar cómo han logrado convivir con los humanos.</desc>
-  </programme>
-  <programme start="20260531221000 -0300" stop="20260531232000 -0300" channel="0636">
-    <title lang="es">Plano general</title>
-    <desc lang="es">Jenaro Castro muestra el lado humano de personajes relevantes de todos los ámbitos. Un viaje introspectivo con voluntad de homenajear la trayectoria de los distintos invitados que, además, eligen su música preferida y el lugar de la entrevista.</desc>
   </programme>
   <programme start="20260531232000 -0300" stop="20260601002000 -0300" channel="0636">
     <title lang="es">Días de cine</title>
@@ -13033,10 +12985,6 @@
   <programme start="20260603182500 -0300" stop="20260603190000 -0300" channel="0636">
     <title lang="es">Aquí la Tierra</title>
     <desc lang="es">Una mirada sobre cómo la salud, la arquitectura, la conducta, incluso el arte o la economía, pueden estar condicionados por la meteorología.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0643">
-    <title lang="es">Wikihispan</title>
-    <desc lang="es">Wikihispan es un programa de 25 minutos en el que abordaremos los acontecimientos de países de Asia Occidental y vecinos de Irán, especialmente los países árabes. En este programa hablaremos con analistas expertos acerca de hechos más importantes de dichos países.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0643">
     <title lang="es">HispanTV noticias</title>
@@ -15594,10 +15542,6 @@
     <title lang="es">El juramento solemne</title>
     <desc lang="es">Dora es una joven periodista que busca a su hermana gemela desaparecida. Su investigación la lleva hasta Carol, una madre que necesita un cuidador para su hijo. Dora, haciéndose pasar por enfermera, acepta el trabajo y comienza a buscar pistas.</desc>
   </programme>
-  <programme start="20260531224500 -0300" stop="20260531233000 -0300" channel="0842">
-    <title lang="es">A sangre fría • Asesinato de la reina de belleza</title>
-    <desc lang="es">Asesinato de la reina de belleza ║ Una reina de belleza local es encontrada muerta en un lago. Mientras su pequeño pueblo llora, las autoridades se encuentran en una investigación de más de veinte años que los lleva a un asesino que se ocultaba a plena vista.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601001500 -0300" channel="0842">
     <title lang="es">A sangre fría • Dos preservativos, un asesino</title>
     <desc lang="es">Dos preservativos, un asesino ║ Un incendio en un apartamento resulta ser un incendio provocado, listo para encubrir el asesinato de una joven belleza. El descubrimiento de una doble vida secreta, y la evidencia única, llevan a los detectives a un sospechoso que está disparando salvas y uno que estaba allí para matar.</desc>
@@ -16585,10 +16529,6 @@
   <programme start="20260603191500 -0300" stop="20260603210000 -0300" channel="0859">
     <title lang="es">The Craft</title>
     <desc lang="es">Una joven problemática, interesada en la magia negra, llega a una nueva escuela. Lentamente se unirá a tres chicas con sus mismas inquietudes, y juntas se adentrarán en los misterios de la magia para así conseguir todo lo que ellas quieren.</desc>
-  </programme>
-  <programme start="20260531230500 -0300" stop="20260531232500 -0300" channel="0812">
-    <title lang="es">Las reglas del amor • La hermana de Audrey</title>
-    <desc lang="es">La hermana de Audrey ║ Russell invita a salir a la hermana de Audrey después de enterarse que ella tiene problemas maritales.</desc>
   </programme>
   <programme start="20260531232500 -0300" stop="20260531235000 -0300" channel="0812">
     <title lang="es">Las reglas del amor • El que arregla todo</title>
@@ -17950,10 +17890,6 @@
     <title lang="es">TV Pública</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260531220000 -0300" stop="20260531233000 -0300" channel="0904">
-    <title lang="es">Comunidad de negocios</title>
-    <desc lang="es">Un espacio donde confluyen los protagonistas de la economía cotidiana y los negocios, en el país y en el mundo.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601003000 -0300" channel="0904">
     <title lang="es">Especiales LN+</title>
     <desc lang="es">Mira los programas especiales presentados por La Nación+.</desc>
@@ -18101,10 +18037,6 @@
   <programme start="20260603230000 -0300" stop="20260604000000 -0300" channel="0904">
     <title lang="es">Mesa chica</title>
     <desc lang="es">José del Rio llega con toda la actualidad económica y política junto a las voces de sus protagonistas.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0905">
-    <title lang="es">En el camino</title>
-    <desc lang="es">Un diario de viajes que nos permite llegar hasta lo más profundo de la Argentina para conocer sus raíces y su gente. Relatos sorprendentes. Cada capítulo tiene un sólo destino: la búsqueda de nuestra identidad.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601003000 -0300" channel="0905">
     <title lang="es">TN Deportivo especial</title>
@@ -21194,10 +21126,6 @@
     <title lang="es">Chicas Pesadas</title>
     <desc lang="es">Después de crecer en la selva africana con sus padres zoólogos, Cady cree estar preparada para todo, hasta que llega a una escuela pública en los EE UU. Ahí descubrirá que la vida en la ciudad puede ser tan salvaje como la jungla.</desc>
   </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0414">
-    <title lang="es">Último tren a Norteamérica</title>
-    <desc lang="es">Sigue el emocionante y singular recorrido de tres países en su preparación conjunta para la Copa Mundial de la FIFA 2026. Viajaremos en diversos trenes para recorrer los tres territorios, explorando cómo cada nación se prepara para albergar el evento deportivo más grande del planeta. Con una narrativa que va más allá de lo deportivo, Último Tren a Norteamérica nos ofrece un retrato profundo de las culturas, las realidades sociales y los retos que enfrentan estos países al unirse para llevar a cabo la primera Copa del Mundo tripartita de la historia.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601003000 -0300" channel="0414">
     <title lang="es">MotoAmerica • Race 2 Supersport - Road America, WI</title>
     <desc lang="es">Race 2 Supersport - Road America, WI ║ Vive lo más emocionante de las carreras del Campeonato MotoAmerica Superbike en su edición 2026. Los amantes del deporte podrán disfrutar de una serie de carreras de motos en Norteamérica y que reúne a las mejores superbikes compitiendo en carreras de alta velocidad en múltiples rondas.</desc>
@@ -21589,10 +21517,6 @@
   <programme start="20260603190500 -0300" stop="20260603211200 -0300" channel="2813">
     <title lang="es">Jumanji: En la selva</title>
     <desc lang="es">Cuatro adolescentes encuentran un viejo videojuego que los absorbe y los transporta a una selva peligrosa, donde se convierten en personajes adultos y tienen que ir superando pruebas terribles para terminar el juego y regresar al mundo real.</desc>
-  </programme>
-  <programme start="20260531220000 -0300" stop="20260531233000 -0300" channel="XXX8">
-    <title lang="es">3 chicas gozan un garrote</title>
-    <desc lang="es">Chicos afortunados disfrutan de dos mujeres lujuriosas que lo único que quieren es disfrutar de un mástil grueso.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601010000 -0300" channel="XXX8">
     <title lang="es">Esposas con negros</title>
@@ -22242,10 +22166,6 @@
     <title lang="es">Mujer Maravilla</title>
     <desc lang="es">Diana es la princesa del Amazonas y fue entrenada para ser una guerrera invencible. Cuando un piloto norteamericano tiene un accidente y acaba en las costas de la isla paradisíaca a la cual pertenece, Diana descubre que hay un grave conflicto bélico que amenaza con destruir al mundo: la Primera Guerra Mundial. Tras obtener dicha información, Diana decide abandonar su hogar y luchar junto a los hombres en la guerra que acabará con todas las guerras. Será entonces cuando descubra sus poderes y su verdadero destino como Wonder Woman.</desc>
   </programme>
-  <programme start="20260531220000 -0300" stop="20260531233000 -0300" channel="1813">
-    <title lang="es">Euphoria</title>
-    <desc lang="es">Un grupo de estudiantes de bachillerato navega entre drogas, relaciones sexuales, traumas, redes sociales, amor y amistad.</desc>
-  </programme>
   <programme start="20260531233000 -0300" stop="20260601010000 -0300" channel="1813">
     <title lang="es">Euphoria</title>
     <desc lang="es">Un grupo de estudiantes de bachillerato navega entre drogas, relaciones sexuales, traumas, redes sociales, amor y amistad.</desc>
@@ -22561,10 +22481,6 @@
   <programme start="20260603200500 -0300" stop="20260603220000 -0300" channel="0622">
     <title lang="es">Gerri • Como la nieve en el sur</title>
     <desc lang="es">Como la nieve en el sur ║ Gregorio Esposito, conocido como Gerri, es un inspector de origen romaní que resuelve casos en Apulia. Gerri ejerce un gran encanto sobre las mujeres, pero también es un hombre inquieto con un pasado doloroso que aún debe superar.</desc>
-  </programme>
-  <programme start="20260531230200 -0300" stop="20260531232800 -0300" channel="0850">
-    <title lang="es">Rick and Morty • Pilot</title>
-    <desc lang="es">Pilot ║ Rick, un excéntrico científico, se va a vivir con la familia de su hija, y será una mala influencia para su nieto Morty.</desc>
   </programme>
   <programme start="20260531232800 -0300" stop="20260531234300 -0300" channel="0850">
     <title lang="es">Smiling Friends • Shmaloogles</title>
@@ -26274,10 +26190,6 @@
     <title lang="es">UEFA Champions League • Paris Saint-Germain vs Arsenal , Final, Puskás Aréna</title>
     <desc lang="es">Paris Saint-Germain vs Arsenal , Final, Puskás Aréna ║ Paris Saint-Germain se enfrenta a Arsenal en la final de la UEFA Champions League. Un duelo decisivo que promete emociones intensas y un espectáculo futbolístico inolvidable.</desc>
   </programme>
-  <programme start="20260531230000 -0300" stop="20260531232000 -0300" channel="0401">
-    <title lang="es">Post • Palestino vs Audax Italiano - Liga de Primera Mercado Libre 2026 - Fecha 14</title>
-    <desc lang="es">Palestino vs Audax Italiano - Liga de Primera Mercado Libre 2026 - Fecha 14 ║ La información de este programa no se encuentra disponible.</desc>
-  </programme>
   <programme start="20260531232000 -0300" stop="20260601012000 -0300" channel="0401">
     <title lang="es">Todos Somos Técnicos • 31-05-2026</title>
     <desc lang="es">31-05-2026 ║ Un espacio para analizar todos los detalles del fútbol nacional e internacional.</desc>
@@ -26625,10 +26537,6 @@
   <programme start="20260604003000 -0300" stop="20260604063000 -0300" channel="0429">
     <title lang="es">Win Sports</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260531213700 -0300" stop="20260531232800 -0300" channel="1824">
-    <title lang="es">Armados y peligrosos</title>
-    <desc lang="es">El agente de la DEA, Bobby Trench, y el oficial de inteligencia de la Armada estadounidense, Marcus Stigman, han estado trabajando juntos de forma encubierta como miembros de un sindicato de narcóticos. Ninguno de ellos sabe que el otro es un agente encubierto. Cuando fracasa su intento por infiltrarse en un cartel mexicano y recuperar millones de dólares, los hombres son desautorizados por sus superiores. Trench y Stigman huyen.</desc>
   </programme>
   <programme start="20260531232800 -0300" stop="20260601011400 -0300" channel="1824">
     <title lang="es">El transportador 3</title>
@@ -27897,10 +27805,6 @@
   <programme start="20260603230000 -0300" stop="20260604010000 -0300" channel="0805">
     <title lang="es">Quiero matar a mi jefe</title>
     <desc lang="es">Nick, Dale y Kurt son unos trabajadores que no desean otra cosa que deshacerse de sus insoportables jefes. El renunciar a sus trabajos no es una opción, por lo que, borrachos y siguiendo el consejo de un criminal, los hombres idean un plan complejo y aparentemente infalible para eliminar permanentemente a sus terribles jefes. El problema es que el plan no sale como lo habían diseñado.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="0625">
-    <title lang="es">Vaticano • Descubriendo la nueva encíclica del papa León</title>
-    <desc lang="es">Descubriendo la nueva encíclica del papa León ║ Las noticias más recientes desde el Vaticano con extractos y análisis de las audiencias del Santo Padre, entrevistas, momentos destacados y eventos recientes desde el corazón de la Iglesia católica.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="0625">
     <title lang="es">Desafíos de la familia hoy</title>
@@ -29486,7 +29390,7 @@
     <title lang="es">Ciudad Magazine</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260601181734 -0300" stop="20260601190000 -0300" channel="531">
+  <programme start="20260601183148 -0300" stop="20260601190000 -0300" channel="531">
     <title lang="es">Marmalade Boy</title>
   </programme>
   <programme start="20260601190000 -0300" stop="20260601200000 -0300" channel="531">
@@ -29726,13 +29630,10 @@
   <programme start="20260603173000 -0300" stop="20260603180000 -0300" channel="531">
     <title lang="es">Mikami, la cazafantasmas</title>
   </programme>
-  <programme start="20260603180000 -0300" stop="20260603181734 -0300" channel="531">
+  <programme start="20260603180000 -0300" stop="20260603183148 -0300" channel="531">
     <title lang="es">Marmalade Boy</title>
   </programme>
-  <programme start="20260601181734 -0300" stop="20260601183000 -0300" channel="532">
-    <title lang="es">Parker Lewis</title>
-  </programme>
-  <programme start="20260601183000 -0300" stop="20260601190000 -0300" channel="532">
+  <programme start="20260601183148 -0300" stop="20260601190000 -0300" channel="532">
     <title lang="es">ALF</title>
   </programme>
   <programme start="20260601190000 -0300" stop="20260601193000 -0300" channel="532">
@@ -29981,10 +29882,13 @@
   <programme start="20260603173000 -0300" stop="20260603180000 -0300" channel="532">
     <title lang="es">Tres por Tres</title>
   </programme>
-  <programme start="20260603180000 -0300" stop="20260603181734 -0300" channel="532">
+  <programme start="20260603180000 -0300" stop="20260603183000 -0300" channel="532">
     <title lang="es">Parker Lewis</title>
   </programme>
-  <programme start="20260601181734 -0300" stop="20260601185713 -0300" channel="536">
+  <programme start="20260603183000 -0300" stop="20260603183148 -0300" channel="532">
+    <title lang="es">ALF</title>
+  </programme>
+  <programme start="20260601183148 -0300" stop="20260601185713 -0300" channel="536">
     <title lang="es">El Juicio Final</title>
   </programme>
   <programme start="20260601185728 -0300" stop="20260601194728 -0300" channel="536">
@@ -30128,10 +30032,13 @@
   <programme start="20260603161800 -0300" stop="20260603171800 -0300" channel="536">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260603171800 -0300" stop="20260603181734 -0300" channel="536">
+  <programme start="20260603171800 -0300" stop="20260603181800 -0300" channel="536">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260601182038 -0300" stop="20260601184219 -0300" channel="537">
+  <programme start="20260603181800 -0300" stop="20260603183148 -0300" channel="536">
+    <title lang="es">Sin información</title>
+  </programme>
+  <programme start="20260601183148 -0300" stop="20260601184219 -0300" channel="537">
     <title lang="es">Angel, La Niña de las Flores</title>
   </programme>
   <programme start="20260601184538 -0300" stop="20260601190732 -0300" channel="537">
@@ -30359,7 +30266,7 @@
   <programme start="20260603164411 -0300" stop="20260603174411 -0300" channel="537">
     <title lang="es">Animotion</title>
   </programme>
-  <programme start="20260603174411 -0300" stop="20260603181734 -0300" channel="537">
+  <programme start="20260603174411 -0300" stop="20260603183148 -0300" channel="537">
     <title lang="es">Animotion</title>
   </programme>
   <programme start="20260601180000 -0300" stop="20260601190000 -0300" channel="538">
@@ -30542,13 +30449,13 @@
   <programme start="20260602175457 -0300" stop="20260602195706 -0300" channel="539">
     <title lang="es">(1991) - Punto De Quiebre</title>
   </programme>
-  <programme start="20260601181734 -0300" stop="20260601191734 -0300" channel="539">
+  <programme start="20260601183148 -0300" stop="20260601193148 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260601191734 -0300" stop="20260601201734 -0300" channel="539">
+  <programme start="20260601193148 -0300" stop="20260601203148 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260601201734 -0300" stop="20260601211222 -0300" channel="539">
+  <programme start="20260601203148 -0300" stop="20260601211222 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
   <programme start="20260602195706 -0300" stop="20260602205706 -0300" channel="539">
@@ -30617,7 +30524,7 @@
   <programme start="20260603165706 -0300" stop="20260603175706 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260603175706 -0300" stop="20260603181734 -0300" channel="539">
+  <programme start="20260603175706 -0300" stop="20260603183148 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
   <programme start="20260601180000 -0300" stop="20260601190000 -0300" channel="567">
@@ -31484,7 +31391,7 @@
   <programme start="20260603170000 -0300" stop="20260603180000 -0300" channel="664">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260601181734 -0300" stop="20260601192400 -0300" channel="633">
+  <programme start="20260601183148 -0300" stop="20260601192400 -0300" channel="633">
     <title lang="es">Kung fusion</title>
   </programme>
   <programme start="20260601192400 -0300" stop="20260601211400 -0300" channel="633">
@@ -31565,7 +31472,7 @@
   <programme start="20260603154800 -0300" stop="20260603172700 -0300" channel="633">
     <title lang="es">Cuidado bebe suelto</title>
   </programme>
-  <programme start="20260603172700 -0300" stop="20260603181734 -0300" channel="633">
+  <programme start="20260603172700 -0300" stop="20260603183148 -0300" channel="633">
     <title lang="es">Hombres de negro</title>
   </programme>
   <programme start="20260601210000 -0300" stop="20260601213000 -0300" channel="6a1610bebdf296985fd95603-6478acb5c83f56da796f166c">
@@ -35106,10 +35013,6 @@
     <title lang="es">The Addams Family</title>
     <desc lang="es">Uncle Fester&#x27;s electrical output fails abruptly. Should they call a doctor or an electrician to bring Fester back? Morticia prescribes a bowl of porcupine mold, and both she an Gomez agree that long exposure to moon rays would be beneficial.</desc>
   </programme>
-  <programme start="20260531223200 -0300" stop="20260531232000 -0300" channel="plex.tv.Deal.Or.No.Deal.plex">
-    <title lang="es">Deal Or No Deal USA</title>
-    <desc lang="es">Contestants get a chance to win money, from one penny to $1 million.</desc>
-  </programme>
   <programme start="20260531232000 -0300" stop="20260601000700 -0300" channel="plex.tv.Deal.Or.No.Deal.plex">
     <title lang="es">Deal Or No Deal USA</title>
     <desc lang="es">Contestants get a chance to win money, from one penny to $1 million.</desc>
@@ -35493,6 +35396,10 @@
   <programme start="20260604053700 -0300" stop="20260604062500 -0300" channel="plex.tv.Deal.Or.No.Deal.plex">
     <title lang="es">Deal Or No Deal USA</title>
     <desc lang="es">NASCAR&#x27;s Jimmie Johnson drops by to meet a player from Rhode Island.</desc>
+  </programme>
+  <programme start="20260604062500 -0300" stop="20260604071300 -0300" channel="plex.tv.Deal.Or.No.Deal.plex">
+    <title lang="es">Deal Or No Deal USA</title>
+    <desc lang="es">The Banker offers a Detroit video-game fan the chance to become a game character.</desc>
   </programme>
   <programme start="20260531231500 -0300" stop="20260601001500 -0300" channel="plex.tv.Family.Feud.plex">
     <title lang="es">Family Feud</title>
@@ -36121,6 +36028,10 @@
   <programme start="20260604043707 -0300" stop="20260604062032 -0300" channel="608049aefa2b8ae93c2c3a63-6684374320f405b792a3b6b3">
     <title lang="es">Matar o Morir</title>
     <desc lang="es">Cuando a Jack, un asesino a sueldo de Londres, se le devuelve la vida y se le da la oportunidad de salvar a su hija, se convierte en una carrera contra el tiempo para matar o ser asesinado.</desc>
+  </programme>
+  <programme start="20260604062032 -0300" stop="20260604075728 -0300" channel="608049aefa2b8ae93c2c3a63-6684374320f405b792a3b6b3">
+    <title lang="es">La Orden Judicial</title>
+    <desc lang="es">Tras luchar en la Guerra Civil, dos compañeros de la Unión se encuentran en lados opuestos poniendo en peligro la paz de posguerra.</desc>
   </programme>
   <programme start="20260601190223 -0300" stop="20260601211352 -0300" channel="608049aefa2b8ae93c2c3a63-66843a1f20f405b792a3b6b5">
     <title lang="es">Asesinos a Sueldo</title>
@@ -40843,10 +40754,6 @@
   <programme start="20260603221800 -0300" stop="20260603232600 -0300" channel="M+.Clásicos.es">
     <title lang="es">Dementia 13</title>
     <desc lang="es">Cuando John Halloran muere de un infarto, su esposa teme no cobrar la herencia. Escribe entonces una carta al resto de la familia anunciando que John ha tenido que viajar a Nueva York por negocios. Cuando se traslada a la casa familiar buscando un modo de quedarse con el dinero, descubre que la familia celebra un morboso ritual.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531233000 -0300" channel="Canal.24.h.es">
-    <title lang="es">Telediario internacional</title>
-    <desc lang="es">Informativo que prioriza las noticias internacionales sobre las nacionales. El Canal 24 Horas asume su edición y realización.</desc>
   </programme>
   <programme start="20260531233000 -0300" stop="20260601000000 -0300" channel="Canal.24.h.es">
     <title lang="es">Secuencias en 24h</title>
