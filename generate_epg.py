@@ -77,7 +77,7 @@ OFFSET_CONFIG = {
     "1412": -1, #ESPN2 (Visor)
     "2413": -1, #ESPN3 (Visor)
     "1418": -1, #ESPN Premium (Visor)
-    "0856" -1, #antena3int (visor)
+    "0856": -1, #antena3int (visor)
     "0927": -1, #Deportv (Visor)    
     "0431": -4, #Dsports (Visor)
     "1841": -7, #Universal Cinema (visor)
