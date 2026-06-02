@@ -2942,10 +2942,6 @@
     <title lang="es">Case Closed</title>
     <desc lang="es">Anime de misterio que sigue a un joven detective atrapado en el cuerpo de un niño que resuelve complejos crimenes usando inteligencia y deduccion.</desc>
   </programme>
-  <programme start="20260601231500 -0300" stop="20260601234500 -0300" channel="cncity">
-    <title lang="es">Las sombrías aventuras de Billy y Mandy</title>
-    <desc lang="es">Dos niños ganan una apuesta a la Muerte y la obligan a ser su mejor amiga para siempre en locas y oscuras aventuras.</desc>
-  </programme>
   <programme start="20260601234500 -0300" stop="20260602000000 -0300" channel="cncity">
     <title lang="es">Duelo Xiaolin</title>
     <desc lang="es">Jóvenes monjes en entrenamiento buscan artefactos mágicos llamados Shen Gong Wu antes de que caigan en manos del mal.</desc>
@@ -4953,10 +4949,6 @@
   <programme start="20260603203000 -0300" stop="20260603210000 -0300" channel="0205">
     <title lang="es">Enlaces- Ventana abierta al mundo digital</title>
     <desc lang="es">Riguroso y entretenido a la vez, presenta temas relevantes del mundo digital con un profundo enfoque periodístico: los desafíos de las redes sociales, la seguridad en Internet o la red como plataforma de agitación política.</desc>
-  </programme>
-  <programme start="20260531233000 -0300" stop="20260531234000 -0300" channel="0206">
-    <title lang="es">Noticias</title>
-    <desc lang="es">Un programa que aborda los hechos más destacados de la agenda de noticias nacional e internacional. Un equipo de periodistas analiza los acontecimientos diarios en Chile y el mundo para que el público se informe de la forma más completa.</desc>
   </programme>
   <programme start="20260531234000 -0300" stop="20260531235400 -0300" channel="0206">
     <title lang="es">Ventana a Europa</title>
@@ -10270,10 +10262,6 @@
     <title lang="es">Visión de futuro</title>
     <desc lang="es">Acompaña al reverendo Omar Cabrera en esta edición en la que presenta algunos mensajes de fe y esperanza inspirados en las enseñanzas bíblicas, para que puedas edificar tu alma a través del encuentro con Cristo.</desc>
   </programme>
-  <programme start="20260531232400 -0300" stop="20260531234800 -0300" channel="0302">
-    <title lang="es">The Pilot&#x27;s Love Song • Vuelo con valentía</title>
-    <desc lang="es">Vuelo con valentía ║ La dura batalla contra el Clan del Cielo sigue en marcha y los estudiantes son requeridos nuevamente para participar en ella. ¿Podrán los estudiantes volver a apostar su vida en el cielo?.</desc>
-  </programme>
   <programme start="20260531234800 -0300" stop="20260601000000 -0300" channel="0302">
     <title lang="es">Corte musical</title>
     <desc lang="es">Un espacio que presenta todo tipo de canciones para bilar y cantar con los artistas favoritos.</desc>
@@ -10865,14 +10853,6 @@
   <programme start="20260603205100 -0300" stop="20260604025100 -0300" channel="0302">
     <title lang="es">ETC TV</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260531232400 -0300" stop="20260531233400 -0300" channel="0308">
-    <title lang="es">Los pequeños Looney Tunes • Taz in Toyland</title>
-    <desc lang="es">Taz in Toyland ║ Cuando Taz sigue rompiendo la mayoría de sus juguetes, Granny le da uno nuevo. Cuando cree que lo rompió, la abuela dice que ese es el trabajo de los juguetes.</desc>
-  </programme>
-  <programme start="20260531233400 -0300" stop="20260531234400 -0300" channel="0308">
-    <title lang="es">Los pequeños Looney Tunes • To Tell the Tooth</title>
-    <desc lang="es">To Tell the Tooth ║ Bugs pierde un diente y Lucas se da cuenta de que no tiene dientes, y se le ocurre un plan para obtener dinero del hada de los dientes.</desc>
   </programme>
   <programme start="20260531234400 -0300" stop="20260531235600 -0300" channel="0308">
     <title lang="es">Los pequeños Looney Tunes • Lightning Bugs Sylvester</title>
@@ -13634,10 +13614,6 @@
     <title lang="es">HispanTV noticias</title>
     <desc lang="es">Noticias actualizadas durante las 24 horas del día. La versión real de lo que ocurre en todo el mundo.</desc>
   </programme>
-  <programme start="20260531225000 -0300" stop="20260531234100 -0300" channel="0707">
-    <title lang="es">Guerreros • Caballero de lucha</title>
-    <desc lang="es">Caballero de lucha ║ La batalla de Agincourt, que se produjo en el año 1415 en el contexto de la guerra de los Cien Años. Este enfrentamiento supuso una gran sorpresa militar, ya que los ingleses derrotaron a los franceses y se anexionaron media Francia.</desc>
-  </programme>
   <programme start="20260531234100 -0300" stop="20260601004100 -0300" channel="0707">
     <title lang="es">Guerreros • Venganza Espartana</title>
     <desc lang="es">Venganza Espartana ║ Tácticas brillantes y disciplina en el campo de batalla ayudan a los espartanos encabezan la victoria griega sobre los persas en la Batalla de Platea en 479 A.C., vengando la derrota de los 300 espartanos en las Termópilas.</desc>
@@ -13993,10 +13969,6 @@
   <programme start="20260603201800 -0300" stop="20260603211000 -0300" channel="0707">
     <title lang="es">Inventos de la antigüedad • Mega Fortalezas</title>
     <desc lang="es">Mega Fortalezas ║ Investigar la historia de las fortalezas más inexpugnables; el castillo que ayudó a crear Gran Bretaña.</desc>
-  </programme>
-  <programme start="20260531230000 -0300" stop="20260531235000 -0300" channel="0808">
-    <title lang="es">El Chapo</title>
-    <desc lang="es">Historia de Joaquín Guzmán, conocido como &#x27;El Chapo&#x27;, uno de los criminales más infames del mundo. La serie relata sus inicios en 1985 cuando era un miembro de bajo nivel del Cartel de Guadalajara hasta su ascenso al poder y su última caída.</desc>
   </programme>
   <programme start="20260531235000 -0300" stop="20260601004000 -0300" channel="0808">
     <title lang="es">El Chapo</title>
@@ -16530,10 +16502,6 @@
     <title lang="es">The Craft</title>
     <desc lang="es">Una joven problemática, interesada en la magia negra, llega a una nueva escuela. Lentamente se unirá a tres chicas con sus mismas inquietudes, y juntas se adentrarán en los misterios de la magia para así conseguir todo lo que ellas quieren.</desc>
   </programme>
-  <programme start="20260531232500 -0300" stop="20260531235000 -0300" channel="0812">
-    <title lang="es">Las reglas del amor • El que arregla todo</title>
-    <desc lang="es">El que arregla todo ║ Jeff intenta resolver un problema que Audrey tiene con un vecino, pero él termina empeorándolo.</desc>
-  </programme>
   <programme start="20260531235000 -0300" stop="20260601001000 -0300" channel="0812">
     <title lang="es">South Park • Jakovasaurs</title>
     <desc lang="es">Jakovasaurs ║ Al acampar en el bosque, Cartman descubre una criatura en extinción, que resulta ser muy molesta y malvada, pero él acaba queriéndola.</desc>
@@ -17257,10 +17225,6 @@
   <programme start="20260603205000 -0300" stop="20260603211000 -0300" channel="0812">
     <title lang="es">Un hombre, un plan • Amor de primavera</title>
     <desc lang="es">Amor de primavera ║ Adam intenta que su hermano no se sienta herido cuando un cliente afirma que no desea que Don asista a una reunión importante. Mientras tanto, Andi le concede a la señora Rodríguez todo lo que quiere para que Emma sea elegida mejor profesora.</desc>
-  </programme>
-  <programme start="20260531224000 -0300" stop="20260531233200 -0300" channel="1604">
-    <title lang="es">Gabby Petito: un crimen viral • El asesinato Gabby Petito</title>
-    <desc lang="es">El asesinato Gabby Petito ║ La aspirante a influencer Gabby Petito emprende un viaje por carretera a través del país con su prometido, pero pronto desaparece y el misterio se vuelve viral. Nuevas imágenes muestran sus peleas, las cuales llevaron al resultado de esta pesadilla.</desc>
   </programme>
   <programme start="20260531233200 -0300" stop="20260601002600 -0300" channel="1604">
     <title lang="es">Detrás del engaño: Ted Bundy</title>
@@ -20378,10 +20342,6 @@
     <title lang="es">Half Man</title>
     <desc lang="es">Rubén, un supuesto hermano con el que Niall no se habla, aparece en su boda, lo que desata una explosión de violencia en la que se rememoran sus vidas, desde los años ochenta hasta la actualidad.</desc>
   </programme>
-  <programme start="20260531224800 -0300" stop="20260531233900 -0300" channel="2701">
-    <title lang="es">Desolado con Ed Stafford • Río Orinoco</title>
-    <desc lang="es">Río Orinoco ║ Rodeado por devastadores incendios forestales, Ed Stafford lucha por sobrevivir en la árida sabana y las densas selvas a lo largo del río Orinoco.</desc>
-  </programme>
   <programme start="20260531233900 -0300" stop="20260601003200 -0300" channel="2701">
     <title lang="es">Desolado con Ed Stafford • Montaña ChangBai</title>
     <desc lang="es">Montaña ChangBai ║ Atrapado en casi dos metros de polvo, Ed Stafford tiene que descubrir cómo sobrevivir el tiempo suficiente para salir de la cima de la montaña ChangBai de China. Luego debe encontrar agua y comida en este árido paisaje nevado.</desc>
@@ -22481,10 +22441,6 @@
   <programme start="20260603200500 -0300" stop="20260603220000 -0300" channel="0622">
     <title lang="es">Gerri • Como la nieve en el sur</title>
     <desc lang="es">Como la nieve en el sur ║ Gregorio Esposito, conocido como Gerri, es un inspector de origen romaní que resuelve casos en Apulia. Gerri ejerce un gran encanto sobre las mujeres, pero también es un hombre inquieto con un pasado doloroso que aún debe superar.</desc>
-  </programme>
-  <programme start="20260531232800 -0300" stop="20260531234300 -0300" channel="0850">
-    <title lang="es">Smiling Friends • Shmaloogles</title>
-    <desc lang="es">Shmaloogles ║ Pim, Charlie y Flint descubren un nuevo reino lleno de personajes extravagantes. Sin embargo, algo sucede y Pim ahora tiene su propia aventura.</desc>
   </programme>
   <programme start="20260531234300 -0300" stop="20260601000800 -0300" channel="0850">
     <title lang="es">Genndy Tartakovsky&#x27;s Primal • Echoes of Eternity</title>
@@ -25674,10 +25630,6 @@
     <title lang="es">Little Nicky: El hijo del diablo</title>
     <desc lang="es">El hijo bondadoso del diablo debe detener a sus dos hermanos malvados antes de que extiendan el infierno a la Tierra.</desc>
   </programme>
-  <programme start="20260531225500 -0300" stop="20260531235000 -0300" channel="0605">
-    <title lang="es">Los juegos del hambre: el gran desafío del oso de Alaska • Bienvenido a la tundra</title>
-    <desc lang="es">Bienvenido a la tundra ║ Despierta después de hibernar con 7 osos al iniciar la Etapa 1 de la competencia. Lucha contra lobos con la nueva mamá BoldFace, mira a Stomper pelear por poder y el amor de Blondie, aléjate mientras el veterano Bernie enfrenta al novato Casanova.</desc>
-  </programme>
   <programme start="20260531235000 -0300" stop="20260601004500 -0300" channel="0605">
     <title lang="es">Los juegos del hambre: el gran desafío del oso de Alaska • Salmón impactante</title>
     <desc lang="es">Salmón impactante ║ Únete a la competencia para aprovechar la carrera de salmón de julio con los ganadores de la Etapa 1 y nuevos reclutas. Acompaña a Big Boi a buscar comida, da la bienvenida a QuadMom y RedBack al festín, mira si BoldFace mantiene a salvo a su cría.</desc>
@@ -28758,10 +28710,6 @@
     <title lang="es">Amistoso internacional • Croacia vs Bélgica</title>
     <desc lang="es">Croacia vs Bélgica ║ Disfruta de los mejores partidos amistosos internacionales.</desc>
   </programme>
-  <programme start="20260531230000 -0300" stop="20260531235000 -0300" channel="0619">
-    <title lang="es">Into the Badlands • Entrada al Phoenix</title>
-    <desc lang="es">Entrada al Phoenix ║ Sunny regresa a Badlands en busca de una cura para su hijo Henry. En tanto, la Viuda y Chua libran una sangrienta guerra civil, mientras emerge una nueva amenaza.</desc>
-  </programme>
   <programme start="20260531235000 -0300" stop="20260601004000 -0300" channel="0619">
     <title lang="es">Into the Badlands • La luna sube, el cuervo sale</title>
     <desc lang="es">La luna sube, el cuervo sale ║ Sunny y Bajie le piden ayuda a Lydia. En tanto, la Viuda trata de controlar a M.K. Pilgrim busca establecer un orden nuevo en los Badlands.</desc>
@@ -29390,7 +29338,7 @@
     <title lang="es">Ciudad Magazine</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601190000 -0300" channel="531">
+  <programme start="20260601185102 -0300" stop="20260601190000 -0300" channel="531">
     <title lang="es">Marmalade Boy</title>
   </programme>
   <programme start="20260601190000 -0300" stop="20260601200000 -0300" channel="531">
@@ -29630,10 +29578,10 @@
   <programme start="20260603173000 -0300" stop="20260603180000 -0300" channel="531">
     <title lang="es">Mikami, la cazafantasmas</title>
   </programme>
-  <programme start="20260603180000 -0300" stop="20260603183148 -0300" channel="531">
+  <programme start="20260603180000 -0300" stop="20260603185102 -0300" channel="531">
     <title lang="es">Marmalade Boy</title>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601190000 -0300" channel="532">
+  <programme start="20260601185102 -0300" stop="20260601190000 -0300" channel="532">
     <title lang="es">ALF</title>
   </programme>
   <programme start="20260601190000 -0300" stop="20260601193000 -0300" channel="532">
@@ -29885,10 +29833,10 @@
   <programme start="20260603180000 -0300" stop="20260603183000 -0300" channel="532">
     <title lang="es">Parker Lewis</title>
   </programme>
-  <programme start="20260603183000 -0300" stop="20260603183148 -0300" channel="532">
+  <programme start="20260603183000 -0300" stop="20260603185102 -0300" channel="532">
     <title lang="es">ALF</title>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601185713 -0300" channel="536">
+  <programme start="20260601185102 -0300" stop="20260601185713 -0300" channel="536">
     <title lang="es">El Juicio Final</title>
   </programme>
   <programme start="20260601185728 -0300" stop="20260601194728 -0300" channel="536">
@@ -30035,13 +29983,10 @@
   <programme start="20260603171800 -0300" stop="20260603181800 -0300" channel="536">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260603181800 -0300" stop="20260603183148 -0300" channel="536">
+  <programme start="20260603181800 -0300" stop="20260603185102 -0300" channel="536">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601184219 -0300" channel="537">
-    <title lang="es">Angel, La Niña de las Flores</title>
-  </programme>
-  <programme start="20260601184538 -0300" stop="20260601190732 -0300" channel="537">
+  <programme start="20260601185102 -0300" stop="20260601190732 -0300" channel="537">
     <title lang="es">Denver, El Último Dinosaurio</title>
   </programme>
   <programme start="20260601190732 -0300" stop="20260601192927 -0300" channel="537">
@@ -30266,7 +30211,10 @@
   <programme start="20260603164411 -0300" stop="20260603174411 -0300" channel="537">
     <title lang="es">Animotion</title>
   </programme>
-  <programme start="20260603174411 -0300" stop="20260603183148 -0300" channel="537">
+  <programme start="20260603174411 -0300" stop="20260603184411 -0300" channel="537">
+    <title lang="es">Animotion</title>
+  </programme>
+  <programme start="20260603184411 -0300" stop="20260603185102 -0300" channel="537">
     <title lang="es">Animotion</title>
   </programme>
   <programme start="20260601180000 -0300" stop="20260601190000 -0300" channel="538">
@@ -30449,13 +30397,13 @@
   <programme start="20260602175457 -0300" stop="20260602195706 -0300" channel="539">
     <title lang="es">(1991) - Punto De Quiebre</title>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601193148 -0300" channel="539">
+  <programme start="20260601185102 -0300" stop="20260601195102 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260601193148 -0300" stop="20260601203148 -0300" channel="539">
+  <programme start="20260601195102 -0300" stop="20260601205102 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260601203148 -0300" stop="20260601211222 -0300" channel="539">
+  <programme start="20260601205102 -0300" stop="20260601211222 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
   <programme start="20260602195706 -0300" stop="20260602205706 -0300" channel="539">
@@ -30524,7 +30472,7 @@
   <programme start="20260603165706 -0300" stop="20260603175706 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
-  <programme start="20260603175706 -0300" stop="20260603183148 -0300" channel="539">
+  <programme start="20260603175706 -0300" stop="20260603185102 -0300" channel="539">
     <title lang="es">Rewind</title>
   </programme>
   <programme start="20260601180000 -0300" stop="20260601190000 -0300" channel="567">
@@ -31391,7 +31339,7 @@
   <programme start="20260603170000 -0300" stop="20260603180000 -0300" channel="664">
     <title lang="es">Sin información</title>
   </programme>
-  <programme start="20260601183148 -0300" stop="20260601192400 -0300" channel="633">
+  <programme start="20260601185102 -0300" stop="20260601192400 -0300" channel="633">
     <title lang="es">Kung fusion</title>
   </programme>
   <programme start="20260601192400 -0300" stop="20260601211400 -0300" channel="633">
@@ -31472,7 +31420,7 @@
   <programme start="20260603154800 -0300" stop="20260603172700 -0300" channel="633">
     <title lang="es">Cuidado bebe suelto</title>
   </programme>
-  <programme start="20260603172700 -0300" stop="20260603183148 -0300" channel="633">
+  <programme start="20260603172700 -0300" stop="20260603185102 -0300" channel="633">
     <title lang="es">Hombres de negro</title>
   </programme>
   <programme start="20260601210000 -0300" stop="20260601213000 -0300" channel="6a1610bebdf296985fd95603-6478acb5c83f56da796f166c">
@@ -36161,6 +36109,10 @@
     <title lang="es">Programa AND</title>
     <desc lang="es">Cuando un humilde cartero es incluido en un programa de ADN sobrehumano ultrasecreto en un centro de investigación, se revela que podrá recibir, controlar y enviar información basada en los sentidos de los demás.</desc>
   </programme>
+  <programme start="20260604064418 -0300" stop="20260604084002 -0300" channel="608049aefa2b8ae93c2c3a63-66843a1f20f405b792a3b6b5">
+    <title lang="es">O Ritual</title>
+    <desc lang="es">Um estudante de antropologia leva alguns colegas de classe ao rancho de sua família, onde seu irmão perturbado vive em meio de drogas e rituais de indígenas Chumash.</desc>
+  </programme>
   <programme start="20260601201046 -0300" stop="20260601223127 -0300" channel="608049aefa2b8ae93c2c3a63-6685abbe59703916799193a7">
     <title lang="es">ENCUENTRO CON LA VIDA</title>
     <desc lang="es">Cuando está a punto de terminar la universidad, Saliya comienza a sufrir los efectos de una grave enfermedad genética y pierde el 95% de la visión.</desc>
@@ -36769,6 +36721,10 @@
     <title lang="es">Charlie&#x27;s Angels</title>
     <desc lang="es">El exmafioso Jake Garfield sale de prisión y busca vengarse del hombre que cree que lo incriminó, Lawrence Renaldi. Cuando encuentran a Renaldi muerto, los Ángeles descubren estupefactas quién es el asesino.</desc>
   </programme>
+  <programme start="20260604064421 -0300" stop="20260604074201 -0300" channel="643054b1fc3be59477853717-692235265cbe620c1f9b6bc7">
+    <title lang="es">Charlie&#x27;s Angels</title>
+    <desc lang="es">Charlie convoca a los Ángeles a una reunión, pero en realidad es una fiesta de aniversario que celebra los tres años que llevan juntas. Evocan casos y disfraces del pasado, y proponen un brindis por el futuro.</desc>
+  </programme>
   <programme start="20260601205440 -0300" stop="20260601212457 -0300" channel="643054b1fc3be59477853717-692234015028288613484a8a">
     <title lang="es">I Dream Of Jeannie (Colorized)</title>
     <desc lang="es">Jeannie descubre que se debilita su poder y fuerza para hacer magia</desc>
@@ -37228,6 +37184,10 @@
   <programme start="20260604060144 -0300" stop="20260604063215 -0300" channel="643054b1fc3be59477853717-692234015028288613484a8a">
     <title lang="es">Bewitched</title>
     <desc lang="es">Para una canción, Serena envía a Boyce y Hart fuera de este mundo y Darrin se queda sin trabajo.</desc>
+  </programme>
+  <programme start="20260604063215 -0300" stop="20260604070215 -0300" channel="643054b1fc3be59477853717-692234015028288613484a8a">
+    <title lang="es">Bewitched</title>
+    <desc lang="es">Irving Bates está absolutamente seguro de que solo se es joven una vez.</desc>
   </programme>
   <programme start="20260601192516 -0300" stop="20260601212220 -0300" channel="643054b1fc3be59477853717-6922322350fe592fd6d5b7e6">
     <title lang="es">Predestination</title>
@@ -38241,6 +38201,10 @@
     <title lang="es">The Goldbergs</title>
     <desc lang="es">Adam pierde sus posesiones más preciadas mientras Erica sueña con aparecer en un programa de televisión local.</desc>
   </programme>
+  <programme start="20260604064010 -0300" stop="20260604070615 -0300" channel="643054b1fc3be59477853717-6922338150fe592fd6d5b7e8">
+    <title lang="es">The Goldbergs</title>
+    <desc lang="es">Adam y Beverly deciden que Erica debe hacer un vídeo musical para acompañar su solicitud a Juilliard, pero el producto final no sale como se esperaba. Mientras tanto, Murray refuerza su amistad con el padre de Lainey.</desc>
+  </programme>
   <programme start="20260601210000 -0300" stop="20260601231322 -0300" channel="643054b1fc3be59477853717-6683fcdf702b9db9f8177252">
     <title lang="es">Valkiria</title>
     <desc lang="es">En plena Segunda Guerra Mundial, un grupo de altos mandos alemanes desarrollan un plan para asesinar a Adolf Hitler, y aprovechar el poder de los mandos militares para acabar con la guerra.</desc>
@@ -38829,6 +38793,10 @@
     <title lang="es">El Lector de Huesos</title>
     <desc lang="es">El 22 de septiembre de 2013 el cuerpo de asunta serna de 12 años fue encontrado en una pista forestal de un municipio de la coruña.</desc>
   </programme>
+  <programme start="20260604064502 -0300" stop="20260604073739 -0300" channel="643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79">
+    <title lang="es">Wives With Knives (español)</title>
+    <desc lang="es">Terri Pearson es una mujer transgénero que se ve obligada a sobrevivir en las calles.</desc>
+  </programme>
   <programme start="20260601200711 -0300" stop="20260601220004 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
     <title lang="es">Bélgica vs Inglaterra | Partido por el tercer puesto | Copa Mundial de la FIFA Rusia 2018™ | Partido Completo</title>
     <desc lang="es">Vídeo del partido completo entre Bélgica y Inglaterra jugado en el Estadio de San Petersburgo, San Petersburgo el sábado, 14 de julio de 2018 a las 17:00 (hora local).</desc>
@@ -39016,6 +38984,10 @@
   <programme start="20260604050027 -0300" stop="20260604064802 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
     <title lang="es">EE. UU. vs Suiza | Grupo A | Copa Mundial de la FIFA Estados Unidos 1994™ | Partido Completo</title>
     <desc lang="es">Vídeo del partido completo entre EE. UU. y Suiza jugado en el Pontiac Silverdome, Detroit el sábado, 18 de junio de 1994 a las 11:30 (hora local).</desc>
+  </programme>
+  <programme start="20260604064802 -0300" stop="20260604071325 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
+    <title lang="es">Todos los penales de la Copa Mundial de la FIFA Francia 1998™</title>
+    <desc lang="es">Revive la emoción de los partidos que terminaron en penales.</desc>
   </programme>
   <programme start="20260601210000 -0300" stop="20260601220000 -0300" channel="643054b1fc3be59477853717-66ea174c9502c5778b828d47">
     <title lang="es">Cine Western</title>
@@ -40575,10 +40547,6 @@
     <title lang="es">Gangs of New York</title>
     <desc lang="es">A mediados del siglo XIX, Nueva York recibe oleadas de inmigrantes europeos que se asientan en el Barrio de Five Points. La corrupción y la lucha entre bandas de diferentes nacionalidades abre una feroz sangría.</desc>
   </programme>
-  <programme start="20260531204600 -0300" stop="20260531233200 -0300" channel="M+.Clásicos.es">
-    <title lang="es">El bueno, el feo y el malo</title>
-    <desc lang="es">Durante la Guerra Civil americana, la noticia de que una fortuna ha sido robada y escondida en el Lejano Oeste llega a oídos de dos pistoleros. Uno de ellos es un vaquero solitario y taciturno llamado Joe; el otro, un bandido mexicano de nombre Tuco; y, por si eran pocos, se les une un cazarrecompensas sin escrúpulos apodado Sentencia. Los tres personajes, enemigos entre sí, intentan localizar el cuantioso tesoro escondido en la tumba de un cementerio que ninguno de los tres truhanes puede localizar sin la ayuda de los otros dos. Uno sabe en qué cementerio; el otro en qué tumba y el tercero pretende averiguarlo siguiéndolos. De esta forma, los tres hombres colaboran en apariencia, pero está bien claro que al final intentarán eliminarse mutuamente. Las traiciones estarán a la orden del día.</desc>
-  </programme>
   <programme start="20260531233200 -0300" stop="20260601011400 -0300" channel="M+.Clásicos.es">
     <title lang="es">Dos superdos</title>
     <desc lang="es">Greg Wonder y Elliot Vance no tienen nada en común. Uno es introvertido, acaba de salir de la cárcel y toca el saxo en un pequeño local de &#x27;jazz&#x27;. El otro es un aventurero que emprende cualquier trabajo con el mayor de los entusiasmos. Los dos viven muy lejos uno del otro, pero a los dos les ofrecen un trabajo secreto y muy bien pagado que deben realizar juntos: suplantar la identidad de dos hombres muy influyentes que, por razones de seguridad, necesitan ser sustituidos por unos días. Son los primos Antonio y Bastiano Coimbra, de Rio de Janeiro, que poseen desde ranchos a bancos y que, en una semana, van a firmar un importante contrato que sus rivales intentarán evitar a toda costa.</desc>
@@ -41703,10 +41671,6 @@
     <title lang="es">Blood Money</title>
     <desc lang="es">Un cártel de droga colombiano se alía con un grupo de Triads de Hong Kong y con el sicario más atactivo del planeta para enviar dos toneladas de cocaína a Australia y a China.</desc>
   </programme>
-  <programme start="20260531215004 -0300" stop="20260531233225 -0300" channel="ES:.Thrillers.-.Rakuten.TV.be">
-    <title lang="es">Ríos de sangre</title>
-    <desc lang="es">Cuando el hijo de un juez es asesinado por dos policías y el sistema les deja libres, un detective veterano descubre unos archivos incriminatorios. El detective y el juez aunarán fuerzas con otro padre afligido para conseguir justicia.</desc>
-  </programme>
   <programme start="20260531233226 -0300" stop="20260601011505 -0300" channel="ES:.Thrillers.-.Rakuten.TV.be">
     <title lang="es">Juntos hasta la muerte</title>
     <desc lang="es">Una joven estudiante de Derecho sufre un intento de asesinato por parte de un perturbado que asegura que la conoce de otra vida anterior en la que ella le mató. El asesino no cesará hasta acabar con la vida de la chica.</desc>
@@ -41942,10 +41906,6 @@
   <programme start="20260603210001 -0300" stop="20260604010000 -0300" channel="ES:.Stingray:.Remember.the.80’s.be">
     <title lang="es">Stingray Remember the &#x27;80s</title>
     <desc lang="es">Relive the decade of perms and shoulder pads! The unmistakable synth pop sound of artists such as Michael Jackson, George Michael, and Whitney Houston is bound to remind you of all your greatest &#x27;80s memories.</desc>
-  </programme>
-  <programme start="20260531214947 -0300" stop="20260531234803 -0300" channel="ES:.Pelis.Top.-.Rakuten.TV.be">
-    <title lang="es">Rainfall: Fuego cruzado</title>
-    <desc lang="es">Un asesino a sueldo se verá obligado a proteger a la hija de su víctima que es perseguida por unos Agentes de la CIA.</desc>
   </programme>
   <programme start="20260531234804 -0300" stop="20260601015046 -0300" channel="ES:.Pelis.Top.-.Rakuten.TV.be">
     <title lang="es">La isla de Bergman</title>
