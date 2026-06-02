@@ -43,7 +43,6 @@ OFFSET_CONFIG = {
     "0302": -4, # Etc(visor)
     "0308": -1, # Tooncast(visor)
     "0812": -4, # Comedy central(visor) 4horas 
-    "Cinemax HD.cl": -1, # Cinemax (crazy epg)
     "0821": -1, # Golden(visor)
     "0822": -4, # Golden plus(visor)
     "0823": -1, # Golden edge(visor)
@@ -67,10 +66,6 @@ OFFSET_CONFIG = {
     "0859": -4, # Mórbido(visor)
     "0807": -4, # TCM latam(visor)
     "1625": -4, #EWTN (visor)
-    "MeTV (KCSG) St. George, UT HD.us": -1, # Metv(crazy epg)
-    "Silver Screen Classics HD.us": +1, #silver screen classics (crazy epg)
-    "MeTV+.us": -3, # metv plus (crazy epg)
-    "Heroes And Icons.us": -2, # h&i(crazy epg)
     "1409": -1, #TYC (Visor)
     "1436 ": -1, #FOXSPOPRTS (Visor)    
     "1411": -4, #ESPN (Visor)
