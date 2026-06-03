@@ -93,6 +93,7 @@ OFFSET_CONFIG = {
     "0623": -4, #enlace tbn
     "0217": -4, #fox news us
     "0932": -4, #c5n
+    "0619": -3 #amc series
     
    # "aztv.ar": -2, # AZTV (sheet) 
 }
@@ -142,7 +143,7 @@ EXTERNAL_SOURCES = [
    # },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
-        "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO"]
+        "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO", "ES300029LP", "ES3000288I"]
     },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/us.xml.gz",
@@ -157,8 +158,8 @@ EXTERNAL_SOURCES = [
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/us.xml.gz",
         "ids": ["6a1610bebdf296985fd95603-6478acb5c83f56da796f166c", "6a1610bebdf296985fd95603-6571f43a1d2aae780d597196", "6a1610bebdf296985fd95603-5fc70600dd53a6002d8f93ca",
                 "6a1610bebdf296985fd95603-646fab0e43d6d6838db81a6a", "6a1610bebdf296985fd95603-68fafc6e558214386ab7ca3a", "6a1610bebdf296985fd95603-688006e7015fe7e375a1a0ac",
-                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-6876fa82e50e77c59c8940c2"
-                "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-5f5132e362fe160040f26c15"
+                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-6876f76054325376973fd314",
+                "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-5f5132e362fe160040f26c15",
                 "6a1610bebdf296985fd95603-5ef4e1b40d9ad000423c442a", "6a1610bebdf296985fd95603-63dea56a2a2abb171ff6dadf", "6a1610bebdf296985fd95603-62d1efa6c33948ea4ceedbcf", 
                 "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-5eea605674085f0040ddc7a6", "6a1610bebdf296985fd95603-689fb7110a486aeba3c7917c"]
     },
@@ -196,7 +197,7 @@ EXTERNAL_SOURCES = [
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
         "ids": ["ES:.That`s.80s.be", "ES:.That`s.90s00s.be", "ES:.That`s.ROCK.be", "ES:.Sci-Fi.-.Rakuten.TV.be", "ES:.Películas.de.Acción.-.Rakuten.TV.be", 
-                "ES:.Thrillers.-.Rakuten.TV.be", "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be", "ES:.AnimeVisión.be", "ES:.AnimeVisión.Classics.be"]
+                "ES:.Thrillers.-.Rakuten.TV.be", "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be"]
     }
 ]
 
