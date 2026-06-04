@@ -197,6 +197,10 @@ EXTERNAL_SOURCES = [
         "url": "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
         "ids": ["ES:.That`s.80s.be", "ES:.That`s.90s00s.be", "ES:.That`s.ROCK.be", "ES:.Sci-Fi.-.Rakuten.TV.be", "ES:.Películas.de.Acción.-.Rakuten.TV.be", 
                 "ES:.Thrillers.-.Rakuten.TV.be", "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be"]
+    },
+    {
+        "url": "https://helmerluzo.github.io/RakutenTV_HL/epg/RakutenTV.xml.gz",
+        "ids": ["top-movies-rakuten-tv", "grjngo-es", "that-s-90s00s", "that-s-rock"]
     }
 ]
 
