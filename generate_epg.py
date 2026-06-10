@@ -13,86 +13,86 @@ import xml.etree.ElementTree as ET
 OFFSET_CONFIG = {
     "464956": -8,  # Screenpix (epg.pw)
     "464775": -8,  # Screenpix Action (epg.pw)
-    "0605": +1, #love nature (visor)
-    "1604": +2, #ID (visor)
-    "0629": -1, #canal luz (visor)
-    "0222": -1, # A24(visor)
-    "0915": -4, # El trece(visor)
-    "0934": -4, # Crónica(visor)
-    "0917": -4, # Canal 26(visor)
-    "0904": -1, # Ln+(visor)
-    "0935": -1, # América TV(visor)
-    "0916": -4, # Canal 9(visor)
-    "0905": -4, # TN(visor)
-    "0932": -4, # C5N(visor)
-    "0210": -4, # CNN esp(visor)
-    "0215": -4, # CNN(visor)
-    "0205": -4, # Dw(visor)
-    "0636": -6, #TVE(visor)
-    "0643": -1, # Hispantv(visor)
-    "0533": -4, # Allegro(visor)
-    "0920": -4, # Encuentro(visor)
-    "0707": -4, # History 2(visor)
-    "1610": -4, # El gourmet(visor)
-    "0704": -4, # Discovery theater(visor)
-    "0703": -4, # Discovery science(visor)
-    "2701": -1, # Discovery chanel(visor)
-    "0705": -3, # Animal Planet (visor)
-    "0850": -4, # Adult swim(visor)
-    "0318": -4, # Bitme(visor)
-    "0302": -4, # Etc(visor)
-    "0308": -1, # Tooncast(visor)
-    "0812": -4, # Comedy central(visor) 4horas 
-    "0821": -1, # Golden(visor)
-    "0822": -4, # Golden plus(visor)
-    "0823": -1, # Golden edge(visor)
-    "0824": -4, # Golden premier(visor)
-    "1824": -4, # Golden premier 2 (visor)
-    "0621": -4, #EuroChannel (visor)
-    "1813": -4, # HBO(visor)
-    "2813": -4, # HBO oeste(visor)
-    "0815": -4, # HBO +(visor)
-    "1814": -4, # HBO 2(visor)
-    "0820": -4, # HBO Xtreme(visor)
-    "0818": -4, # HBO mundo(visor)
-    "1806": -1, # Sony(visor)
-    "1810": -4, # Sony movies(visor)
-    "1832": -5, # Warner(visor)
-    "0838": -4, # Multi premier(visor)
-    "0839": -4, # Multi cinema(visor)
-    "0851": -4, # Film & arts(visor)
-    "0622": -4, # Europa Europa(visor)
-    "0855": -4, # Pánico(visor)
-    "0859": -4, # Mórbido(visor)
-    "0807": -4, # TCM latam(visor)
-    "1625": -4, #EWTN (visor)
-    "1409": -1, #TYC (Visor)
-    "1436 ": -1, #FOXSPOPRTS (Visor)    
-    "1411": -4, #ESPN (Visor)
+ #   "0605": +1, #love nature (visor)
+  #  "1604": +2, #ID (visor)
+  #  "0629": -1, #canal luz (visor)
+  #  "0222": -1, # A24(visor)
+   # "0915": -4, # El trece(visor)
+ #   "0934": -4, # Crónica(visor)
+  #  "0917": -4, # Canal 26(visor)
+  #  "0904": -1, # Ln+(visor)
+ #   "0935": -1, # América TV(visor)
+  #  "0916": -4, # Canal 9(visor)
+ #   "0905": -4, # TN(visor)
+#    "0932": -4, # C5N(visor)
+#    "0210": -4, # CNN esp(visor)
+#    "0215": -4, # CNN(visor)
+#    "0205": -4, # Dw(visor)
+ #   "0636": -6, #TVE(visor)
+#    "0643": -1, # Hispantv(visor)
+#    "0533": -4, # Allegro(visor)
+#    "0920": -4, # Encuentro(visor)
+#    "0707": -4, # History 2(visor)
+#    "1610": -4, # El gourmet(visor)
+#    "0704": -4, # Discovery theater(visor)
+#    "0703": -4, # Discovery science(visor)
+#    "2701": -1, # Discovery chanel(visor)
+#    "0705": -3, # Animal Planet (visor)
+ #   "0850": -4, # Adult swim(visor)
+#    "0318": -4, # Bitme(visor)
+ #   "0302": -4, # Etc(visor)
+#    "0308": -1, # Tooncast(visor)
+#    "0812": -4, # Comedy central(visor) 4horas 
+#    "0821": -1, # Golden(visor)
+#    "0822": -4, # Golden plus(visor)
+#    "0823": -1, # Golden edge(visor)
+  #  "0824": -4, # Golden premier(visor)
+ #   "1824": -4, # Golden premier 2 (visor)
+#    "0621": -4, #EuroChannel (visor)
+#    "1813": -4, # HBO(visor)
+ #   "2813": -4, # HBO oeste(visor)
+ #   "0815": -4, # HBO +(visor)
+ #   "1814": -4, # HBO 2(visor)
+ #   "0820": -4, # HBO Xtreme(visor)
+ #   "0818": -4, # HBO mundo(visor)
+#    "1806": -1, # Sony(visor)
+#    "1810": -4, # Sony movies(visor)
+#    "1832": -5, # Warner(visor)
+  #  "0838": -4, # Multi premier(visor)
+#    "0839": -4, # Multi cinema(visor)
+#    "0851": -4, # Film & arts(visor)
+#    "0622": -4, # Europa Europa(visor)
+ #   "0855": -4, # Pánico(visor)
+#    "0859": -4, # Mórbido(visor)
+ #   "0807": -4, # TCM latam(visor)
+#    "1625": -4, #EWTN (visor)
+ #   "1409": -1, #TYC (Visor)
+ #   "1436 ": -1, #FOXSPOPRTS (Visor)    
+  #  "1411": -4, #ESPN (Visor)
     "1412": -1, #ESPN2 (Visor)
-    "2413": -1, #ESPN3 (Visor)
-    "1418": -1, #ESPN Premium (Visor)
-    "0856": -1, #antena3int (visor)
-    "0927": -1, #Deportv (Visor)    
-    "0431": -4, #Dsports (Visor)
-    "1841": -7, #Universal Cinema (visor)
-    "0844": -1, #universal premiere (visor)
-    "0845": -1, #universal comedy (visor)
-    "1412": -1, #ESPN 2 arg
-    "1411": -4, #espn arg
-    "2413": -1, #espn 3 arg
-    "1418": -1, #espn premium
-    "0416": -4, #espn 6 arg
-    "1836": -7, #amc
-    "0802": -4, #dhe
-    "0829": +2, #space
-    "3801": -4, #star channel
-    "0811": -4, #fx
-    "0840": -4, #cinemax
-    "0623": -4, #enlace tbn
-    "0217": -4, #fox news us
-    "0932": -4, #c5n
-    "0619": -3 #amc series
+ #   "2413": -1, #ESPN3 (Visor)
+ #   "1418": -1, #ESPN Premium (Visor)
+ #   "0856": -1, #antena3int (visor)
+  #  "0927": -1, #Deportv (Visor)    
+ #   "0431": -4, #Dsports (Visor)
+#    "1841": -7, #Universal Cinema (visor)
+ #   "0844": -1, #universal premiere (visor)
+  #  "0845": -1, #universal comedy (visor)
+ #   "1412": -1, #ESPN 2 arg
+#    "1411": -4, #espn arg
+ #   "2413": -1, #espn 3 arg
+#    "1418": -1, #espn premium
+#    "0416": -4, #espn 6 arg
+#    "1836": -7, #amc
+#    "0802": -4, #dhe
+#    "0829": +2, #space
+ #   "3801": -4, #star channel
+ #   "0811": -4, #fx
+ #   "0840": -4, #cinemax
+ #   "0623": -4, #enlace tbn
+ #   "0217": -4, #fox news us
+#    "0932": -4, #c5n
+  #  "0619": -3 #amc series
     
    # "aztv.ar": -2, # AZTV (sheet) 
 }
@@ -126,7 +126,7 @@ EXTERNAL_SOURCES = [
                 "0636", "0643", "0707", "0808", "0821", "0822", "0823", "0824", "0838", "0839", "0842", "0851", "0855", "0859", "0812", "1604", "0621", "1412", "0802",
                 "0903", "0904", "0905", "0909", "0915", "0916", "0917", "0920", "0927", "0934", "0935", "1806", "1810", "1814", "2701", "1832", "1411", "2413", "1836",
                 "2813", "XXX8", "0818", "0820", "0815", "1813", "0622", "0850", "0807", "1409", "1610", "0704", "0703", "1841", "1418", "0414", "0415", "0416", "0417", 
-                "0605", "1436", "0401", "0429", "1824", "0845", "0844", "0805", "0625", "0619", "0846", "3801", "0811", "2834", "0840", "0623", "0706", "0702",
+                "0605", "1436", "0401", "0429", "1824", "0845", "0844", "0805", "0625", "0619", "0846", "3801", "0811", "2834", "0840", "0623", "0706", "0702", "0430",
                 "0217", "0932"]
     },
     {
@@ -142,12 +142,13 @@ EXTERNAL_SOURCES = [
    # },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
-        "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO", "ES300029LP", "ES3000288I"]
+        "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO", "ES300029LP", "ES3000288I", "ES260000968", "ESAJ3800001KT", "ES2600004BD", "ES4100002WB", "ES500004NO"
+               ]
     },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/us.xml.gz",
         "ids": ["USBD3500008IJ","USBD35000149S", "USBD35000180U", "US2600019IC","USBD1200009JI", "US2200001IY", "US5000053YV", "USAJ3504502A", "US1900002QK", "US1800014CG", "USBD12000255B",
-               "USAK3508705A", "US700012OU", "USBA3800004EL"]
+               "USAK3508705A", "US700012OU", "USBA3800004EL", "USBD3500013DG"]
     },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz",
