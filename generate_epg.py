@@ -93,7 +93,17 @@ OFFSET_CONFIG = {
  #   "0217": -4, #fox news us
 #    "0932": -4, #c5n
   #  "0619": -3 #amc series
-    
+    "ES:.Pelis.Top.-.Rakuten.TV.be": 2,
+    "ES:.Grjngo.be": 4,
+    "ES:.Sci-Fi.-.Rakuten.TV.be": 2,
+    "ES:.That`s.90s00s.be": 3,
+    "ES:.Películas.de.Acción.-.Rakuten.TV.be": 2,
+    "ES:.Thrillers.-.Rakuten.TV.be": 2,
+    "ES:.Cine.Western.be": 2,
+    "ES:.FIFA+.be": 2,
+    "ES:.Mr..Bean.-.Live.Action.be": 2,
+    "ES:.Stingray.Naturescape.be": 2,
+    "ES:.The.Pet.Collective.be": 2,
    # "aztv.ar": -2, # AZTV (sheet) 
 }
 
@@ -133,13 +143,13 @@ EXTERNAL_SOURCES = [
         "url": "https://epg.programadorx.cl/mdiaz/gratis.xml",
         "ids": ["531", "532", "536", "537", "538", "539", "567", "568", "569", "581", "663", "664", "633"]
     },
-   # {
-   #     "url": "https://i.mjh.nz/PlutoTV/mx.xml",
-   #     "ids": ["66a11a21a79dea0008aa90ca", "5de5758e1a30dc00094fcd6c", "63a084934734f30007457b2c", "6894fc3f66f164e402f4fd14", "6894febddbd49c964f3b66c8", "5dcde17bf6591d0009839e02", "6870072ca9d5c45c3e9466f1", 
-   #             "645952687cb4b100084ed52e","6824cda00101510f9eeaa011", "6254598f5083f800076d8563", "609ae5cd48d3200007b0a98e","65df731cec9fda0008b7aa8d", "65df7272ec9fda0008b7a970", "65df73520d4561000817c29b",
-   #             "65df72db18036500081a8292", "5dcde1317578340009b751d0", "65662f8a2c46f300088a84cc","6479ff1c17f5e10008ad2797", "655f62ff954b020008c91ec6", "5de802659167b10009e7deba","5ff608e60e2996000768c366", 
-   #             "5f2817d3d7573a00080f9175","5dcde437229eff00091b6c30", "5e972a21ad709d00074195ba", "5dcb62e63d4d8f0009f36881","5ddc4e8bcbb9010009b4e84f", "5dcddf1ed95e740009fef7ab","66997d18a1b69e00082ee85f"]
-   # },
+    {
+        "url": "https://i.mjh.nz/PlutoTV/mx.xml",
+        "ids": ["66a11a21a79dea0008aa90ca", "5de5758e1a30dc00094fcd6c", "63a084934734f30007457b2c", "6894fc3f66f164e402f4fd14", "6894febddbd49c964f3b66c8", "5dcde17bf6591d0009839e02", "6870072ca9d5c45c3e9466f1", 
+                "645952687cb4b100084ed52e","6824cda00101510f9eeaa011", "6254598f5083f800076d8563", "609ae5cd48d3200007b0a98e","65df731cec9fda0008b7aa8d", "65df7272ec9fda0008b7a970", "65df73520d4561000817c29b",
+                "65df72db18036500081a8292", "5dcde1317578340009b751d0", "65662f8a2c46f300088a84cc","6479ff1c17f5e10008ad2797", "655f62ff954b020008c91ec6", "5de802659167b10009e7deba","5ff608e60e2996000768c366", 
+                "5f2817d3d7573a00080f9175","5dcde437229eff00091b6c30", "5e972a21ad709d00074195ba", "5dcb62e63d4d8f0009f36881","5ddc4e8bcbb9010009b4e84f", "5dcddf1ed95e740009fef7ab","66997d18a1b69e00082ee85f"]
+    },
     {
         "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
         "ids": ["ES3400004SS", "ESBC1700004PX", "ESBC2700003T8", "ESBC40000248", "ESBC2700002LO", "ES300029LP", "ES3000288I", "ES260000968", "ESAJ3800001KT", "ES2600004BD", "ES4100002WB", "ES500004NO"
@@ -158,10 +168,11 @@ EXTERNAL_SOURCES = [
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/Plex/us.xml.gz",
         "ids": ["6a1610bebdf296985fd95603-6478acb5c83f56da796f166c", "6a1610bebdf296985fd95603-6571f43a1d2aae780d597196", "6a1610bebdf296985fd95603-5fc70600dd53a6002d8f93ca",
                 "6a1610bebdf296985fd95603-646fab0e43d6d6838db81a6a", "6a1610bebdf296985fd95603-68fafc6e558214386ab7ca3a", "6a1610bebdf296985fd95603-688006e7015fe7e375a1a0ac",
-                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-6876f76054325376973fd314",
+                "6a1610bebdf296985fd95603-6889430a3b7708975e7c07e3", "6a1610bebdf296985fd95603-6876f76054325376973fd314", "6a1610bebdf296985fd95603-5eea71d65252710041e0ccbc",
                 "6a1610bebdf296985fd95603-64b710b44612b1f48e9ad31a", "6a1610bebdf296985fd95603-5eea605574085f0040ddc791", "6a1610bebdf296985fd95603-5f5132e362fe160040f26c15",
                 "6a1610bebdf296985fd95603-5ef4e1b40d9ad000423c442a", "6a1610bebdf296985fd95603-63dea56a2a2abb171ff6dadf", "6a1610bebdf296985fd95603-62d1efa6c33948ea4ceedbcf", 
-                "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-5eea605674085f0040ddc7a6", "6a1610bebdf296985fd95603-689fb7110a486aeba3c7917c"]
+                "6a1610bebdf296985fd95603-66a2e7fe94b6a49cb5054d7b", "6a1610bebdf296985fd95603-5eea605674085f0040ddc7a6", "6a1610bebdf296985fd95603-689fb7110a486aeba3c7917c",
+               "6a1610bebdf296985fd95603-62d7f68fb19cbf65dc7bef7d"]
     },
      {
          "url": "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
@@ -174,13 +185,13 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/refs/heads/master/Plex/es.xml",
-        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66841b30702b9db9f18177258",
-               "643054b1fc3be59477853717-692235265cbe620c1f9b6bc7","643054b1fc3be59477853717-692234015028288613484a8a","643054b1fc3be59477853717-6922322350fe592fd6d5b7e6",
-                "643054b1fc3be59477853717-66840253cd6f1d394094114f","643054b1fc3be59477853717-6490e17c18a55242eea95991","643054b1fc3be59477853717-668420c2cd6f1d3940941157",
-               "643054b1fc3be59477853717-6922338150fe592fd6d5b7e8", "643054b1fc3be59477853717-6683fcdf702b9db9f8177252", 
-               "643054b1fc3be59477853717-64d79408e5f67b0fab47ff24", "643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79", "643054b1fc3be59477853717-65e9d0ad8fe4ef7053c3c872",
-               "643054b1fc3be59477853717-6662984e346b86608532dbdf", "643054b1fc3be59477853717-66ea174c9502c5778b828d47", "643054b1fc3be59477853717-69a1fe1b0f8d297b3f6ac0f0",
-               "643054b1fc3be59477853717-62fbf36c1567211fdb82e920", "643054b1fc3be59477853717-5f170d61b898490041b49369"]
+        "ids": ["643054b1fc3be59477853717-66840a26cd6f1d3940941155", "643054b1fc3be59477853717-66841b30702b9db9f18177258", 
+                "643054b1fc3be59477853717-692235265cbe620c1f9b6bc7", "643054b1fc3be59477853717-692234015028288613484a8a", "643054b1fc3be59477853717-6922322350fe592fd6d5b7e6",
+                "643054b1fc3be59477853717-66840253cd6f1d394094114f", "643054b1fc3be59477853717-6490e17c18a55242eea95991", "643054b1fc3be59477853717-668420c2cd6f1d3940941157",
+                "643054b1fc3be59477853717-6922338150fe592fd6d5b7e8", "643054b1fc3be59477853717-6683fcdf702b9db9f8177252", "643054b1fc3be59477853717-60089d97f682a3002c34829d",  
+                "643054b1fc3be59477853717-64d79408e5f67b0fab47ff24", "643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79", "643054b1fc3be59477853717-65e9d0ad8fe4ef7053c3c872",
+                "643054b1fc3be59477853717-6662984e346b86608532dbdf", "643054b1fc3be59477853717-66ea174c9502c5778b828d47", "643054b1fc3be59477853717-69a1fe1b0f8d297b3f6ac0f0",
+                "643054b1fc3be59477853717-62fbf36c1567211fdb82e920", "643054b1fc3be59477853717-5f170d61b898490041b49369"]
     }, 
     {
         "url": "https://raw.githubusercontent.com/luisms123/tdt/refs/heads/master/guiacanales.xml",
@@ -196,13 +207,16 @@ EXTERNAL_SOURCES = [
     },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_RAKUTEN1.xml.gz",
-        "ids": ["ES:.That`s.80s.be", "ES:.That`s.90s00s.be", "ES:.That`s.ROCK.be", "ES:.Sci-Fi.-.Rakuten.TV.be", "ES:.Películas.de.Acción.-.Rakuten.TV.be", 
-                "ES:.Thrillers.-.Rakuten.TV.be", "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be"]
-    },
-    {
-        "url": "https://helmerluzo.github.io/RakutenTV_HL/epg/RakutenTV.xml.gz",
-        "ids": ["top-movies-rakuten-tv", "grjngo-es", "that-s-90s00s", "that-s-rock"]
+        "ids": ["ES:.That`s.80s.be", "ES:.That`s.90s00s.be", "ES:.That`s.ROCK.be", "ES:.Sci-Fi.-.Rakuten.TV.be", "ES:.Películas.de.Acción.-.Rakuten.TV.be", "ES:.FIFA+.be", 
+                "ES:.Thrillers.-.Rakuten.TV.be", "ES:.Stingray:.Remember.the.80’s.be", "ES:.Pelis.Top.-.Rakuten.TV.be", "ES:.Grjngo.be", "ES:.Cine.Western.be",
+                "ES:.Mr..Bean.-.Live.Action.be", "ES:.Stingray.Naturescape.be", "ES:.The.Pet.Collective.be"]
     }
+  # ,
+    
+  #  {
+  #      "url": "https://helmerluzo.github.io/RakutenTV_HL/epg/RakutenTV.xml.gz",
+  #      "ids": ["top-movies-rakuten-tv", "grjngo-es", "that-s-90s00s", "that-s-rock"]
+  #  }
 ]
 
 TIMEZONE = "America/Argentina/Buenos_Aires"
