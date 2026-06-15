@@ -11,8 +11,8 @@ import xml.etree.ElementTree as ET
 
 # Ajuste horario manual para canales específicos (Horas a sumar o restar)
 OFFSET_CONFIG = {
-    "464956": -8,  # Screenpix (epg.pw)
-    "464775": -8,  # Screenpix Action (epg.pw)
+ #   "464956": -8,  # Screenpix (epg.pw)
+ #   "464775": -8,  # Screenpix Action (epg.pw)
  #   "0605": +1, #love nature (visor)
   #  "1604": +2, #ID (visor)
   #  "0629": -1, #canal luz (visor)
@@ -197,10 +197,10 @@ EXTERNAL_SOURCES = [
         "url": "https://raw.githubusercontent.com/luisms123/tdt/refs/heads/master/guiacanales.xml",
         "ids": ["Magic Kids Tv", "Ani Retro", "El Chavo", "Cine Sony"]
     },
-    {
-        "url": "https://epg.pw/xmltv/epg_US.xml.gz",
-        "ids": ["464956", "464775"]
-    },
+ #   {
+ #       "url": "https://epg.pw/xmltv/epg_US.xml.gz",
+ #       "ids": ["464956", "464775"]
+ #   },
     {
         "url": "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz",
         "ids": ["TCM.es", "M+.Clásicos.es", "Canal.24.h.es"]
