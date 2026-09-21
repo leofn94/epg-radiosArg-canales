@@ -10,6 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scrapper
+
     steps:
       - name: Checkout del código
         uses: actions/checkout@v3
@@ -29,20 +33,19 @@ jobs:
       - name: Ejecutar script de CN City
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: python update_cncity.py
+        run: python cncity.py
 
-      - name: Procesar matriz remota de USA para BLAST
+      - name: Ejecutar script de retroblast
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: python update_usa_schedule.py
+        run: python retroblast.py
 
       - name: Ejecutar script de Janimotion
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: python update_janimotion.py
+        run: python janimotion.py
 
       - name: Ejecutar script de Doble C
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: python update_doblec.py
-        
+        run: python doblec.py
