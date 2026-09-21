@@ -1,0 +1,48 @@
+name: Scrapper EPG
+
+on:
+  schedule:
+    # Se ejecuta automáticamente cada 3 horas (minuto 0)
+    - cron: '0 */3 * * *'
+  # Mantiene la opción de ejecutarlo manualmente cuando quieras
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright beautifulsoup4 gspread google-auth pandas openpyxl
+          playwright install chromium
+          playwright install-deps
+
+      - name: Ejecutar script de CN City
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python update_cncity.py
+
+      - name: Procesar matriz remota de USA para BLAST
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python update_usa_schedule.py
+
+      - name: Ejecutar script de Janimotion
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python update_janimotion.py
+
+      - name: Ejecutar script de Doble C
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python update_doblec.py
+        
