@@ -45,8 +45,8 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-def ajustar_hora(hora_str, horas_a_sumar=2):
-    """Suma 2 horas a un formato HH:MM."""
+def ajustar_hora(hora_str, horas_a_sumar=-1):
+    """Ajusta la hora sumando o restando horas (formato HH:MM)."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -77,7 +77,6 @@ progs_weekdays = []
 progs_weekend = []
 modo_actual = "Weekdays"
 
-# Buscar todos los elementos relevantes del HTML (encabezados e ítems de programación)
 elementos = soup.find_all(['h1', 'h2', 'h3', 'h4', 'div', 'li', 'tr', 'p'])
 
 for elem in elementos:
@@ -88,16 +87,15 @@ for elem in elementos:
         modo_actual = "Weekend"
         continue
     
-    # Extraer horas dentro del texto
     matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto)
     if matches_hora:
         hora_raw = matches_hora[0]
         if len(hora_raw) == 4:
             hora_raw = "0" + hora_raw
             
-        hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
+        # Retrasar 1 hora los horarios (-1)
+        hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=-1)
         
-        # Eliminar la hora para quedarnos solo con el nombre del programa
         texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
         nombre_prog = limpiar_texto_programa(texto_prog)
         
@@ -111,7 +109,7 @@ for elem in elementos:
                 if not progs_weekend or progs_weekend[-1]["inicio"] != hora_ajustada:
                     progs_weekend.append(item)
 
-# 3. Armar las filas finales para Google Sheets
+# 3. Armar las filas finales
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
 # Cargar Weekdays
@@ -129,4 +127,4 @@ for i in range(len(progs_weekend)):
 # 4. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se cargaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend en la pestaña MITV.")
+print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con -1 hora de desfasaje.")
