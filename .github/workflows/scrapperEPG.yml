@@ -1,4 +1,4 @@
-name: Scrapper EPG
+name: Scrapper web
 
 on:
   schedule:
