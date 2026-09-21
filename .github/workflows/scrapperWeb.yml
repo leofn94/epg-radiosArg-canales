@@ -49,3 +49,13 @@ jobs:
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: python doblec.py
+        
+      - name: Ejecutar script de MITV_Clasica
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python MITV_Clasica.py
+
+
+
+
+        
