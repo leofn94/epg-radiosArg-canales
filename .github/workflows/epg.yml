@@ -1,4 +1,4 @@
-name: Generar EPG semanal
+name: Generar EPG
 
 on:
   schedule:
