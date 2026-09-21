@@ -46,7 +46,7 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
 def ajustar_hora(hora_str, horas_a_sumar=2):
-    """Suma 2 horas a la hora ingresada (formato HH:MM)."""
+    """Suma X horas a un formato HH:MM."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -60,7 +60,10 @@ def limpiar_texto_programa(texto):
     texto = re.sub(r'Fin\s+de\s+Semana|S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
     texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
     texto = re.sub(r'(Agendar|Google Calendar|Descargar|\.ics|18\+|13\+|TODOS)', '', texto, flags=re.I)
-    texto = re.sub(r'^\s*[\cdot\•\-\:]+\s*', '', texto)  # Quita puntos o guiones al inicio (ej: "• 101 Dalmatas")
+    
+    # CORREGIDO: uso directo de caracteres de viñeta sin \c
+    texto = re.sub(r'^\s*[·•\-\:]+\s*', '', texto)
+    
     texto = re.sub(r'\s+', ' ', texto).strip()
     return texto.title()
 
@@ -80,8 +83,7 @@ def extraer_programas_de_texto(bloque_texto):
             hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
             nombre_prog = limpiar_texto_programa(match.group(2))
             
-            if nombre_prog and len(nombre_prog) > 1:
-                # Evitar duplicados consecutivos de la misma hora
+            if nombre_prog and len(nombre_prog) > 1 and len(nombre_prog) < 80:
                 if not programas or programas[-1]["inicio"] != hora_ajustada:
                     programas.append({"inicio": hora_ajustada, "programa": nombre_prog})
                     
@@ -96,27 +98,26 @@ headers = {
 response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content, "html.parser")
 
-# Obtener todo el texto manteniendo saltos de línea para facilitar el parseo
 texto_completo = soup.get_text("\n")
 
-# Separar el texto en los dos bloques principales
 bloque_weekdays = ""
 bloque_weekend = ""
 
-# Buscar división por encabezados en el texto
 match_weekdays = re.search(r'Lunes\s+a\s+Viernes(.*?)(Fin\s+de\s+Semana|S[áa]bado|$)', texto_completo, re.DOTALL | re.I)
 match_weekend = re.search(r'(Fin\s+de\s+Semana|S[áa]bados?\s+y\s+Domingos?)(.*)', texto_completo, re.DOTALL | re.I)
 
 if match_weekdays:
     bloque_weekdays = match_weekdays.group(1)
+else:
+    bloque_weekdays = texto_completo
+
 if match_weekend:
     bloque_weekend = match_weekend.group(2)
 
-# Extraer programas de cada bloque por separado
 progs_weekdays = extraer_programas_de_texto(bloque_weekdays)
 progs_weekend = extraer_programas_de_texto(bloque_weekend)
 
-# 3. Armar las filas finales para el EPG
+# 3. Armar las filas finales
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
 # Cargar Weekdays
@@ -131,7 +132,7 @@ for i in range(len(progs_weekend)):
     fin = progs_weekend[i+1]["inicio"] if i < len(progs_weekend) - 1 else progs_weekend[0]["inicio"]
     filas_epg.append(["Weekend", p_curr["inicio"], fin, p_curr["programa"], ""])
 
-# 4. Volcado limpio a Google Sheets
+# 4. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
 print(f"¡Éxito! Se cargaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend en la pestaña MITV.")
