@@ -3,6 +3,7 @@ import json
 import re
 import time
 import requests
+import urllib.parse
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 import gspread
@@ -45,8 +46,48 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
+# Cache local durante la ejecución para evitar buscar el mismo programa múltiples veces
+CACHE_SINOPSIS = {}
+
+def buscar_sinopsis_dinamica(nombre_programa):
+    """Busca dinámicamente la sinopsis del programa vía TVMaze/Wikipedia si cambia la grilla."""
+    nombre_clean = re.sub(r'\(.*?\)', '', nombre_programa).strip()
+    
+    # 1. Verificar si ya fue buscado en esta corrida
+    if nombre_clean in CACHE_SINOPSIS:
+        return CACHE_SINOPSIS[nombre_clean]
+
+    # 2. Intentar buscar en la API pública de TVMaze
+    try:
+        query = urllib.parse.quote(nombre_clean)
+        url_api = f"https://api.tvmaze.com/singlesearch/shows?q={query}"
+        res = requests.get(url_api, timeout=3)
+        if res.status_code == 200:
+            data = res.json()
+            if data and "summary" in data and data["summary"]:
+                # Limpiar etiquetas HTML de la respuesta (<p>, <b>, etc.)
+                summary_text = re.sub(r'<[^>]+>', '', data["summary"]).strip()
+                if len(summary_text) > 20:
+                    CACHE_SINOPSIS[nombre_clean] = summary_text
+                    return summary_text
+    except Exception:
+        pass
+
+    # 3. Respuesta fallback dinámica según tipo de programa
+    if re.search(r'Cine|Pelicula|Film', nombre_clean, re.I):
+        sinopsis = f"Espacio cinematográfico dedicado a la emisión de producciones de {nombre_clean}."
+    elif re.search(r'Documental|Documentales', nombre_clean, re.I):
+        sinopsis = "Programa documental enfocado en cultura, historia, naturaleza y temas de interés general."
+    elif re.search(r'Caricaturas|Animada|Dibujos', nombre_clean, re.I):
+        sinopsis = "Bloque de entretenimiento animado destinado a todo público."
+    else:
+        sinopsis = f"Emisión regular del programa {nombre_clean}."
+        
+    CACHE_SINOPSIS[nombre_clean] = sinopsis
+    return sinopsis
+
 def ajustar_hora(hora_str, horas_a_sumar=2):
-    """Suma 2 horas a un formato HH:MM (ejemplo 01:00 -> 03:00)."""
+    """Suma 2 horas a un formato HH:MM."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -82,7 +123,6 @@ elementos = soup.find_all(['h1', 'h2', 'h3', 'h4', 'div', 'li', 'tr', 'p'])
 for elem in elementos:
     texto = elem.get_text(" ", strip=True)
     
-    # Detectar el cambio de bloque si la línea es un título
     if re.search(r'(Fin\s+de\s+Semana|S[áa]bado|Domingo)', texto, re.I) and len(texto) < 40:
         modo_actual = "Weekend"
         continue
@@ -93,14 +133,20 @@ for elem in elementos:
         if len(hora_raw) == 4:
             hora_raw = "0" + hora_raw
             
-        # Sumar 2 horas para llevar 01:00 -> 03:00
         hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
         
         texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
         nombre_prog = limpiar_texto_programa(texto_prog)
         
         if nombre_prog and len(nombre_prog) > 1 and len(nombre_prog) < 80:
-            item = {"inicio": hora_ajustada, "programa": nombre_prog}
+            # Obtener o consultar la sinopsis en vivo
+            sinopsis = buscar_sinopsis_dinamica(nombre_prog)
+            
+            item = {
+                "inicio": hora_ajustada, 
+                "programa": nombre_prog,
+                "descripcion": sinopsis
+            }
             
             if modo_actual == "Weekdays":
                 if not progs_weekdays or progs_weekdays[-1]["inicio"] != hora_ajustada:
@@ -112,19 +158,17 @@ for elem in elementos:
 # 3. Armar las filas finales
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
-# Cargar Weekdays
 for i in range(len(progs_weekdays)):
     p_curr = progs_weekdays[i]
     fin = progs_weekdays[i+1]["inicio"] if i < len(progs_weekdays) - 1 else progs_weekdays[0]["inicio"]
-    filas_epg.append(["Weekdays", p_curr["inicio"], fin, p_curr["programa"], ""])
+    filas_epg.append(["Weekdays", p_curr["inicio"], fin, p_curr["programa"], p_curr["descripcion"]])
 
-# Cargar Weekend
 for i in range(len(progs_weekend)):
     p_curr = progs_weekend[i]
     fin = progs_weekend[i+1]["inicio"] if i < len(progs_weekend) - 1 else progs_weekend[0]["inicio"]
-    filas_epg.append(["Weekend", p_curr["inicio"], fin, p_curr["programa"], ""])
+    filas_epg.append(["Weekend", p_curr["inicio"], fin, p_curr["programa"], p_curr["descripcion"]])
 
 # 4. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend")
+print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con sinopsis dinámicas.")
