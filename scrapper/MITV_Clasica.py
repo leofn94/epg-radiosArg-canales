@@ -46,7 +46,7 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
 def ajustar_hora(hora_str, horas_a_sumar=2):
-    """Suma X horas a un formato HH:MM."""
+    """Suma 2 horas a la hora ingresada (formato HH:MM)."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -55,20 +55,39 @@ def ajustar_hora(hora_str, horas_a_sumar=2):
         return hora_str
 
 def limpiar_texto_programa(texto):
-    """Limpia encabezados basuras, duraciones y aplica Title Case."""
-    # Eliminar títulos de sección colados en el texto
+    """Limpia la basura y aplica Title Case."""
     texto = re.sub(r'Lunes\s+[aA]\s+Viernes', '', texto, flags=re.I)
-    texto = re.sub(r'S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
-    texto = re.sub(r'Programaci[óo]n\s+Regular', '', texto, flags=re.I)
-    
-    # Eliminar marcas de duración y botones
+    texto = re.sub(r'Fin\s+de\s+Semana|S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
     texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
     texto = re.sub(r'(Agendar|Google Calendar|Descargar|\.ics|18\+|13\+|TODOS)', '', texto, flags=re.I)
-    
-    # Normalizar espacios
+    texto = re.sub(r'^\s*[\cdot\•\-\:]+\s*', '', texto)  # Quita puntos o guiones al inicio (ej: "• 101 Dalmatas")
     texto = re.sub(r'\s+', ' ', texto).strip()
     return texto.title()
 
+def extraer_programas_de_texto(bloque_texto):
+    """Parsea un bloque de texto buscando patrones de HORA PROGRAMA."""
+    lineas = bloque_texto.split('\n')
+    programas = []
+    
+    for linea in lineas:
+        linea = linea.strip()
+        match = re.search(r'(\b\d{1,2}:\d{2}\b)\s*(.*)', linea)
+        if match:
+            hora_raw = match.group(1)
+            if len(hora_raw) == 4:
+                hora_raw = "0" + hora_raw
+                
+            hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
+            nombre_prog = limpiar_texto_programa(match.group(2))
+            
+            if nombre_prog and len(nombre_prog) > 1:
+                # Evitar duplicados consecutivos de la misma hora
+                if not programas or programas[-1]["inicio"] != hora_ajustada:
+                    programas.append({"inicio": hora_ajustada, "programa": nombre_prog})
+                    
+    return programas
+
+# 2. Descarga del sitio web
 url = "https://www.mi-television.com/programacion.php"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -77,46 +96,42 @@ headers = {
 response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content, "html.parser")
 
-elementos = soup.find_all(["li", "tr", "div"], class_=re.compile(r'program|broadcast|item|row', re.I))
-if not elementos:
-    elementos = soup.find_all(["li", "tr", "div"])
+# Obtener todo el texto manteniendo saltos de línea para facilitar el parseo
+texto_completo = soup.get_text("\n")
 
-items_raw = []
-for elem in elementos:
-    texto = elem.get_text(" ", strip=True)
-    matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto)
-    if matches_hora:
-        hora_ini_original = matches_hora[0]
-        if len(hora_ini_original) == 4:
-            hora_ini_original = "0" + hora_ini_original
-            
-        # Sumar 2 horas para corregir el desfase
-        hora_ini = ajustar_hora(hora_ini_original, horas_a_sumar=2)
-            
-        texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
-        prog_formateado = limpiar_texto_programa(texto_prog)
-        
-        # Filtro estricto para ignorar bloques con listas concatenadas basuras
-        if prog_formateado and len(prog_formateado) > 1 and len(prog_formateado) < 80:
-            if not items_raw or items_raw[-1]["inicio"] != hora_ini:
-                items_raw.append({"inicio": hora_ini, "programa": prog_formateado})
+# Separar el texto en los dos bloques principales
+bloque_weekdays = ""
+bloque_weekend = ""
 
-# Construir lista de filas final cargando Weekdays y Weekend
+# Buscar división por encabezados en el texto
+match_weekdays = re.search(r'Lunes\s+a\s+Viernes(.*?)(Fin\s+de\s+Semana|S[áa]bado|$)', texto_completo, re.DOTALL | re.I)
+match_weekend = re.search(r'(Fin\s+de\s+Semana|S[áa]bados?\s+y\s+Domingos?)(.*)', texto_completo, re.DOTALL | re.I)
+
+if match_weekdays:
+    bloque_weekdays = match_weekdays.group(1)
+if match_weekend:
+    bloque_weekend = match_weekend.group(2)
+
+# Extraer programas de cada bloque por separado
+progs_weekdays = extraer_programas_de_texto(bloque_weekdays)
+progs_weekend = extraer_programas_de_texto(bloque_weekend)
+
+# 3. Armar las filas finales para el EPG
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
-# 1. Cargar bloque de Lunes a Viernes como "Weekdays"
-for i in range(len(items_raw)):
-    p_curr = items_raw[i]
-    fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+# Cargar Weekdays
+for i in range(len(progs_weekdays)):
+    p_curr = progs_weekdays[i]
+    fin = progs_weekdays[i+1]["inicio"] if i < len(progs_weekdays) - 1 else progs_weekdays[0]["inicio"]
     filas_epg.append(["Weekdays", p_curr["inicio"], fin, p_curr["programa"], ""])
 
-# 2. Cargar bloque de Fin de semana como "Weekend"
-for i in range(len(items_raw)):
-    p_curr = items_raw[i]
-    fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+# Cargar Weekend
+for i in range(len(progs_weekend)):
+    p_curr = progs_weekend[i]
+    fin = progs_weekend[i+1]["inicio"] if i < len(progs_weekend) - 1 else progs_weekend[0]["inicio"]
     filas_epg.append(["Weekend", p_curr["inicio"], fin, p_curr["programa"], ""])
 
-# Volcado a Google Sheets
+# 4. Volcado limpio a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros correctamente en la pestaña MITV con etiquetas Weekdays/Weekend.")
+print(f"¡Éxito! Se cargaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend en la pestaña MITV.")
