@@ -3,6 +3,7 @@ import json
 import re
 import time
 import requests
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 import gspread
 from google.oauth2.service_account import Credentials
@@ -44,10 +45,27 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-def formatear_titulo(texto):
-    """Limpia el texto y aplica formato Capitalizado (Title Case)."""
+def ajustar_hora(hora_str, horas_a_sumar=2):
+    """Suma X horas a un formato HH:MM."""
+    try:
+        dt = datetime.strptime(hora_str, "%H:%M")
+        dt_ajustada = dt + timedelta(hours=horas_a_sumar)
+        return dt_ajustada.strftime("%H:%M")
+    except ValueError:
+        return hora_str
+
+def limpiar_texto_programa(texto):
+    """Limpia encabezados basuras, duraciones y aplica Title Case."""
+    # Eliminar títulos de sección colados en el texto
+    texto = re.sub(r'Lunes\s+[aA]\s+Viernes', '', texto, flags=re.I)
+    texto = re.sub(r'S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
+    texto = re.sub(r'Programaci[óo]n\s+Regular', '', texto, flags=re.I)
+    
+    # Eliminar marcas de duración y botones
     texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
     texto = re.sub(r'(Agendar|Google Calendar|Descargar|\.ics|18\+|13\+|TODOS)', '', texto, flags=re.I)
+    
+    # Normalizar espacios
     texto = re.sub(r'\s+', ' ', texto).strip()
     return texto.title()
 
@@ -59,19 +77,6 @@ headers = {
 response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content, "html.parser")
 
-# Agrupamiento de días
-WEEKDAYS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
-WEEKEND = ["Sábado", "Domingo"]
-
-# Buscar bloques/secciones completas en la página
-secciones = soup.find_all(["div", "section", "article"])
-
-programas_por_bloque = {
-    "weekdays": [],
-    "weekend": []
-}
-
-# Extraer ítems de programación
 elementos = soup.find_all(["li", "tr", "div"], class_=re.compile(r'program|broadcast|item|row', re.I))
 if not elementos:
     elementos = soup.find_all(["li", "tr", "div"])
@@ -81,35 +86,37 @@ for elem in elementos:
     texto = elem.get_text(" ", strip=True)
     matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto)
     if matches_hora:
-        hora_ini = matches_hora[0]
-        if len(hora_ini) == 4:
-            hora_ini = "0" + hora_ini
+        hora_ini_original = matches_hora[0]
+        if len(hora_ini_original) == 4:
+            hora_ini_original = "0" + hora_ini_original
+            
+        # Sumar 2 horas para corregir el desfase
+        hora_ini = ajustar_hora(hora_ini_original, horas_a_sumar=2)
             
         texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
-        prog_formateado = formatear_titulo(texto_prog)
+        prog_formateado = limpiar_texto_programa(texto_prog)
         
-        if prog_formateado and len(prog_formateado) > 1:
+        # Filtro estricto para ignorar bloques con listas concatenadas basuras
+        if prog_formateado and len(prog_formateado) > 1 and len(prog_formateado) < 80:
             if not items_raw or items_raw[-1]["inicio"] != hora_ini:
                 items_raw.append({"inicio": hora_ini, "programa": prog_formateado})
 
-# Construir lista de filas final para el EPG
+# Construir lista de filas final cargando Weekdays y Weekend
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
-# Mapear la grilla extraída a los días de la semana (Lunes a Viernes)
-for dia in WEEKDAYS:
-    for i in range(len(items_raw)):
-        p_curr = items_raw[i]
-        fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
-        filas_epg.append([dia, p_curr["inicio"], fin, p_curr["programa"], ""])
+# 1. Cargar bloque de Lunes a Viernes como "Weekdays"
+for i in range(len(items_raw)):
+    p_curr = items_raw[i]
+    fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+    filas_epg.append(["Weekdays", p_curr["inicio"], fin, p_curr["programa"], ""])
 
-# Mapear la grilla a los días del fin de semana (Sábado y Domingo)
-for dia in WEEKEND:
-    for i in range(len(items_raw)):
-        p_curr = items_raw[i]
-        fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
-        filas_epg.append([dia, p_curr["inicio"], fin, p_curr["programa"], ""])
+# 2. Cargar bloque de Fin de semana como "Weekend"
+for i in range(len(items_raw)):
+    p_curr = items_raw[i]
+    fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+    filas_epg.append(["Weekend", p_curr["inicio"], fin, p_curr["programa"], ""])
 
 # Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros correctamente en la pestaña MITV.")
+print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros correctamente en la pestaña MITV con etiquetas Weekdays/Weekend.")
