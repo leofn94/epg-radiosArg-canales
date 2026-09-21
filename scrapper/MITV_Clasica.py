@@ -46,43 +46,84 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-# Cache local durante la ejecución para evitar buscar el mismo programa múltiples veces
+# Base de respaldo en español para programas o bloques especiales
+SINOPSIS_ESPANOL = {
+    "El Septimo Cielo": "Serie dramática familiar que sigue la vida del reverendo Eric Camden, su esposa Annie y sus siete hijos enfrentando los dilemas cotidianos de la vida.",
+    "El Hombre Del Maletin": "Serie clásica de espionaje y suspenso que sigue las peligrosas misiones y misterios de un intrépido agente secreto.",
+    "101 Dalmatas": "Serie animada que sigue las divertidas peripecias de los cachorros dálmatas en la granja mientras escapan de las ocurrencias de Cruella de Vil.",
+    "Area 12": "Serie policíaca y de acción que retrata el trabajo diario de una patrulla urbana resolviendo crímenes e incidentes en las calles.",
+    "La Mujer Bionica": "Jaime Sommers utiliza sus implantes cibernéticos de alta tecnología para cumplir arriesgadas misiones secretas para el gobierno.",
+    "Chico Listo": "Comedia de situaciones sobre TJ Henderson, un niño prodigio de 10 años que es transferido a la escuela secundaria con compañeros mayores.",
+    "El Show De Los Muppets": "El emblemático programa de variedades y comedia presentado por Kermit la Rana, Miss Piggy y un elenco inolvidable de marionetas.",
+    "La Casa De La Pradera": "Las emotivas vivencias de la familia Ingalls en un pequeño pueblo del oeste estadounidense a finales del siglo XIX.",
+    "El Senor De Las Bestias": "Serie de fantasía y aventuras sobre Dar, un guerrero capaz de comunicarse telepáticamente con los animales para proteger a los inocentes.",
+    "Perdidos En El Espacio": "Las aventuras de la familia Robinson intentando sobrevivir tras quedar varados en los confines del espacio exterior.",
+    "La Novicia Rebelde": "Una joven e independiente postulante a monja se convierte en la instructora de los siete hijos del estricto capitán Von Trapp.",
+    "Odisea Burbujas": "Las divertidas aventuras educativas del Profesor Memelovsky y sus asistentes protegiendo al medio ambiente del ecoloco.",
+    "Mi Bella Genio": "Un astronauta encuentra una botella mágica en una isla desierta y libera a una hermosa genio que se enamora de él.",
+    "Blanco Y Negro": "Comedia de situaciones sobre dos hermanos afroamericanos de Harlem que son adoptados por un millonario de Manhattan.",
+    "Tierra De Gigantes": "La tripulación de una nave espacial en un viaje interplanetario queda atrapada en un planeta habitado por seres gigantescos."
+}
+
 CACHE_SINOPSIS = {}
 
-def buscar_sinopsis_dinamica(nombre_programa):
-    """Busca dinámicamente la sinopsis del programa vía TVMaze/Wikipedia si cambia la grilla."""
-    nombre_clean = re.sub(r'\(.*?\)', '', nombre_programa).strip()
-    
-    # 1. Verificar si ya fue buscado en esta corrida
-    if nombre_clean in CACHE_SINOPSIS:
-        return CACHE_SINOPSIS[nombre_clean]
+def obtener_nombre_base(titulo):
+    """Limpia aclaraciones del título para quedarse con el nombre real de la serie/película."""
+    # Elimina textos entre paréntesis o tras barras/días
+    limpio = re.sub(r'\(.*?\)', '', titulo)
+    limpio = re.split(r'/| De Lunes| Lunes| Viernes| Este Espacio', limpio, flags=re.I)[0]
+    limpio = re.sub(r'^\s*[·•\-\:]+\s*', '', limpio)
+    return limpio.strip()
 
-    # 2. Intentar buscar en la API pública de TVMaze
+def buscar_sinopsis_wikipedia(titulo_clean):
+    """Busca el primer párrafo de resumen en Wikipedia en Español."""
     try:
-        query = urllib.parse.quote(nombre_clean)
-        url_api = f"https://api.tvmaze.com/singlesearch/shows?q={query}"
-        res = requests.get(url_api, timeout=3)
+        query = urllib.parse.quote(titulo_clean)
+        url_wiki = f"https://es.wikipedia.org/api/rest_v1/page/summary/{query}"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        res = requests.get(url_wiki, headers=headers, timeout=3)
         if res.status_code == 200:
             data = res.json()
-            if data and "summary" in data and data["summary"]:
-                # Limpiar etiquetas HTML de la respuesta (<p>, <b>, etc.)
-                summary_text = re.sub(r'<[^>]+>', '', data["summary"]).strip()
-                if len(summary_text) > 20:
-                    CACHE_SINOPSIS[nombre_clean] = summary_text
-                    return summary_text
+            if "extract" in data and len(data["extract"]) > 30:
+                extracto = data["extract"]
+                # Cortar en el primer punto para mantener brevedad
+                primer_punto = extracto.find('.')
+                if primer_punto != -1 and primer_punto > 40:
+                    extracto = extracto[:primer_punto + 1]
+                return extracto
     except Exception:
         pass
+    return None
 
-    # 3. Respuesta fallback dinámica según tipo de programa
-    if re.search(r'Cine|Pelicula|Film', nombre_clean, re.I):
-        sinopsis = f"Espacio cinematográfico dedicado a la emisión de producciones de {nombre_clean}."
-    elif re.search(r'Documental|Documentales', nombre_clean, re.I):
-        sinopsis = "Programa documental enfocado en cultura, historia, naturaleza y temas de interés general."
-    elif re.search(r'Caricaturas|Animada|Dibujos', nombre_clean, re.I):
-        sinopsis = "Bloque de entretenimiento animado destinado a todo público."
-    else:
-        sinopsis = f"Emisión regular del programa {nombre_clean}."
+def obtener_sinopsis_espanol(nombre_programa_raw):
+    """Genera la sinopsis limpia en español combinando Wikipedia, diccionario y fallbacks."""
+    nombre_clean = obtener_nombre_base(nombre_programa_raw)
+    
+    if nombre_clean in CACHE_SINOPSIS:
+        return CACHE_SINOPSIS[nombre_clean]
         
+    # 1. Búsqueda en el diccionario local
+    for clave, desc in SINOPSIS_ESPANOL.items():
+        if clave.lower() in nombre_clean.lower() or nombre_clean.lower() in clave.lower():
+            CACHE_SINOPSIS[nombre_clean] = desc
+            return desc
+            
+    # 2. Búsqueda automática en Wikipedia en Español
+    desc_wiki = buscar_sinopsis_wikipedia(nombre_clean)
+    if desc_wiki:
+        CACHE_SINOPSIS[nombre_clean] = desc_wiki
+        return desc_wiki
+
+    # 3. Categorización inteligente en español
+    if re.search(r'Cine|Pelicula|Film', nombre_clean, re.I):
+        sinopsis = "Espacio cinematográfico dedicado a la emisión de películas destacadas y producciones inolvidables."
+    elif re.search(r'Documental|Documentales', nombre_clean, re.I):
+        sinopsis = "Espacio informativo dedicado a documentales sobre naturaleza, historia, ciencia y cultura general."
+    elif re.search(r'Caricaturas|Animada|Dibujos', nombre_clean, re.I):
+        sinopsis = "Bloque de entretenimiento animado con los personajes y cortometrajes clásicos preferidos de la televisión."
+    else:
+        sinopsis = f"Programa de entretenimiento y serie destacada de la grilla de {nombre_clean}."
+
     CACHE_SINOPSIS[nombre_clean] = sinopsis
     return sinopsis
 
@@ -96,7 +137,7 @@ def ajustar_hora(hora_str, horas_a_sumar=2):
         return hora_str
 
 def limpiar_texto_programa(texto):
-    """Limpia encabezados, viñetas y aplica Title Case."""
+    """Limpia encabezados y aplica Title Case."""
     texto = re.sub(r'Lunes\s+[aA]\s+Viernes', '', texto, flags=re.I)
     texto = re.sub(r'Fin\s+de\s+Semana|S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
     texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
@@ -139,8 +180,7 @@ for elem in elementos:
         nombre_prog = limpiar_texto_programa(texto_prog)
         
         if nombre_prog and len(nombre_prog) > 1 and len(nombre_prog) < 80:
-            # Obtener o consultar la sinopsis en vivo
-            sinopsis = buscar_sinopsis_dinamica(nombre_prog)
+            sinopsis = obtener_sinopsis_espanol(nombre_prog)
             
             item = {
                 "inicio": hora_ajustada, 
@@ -171,4 +211,4 @@ for i in range(len(progs_weekend)):
 # 4. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con sinopsis dinámicas.")
+print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con sinopsis completas en español.")
