@@ -2,12 +2,10 @@ import os
 import json
 import re
 import time
-from datetime import datetime
-import zoneinfo
+import requests
 from bs4 import BeautifulSoup
 import gspread
 from google.oauth2.service_account import Credentials
-from playwright.sync_api import sync_playwright
 
 # 1. Conexión con Google Sheets
 SCOPES = [
@@ -44,101 +42,74 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
             else:
                 raise e
 
-# Pestaña para Mi Televisión
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-dias_mapa = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-
-def limpiar_texto_programa(texto_raw):
-    texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto_raw, flags=re.I)
+def formatear_titulo(texto):
+    """Limpia el texto y aplica formato Capitalizado (Title Case)."""
+    texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
     texto = re.sub(r'(Agendar|Google Calendar|Descargar|\.ics|18\+|13\+|TODOS)', '', texto, flags=re.I)
-    return re.sub(r'\s+', ' ', texto).strip()
+    texto = re.sub(r'\s+', ' ', texto).strip()
+    return texto.title()
 
 url = "https://www.mi-television.com/programacion.php"
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    context = browser.new_context(
-        timezone_id="America/Argentina/Buenos_Aires",
-        viewport={"width": 1280, "height": 800},
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-    )
-    page = context.new_page()
-    page.goto(url, wait_until="networkidle", timeout=60000)
-    page.wait_for_timeout(3000)
+response = requests.get(url, headers=headers)
+soup = BeautifulSoup(response.content, "html.parser")
 
-    # Scroll para asegurar la carga completa de elementos
-    for _ in range(3):
-        page.evaluate("window.scrollBy(0, 800)")
-        page.wait_for_timeout(1000)
+# Agrupamiento de días
+WEEKDAYS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+WEEKEND = ["Sábado", "Domingo"]
 
-    html_content = page.content()
-    browser.close()
+# Buscar bloques/secciones completas en la página
+secciones = soup.find_all(["div", "section", "article"])
 
-soup = BeautifulSoup(html_content, "html.parser")
+programas_por_bloque = {
+    "weekdays": [],
+    "weekend": []
+}
 
-# Capturar los contenedores de programas específicos del sitio
-bloques = soup.find_all(["li", "div", "tr", "article"], class_=re.compile(r'program|broadcast|item|row|listing', re.I))
-if not bloques:
-    # Si no se encuentra con clases específicas, busca cualquier contenedor con horas
-    bloques = soup.find_all(["li", "tr", "div"])
+# Extraer ítems de programación
+elementos = soup.find_all(["li", "tr", "div"], class_=re.compile(r'program|broadcast|item|row', re.I))
+if not elementos:
+    elementos = soup.find_all(["li", "tr", "div"])
 
-tz_local = zoneinfo.ZoneInfo("America/Argentina/Buenos_Aires")
-indice_dia = datetime.now(tz_local).weekday()
-
-programas_raw = []
-
-for b in bloques:
-    texto_art = b.get_text(" ", strip=True)
-    matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto_art)
-    
-    # Filtrar solo elementos que contengan horas válidas de emisión
-    if not matches_hora or len(matches_hora) > 3:
-        continue
+items_raw = []
+for elem in elementos:
+    texto = elem.get_text(" ", strip=True)
+    matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto)
+    if matches_hora:
+        hora_ini = matches_hora[0]
+        if len(hora_ini) == 4:
+            hora_ini = "0" + hora_ini
+            
+        texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
+        prog_formateado = formatear_titulo(texto_prog)
         
-    hora_ini = matches_hora[0]
-    if len(hora_ini) == 4:
-        hora_ini = "0" + hora_ini
+        if prog_formateado and len(prog_formateado) > 1:
+            if not items_raw or items_raw[-1]["inicio"] != hora_ini:
+                items_raw.append({"inicio": hora_ini, "programa": prog_formateado})
 
-    # Limpiar el texto para aislar el título
-    texto_sin_hora = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto_art)
-    programa_completo = limpiar_texto_programa(texto_sin_hora)
+# Construir lista de filas final para el EPG
+filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
-    if not programa_completo or len(programa_completo) < 2:
-        continue
+# Mapear la grilla extraída a los días de la semana (Lunes a Viernes)
+for dia in WEEKDAYS:
+    for i in range(len(items_raw)):
+        p_curr = items_raw[i]
+        fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+        filas_epg.append([dia, p_curr["inicio"], fin, p_curr["programa"], ""])
 
-    # Evitar duplicados consecutivos
-    if programas_raw and programas_raw[-1]["inicio"] == hora_ini and programas_raw[-1]["programa"] == programa_completo:
-        continue
+# Mapear la grilla a los días del fin de semana (Sábado y Domingo)
+for dia in WEEKEND:
+    for i in range(len(items_raw)):
+        p_curr = items_raw[i]
+        fin = items_raw[i+1]["inicio"] if i < len(items_raw) - 1 else items_raw[0]["inicio"]
+        filas_epg.append([dia, p_curr["inicio"], fin, p_curr["programa"], ""])
 
-    programas_raw.append({
-        "inicio": hora_ini,
-        "programa": programa_completo
-    })
-
-filas_epg = [
-    ["Dia", "Inicio", "Fin", "Programa", "Descripcion"]
-]
-
-for i in range(len(programas_raw)):
-    p_curr = programas_raw[i]
-    
-    # Manejo del cambio de día si pasa de la noche a la madrugada
-    if i > 0:
-        hora_prev = programas_raw[i-1]["inicio"]
-        hora_curr = p_curr["inicio"]
-        if hora_prev >= "20:00" and hora_curr < "06:00":
-            indice_dia = (indice_dia + 1) % 7
-
-    dia_nombre = dias_mapa[indice_dia]
-
-    if i < len(programas_raw) - 1:
-        fin = programas_raw[i+1]["inicio"]
-    else:
-        fin = programas_raw[0]["inicio"]
-
-    filas_epg.append([dia_nombre, p_curr["inicio"], fin, p_curr["programa"], ""])
-
+# Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros en MITV.")
+print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros correctamente en la pestaña MITV.")
