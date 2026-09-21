@@ -45,8 +45,8 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-def ajustar_hora(hora_str, horas_a_sumar=-1):
-    """Ajusta la hora sumando o restando horas (formato HH:MM)."""
+def ajustar_hora(hora_str, horas_a_sumar=2):
+    """Suma 2 horas a un formato HH:MM (ejemplo 01:00 -> 03:00)."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -93,8 +93,8 @@ for elem in elementos:
         if len(hora_raw) == 4:
             hora_raw = "0" + hora_raw
             
-        # Retrasar 1 hora los horarios (-1)
-        hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=-1)
+        # Sumar 2 horas para llevar 01:00 -> 03:00
+        hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
         
         texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
         nombre_prog = limpiar_texto_programa(texto_prog)
@@ -127,4 +127,4 @@ for i in range(len(progs_weekend)):
 # 4. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con -1 hora de desfasaje.")
+print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend")
