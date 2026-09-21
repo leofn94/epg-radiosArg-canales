@@ -46,7 +46,7 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
 def ajustar_hora(hora_str, horas_a_sumar=2):
-    """Suma X horas a un formato HH:MM."""
+    """Suma 2 horas a un formato HH:MM."""
     try:
         dt = datetime.strptime(hora_str, "%H:%M")
         dt_ajustada = dt + timedelta(hours=horas_a_sumar)
@@ -55,41 +55,16 @@ def ajustar_hora(hora_str, horas_a_sumar=2):
         return hora_str
 
 def limpiar_texto_programa(texto):
-    """Limpia la basura y aplica Title Case."""
+    """Limpia encabezados, viñetas y aplica Title Case."""
     texto = re.sub(r'Lunes\s+[aA]\s+Viernes', '', texto, flags=re.I)
     texto = re.sub(r'Fin\s+de\s+Semana|S[áa]bados?\s*(y|e)?\s*Domingos?', '', texto, flags=re.I)
     texto = re.sub(r'\b\d{1,3}\s*min\b', '', texto, flags=re.I)
     texto = re.sub(r'(Agendar|Google Calendar|Descargar|\.ics|18\+|13\+|TODOS)', '', texto, flags=re.I)
-    
-    # CORREGIDO: uso directo de caracteres de viñeta sin \c
     texto = re.sub(r'^\s*[·•\-\:]+\s*', '', texto)
-    
     texto = re.sub(r'\s+', ' ', texto).strip()
     return texto.title()
 
-def extraer_programas_de_texto(bloque_texto):
-    """Parsea un bloque de texto buscando patrones de HORA PROGRAMA."""
-    lineas = bloque_texto.split('\n')
-    programas = []
-    
-    for linea in lineas:
-        linea = linea.strip()
-        match = re.search(r'(\b\d{1,2}:\d{2}\b)\s*(.*)', linea)
-        if match:
-            hora_raw = match.group(1)
-            if len(hora_raw) == 4:
-                hora_raw = "0" + hora_raw
-                
-            hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
-            nombre_prog = limpiar_texto_programa(match.group(2))
-            
-            if nombre_prog and len(nombre_prog) > 1 and len(nombre_prog) < 80:
-                if not programas or programas[-1]["inicio"] != hora_ajustada:
-                    programas.append({"inicio": hora_ajustada, "programa": nombre_prog})
-                    
-    return programas
-
-# 2. Descarga del sitio web
+# 2. Descarga de la web
 url = "https://www.mi-television.com/programacion.php"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -98,26 +73,45 @@ headers = {
 response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.content, "html.parser")
 
-texto_completo = soup.get_text("\n")
+progs_weekdays = []
+progs_weekend = []
+modo_actual = "Weekdays"
 
-bloque_weekdays = ""
-bloque_weekend = ""
+# Buscar todos los elementos relevantes del HTML (encabezados e ítems de programación)
+elementos = soup.find_all(['h1', 'h2', 'h3', 'h4', 'div', 'li', 'tr', 'p'])
 
-match_weekdays = re.search(r'Lunes\s+a\s+Viernes(.*?)(Fin\s+de\s+Semana|S[áa]bado|$)', texto_completo, re.DOTALL | re.I)
-match_weekend = re.search(r'(Fin\s+de\s+Semana|S[áa]bados?\s+y\s+Domingos?)(.*)', texto_completo, re.DOTALL | re.I)
+for elem in elementos:
+    texto = elem.get_text(" ", strip=True)
+    
+    # Detectar el cambio de bloque si la línea es un título
+    if re.search(r'(Fin\s+de\s+Semana|S[áa]bado|Domingo)', texto, re.I) and len(texto) < 40:
+        modo_actual = "Weekend"
+        continue
+    
+    # Extraer horas dentro del texto
+    matches_hora = re.findall(r'\b\d{1,2}:\d{2}\b', texto)
+    if matches_hora:
+        hora_raw = matches_hora[0]
+        if len(hora_raw) == 4:
+            hora_raw = "0" + hora_raw
+            
+        hora_ajustada = ajustar_hora(hora_raw, horas_a_sumar=2)
+        
+        # Eliminar la hora para quedarnos solo con el nombre del programa
+        texto_prog = re.sub(r'^\d{1,2}:\d{2}\s*', '', texto)
+        nombre_prog = limpiar_texto_programa(texto_prog)
+        
+        if nombre_prog and len(nombre_prog) > 1 and len(nombre_prog) < 80:
+            item = {"inicio": hora_ajustada, "programa": nombre_prog}
+            
+            if modo_actual == "Weekdays":
+                if not progs_weekdays or progs_weekdays[-1]["inicio"] != hora_ajustada:
+                    progs_weekdays.append(item)
+            else:
+                if not progs_weekend or progs_weekend[-1]["inicio"] != hora_ajustada:
+                    progs_weekend.append(item)
 
-if match_weekdays:
-    bloque_weekdays = match_weekdays.group(1)
-else:
-    bloque_weekdays = texto_completo
-
-if match_weekend:
-    bloque_weekend = match_weekend.group(2)
-
-progs_weekdays = extraer_programas_de_texto(bloque_weekdays)
-progs_weekend = extraer_programas_de_texto(bloque_weekend)
-
-# 3. Armar las filas finales
+# 3. Armar las filas finales para Google Sheets
 filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
 
 # Cargar Weekdays
