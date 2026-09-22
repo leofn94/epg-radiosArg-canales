@@ -23,6 +23,9 @@ credentials_info = json.loads(gcp_key)
 credentials = Credentials.from_service_account_info(credentials_info, scopes=SCOPES)
 client = gspread.authorize(credentials)
 
+# API Key de TMDb desde GitHub Secrets
+TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "")
+
 def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=5):
     for intento in range(1, max_intentos + 1):
         try:
@@ -57,7 +60,7 @@ SINOPSIS_DB = {
     "Hi Hi Puffy AmiYumi": "Las superestrellas del pop japonés Ami y Yumi viajan por todo el mundo a bordo de su autobús, viviendo cómicas aventuras junto a su avaro representante Kaz.",
     "The Grim Adventures of Billy & Mandy": "Billy, un niño extremadamente despistado, y Mandy, una niña cínica y dominante, le ganan una apuesta a la Muerte (Puro Hueso), obligándolo a ser su mejor amigo para siempre entre situaciones absurdas y oscuras.",
     "Dexter's Laboratory": "El pequeño niño genio Dexter realiza increíbles experimentos en su laboratorio secreto oculto tras la biblioteca de su cuarto, batallando constantemente contra las travesuras de su hermana Dee Dee.",
-    "Cow and Chicken": "Vaca y Pollito son dos hermanos biológicos muy peculiars que lidian con la vida escolar cotidiana mientras evitan los retorcidos plans del Trasero Rojo.",
+    "Cow and Chicken": "Vaca y Pollito son dos hermanos biológicos muy peculiares que lidian con la vida escolar cotidiana mientras evitan los retorcidos planes del Trasero Rojo.",
     "The Marvelous Misadventures of Flapjack": "El ingenuo niño Flapjack y el veterano Capitán Nudillos exploran los peligrosos mares desde la Ciudad Marea Alta, buscando obsesivamente la mítica Isla Caramelizada.",
     "Johnny Bravo": "Con su copete perfecto, gafas de sol y desbordante confianza, Johnny Bravo busca incansablemente conquistar al amor de su vida, metiéndose continuamente en aprietos por su vanidad e ingenio torpe.",
     "Foster's Home for Imaginary Friends": "Cuando Mac debe despedirse de su amigo imaginario Bloo, lo lleva al hogar de adopción de la Sra. Foster, un lugar fantástico habitado por cientos de coloridas e insólitas criaturas.",
@@ -94,46 +97,52 @@ SINOPSIS_DB = {
     "Harvey Birdman, Attorney at Law": "El antiguo superhéroe ex-cohete opera ahora como abogado defensor representando a clásicos personajes de caricaturas en disparatados juicios legales.",
     "Sealab 2021": "La tripulación incompetente de una investigación submarina enfrenta absurdas crisis cotidianas bajo una disparatada convivencia sin sentido.",
     "Space Ghost Coast to Coast": "El héroe intergaláctico Fantasma del Espacio conduce su propio programa de entrevistas nocturno recibiendo a celebridades humanas en un ambiente surrealista.",
-    "Clone High": "Clones genéticos de figuras históricas como Abraham Lincoln, Cleopatra y Gandhi asisten juntos a la escuela secundaria mientras atraviesan los dramas típicos de la adolescencia."
+    "Clone High": "Clones genéticos de figuras históricas como Abraham Lincoln, Cleopatra y Gandhi asisten juntos a la escuela secundaria mientras atravesan los dramas típicos de la adolescencia."
 }
 
-# Cache en memoria para evitar consultas duplicadas a la API de TVmaze
-CACHE_SINOPSIS_TV = {}
+CACHE_SINOPSIS = {}
 
-def buscar_en_api_tv(titulo):
-    """Consulta la API de TVmaze para obtener la sinopsis centrada en el argumento / trama."""
-    if titulo in CACHE_SINOPSIS_TV:
-        return CACHE_SINOPSIS_TV[titulo]
+def buscar_en_tmdb_espanol(titulo):
+    """Consulta la API de TMDb pidiendo explícitamente el resumen en español (es-MX / es-ES)."""
+    if not TMDB_API_KEY:
+        return None
         
     try:
         titulo_clean = re.sub(r'\b(EN VIVO|ESPECIAL|BLOQUE)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
         
-        # Consultamos TVmaze API
-        url_tvmaze = f"https://api.tvmaze.com/singlesearch/shows?q={query}"
-        res = requests.get(url_tvmaze, timeout=4)
-        
+        # 1. Búsqueda en Series de TV (TV Shows)
+        url_tv = f"https://api.themoviedb.org/3/search/tv?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
+        res = requests.get(url_tv, timeout=4)
         if res.status_code == 200:
-            data = res.json()
-            summary_html = data.get("summary", "")
-            if summary_html:
-                # Quitar etiquetas HTML <p>, <b>, <i>, etc.
-                summary_clean = re.sub(r'<[^>]+>', '', summary_html).strip()
-                
-                # Validar que tenga contenido sustancial
-                if len(summary_clean) > 40:
-                    CACHE_SINOPSIS_TV[titulo] = summary_clean
-                    return summary_clean
-    except Exception as e:
-        print(f"Error consultando API TVmaze para '{titulo}':", e)
+            results = res.json().get("results", [])
+            if results:
+                overview = results[0].get("overview", "").strip()
+                if overview and len(overview) > 20:
+                    return overview
 
-    CACHE_SINOPSIS_TV[titulo] = None
+        # 2. Si no halla en TV, busca en Películas (Movies)
+        url_movie = f"https://api.themoviedb.org/3/search/movie?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
+        res_movie = requests.get(url_movie, timeout=4)
+        if res_movie.status_code == 200:
+            results = res_movie.json().get("results", [])
+            if results:
+                overview = results[0].get("overview", "").strip()
+                if overview and len(overview) > 20:
+                    return overview
+
+    except Exception as e:
+        print(f"Error consultando TMDb para '{titulo}':", e)
+        
     return None
 
 def obtener_o_generar_sinopsis(nombre_programa):
-    """1. Base de Datos Local -> 2. TVmaze API (Trama) -> 3. Fallback Dinámico"""
+    """1. DB Local -> 2. TMDb (Solo en Español) -> 3. Fallback Dinámico"""
     clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I).strip()
     
+    if clean in CACHE_SINOPSIS:
+        return CACHE_SINOPSIS[clean]
+
     # Nivel 1: Diccionario Local
     if clean in SINOPSIS_DB:
         return SINOPSIS_DB[clean]
@@ -142,18 +151,22 @@ def obtener_o_generar_sinopsis(nombre_programa):
         if clave.lower() in clean.lower() or clean.lower() in clave.lower():
             return sinopsis
 
-    # Nivel 2: API de TVmaze (Sustituye a Wikipedia)
-    sinopsis_tv = buscar_en_api_tv(clean)
-    if sinopsis_tv:
-        return sinopsis_tv
+    # Nivel 2: API de TMDb únicamente en Español
+    sinopsis_tmdb = buscar_en_tmdb_espanol(clean)
+    if sinopsis_tmdb:
+        CACHE_SINOPSIS[clean] = sinopsis_tmdb
+        return sinopsis_tmdb
 
-    # Nivel 3: Fallback Dinámico Inteligente
+    # Nivel 3: Fallback Dinámico Inteligente (Si TMDb no tiene datos o no están en español)
     if re.search(r'Horror|Terror|Miedo|Dark|Misterio', clean, re.I):
-        return f"Prepárate para momentos de tensión y suspenso con {clean}, una propuesta repleta de historias oscuras y escalofriantes."
+        res = f"Prepárate para momentos de tensión y suspenso con {clean}, una propuesta repleta de historias oscuras y escalofriantes."
     elif re.search(r'Dragon Ball|Naruto|Piece|Seiya|Kenshin|Anime', clean, re.I):
-        return f"Sumérgete en la acción de {clean}, con batallas memorables, poderes sorprendentes y grandes desafíos junto a sus emblemáticos protagonistas."
-    
-    return f"Acompaña a los protagonistas de {clean} en esta emocionante entrega repleta de diversión, aventuras inolvidables y gran entretenimiento."
+        res = f"Sumérgete en la acción de {clean}, con batallas memorables, poderes sorprendentes y grandes desafíos junto a sus emblemáticos protagonistas."
+    else:
+        res = f"Acompaña a los protagonistas de {clean} en esta emocionante entrega repleta de diversión, aventuras inolvidables y gran entretenimiento."
+
+    CACHE_SINOPSIS[clean] = res
+    return res
 
 # 3. Descargar datos de la matriz
 datos_matriz = sheet_origen.get_all_values()
@@ -241,7 +254,7 @@ for dia_nombre in DIAS_ORDEN:
         else:
             fin = progs_dia[0]["inicio"]
 
-        # Se obtiene o consulta la sinopsis usando el nuevo flujo con TVmaze
+        # Se obtiene o consulta la sinopsis garantizando idioma español
         sinopsis = obtener_o_generar_sinopsis(p_curr["programa"])
 
         filas_epg.append([p_curr["dia"], p_curr["inicio"], fin, p_curr["programa"], sinopsis])
@@ -249,4 +262,4 @@ for dia_nombre in DIAS_ORDEN:
 # 6. Volcar en la pestaña 'BLAST'
 sheet_destino.clear()
 sheet_destino.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se procesó y se cargaron {len(filas_epg)-1} registros en BLAST.")
+print(f"¡Éxito! Se procesó y se cargaron {len(filas_epg)-1} registros en BLAST con sinopsis en español.")
