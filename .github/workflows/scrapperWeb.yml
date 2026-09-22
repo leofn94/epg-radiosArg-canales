@@ -56,15 +56,15 @@ jobs:
         run: python MITV_Clasica.py
 
       # --- EL RESTO DE LOS CANALES SIGUEN IGUAL (CADA 3 HORAS) ---
-      - name: Ejecutar script de CN City
-        env:
-          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-        run: python cncity.py
-
       - name: Ejecutar script de retroblast
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: python retroblast.py
+        
+      - name: Ejecutar script de CN City
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: python cncity.py
 
       - name: Ejecutar script de Janimotion
         env:
