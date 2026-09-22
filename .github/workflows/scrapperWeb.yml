@@ -2,8 +2,8 @@ name: Scrapper web
 
 on:
   schedule:
-    # Se ejecuta automáticamente cada 3 horas (minuto 0)
-    - cron: '0 */3 * * *'
+    # Se ejecuta automáticamente cada 6 horas (minuto 0)
+    - cron: '0 */6 * * *'
   # Mantiene la opción de ejecutarlo manualmente cuando quieras
   workflow_dispatch:
 
@@ -30,11 +30,32 @@ jobs:
           playwright install chromium
           playwright install-deps
 
+      # --- VERIFICACIÓN DE FRECUENCIA PARA MITV ---
+      - name: Verificar si corresponde ejecutar MITV (Cada 3 días)
+        id: check_mitv
+        run: |
+          # Si se dispara manualmente (workflow_dispatch) o el día del año es múltiplo de 3, se activa.
+          DAY_OF_YEAR=$(date +%j)
+          
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((10#$DAY_OF_YEAR % 3)) -eq 0 ]; then
+            # Solo corre a la medianoche (00:00 UTC) del día correspondiente para no repetir 8 veces ese día
+            HOUR=$(date +%H)
+            if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$HOUR" -eq "00" ]; then
+              echo "run_mitv=true" >> $GITHUB_OUTPUT
+            else
+              echo "run_mitv=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "run_mitv=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Ejecutar script de MITV_Clasica
+        if: steps.check_mitv.outputs.run_mitv == 'true'
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: python MITV_Clasica.py
 
+      # --- EL RESTO DE LOS CANALES SIGUEN IGUAL (CADA 3 HORAS) ---
       - name: Ejecutar script de CN City
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
@@ -54,10 +75,3 @@ jobs:
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: python doblec.py
-        
-
-
-
-
-
-        
