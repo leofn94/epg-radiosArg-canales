@@ -16,17 +16,17 @@ jobs:
 
     steps:
       - name: Checkout del código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install playwright beautifulsoup4 gspread google-auth pandas openpyxl
+          pip install playwright beautifulsoup4 gspread google-auth pandas openpyxl requests
           playwright install chromium
           playwright install-deps
 
@@ -53,25 +53,30 @@ jobs:
         if: steps.check_mitv.outputs.run_mitv == 'true'
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python MITV_Clasica.py
 
-      # --- EL RESTO DE LOS CANALES SIGUEN IGUAL (CADA 3 HORAS) ---
+      # --- EL RESTO DE LOS CANALES ---
       - name: Ejecutar script de retroblast
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python retroblast.py
         
       - name: Ejecutar script de CN City
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python cncity.py
 
       - name: Ejecutar script de Janimotion
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python janimotion.py
 
       - name: Ejecutar script de Doble C
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python doblec.py
