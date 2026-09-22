@@ -53,6 +53,103 @@ NOMBRE_PESTANA = "BLAST"
 sheet_origen = abrir_sheet_con_reintento(SHEET_ORIGEN_ID)
 sheet_destino = abrir_sheet_con_reintento(SHEET_DESTINO_ID, NOMBRE_PESTANA)
 
+# --- BASE DE DATOS LOCAL CON SINOPSIS ENRIQUECIDAS ---
+DATABASE_SINOPSIS = {
+    "space ghost c2c": "Space Ghost, un superhero de los 60, conduce su propio talk show intergaláctico entrevistando a celebridades del mundo real junto a sus antiguos enemigos capturados.",
+    "space ghost coast to coast": "Space Ghost, un superhéroe de los 60, conduce su propio talk show intergaláctico entrevistando a celebridades del mundo real junto a sus antiguos enemigos capturados.",
+    "futurama": "Philip J. Fry, un repartidor de pizza congelado criogénicamente en 1999, despierta mil años después en un extravagante futuro repleto de aliens y tecnología disparatada.",
+    "the boondocks": "Huey y Riley Freeman son dos hermanos afroamericanos que se mudan a un tranquilo suburbio blanco con su excéntrico abuelo, enfrentando choques culturales y sátira social.",
+    "harvey birdman": "El antiguo superhéroe Harvey Birdman ejerce como abogado defendiendo a clásicos personajes de caricatura en absurdos casos judiciales y conflictos legales.",
+    "sealab 2021": "Las desquiciadas aventuras de un grupo de investigadores que habitan una estación submarina experimental en el año 2021, donde el caos y el absurdo son la norma.",
+    "metalocalypse": "Dethklok es la banda de heavy metal más famosa e influyente del planeta, desatando destrucción, caos y locura sin importar a dónde vayan.",
+    "metalocypalpse": "Dethklok es la banda de heavy metal más famosa e influyente del planeta, desatando destrucción, caos y locura sin importar a dónde vayan.",
+    "athf": "Un vaso de batido, una caja de papas fritas y una albóndiga de carne vivientes resuelven insólitos misterios mientras lidian con su molesto vecino Carl.",
+    "aqua teen hunger force": "Un vaso de batido, una caja de papas fritas y una albóndiga de carne vivientes resuelven insólitos misterios mientras lidian con su molesto vecino Carl.",
+    "robot chicken": "Sátira animada en stop-motion que parodia la cultura pop, juguetes, películas, cómics y programas de televisión con humor negro y ritmo desenfrenado.",
+    "on cinema": "Tim Heidecker y Gregg Turkington analizan estrenos cinematográficos y discuten sobre el mundo del cine en un caótico programa de reseñas llenas de drama.",
+    "check it out": "El Dr. Steve Brule presenta un desastroso programa de noticias de acceso público donde explora temas cotidianos de la forma más incómoda y torpe posible.",
+    "eric andre": "Eric André conduce un talk show nocturno surrealista cargado de bromas pesadas, celebridades desconcertadas, destrucción del set y caos impredecible.",
+    "home movies": "Brendon Small, un niño de ocho años, pasa su tiempo libre dirigiendo y protagonizando películas caseras con la ayuda de sus dos mejores amigos.",
+    "king of the hill": "La vida cotidiana de Hank Hill, su familia y sus peculiares amigos en la ficticia ciudad de Arlen, Texas, con un humor sutil sobre el estilo de vida americano.",
+    "animaniacs": "Los hermanos Warner, Yakko, Wakko y Dot, escapan del tanque de agua de los estudios para desatar travesuras, números musicales y pura locura animación.",
+    "power rangers": "Un grupo de jóvenes es elegido para convertirse en guerreros capaces de pilotar robots gigantes y defender a la Tierra de amenazas alienígenas.",
+    "batman tas": "El caballero de la noche patrulla las oscuras calles de Ciudad Gótica combatiendo a icónicos villanos en una aclamada obra maestra de la animación.",
+    "totally spies": "Tres adolescentes de Beverly Hills equilibran su vida escolar con su trabajo como agentes secretas para una organización mundial de espionaje.",
+    "code lyoko": "Un grupo de estudiantes descubre un superordenador que alberga un mundo virtual llamado Lyoko y luchan para evitar que un malvado virus destruya la realidad.",
+    "tmnt (2003)": "Cuatro tortugas mutantes entrenadas en el arte del ninjutsu emergen de las alcantarillas de Nueva York para proteger a la ciudad del malvado Shredder.",
+    "teen titans": "Cinco jóvenes superhéroes unen sus fuerzas para proteger Jump City de poderosos villanos mientras lidian con los altibajos de la adolescencia.",
+    "pokemon advanced": "Ash Ketchum continúa su viaje hacia la región de Hoenn para convertirse en Maestro Pokémon, acompañado de nuevos amigos y desafiando nuevos gimnasios.",
+    "pokémon advanced": "Ash Ketchum continúa su viaje hacia la región de Hoenn para convertirse en Maestro Pokémon, acompañado de nuevos amigos y desafiando nuevos gimnasios.",
+    "yu-gi-oh! gx": "Jaden Yuki ingresa a la prestigiosa Academia de Duelos para perfeccionar sus habilidades como duelista de cartas mientras descubre oscuros secretos.",
+    "the cartoon cartoon show": "Bloque clásico de cortometrajes animados originales de Cartoon Network que sirvió de cuna para grandes series de la historia de la animación.",
+    "ben 10": "Ben Tennyson descubre el Omnitrix, un reloj alienígena que le permite transformarse en diez alienígenas diferentes con habilidades sobrehumanas.",
+    "xiaolin showdown": "Cuatro jóvenes monjes entrenan duro en artes marciales para recolectar místicos artefactos conocidos como Shen Gong Wu antes de que caigan en manos del mal.",
+    "knd": "Cinco niños superoperativos forman un equipo altamente entrenado que lucha desde su casa del árbol contra la tiranía de los adultos y los deberes.",
+    "billy and mandy": "Dos niños ganan la custodia de la Muerte en un juego de limbo y la convierten en su mejor amiga eterna, viviendo aventuras oscuras y cómicas.",
+    "ed edd n eddy": "Tres muchachos llamados Ed idean constantes y descabellados planes para estafar a los niños del vecindario y comprar sus caramelos gigantes favoritos.",
+    "juniper lee": "Juniper Lee es una niña de 11 años que equilibra la escuela con su deber secreto como la protectora del equilibrio entre el mundo humano y el mágico.",
+    "fosters": "Un hogar especial acoge a amigos imaginarios abandonados por sus creadores hasta que puedan ser adoptados por nuevos niños que los necesiten.",
+    "samurai jack": "Un noble guerrero samurai es enviado a un futuro distópico controlado por el demonio Aku y busca incansablemente la forma de regresar al pasado.",
+    "camp lazlo": "Un mono alegre y curioso llamado Lazlo provoca divertidos estragos junto a sus amigos en el campamento de verano de los Scouts.",
+    "ppg": "Tres niñas con superpoderes creadas accidentalmente en un laboratorio defienden a la ciudad de Saltadilla de monstruos y mentes criminales.",
+    "star wars the clone wars": "Los Caballeros Jedi luchan para mantener el orden y la paz en la galaxia contra los separatistas durante la devastadora Guerra de los Clones.",
+    "hi hi puffy ami yumi": "Las aventuras animadas de las dos estrellas reales del pop japonés Puffy AmiYumi mientras viajan por el mundo en su autobús de gira.",
+    "hihiPuffyAmiYumi": "Las aventuras animadas de las dos estrellas reales del pop japonés Puffy AmiYumi mientras viajan por el mundo en su autobús de gira.",
+    "yu-gi-oh! dm": "Yugi Muto resuelve el Milenario Rompecabezas del Faraón y libera un espíritu antiguo, compitiendo en el juego de cartas de duelos de monstruos.",
+    "sailor moon": "Usagi Tsukino descubre que es la reencarnación de una guerrera cósmica destinada a proteger la Tierra y buscar el Sagrado Cristal de Plata.",
+    "yuyu": "Yusuke Urameshi muere al salvar a un niño y recibe una segunda oportunidad de vivir convirtiéndose en un detective del mundo espiritual.",
+    "dragon ball": "Goku inicia una legendaria búsqueda a través del mundo en busca de las siete Esferas del Dragón junto a sus valientes amigos.",
+    "bobobobobobobo": "En un futuro absurdo donde el Imperio Calvo busca despojar de su cabello a la gente, BoBoBo combate al ejército enemigo con las técnicas del pelo de la nariz.",
+    "outlaw star": "Gene Starwind y su joven tripulación navegan por el espacio en una nave avanzada en busca de un tesoro galáctico de poder incalculable.",
+    "dbz (run a)": "Goku y los Guerreros Z protegen la Tierra de despiadados saiyajins, tiranos intergalácticos y androides en batallas de poder colosal.",
+    "dbz (run b)": "Goku y los Guerreros Z protegen la Tierra de despiadados saiyajins, tiranos intergalácticos y androides en batallas de poder colosal.",
+    "one piece": "Luffy y su tripulación de Piratas de Sombrero de Paja navegan a través de peligrosos mares para encontrar el legendario tesoro One Piece.",
+    "one piece (fun b)": "Luffy y su tripulación de Piratas de Sombrero de Paja navegan a través de peligrosos mares para encontrar el legendario tesoro One Piece.",
+    "one piece (season 1)": "Luffy inicia su viaje en el East Blue reclutando a los primeros miembros de su tripulación para aventurarse al Grand Line.",
+    "naruto": "Naruto Uzumaki, un joven ninja marginado que alberga en su interior al Zorro de Nueve Colas, sueña con convertirse en el líder de su aldea.",
+    "naruto (run b)": "Naruto Uzumaki, un joven ninja marginado que alberga en su interior al Zorro de Nueve Colas, sueña con convertirse en el líder de su aldea.",
+    "naruto (season 1)": "Naruto forma parte del Equipo 7 junto a Sasuke y Sakura, emprendiendo sus primeras misiones oficiales como ninja.",
+    "naruto/shippuden": "Tras años de intenso entrenamiento, Naruto regresa a su aldea para hacer frente a la temible organización Akatsuki y salvar a su amigo.",
+    "naruto'shippuden": "Tras años de intenso entrenamiento, Naruto regresa a su aldea para hacer frente a la temible organización Akatsuki y salvar a su amigo.",
+    "naruto/ shippuden": "Tras años de intenso entrenamiento, Naruto regresa a su aldea para hacer frente a la temible organización Akatsuki y salvar a su amigo.",
+    "family guy": "Las disparatadas vivencias de la familia Griffin en Quahog, encabezada por el descabellado Peter y su perro parlante Brian.",
+    "bleach": "Ichigo Kurosaki obtiene accidentalmente los poderes de un Segador de Almas y asume el deber de proteger a los vivos y guiar a los espíritus.",
+    "fma brotherhood": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
+    "death note": "Un estudiante de secundaria encuentra un cuaderno sobrenatural con la capacidad de matar a cualquiera cuyo nombre sea escrito en sus páginas.",
+    "jojo's bizarre adventure": "Las épicas batallas intergeneracionales de la linaje Joestar contra fuerzas del mal utilizando habilidades místicas y Stands.",
+    "inuyasha": "Kagome es transportada al Japón feudal donde se une al medio demonio Inuyasha para recolectar los fragmentos de la valiosa Perla de Shikon.",
+    "lupin the third part ii": "El carismático ladrón internacional Arsène Lupin III planea atrevidos robos alrededor del mundo mientras esquiva al inspector Zenigata.",
+    "case closed": "El brillante detective adolescente Shinichi Kudo es encogido al cuerpo de un niño de primaria y adopta la identidad del Detective Conan.",
+    "tom and jerry": "La eterna y cómica rivalidad entre el gato Tom y el astuto ratón Jerry en desenfrenadas persecuciones llenas de humor físico.",
+    "robotboy": "Un avanzado robot con forma de niño intenta vivir una vida normal mientras protege su tecnología del malvado Doctor Kamikazi.",
+    "duck dodgers": "El incompetente capitán Duck Dodgers navega por la galaxia del siglo XXIV junto a su cadete espacial desatando cómicos desastres.",
+    "johnny bravo": "Un musculoso pero ingenuo joven de tupé rubio intenta torpemente conquistar mujeres con resultados desastrosos.",
+    "dexters lab": "Un niño prodigio realiza experimentos secretos en su gigantesco laboratorio personal mientras intenta evitar que su hermana Dee Dee los destruya.",
+    "scooby-doo": "Un grupo de cuatro adolescentes y su perro parlante investigan misterios paranormales que suelen ocultar fraudes humanos.",
+    "courage": "Un cobarde perro rosado debe reunir valor para proteger a sus ancianos dueños de aterradoras e insólitas amenazas en medio de la nada.",
+    "gundam wing": "Cinco jóvenes pilotos de trajes gigantes de combate son enviados desde las colonias espaciales a la Tierra para luchar por la libertad.",
+    "justice league": "Los superhéroes más poderosos del planeta unifican sus fuerzas para enfrentar invasiones alienígenas y supervillanos globales.",
+    "zatch bell": "Un niño prodigio se alía con un pequeño demonio de otro mundo para participar en la batalla definitiva por la corona del mundo demoníaco.",
+    "class of 3000": "Una superestrella de la música decide dejar su carrera para convertirse en profesor de música en una colorida escuela de artes.",
+    "tim and eric": "Un show de variedad y sketches cargado de un característico humor absurdo, sátira televisiva y formatos surrealistas.",
+    "shin chan": "Un irreverente y travieso niño de cinco años causa desternillantes situaciones cómicas en su familia, escuela y vecindario.",
+    "boomerang": "Bloque de programación especial dedicado a clásicos atemporales y caricaturas retro que marcaron a generaciones.",
+    "avatar tla": "Aang, el último Maestro del Aire y verdadero Avatar, debe dominar los cuatro elementos para traer la paz al mundo dividido por la guerra.",
+    "cartoon theater*": "Espacio cinematográfico dedicado a la emisión de las películas animadas más destacadas de la historia del cine y la televisión.",
+    "mucha lucha": "Un grupo de jóvenes estudiantes entrena en una academia dedicada por completo a dominar las artes de la Lucha Libre profesional.",
+    "yu-gi-oh! 5d's": "En un futuro donde los duelos de cartas se juegan sobre motocicletas de alta velocidad, Yusei Fudo lucha por la justicia social.",
+    "digimon adventure": "Siete niños son transportados a un mundo digital donde se alían con criaturas llamadas Digimon para salvar ambos mundos.",
+    "static shock": "Virgil Hawkins adquiere poderes electromagnéticos tras un accidente químico y decide combatir el crimen en su ciudad.",
+    "megas xlr": "Un joven fanático de los autos encuentra un robot gigante del futuro en un basurero y lo modifica con partes de coche para defender la Tierra.",
+    "jackie chan adventures": "Jackie Chan y su familia recorren el globo recuperando talismanes mágicos antes de que caigan en manos de organizaciones criminales.",
+    "the batman": "Un joven Bruce Wayne da sus primeros pasos como el vigilante de Ciudad Gótica mientras enfrenta la evolución de sus villanos.",
+    "igpx": "En el año 2048, equipos de pilotos compiten en robots biomecánicos de alta velocidad en la liga más competitiva del planeta.",
+    "ghost in the shell": "En un futuro cibernético, la mayor Motoko Kusanagi lidera una unidad policial de élite enfrentando crímenes tecnológicos y existenciales.",
+    "paranoia agent": "Un misterioso agresor en patines aterroriza Tokio mientras un grupo de detectives intenta desentrañar la verdad detrás de los ataques.",
+    "cowboy bebop": "Un grupo de cazadores de recompensas a bordo de la nave Bebop navega por el espacio enfrentando su oscuro pasado.",
+    "late night movie*": "Espacio de cine nocturno que presenta largometrajes, clásicos de culto y producciones seleccionadas."
+}
+
 CACHE_SINOPSIS = {}
 
 def buscar_en_tmdb_espanol(titulo):
@@ -61,7 +158,7 @@ def buscar_en_tmdb_espanol(titulo):
         return ""
         
     try:
-        titulo_clean = re.sub(r'\b(EN VIVO|ESPECIAL|BLOQUE)\b', '', titulo, flags=re.I).strip()
+        titulo_clean = re.sub(r'\b(EN VIVO|ESPECIAL|BLOQUE|RUN A|RUN B|SEASON 1|FUN B)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
         
         # 1. Búsqueda en Series de TV (TV Shows)
@@ -90,17 +187,33 @@ def buscar_en_tmdb_espanol(titulo):
     return ""
 
 def obtener_sinopsis(nombre_programa):
-    """Busca únicamente en TMDb (Español). Si no encuentra nada, devuelve una cadena vacía."""
+    """
+    Busca la sinopsis en el siguiente orden:
+    1. Base de datos local (DATABASE_SINOPSIS)
+    2. API de TMDb (Español)
+    3. Cadena vacía si no se encuentra en ninguna parte
+    """
+    # Limpieza base del nombre
     clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I).strip()
     
+    # 1. Verificar si ya está en caché de esta ejecución
     if clean in CACHE_SINOPSIS:
         return CACHE_SINOPSIS[clean]
 
-    sinopsis_tmdb = buscar_en_tmdb_espanol(clean)
+    # Normalización para búsqueda insensible a mayúsculas/minúsculas y espacios extra
+    key_normalizada = re.sub(r'\s+', ' ', clean).strip().lower()
     
-    # Se guarda en caché la sinopsis (o cadena vacía si no se encontró)
-    CACHE_SINOPSIS[clean] = sinopsis_tmdb
-    return sinopsis_tmdb
+    # 2. Buscar en la base local de sinopsis enriquecidas
+    sinopsis_encontrada = ""
+    if key_normalizada in DATABASE_SINOPSIS and DATABASE_SINOPSIS[key_normalizada]:
+        sinopsis_encontrada = DATABASE_SINOPSIS[key_normalizada]
+    else:
+        # 3. Si no existe localmente, consultar con TMDb
+        sinopsis_encontrada = buscar_en_tmdb_espanol(clean)
+
+    # 4. Guardar resultado en caché (incluso si quedó en blanco) y retornar
+    CACHE_SINOPSIS[clean] = sinopsis_encontrada
+    return sinopsis_encontrada
 
 # 3. Descargar datos de la matriz
 datos_matriz = sheet_origen.get_all_values()
@@ -188,7 +301,7 @@ for dia_nombre in DIAS_ORDEN:
         else:
             fin = progs_dia[0]["inicio"]
 
-        # Se obtiene la sinopsis únicamente desde TMDb o se deja en blanco
+        # Se obtiene la sinopsis desde BD local, TMDb o se deja en blanco
         sinopsis = obtener_sinopsis(p_curr["programa"])
 
         filas_epg.append([p_curr["dia"], p_curr["inicio"], fin, p_curr["programa"], sinopsis])
