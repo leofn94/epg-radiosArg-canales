@@ -57,7 +57,7 @@ SINOPSIS_DB = {
     "Hi Hi Puffy AmiYumi": "Las superestrellas del pop japonés Ami y Yumi viajan por todo el mundo a bordo de su autobús, viviendo cómicas aventuras junto a su avaro representante Kaz.",
     "The Grim Adventures of Billy & Mandy": "Billy, un niño extremadamente despistado, y Mandy, una niña cínica y dominante, le ganan una apuesta a la Muerte (Puro Hueso), obligándolo a ser su mejor amigo para siempre entre situaciones absurdas y oscuras.",
     "Dexter's Laboratory": "El pequeño niño genio Dexter realiza increíbles experimentos en su laboratorio secreto oculto tras la biblioteca de su cuarto, batallando constantemente contra las travesuras de su hermana Dee Dee.",
-    "Cow and Chicken": "Vaca y Pollito son dos hermanos biológicos muy peculiares que lidian con la vida escolar cotidiana mientras evitan los retorcidos planes del Trasero Rojo.",
+    "Cow and Chicken": "Vaca y Pollito son dos hermanos biológicos muy peculiars que lidian con la vida escolar cotidiana mientras evitan los retorcidos plans del Trasero Rojo.",
     "The Marvelous Misadventures of Flapjack": "El ingenuo niño Flapjack y el veterano Capitán Nudillos exploran los peligrosos mares desde la Ciudad Marea Alta, buscando obsesivamente la mítica Isla Caramelizada.",
     "Johnny Bravo": "Con su copete perfecto, gafas de sol y desbordante confianza, Johnny Bravo busca incansablemente conquistar al amor de su vida, metiéndose continuamente en aprietos por su vanidad e ingenio torpe.",
     "Foster's Home for Imaginary Friends": "Cuando Mac debe despedirse de su amigo imaginario Bloo, lo lleva al hogar de adopción de la Sra. Foster, un lugar fantástico habitado por cientos de coloridas e insólitas criaturas.",
@@ -97,43 +97,41 @@ SINOPSIS_DB = {
     "Clone High": "Clones genéticos de figuras históricas como Abraham Lincoln, Cleopatra y Gandhi asisten juntos a la escuela secundaria mientras atraviesan los dramas típicos de la adolescencia."
 }
 
-# Cache en memoria para evitar consultas duplicadas a Wikipedia dentro de la misma ejecución
-CACHE_WIKI = {}
+# Cache en memoria para evitar consultas duplicadas a la API de TVmaze
+CACHE_SINOPSIS_TV = {}
 
-def buscar_en_wikipedia(titulo):
-    """Consulta la API de Wikipedia en español para obtener una sinopsis real."""
-    if titulo in CACHE_WIKI:
-        return CACHE_WIKI[titulo]
+def buscar_en_api_tv(titulo):
+    """Consulta la API de TVmaze para obtener la sinopsis centrada en el argumento / trama."""
+    if titulo in CACHE_SINOPSIS_TV:
+        return CACHE_SINOPSIS_TV[titulo]
         
     try:
         titulo_clean = re.sub(r'\b(EN VIVO|ESPECIAL|BLOQUE)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
-        url_wiki = f"https://es.wikipedia.org/api/rest_v1/page/summary/{query}"
         
-        headers = {"User-Agent": "EPGScraperScript/1.0 (https://github.com)"}
-        res = requests.get(url_wiki, headers=headers, timeout=4)
+        # Consultamos TVmaze API
+        url_tvmaze = f"https://api.tvmaze.com/singlesearch/shows?q={query}"
+        res = requests.get(url_tvmaze, timeout=4)
         
         if res.status_code == 200:
             data = res.json()
-            if "extract" in data and len(data["extract"]) > 30:
-                extracto = data["extract"]
-                # Cortar hasta el primer o segundo punto para mantener brevedad estilo EPG
-                puntos = [m.start() for m in re.finditer(r'\.', extracto)]
-                if len(puntos) >= 2 and puntos[1] < 260:
-                    extracto = extracto[:puntos[1] + 1]
-                elif len(puntos) >= 1:
-                    extracto = extracto[:puntos[0] + 1]
-                    
-                CACHE_WIKI[titulo] = extracto
-                return extracto
+            summary_html = data.get("summary", "")
+            if summary_html:
+                # Quitar etiquetas HTML <p>, <b>, <i>, etc.
+                summary_clean = re.sub(r'<[^>]+>', '', summary_html).strip()
+                
+                # Validar que tenga contenido sustancial
+                if len(summary_clean) > 40:
+                    CACHE_SINOPSIS_TV[titulo] = summary_clean
+                    return summary_clean
     except Exception as e:
-        print(f"Error consultando Wikipedia para '{titulo}':", e)
-        
-    CACHE_WIKI[titulo] = None
+        print(f"Error consultando API TVmaze para '{titulo}':", e)
+
+    CACHE_SINOPSIS_TV[titulo] = None
     return None
 
 def obtener_o_generar_sinopsis(nombre_programa):
-    """1. Base de Datos Local -> 2. Wikipedia Español -> 3. Generación por Palabras Clave"""
+    """1. Base de Datos Local -> 2. TVmaze API (Trama) -> 3. Fallback Dinámico"""
     clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I).strip()
     
     # Nivel 1: Diccionario Local
@@ -144,10 +142,10 @@ def obtener_o_generar_sinopsis(nombre_programa):
         if clave.lower() in clean.lower() or clean.lower() in clave.lower():
             return sinopsis
 
-    # Nivel 2: Wikipedia en Español
-    sinopsis_wiki = buscar_en_wikipedia(clean)
-    if sinopsis_wiki:
-        return sinopsis_wiki
+    # Nivel 2: API de TVmaze (Sustituye a Wikipedia)
+    sinopsis_tv = buscar_en_api_tv(clean)
+    if sinopsis_tv:
+        return sinopsis_tv
 
     # Nivel 3: Fallback Dinámico Inteligente
     if re.search(r'Horror|Terror|Miedo|Dark|Misterio', clean, re.I):
@@ -243,7 +241,7 @@ for dia_nombre in DIAS_ORDEN:
         else:
             fin = progs_dia[0]["inicio"]
 
-        # Se obtiene o consulta la sinopsis usando el nuevo flujo
+        # Se obtiene o consulta la sinopsis usando el nuevo flujo con TVmaze
         sinopsis = obtener_o_generar_sinopsis(p_curr["programa"])
 
         filas_epg.append([p_curr["dia"], p_curr["inicio"], fin, p_curr["programa"], sinopsis])
@@ -251,4 +249,4 @@ for dia_nombre in DIAS_ORDEN:
 # 6. Volcar en la pestaña 'BLAST'
 sheet_destino.clear()
 sheet_destino.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se procesó la matriz y se cargaron {len(filas_epg)-1} registros en BLAST con sus descripciones.")
+print(f"¡Éxito! Se procesó y se cargaron {len(filas_epg)-1} registros en BLAST.")
