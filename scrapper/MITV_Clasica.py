@@ -45,48 +45,48 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, "MITV")
 
-# 2. Diccionario de Sinopsis Predefinidas
+# 2. Diccionario de Sinopsis Enriquecidas y Narrativas
 SINOPSIS_DB = {
-    "Las Aventuras De Sinbad": "Serie de aventuras y fantasía sobre las legendarias travesías del marino Sinbad y su tripulación enfrentando criaturas mitológicas.",
-    "El Septimo Cielo": "Drama familiar centrado en la vida del reverendo Eric Camden, su esposa Annie y sus siete hijos.",
-    "Scooby Do": "Serie animada clásica donde Misterio a la Orden resuelve enigmas y desenmascara supuestos fantasmas y monstruos.",
-    "Sailor Moon": "Las aventuras de Usagi Tsukino y las Sailor Scouts luchando contra las fuerzas del mal para proteger la Tierra.",
-    "Caricaturas Clasicas": "Bloque especial con los cortometrajes y dibujos animados más emblemáticos de la época dorada de la animación.",
-    "101 Dalmatas": "Serie animada basada en la historia de los dálmatas enfrentando las disparatadas ocurrencias en la granja y huyendo de Cruella.",
-    "Full House": "Comedia familiar centrada en Danny Tanner y cómo cría a sus tres hijas con la ayuda de su cuñado Jesse y su amigo Joey.",
-    "El Hombre Del Maletin": "Serie clásica de suspenso y espionaje que sigue las misiones y misterios de un agente enigmático.",
-    "Degrassi Junior High": "Drama juvenil que retrata los desafíos, dilemas y vivencias diarias de un grupo de estudiantes de secundaria.",
-    "El Chavo Del 8": "Las divertidas situaciones y vivencias del Chavo y los vecinos en la emblemática vecindad.",
-    "El Chavo El 8": "Las divertidas situaciones y vivencias del Chavo y los vecinos en la emblemática vecindad.",
-    "Area 12": "Serie policíaca de acción y drama centrada en la patrulla urbana y la resolución de crímenes.",
-    "Babylon 5": "Serie de ciencia ficción ambientada en una estación espacial neutra en medio de tensiones diplomáticas y guerras intergalácticas.",
-    "La Mujer Bionica": "Jaime Sommers utiliza sus implantes cibernéticos de alta tecnología para llevar a cabo misiones secretas del gobierno.",
-    "El Monk": "Un brillante detective privado con trastorno obsesivo-compulsivo resuelve los casos más complejos de San Francisco.",
-    "Chico Listo": "Un niño prodigio de 10 años asiste a la escuela secundaria adaptándose a compañeros de clase mayores que él.",
-    "El Show De Los Muppets": "El clásico programa de variedades encabezado por Kermit la Rana, Miss Piggy y sus hilarantes invitados.",
-    "Viaje Al Fondo Del Mar": "Serie de ciencia ficción a bordo del submarino futurista Seaview enfrentando amenazas marítimas y alienígenas.",
-    "Blanco Y Negro": "Comedia de situaciones sobre dos niños de Harlem adoptados por un millonario de Manhattan.",
-    "Tierra De Gigantes": "La tripulación de una nave espacial queda atrapada en un planeta habitado por seres gigantescos.",
-    "Cine Estelar": "Espacio cinematográfico con la emisión de películas destacadas de acción, drama y grandes producciones.",
-    "Cine Clasico": "Selección especial de películas clásicas y producciones destacadas de la época dorada del cine.",
-    "Los Angeles De Charlie": "Tres intrépidas detectives privadas trabajan para una agencia de investigación resolviendo intrincados casos.",
-    "Jim West": "Dos agentes del servicio secreto en el Viejo Oeste utilizan ingeniosos artilugios para proteger al país.",
-    "La Casa De La Pradera": "Las emotivas vivencias de la familia Ingalls en un pequeño pueblo del oeste estadounidense a finales del siglo XIX.",
-    "El Senor De Las Bestias": "Serie de fantasía sobre un guerrero capaz de comunicarse telepáticamente con los animales.",
-    "Mision Imposible": "Un equipo de élite del gobierno realiza operaciones secretas e imposibles con disfraces y tecnología.",
-    "Perdidos En El Espacio": "Las aventuras y peripecias de la familia Robinson intentando sobrevivir tras perder el rumbo en el espacio exterior.",
-    "El Auto Fantastico": "Michael Knight y KITT, un automóvil con inteligencia artificial avanzada, combaten el crimen.",
-    "El Crucero Del Amor": "Historias románticas y comedias a bordo del lujoso crucero Pacific Princess.",
-    "Lady Oscar": "Serie animada ambientada en la Francia del siglo XVIII previa a la Revolución Francesa.",
-    "La Novicia Rebelde": "Una joven aspirante a monja se convierte en la instructora de los siete hijos de un capitán de la marina.",
-    "Odisea Burbujas": "Las aventuras del Profesor Memelovsky y sus criaturas enseñando ciencia y protegiendo el medio ambiente.",
-    "Caravana": "Un grupo de pioneros atraviesa el territorio estadounidense enfrentando peligros y aventuras.",
-    "Mi Bella Genio": "Un astronauta encuentra una botella mágica que alberga a una hermosa genio de dos mil años.",
-    "El Chapulin Colorado": "Las cómicas aventuras del torpe pero bienintencionado superhéroe mexicano."
+    "Las Aventuras De Sinbad": "Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.",
+    "El Septimo Cielo": "El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.",
+    "Scooby Do": "A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.",
+    "Sailor Moon": "Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.",
+    "Caricaturas Clasicas": "Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.",
+    "101 Dalmatas": "En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.",
+    "Full House": "Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.",
+    "El Hombre Del Maletin": "Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones imposibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.",
+    "Degrassi Junior High": "Con una mirada cruda y realista a la etapa de la adolescencia, un grupo de estudiantes de secundaria se enfrenta a la presión social, los primeros amores, la búsqueda de identidad y los imprevistos dilemas de la juventud.",
+    "El Chavo Del 8": "Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.",
+    "El Chavo El 8": "Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.",
+    "Area 12": "Los oficiales de patrulla Pete Malloy y Jim Reed recorren las calles de Los Ángeles velando por la seguridad ciudadana. Cada jornada los enfrenta a persecuciones a alta velocidad, robos armados y dramas humanos al límite.",
+    "Babylon 5": "En una colosal estación espacial de cinco millas de largo diseñada como territorio neutral, diplomáticos humanos y alienígenas intentan mantener una frágil paz galáctica mientras oscuras conspiraciones amenazan con desatar la guerra.",
+    "La Mujer Bionica": "Tras sufrir un trágico accidente de paracaidismo, la tenista Jaime Sommers es reconstruida con implantes cibernéticos que le otorgan fuerza, velocidad y un oído sobrehumanos, los cuales usa para trabajar como agente secreta.",
+    "El Monk": "Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.",
+    "Chico Listo": "TJ Henderson es un niño prodigio de solo 10 años cuya superinteligencia lo lleva directamente a la escuela secundaria. Allí deberá aprender a encajar entre estudiantes mucho mayores, incluyendo a sus propios hermanos.",
+    "El Show De Los Muppets": "Kermit la Rana intenta coordinar entre bambalinas un disparatado programa de variedades repleto de marionetas chifladas, sketches cómicos, números musicales y estrellas invitadas internacionales de primer nivel.",
+    "Viaje Al Fondo Del Mar": "El submarino nuclear Seaview explora las profundidades del océano bajo el mando del almirante Nelson y el capitán Crane, enfrentando no solo amenazas marinas y espías internacionales, sino también misteriosas criaturas.",
+    "Blanco Y Negro": "Un adinerado viudo de la Quinta Avenida adopta a Arnold y Willis, dos hermanos afroamericanos huérfanos de Harlem, dando paso a una conmovedora comedia de adaptación, valores familiares y reflexiones sociales.",
+    "Tierra De Gigantes": "Tras atravesar una tormenta espacial, la nave Spindrift realiza un aterrizaje forzoso en un planeta idéntico a la Tierra, pero donde todo tiene doce veces su tamaño normal y sus habitantes consideran a los viajeros como fugitivos.",
+    "Cine Estelar": "La pantalla se ilumina con grandes producciones cinematográficas, éxitos de taquilla y memorables historias de acción, suspenso y romance protagonizadas por las estrellas más icónicas de la industria.",
+    "Cine Clasico": "Un recorrido por las joyas doradas del séptimo arte. Obras maestras, dramas intensos y comedias inolvidables que definieron la historia del cine mundial y cautivaron a generaciones enteras.",
+    "Los Angeles De Charlie": "Sabrina, Jill y Kelly son tres audaces e inteligentes exoficiales de policía contratadas por la agencia privada del misterioso millonario Charles Townsend para resolver peligrosos casos encubiertos.",
+    "Jim West": "En el intrépido Viejo Oeste, los agentes secretos Jim West y Artemus Gordon utilizan un tren blindado de alta tecnología y disfraces para detener a malévolos villanos que amenazan la seguridad de la nación.",
+    "La Casa De La Pradera": "A finales del siglo XIX, la abnegada familia Ingalls lucha por salir adelante en la frontera estadounidense, viviendo momentos de amor, superación, fe y solidaridad comunitaria en el pintoresco poblado de Walnut Grove.",
+    "El Senor De Las Bestias": "Dotado con la capacidad única de comunicarse telepáticamente con los animales y apoyado por una pantera, un hurón y un águila, el guerrero Dar recorre tierras fantásticas combatiendo las fuerzas del mal.",
+    "Mision Imposible": "Jim Phelps encabeza al equipo IMF, un grupo de élite especializado en infiltraciones, ingeniería de engaño y tecnología avanzada diseñado para desarticular amenazas internacionales que nadie más puede detener.",
+    "Perdidos En El Espacio": "Rumbo al sistema Alfa Centauri, la nave de la familia Robinson es saboteada por el malicioso Dr. Smith, dejándolos a la deriva en un universo desconocido donde deberán sobrevivir a extraños mundos alienígenas.",
+    "El Auto Fantastico": "El detective dado por muerto Michael Knight recibe una nueva identidad para combatir a los criminales fuera del alcance de la ley, respaldado por K.I.T.T., un prototipo de automóvil deportivo dotado de inteligencia artificial.",
+    "El Crucero Del Amor": "A bordo del lujoso trasatlántico Pacific Princess, pasajeros de todas las edades se embarcan en viajes llenos de enredos románticos y comedia, guiados por la carismática tripulación liderada por el Capitán Stubing.",
+    "Lady Oscar": "En la Francia del siglo XVIII prerrevolucionaria, Oscar François de Jarjayes es criada como un hombre por su padre militar. Convertida en comandante de la guardia real, deberá proteger a María Antonieta entre conspiraciones.",
+    "La Novicia Rebelde": "Maria, una alegre y libre postulante a monja, es enviada a la mansión del estricto capitán Von Trapp para ser la institutriz de sus siete hijos, devolviendo la música, las risas y el amor al hogar familiar.",
+    "Odisea Burbujas": "El sabio Profesor Memelovsky, junto a Patas Verdes, Mimoso Ratón, Mafafa Musguito y Pistachón Zig-Zag, viajan por el tiempo y el espacio aprendiendo ciencia y desbaratando los mugrosos planes del Ecoloco.",
+    "Caravana": "Una extensa fila de carretas encabezada por el mayor Adams emprende una peligrosa travesía desde Misuri hasta California, enfrentando terrenos hostiles, desastres naturales y dramas personales entre los viajeros.",
+    "Mi Bella Genio": "Tras estrellarse en una isla desierta, el astronauta Tony Nelson encuentra una botella mística que alberga a Jeannie, una hermosa y juguetona genio que insiste en concederle todos sus deseos con inesperados resultados.",
+    "El Chapulin Colorado": "Con su Chipote Chillón y las Pastillas de Chiquitolina, este héroe de corazón puro pero sumamente torpe acude al rescate de quienes lo necesitan, superando sus propios miedos con un humor inolvidable."
 }
 
 def obtener_o_generar_sinopsis(nombre_programa):
-    """Busca en el diccionario o genera una descripción automática si no existe."""
+    """Busca en el diccionario o genera una descripción automática narrativa si no existe."""
     nombre_clean = nombre_programa.strip()
     
     # 1. Búsqueda exacta en la base de datos
@@ -98,15 +98,15 @@ def obtener_o_generar_sinopsis(nombre_programa):
         if clave.lower() in nombre_clean.lower() or nombre_clean.lower() in clave.lower():
             return sinopsis
             
-    # 3. Generación automática genérica según palabras clave
+    # 3. Generación narrativa genérica según palabras clave
     if re.search(r'Cine|Pelicula|Film', nombre_clean, re.I):
-        return f"Espacio cinematográfico dedicado a la emisión de producciones de {nombre_clean}."
+        return f"Disfruta de una entrega cinematográfica especial dentro del espacio de {nombre_clean}, con historias apasionantes, grandes interpretaciones y momentos memorables para los amantes del cine."
     elif re.search(r'Documental|Documentales', nombre_clean, re.I):
-        return "Programa documental enfocado en cultura, historia, naturaleza y temas de interés general."
+        return "Un fascinante recorrido visual que explora los misterios de la naturaleza, los hitos históricos más trascendentales y los secretos de nuestro planeta mediante imágenes e investigaciones impactantes."
     elif re.search(r'Caricaturas|Animada|Dibujos', nombre_clean, re.I):
-        return "Bloque de entretenimiento animado destinado a todo público."
+        return "Risas y diversión garantizadas con una selección especial de aventuras animadas llenas de color, personajes carismáticos y situaciones disparatadas para toda la familia."
     
-    return f"Emisión regular del programa {nombre_clean}."
+    return f"Acompaña a los protagonistas de {nombre_clean} en esta entrega donde las emociones, el entretenimiento y los momentos inesperados se apoderan de la pantalla."
 
 def ajustar_hora(hora_str, horas_a_sumar=2):
     """Suma 2 horas a un formato HH:MM (ejemplo 01:00 -> 03:00)."""
@@ -192,4 +192,4 @@ for i in range(len(progs_weekend)):
 # 5. Volcado a Google Sheets
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con sinopsis generadas.")
+print(f"¡Éxito! Se actualizaron {len(progs_weekdays)} programas para Weekdays y {len(progs_weekend)} para Weekend con sinopsis enriquecidas.")
