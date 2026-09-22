@@ -2,8 +2,8 @@ name: Scrapper web
 
 on:
   schedule:
-    # Se ejecuta automáticamente cada 6 horas (minuto 0)
-    - cron: '0 */6 * * *'
+    # Se ejecuta automáticamente cada 4 horas (minuto 0)
+    - cron: '0 */4 * * *'
   # Mantiene la opción de ejecutarlo manualmente cuando quieras
   workflow_dispatch:
 
