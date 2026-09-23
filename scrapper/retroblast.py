@@ -55,7 +55,7 @@ sheet_destino = abrir_sheet_con_reintento(SHEET_DESTINO_ID, NOMBRE_PESTANA)
 
 # --- BASE DE DATOS LOCAL CON SINOPSIS ENRIQUECIDAS ---
 DATABASE_SINOPSIS = {
-    "space ghost c2c": "Space Ghost, un superhero de los 60, conduce su propio talk show intergaláctico entrevistando a celebridades del mundo real junto a sus antiguos enemigos capturados.",
+    "space ghost c2c": "Space Ghost, un superhéroe de los 60, conduce su propio talk show intergaláctico entrevistando a celebridades del mundo real junto a sus antiguos enemigos capturados.",
     "space ghost coast to coast": "Space Ghost, un superhéroe de los 60, conduce su propio talk show intergaláctico entrevistando a celebridades del mundo real junto a sus antiguos enemigos capturados.",
     "futurama": "Philip J. Fry, un repartidor de pizza congelado criogénicamente en 1999, despierta mil años después en un extravagante futuro repleto de aliens y tecnología disparatada.",
     "the boondocks": "Huey y Riley Freeman son dos hermanos afroamericanos que se mudan a un tranquilo suburbio blanco con su excéntrico abuelo, enfrentando choques culturales y sátira social.",
@@ -63,6 +63,7 @@ DATABASE_SINOPSIS = {
     "sealab 2021": "Las desquiciadas aventuras de un grupo de investigadores que habitan una estación submarina experimental en el año 2021, donde el caos y el absurdo son la norma.",
     "metalocalypse": "Dethklok es la banda de heavy metal más famosa e influyente del planeta, desatando destrucción, caos y locura sin importar a dónde vayan.",
     "metalocypalpse": "Dethklok es la banda de heavy metal más famosa e influyente del planeta, desatando destrucción, caos y locura sin importar a dónde vayan.",
+    "metalocyalpse": "Dethklok es la banda de heavy metal más famosa e influyente del planeta, desatando destrucción, caos y locura sin importar a dónde vayan.",
     "athf": "Un vaso de batido, una caja de papas fritas y una albóndiga de carne vivientes resuelven insólitos misterios mientras lidian con su molesto vecino Carl.",
     "aqua teen hunger force": "Un vaso de batido, una caja de papas fritas y una albóndiga de carne vivientes resuelven insólitos misterios mientras lidian con su molesto vecino Carl.",
     "robot chicken": "Sátira animada en stop-motion que parodia la cultura pop, juguetes, películas, cómics y programas de televisión con humor negro y ritmo desenfrenado.",
@@ -114,7 +115,11 @@ DATABASE_SINOPSIS = {
     "naruto/ shippuden": "Tras años de intenso entrenamiento, Naruto regresa a su aldea para hacer frente a la temible organización Akatsuki y salvar a su amigo.",
     "family guy": "Las disparatadas vivencias de la familia Griffin en Quahog, encabezada por el descabellado Peter y su perro parlante Brian.",
     "bleach": "Ichigo Kurosaki obtiene accidentalmente los poderes de un Segador de Almas y asume el deber de proteger a los vivos y guiar a los espíritus.",
+    "fma b": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
+    "fma: b": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
     "fma brotherhood": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
+    "fma: brotherhood": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
+    "fullmetal alchemist brotherhood": "Los hermanos Elric viajan por el mundo buscando la Piedra Filosofal para restaurar sus cuerpos tras un fallido ritual alquímico.",
     "death note": "Un estudiante de secundaria encuentra un cuaderno sobrenatural con la capacidad de matar a cualquiera cuyo nombre sea escrito en sus páginas.",
     "jojo's bizarre adventure": "Las épicas batallas intergeneracionales de la linaje Joestar contra fuerzas del mal utilizando habilidades místicas y Stands.",
     "inuyasha": "Kagome es transportada al Japón feudal donde se une al medio demonio Inuyasha para recolectar los fragmentos de la valiosa Perla de Shikon.",
@@ -154,13 +159,16 @@ CACHE_SINOPSIS = {}
 
 def normalizar_nombre_programa(nombre_programa):
     """
-    Limpia etiquetas como 'x2', 'x 2', 'EN VIVO', etc., para poder
-    encontrar el programa base tanto en la BD como al unificar bloques.
+    Limpia etiquetas como 'x2', 'x 2', 'EN VIVO', etc., y corrige errores comunes de tipeo.
     """
     clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I)
-    # Elimina sufijos como 'x2', 'x 2', 'x 3' al final o de forma aislada
     clean = re.sub(r'\bx\s*\d+\b', '', clean, flags=re.I)
     clean = re.sub(r'\s+', ' ', clean).strip()
+    
+    # Corrección de errores tipográficos específicos
+    if re.search(r'metaloc', clean, flags=re.I):
+        clean = "Metalocalypse"
+        
     return clean
 
 def buscar_en_tmdb_espanol(titulo):
@@ -199,7 +207,7 @@ def buscar_en_tmdb_espanol(titulo):
 
 def obtener_sinopsis(nombre_programa):
     """
-    Obtiene la sinopsis normalizando primero el título (eliminando 'x2', etc.).
+    Obtiene la sinopsis normalizando primero el título.
     """
     clean = normalizar_nombre_programa(nombre_programa)
     
@@ -230,15 +238,11 @@ DIAS_MAPA = {
     "Monday": "Lunes",
     "Tuesday": "Martes",
     "Wednesday": "Miércoles",
-    "Thursday": "Viernes",
-    "Friday": "Viernes", # Corrección segura si hay duplicados
+    "Thursday": "Jueves",
+    "Friday": "Viernes",
     "Saturday": "Sábado",
     "Sunday": "Domingo"
 }
-
-# Corregir clave Friday
-DIAS_MAPA["Friday"] = "Viernes"
-DIAS_MAPA["Thursday"] = "Jueves"
 
 DIAS_ORDEN = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
@@ -258,6 +262,8 @@ for col_dia in headers[1:]:
         continue
 
     for idx, row in df.iterrows():
+        hora_raw = str(row[col_dia] if col_dia in df.columns else '').strip()
+        # En la iteración original leía col_hora o col_dia:
         hora_raw = str(row[col_hora]).strip()
         nombre_prog = str(row[col_dia]).strip()
 
@@ -302,7 +308,7 @@ for dia_nombre in DIAS_ORDEN:
     if not progs_dia:
         continue
 
-    # Primero construimos la lista con sus horas de inicio y fin individuales
+    # Construir lista individual
     bloques_individuales = []
     for i in range(len(progs_dia)):
         p_curr = progs_dia[i]
@@ -316,7 +322,7 @@ for dia_nombre in DIAS_ORDEN:
             "programa_norm": normalizar_nombre_programa(p_curr["programa"])
         })
 
-    # Unificación de bloques continuos consecutivos del mismo programa
+    # Unificación de bloques continuos
     bloques_unificados = []
     bloque_actual = None
 
@@ -324,7 +330,6 @@ for dia_nombre in DIAS_ORDEN:
         if bloque_actual is None:
             bloque_actual = b
         else:
-            # Si el programa normalizado es igual al anterior, extendemos la hora de fin
             if b["programa_norm"].lower() == bloque_actual["programa_norm"].lower():
                 bloque_actual["fin"] = b["fin"]
             else:
@@ -334,9 +339,8 @@ for dia_nombre in DIAS_ORDEN:
     if bloque_actual is not None:
         bloques_unificados.append(bloque_actual)
 
-    # Construir filas para la EPG con la sinopsis correspondiente
+    # Filas finales
     for b in bloques_unificados:
-        # Se guarda el nombre del programa sin la coletilla 'x2' si corresponde
         prog_limpio = b["programa_norm"]
         sinopsis = obtener_sinopsis(prog_limpio)
         filas_epg.append([b["dia"], b["inicio"], b["fin"], prog_limpio, sinopsis])
@@ -344,4 +348,4 @@ for dia_nombre in DIAS_ORDEN:
 # 6. Volcar en la pestaña 'BLAST'
 sheet_destino.clear()
 sheet_destino.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se cargaron {len(filas_epg)-1} registros en BLAST.")
+print(f"¡Éxito! Se unificaron los bloques y se cargaron {len(filas_epg)-1} registros en BLAST.")
