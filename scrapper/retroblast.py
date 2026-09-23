@@ -94,7 +94,7 @@ DATABASE_SINOPSIS = {
     "ppg": "Tres niñas con superpoderes creadas accidentalmente en un laboratorio defienden a la ciudad de Saltadilla de monstruos y mentes criminales.",
     "star wars the clone wars": "Los Caballeros Jedi luchan para mantener el orden y la paz en la galaxia contra los separatistas durante la devastadora Guerra de los Clones.",
     "hi hi puffy ami yumi": "Las aventuras animadas de las dos estrellas reales del pop japonés Puffy AmiYumi mientras viajan por el mundo en su autobús de gira.",
-    "hihiPuffyAmiYumi": "Las aventuras animadas de las dos estrellas reales del pop japonés Puffy AmiYumi mientras viajan por el mundo en su autobús de gira.",
+    "hihipuffyamiyumi": "Las aventuras animadas de las dos estrellas reales del pop japonés Puffy AmiYumi mientras viajan por el mundo en su autobús de gira.",
     "yu-gi-oh! dm": "Yugi Muto resuelve el Milenario Rompecabezas del Faraón y libera un espíritu antiguo, compitiendo en el juego de cartas de duelos de monstruos.",
     "sailor moon": "Usagi Tsukino descubre que es la reencarnación de una guerrera cósmica destinada a proteger la Tierra y buscar el Sagrado Cristal de Plata.",
     "yuyu": "Yusuke Urameshi muere al salvar a un niño y recibe una segunda oportunidad de vivir convirtiéndose en un detective del mundo espiritual.",
@@ -152,16 +152,27 @@ DATABASE_SINOPSIS = {
 
 CACHE_SINOPSIS = {}
 
+def normalizar_nombre_programa(nombre_programa):
+    """
+    Limpia etiquetas como 'x2', 'x 2', 'EN VIVO', etc., para poder
+    encontrar el programa base tanto en la BD como al unificar bloques.
+    """
+    clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I)
+    # Elimina sufijos como 'x2', 'x 2', 'x 3' al final o de forma aislada
+    clean = re.sub(r'\bx\s*\d+\b', '', clean, flags=re.I)
+    clean = re.sub(r'\s+', ' ', clean).strip()
+    return clean
+
 def buscar_en_tmdb_espanol(titulo):
     """Consulta la API de TMDb pidiendo explícitamente el resumen en español (es-MX)."""
     if not TMDB_API_KEY:
         return ""
         
     try:
-        titulo_clean = re.sub(r'\b(EN VIVO|ESPECIAL|BLOQUE|RUN A|RUN B|SEASON 1|FUN B)\b', '', titulo, flags=re.I).strip()
+        titulo_clean = re.sub(r'\b(BLOQUE|RUN A|RUN B|SEASON 1|FUN B)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
         
-        # 1. Búsqueda en Series de TV (TV Shows)
+        # 1. Búsqueda en Series de TV
         url_tv = f"https://api.themoviedb.org/3/search/tv?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
         res = requests.get(url_tv, timeout=4)
         if res.status_code == 200:
@@ -171,7 +182,7 @@ def buscar_en_tmdb_espanol(titulo):
                 if overview and len(overview) > 20:
                     return overview
 
-        # 2. Si no halla en TV, busca en Películas (Movies)
+        # 2. Búsqueda en Películas
         url_movie = f"https://api.themoviedb.org/3/search/movie?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
         res_movie = requests.get(url_movie, timeout=4)
         if res_movie.status_code == 200:
@@ -188,30 +199,21 @@ def buscar_en_tmdb_espanol(titulo):
 
 def obtener_sinopsis(nombre_programa):
     """
-    Busca la sinopsis en el siguiente orden:
-    1. Base de datos local (DATABASE_SINOPSIS)
-    2. API de TMDb (Español)
-    3. Cadena vacía si no se encuentra en ninguna parte
+    Obtiene la sinopsis normalizando primero el título (eliminando 'x2', etc.).
     """
-    # Limpieza base del nombre
-    clean = re.sub(r'\bEN VIVO\b', '', nombre_programa, flags=re.I).strip()
+    clean = normalizar_nombre_programa(nombre_programa)
     
-    # 1. Verificar si ya está en caché de esta ejecución
     if clean in CACHE_SINOPSIS:
         return CACHE_SINOPSIS[clean]
 
-    # Normalización para búsqueda insensible a mayúsculas/minúsculas y espacios extra
-    key_normalizada = re.sub(r'\s+', ' ', clean).strip().lower()
+    key_normalizada = clean.lower()
     
-    # 2. Buscar en la base local de sinopsis enriquecidas
     sinopsis_encontrada = ""
     if key_normalizada in DATABASE_SINOPSIS and DATABASE_SINOPSIS[key_normalizada]:
         sinopsis_encontrada = DATABASE_SINOPSIS[key_normalizada]
     else:
-        # 3. Si no existe localmente, consultar con TMDb
         sinopsis_encontrada = buscar_en_tmdb_espanol(clean)
 
-    # 4. Guardar resultado en caché (incluso si quedó en blanco) y retornar
     CACHE_SINOPSIS[clean] = sinopsis_encontrada
     return sinopsis_encontrada
 
@@ -228,11 +230,15 @@ DIAS_MAPA = {
     "Monday": "Lunes",
     "Tuesday": "Martes",
     "Wednesday": "Miércoles",
-    "Thursday": "Jueves",
-    "Friday": "Viernes",
+    "Thursday": "Viernes",
+    "Friday": "Viernes", # Corrección segura si hay duplicados
     "Saturday": "Sábado",
     "Sunday": "Domingo"
 }
+
+# Corregir clave Friday
+DIAS_MAPA["Friday"] = "Viernes"
+DIAS_MAPA["Thursday"] = "Jueves"
 
 DIAS_ORDEN = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
@@ -284,7 +290,7 @@ for col_dia in headers[1:]:
             "programa": nombre_prog
         })
 
-# 5. Ordenar, calcular horas de fin y asignar Sinopsis
+# 5. Ordenar, calcular horas de fin, unificar bloques continuos y asignar Sinopsis
 filas_epg = [
     ["Dia", "Inicio", "Fin", "Programa", "Descripcion"]
 ]
@@ -293,20 +299,49 @@ for dia_nombre in DIAS_ORDEN:
     progs_dia = [p for p in programas_procesados if p["dia"] == dia_nombre]
     progs_dia.sort(key=lambda x: x["inicio"])
 
+    if not progs_dia:
+        continue
+
+    # Primero construimos la lista con sus horas de inicio y fin individuales
+    bloques_individuales = []
     for i in range(len(progs_dia)):
         p_curr = progs_dia[i]
+        fin = progs_dia[i+1]["inicio"] if i < len(progs_dia) - 1 else progs_dia[0]["inicio"]
         
-        if i < len(progs_dia) - 1:
-            fin = progs_dia[i+1]["inicio"]
+        bloques_individuales.append({
+            "dia": p_curr["dia"],
+            "inicio": p_curr["inicio"],
+            "fin": fin,
+            "programa": p_curr["programa"],
+            "programa_norm": normalizar_nombre_programa(p_curr["programa"])
+        })
+
+    # Unificación de bloques continuos consecutivos del mismo programa
+    bloques_unificados = []
+    bloque_actual = None
+
+    for b in bloques_individuales:
+        if bloque_actual is None:
+            bloque_actual = b
         else:
-            fin = progs_dia[0]["inicio"]
+            # Si el programa normalizado es igual al anterior, extendemos la hora de fin
+            if b["programa_norm"].lower() == bloque_actual["programa_norm"].lower():
+                bloque_actual["fin"] = b["fin"]
+            else:
+                bloques_unificados.append(bloque_actual)
+                bloque_actual = b
+    
+    if bloque_actual is not None:
+        bloques_unificados.append(bloque_actual)
 
-        # Se obtiene la sinopsis desde BD local, TMDb o se deja en blanco
-        sinopsis = obtener_sinopsis(p_curr["programa"])
-
-        filas_epg.append([p_curr["dia"], p_curr["inicio"], fin, p_curr["programa"], sinopsis])
+    # Construir filas para la EPG con la sinopsis correspondiente
+    for b in bloques_unificados:
+        # Se guarda el nombre del programa sin la coletilla 'x2' si corresponde
+        prog_limpio = b["programa_norm"]
+        sinopsis = obtener_sinopsis(prog_limpio)
+        filas_epg.append([b["dia"], b["inicio"], b["fin"], prog_limpio, sinopsis])
 
 # 6. Volcar en la pestaña 'BLAST'
 sheet_destino.clear()
 sheet_destino.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se procesó y se cargaron {len(filas_epg)-1} registros en BLAST.")
+print(f"¡Éxito! Se cargaron {len(filas_epg)-1} registros en BLAST.")
