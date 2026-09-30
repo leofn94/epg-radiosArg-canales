@@ -32,6 +32,16 @@ TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "")
 SPREADSHEET_ID = "1JKs0R5aFs4uWMBFDAuVtf2-hDDYd87ZkibTqFV600Rs"
 NOMBRE_PESTANA = "TLMAS"
 
+DIAS_SEMANA_ES = {
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo"
+}
+
 def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=5):
     for intento in range(1, max_intentos + 1):
         try:
@@ -58,10 +68,6 @@ sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, NOMBRE_PESTANA)
 # ==========================================
 
 def obtener_xml_activo_por_intercepcion():
-    """
-    Abre la página con un navegador headless y captura la URL del .xml
-    solicitado por Fetch/XHR en tiempo real.
-    """
     xml_url_encontrada = []
 
     def manejar_peticion(request):
@@ -90,16 +96,60 @@ def obtener_xml_activo_por_intercepcion():
     return "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml"
 
 # ==========================================
-# 3. SINOPSIS LOCAL Y EXTERNA (TMDB)
+# 3. BASE DE DATOS LOCAL Y BÚSQUEDA SINOPSIS
 # ==========================================
 
 SINOPSIS_DB = {
+    "inuyasha": "Kagome Higurashi es una joven moderna que cae en un pozo sagrado y viaja al Japón feudal, donde libera al semidemonio Inuyasha para recolectar los fragmentos de la Joya de las Cuatro Almas.",
+    "hitoribocchi no seikatsu": "Hitori Bocchi sufre de extrema ansiedad social. Al entrar a la secundaria, intenta cumplir la promesa a su única amiga de la infancia: hacerse amiga de todos sus compañeros de clase.",
+    "yuru camp": "Rin es una chica que disfruta acampando sola en el monte Fuji, pero su vida cambia cuando conoce a Nadeshiko, una entusiasta joven que ama acampar en grupo.",
+    "kono subarashii sekai ni shukufuku wo!": "Kazuma Satou muere de forma ridícula y renace en un mundo de fantasía junto a una diosa inútil llamada Aqua, formando un grupo de aventureros muy peculiar.",
+    "my deer friend nokotan": "Torako Koshi es una estudiante perfecta de preparatoria cuya vida cambia drásticamente cuando rescata a Nokotan, una extraña chica con astas de ciervo.",
+    "one piece": "Monkey D. Luffy se embarca en un viaje por el mar junto a su tripulación de Piratas de Sombrero de Paja para encontrar el tesoro legendario One Piece y convertirse en el Rey de los Piratas.",
+    "naruto": "Naruto Uzumaki es un joven ninja hiperactivo que busca el reconocimiento de su aldea y sueña con convertirse en el Hokage, el líder de su comunidad.",
+    "lucky star": "Sigue las divertidas e ingeniosas vivencias cotidianas de un grupo de cuatro chicas de secundaria encabezadas por Konata Izumi, una chica otaku y perezosa.",
+    "city the animation": "Una comedia disparatada ambientada en una ciudad común y corriente pero llena de habitantes excéntricos cuyas vidas se entrelazan en situaciones cómicas.",
+    "nichijou": "La vida diaria de un grupo de estudiantes de secundaria e inusuales residentes, desde una robot hasta un gato parlante, enfrentando situaciones absurdas y exageradas.",
+    "girls' last tour": "Chito y Yuuri viajan sobre su vehículo Kettenkrad a través de las ruinas desoladas de una civilización futurista colapsada, buscando comida y combustible día a día.",
+    "frieren: más allá del final del viaje": "Décadas después de derrotar al Rey Demonio, la elfa Frieren emprende un viaje de autodescubrimiento para comprender mejor los sentimientos humanos tras la muerte de un viejo compañero.",
+    "shijou saikyou no deshi kenichi": "Kenichi Shirahama sufre acoso escolar, pero decide entrenar en un dojo donde se concentran maestros legendarios de diversas artes marciales.",
+    "jujutsu kaisen": "Yuji Itadori se traga un amuleto maldito con la fuerza de un poderoso demonio y se une a la Academia de Hechicería para eliminar maldiciones de este mundo.",
+    "kirakira☆pretty cure": "Un grupo de chicas pastelera de secundaria se transforma en las legendarias guerreras Precure para proteger los dulces y el poder del 'KiraKiraru'.",
+    "las quintillizas": "Futaro Uesugi es contratado como tutor académico privado para cinco hermanas idénticas que odian estudiar pero deben aprobar la preparatoria.",
+    "heartcatch precure": "Tsubomi Hanasaki y Erika Kurumi se transforman en las legendarias guerreras Pretty Cure para proteger el Árbol del Corazón y los sueños de la gente de los Apóstoles del Desierto.",
+    "initial d": "Takumi Fujiwara es un joven repartidor de tofu que demuestra un talento innato conduciendo su Toyota AE86 por las carreteras de montaña de Akina.",
+    "full metal alchemists": "Los hermanos Edward y Alphonse Elric utilizan la alquimia prohibida para intentar resucitar a su madre, pagando un alto precio que intentarán reparar buscando la Piedra Filosofal.",
+    "kiteretsu: el primo mas listo de debita": "Kiteretsu es un niño genio inventor que usa el libro de sus antepasados para construir inventos increíbles junto a su robot Korosuke.",
+    "kiteretsu: el primo mas listo de nobita": "Kiteretsu es un niño genio inventor que usa el libro de sus antepasados para construir inventos increíbles junto a su robot Korosuke.",
+    "k-on!": "Cuatro chicas de preparatoria se unen al club de música ligera de su escuela para salvarlo de ser desmantelado, formando la banda Ho-kago Tea Time.",
+    "adachi to shimamura": "Adachi y Shimamura se conocen en el segundo piso del gimnasio escolar y desarrollan una amistad muy cercana que lentamente evoluciona.",
+    "los justicieros": "Lina Inverse, una poderosa y codiciosa hechicera, viaja por el mundo enfrentándose a monstruos, bandidos y fuerzas oscuras con poderosos hechizos mágicos.",
+    "re:zero kara hajimeru isekai seikatsu": "Subaru Natsuki es transportado repentinamente a un mundo fantástico donde descubre que tiene la habilidad de 'Regreso por Muerte' cada vez que fallece.",
+    "evangelion": "Shinji Ikari es reclutado por su padre para pilotar un bio-meca gigante llamado Evangelion y defender a la humanidad del ataque de misteriosos seres conocidos como Ángeles.",
+    "amagami-san chi no enmusubi": "Uryu Kamiki intenta ingresar a la facultad de medicina mientras vive en un templo con tres hermanas sacerdotisas.",
     "komi-san no puede comunicarse": "Komi-san padece un severo trastorno de comunicación, pero junto a Tadano intentará cumplir su sueño de hacer 100 amigos.",
     "bocchi the rock!": "Hitori Gotou es una chica introvertida que sueña con tocar en una banda de rock, enfrentando sus miedos sociales con su guitarra.",
-    "bleach": "Ichigo Kurosaki obtiene los poderes de un Shinigami para proteger a los inocentes de los espíritus malignos llamados Hollows.",
     "umamusume: pretty derby": "Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación.",
+    "bleach": "Ichigo Kurosaki obtiene los poderes de un Shinigami para proteger a los inocentes de los espíritus malignos llamados Hollows.",
+    "love live": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su escuela.",
     "love live!": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su escuela.",
-    "amagami-san chi no enmusubi": "Uryu Kamiki intenta ingresar a la facultad de medicina mientras vive en un templo con tres hermanas sacerdotisas."
+    "onimai: i'm now your sister!": "Mahiro Oyama es un otaku encerrado en su casa cuya vida cambia cuando su hermana menor Mahiro lo transforma experimentalmente en una chica.",
+    "puella magi madoka magica": "Madoka Kaname y Sayaka Miki reciben la oferta de convertirse en chicas mágicas a cambio de concederles un deseo, pero descubren la oscura realidad detrás de ese contrato.",
+    "kao ni denai kashiwada-san": "Kashiwada-san es una chica con una expresión totalmente inexpresiva, mientras que Oota intenta constantemente sacarle una reacción.",
+    "devil may cry": "Dante regenta una agencia que acepta trabajos relacionados con cazas de demonios y misterios sobrenaturales.",
+    "alya sometimes hides her feelings in russian": "Alya es una estudiante transferida ruso-japonesa que suele hacer comentarios cariñosos en ruso a su compañero Kuze pensando que no le entiende.",
+    "black lagoon": "Rokuro Okajima es secuestrado por un grupo de mercenarios piratas modernos en Tailandia y decide unirse a ellos adoptando el apodo 'Rock'.",
+    "monster": "El Dr. Kenzo Tenma salva la vida de un niño herido en lugar de un político relevante, desencadenando una cadena de eventos macabros al descubrir que el niño creció para convertirse en un sociópata.",
+    "91 days": "Angelo Lagusa regresa a su ciudad natal bajo el nombre de Avilio Bruno para vengarse de la familia de la mafia que asesinó a sus padres y a su hermano.",
+    "ajin": "Kei Nagai descubre que es un 'Ajin', un ser inmortal perseguido por los gobiernos del mundo para experimentar con sus poderes.",
+    "planetes": "Sigue a un grupo de recolectores de basura espacial que trabajan a bordo de la nave DS-12 recopilando desechos orbitales para proteger las naves espaciales.",
+    "death note": "Light Yagami encuentra un cuaderno sobrenatural que permite matar a cualquiera cuyo nombre sea escrito en él, comenzando una cruzada para purgar el crimen.",
+    "mononoke": "Un misterioso boticario viaja por el Japón feudal resolviendo casos sobrenaturales y exorcizando espíritus malignos conocidos como Mononoke.",
+    "another": "Kouichi Sakakibara se traslada a la escuela de Yomiyama y descubre una extraña maldición en la clase 3-3 relacionada con una misteriosa chica con un parche.",
+    "phantom: requiem for the phantom": "Un turista estadounidense es secuestrado por una organización criminal llamada Inferno y entrenado para convertirse en un asesino a sueldo implacable llamado 'Two'.",
+    "rahxephon": "Ayato Kamina vive en un Tokio aislado del mundo exterior hasta que descubre la verdad detrás de las barreras y despierta al gigante RahXephon.",
+    "berserk": "Guts, conocido como el Espadachín Negro, viaja por un oscuro mundo medieval buscando venganza contra su antiguo comandante Griffith.",
+    "my home hero": "Tetsuo Tosu descubre que su hija es víctima de violencia doméstica por parte de un miembro de la yakuza y toma medidas drásticas para proteger a su familia."
 }
 
 CACHE_SINOPSIS = {}
@@ -155,23 +205,10 @@ def obtener_sinopsis(nombre_programa):
     return sinopsis
 
 # ==========================================
-# 4. CONVERSIÓN DE HORARIO (SV ➔ AR)
-# ==========================================
-
-def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
-    """Suma 3 horas (El Salvador UTC-6 a Argentina UTC-3)."""
-    try:
-        dt = datetime.strptime(hora_str.strip(), "%H:%M")
-        dt_ajustada = dt + timedelta(hours=diferencia_horas)
-        return dt_ajustada.strftime("%H:%M")
-    except ValueError:
-        return hora_str
-# ==========================================
-# 5. PARSEO DEL XML CON ESTRUCTURA REAL XMLTV
+# 4. PARSEO DEL XML CON ZONA HORARIA Y DÍA
 # ==========================================
 
 tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
-fecha_hoy_str = datetime.now(tz_ar).strftime("%Y-%m-%d")
 
 url_xml_activo = obtener_xml_activo_por_intercepcion()
 print(f"Descargando programación activa desde: {url_xml_activo}")
@@ -189,39 +226,41 @@ if res.status_code == 200:
         
         for elem in root.findall('.//programme'):
             start_attr = elem.attrib.get('start', '') # Ej: "20260901060000 -0600"
-            stop_attr = elem.attrib.get('stop', '')   # Ej: "20260901063000 -0600"
             
             title_elem = elem.find('title')
             nombre_prog = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
 
             if start_attr and nombre_prog:
-                # Extraer la parte YYYYMMDDHHMMSS sin el offset
                 raw_time = start_attr.split()[0]
                 
                 if len(raw_time) >= 12:
-                    # Convertir la hora del XML (UTC-6)
                     dt_orig = datetime.strptime(raw_time[:14], "%Y%m%d%H%M%S")
                     
-                    # Asignar la zona horaria UTC-6 (El Salvador)
                     tz_sv = pytz.timezone("America/El_Salvador")
                     dt_sv = tz_sv.localize(dt_orig)
                     
-                    # Convertir a hora de Argentina (UTC-3)
                     dt_ar = dt_sv.astimezone(tz_ar)
+                    
+                    # Extraer el día de la semana en español
+                    dia_semana_eng = dt_ar.strftime("%A").lower()
+                    dia_semana_es = DIAS_SEMANA_ES.get(dia_semana_eng, dt_ar.strftime("%A"))
                     
                     hora_ar = dt_ar.strftime("%H:%M")
                     nombre_clean = normalizar_nombre(nombre_prog)
                     
                     if nombre_clean:
-                        # Evitar duplicados seguidos exactos en la lista base
                         if not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean:
-                            programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
+                            programas_raw.append({
+                                "dia": dia_semana_es,
+                                "inicio": hora_ar,
+                                "programa": nombre_clean
+                            })
 
     except Exception as e:
         print(f"Error procesando el contenido XML: {e}")
 
 # ==========================================
-# 6. UNIFICACIÓN DE BLOQUES Y CARGA A SHEETS
+# 5. UNIFICACIÓN DE BLOQUES Y CARGA A SHEETS
 # ==========================================
 
 if not programas_raw:
@@ -232,20 +271,20 @@ else:
         p_curr = programas_raw[i]
         fin = programas_raw[i+1]["inicio"] if i < len(programas_raw) - 1 else programas_raw[0]["inicio"]
         bloques_individuales.append({
-            "fecha": fecha_hoy_str,
+            "dia": p_curr["dia"],
             "inicio": p_curr["inicio"],
             "fin": fin,
             "programa": p_curr["programa"]
         })
 
-    # Unificar programas o episodios consecutivos de la misma serie
+    # Unificar episodios o bloques consecutivos de la misma serie
     bloques_unificados = []
     bloque_actual = None
     for b in bloques_individuales:
         if bloque_actual is None:
             bloque_actual = b
         else:
-            if b["programa"].lower() == bloque_actual["programa"].lower():
+            if b["programa"].lower() == bloque_actual["programa"].lower() and b["dia"] == bloque_actual["dia"]:
                 bloque_actual["fin"] = b["fin"]
             else:
                 bloques_unificados.append(bloque_actual)
@@ -254,11 +293,11 @@ else:
         bloques_unificados.append(bloque_actual)
 
     # Confeccionar filas para Google Sheets
-    filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
+    filas_epg = [["Dia", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
-        filas_epg.append([b["fecha"], b["inicio"], b["fin"], b["programa"], sinopsis])
+        filas_epg.append([b["dia"], b["inicio"], b["fin"], b["programa"], sinopsis])
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets para el {fecha_hoy_str}.")
+    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets con la columna 'Dia'.")
