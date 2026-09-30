@@ -151,8 +151,8 @@ with sync_playwright() as p:
 
     browser.close()
 
-# 3. Post-procesamiento corregido
-# Step 3.1: Reemplazar 'AHORA' por hora actual o del programa contiguo
+# 3. Post-procesamiento
+# Step 3.1: Reemplazar 'AHORA' por la hora contigua o actual
 hora_actual_str = datetime.now(tz_local).strftime("%H:%M")
 for i, p in enumerate(programas_totales):
     if p["inicio"] == "AHORA":
@@ -163,18 +163,17 @@ for i, p in enumerate(programas_totales):
         else:
             p["inicio"] = hora_actual_str
 
-# Step 3.2: Filtrar elementos idénticos o consecutivos con la misma hora de inicio
+# Step 3.2: Filtrar elementos idénticos o consecutivos con la misma hora de inicio en el mismo día
 programas_depurados = []
 for p in programas_totales:
     if programas_depurados:
         ultimo = programas_depurados[-1]
         if ultimo["dia"] == p["dia"] and ultimo["inicio"] == p["inicio"]:
-            # Si se repite el inicio en el mismo día, conserva el programa más reciente
             programas_depurados[-1] = p
             continue
     programas_depurados.append(p)
 
-# Step 3.3: Asignar hora de fin evitando duraciones nulas o errores a medianoche
+# Step 3.3: Asignar hora de fin utilizando 00:00 al final del día o siguiente programa
 programas_procesados = []
 cant = len(programas_depurados)
 
@@ -184,13 +183,10 @@ for i in range(cant):
     if i < cant - 1:
         p_sig = programas_depurados[i+1]
         fin_str = p_sig["inicio"]
-        # Si el programa termina a medianoche (00:00), se asigna 24:00 para no romper duraciones
-        if fin_str == "00:00":
-            fin_str = "24:00"
     else:
-        fin_str = "24:00"
+        fin_str = "00:00"
 
-    # Ignorar si el horario de inicio es idéntico al de fin
+    # Ignorar si la hora de inicio es igual a la de fin (evita duración cero tipo 22:20 - 22:20)
     if p_curr["inicio"] == fin_str:
         continue
 
@@ -212,4 +208,4 @@ for p in programas_procesados:
 
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros sin texto duplicado ni bloques corruptos.")
+print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros sin texto duplicado ni duraciones nulas.")
