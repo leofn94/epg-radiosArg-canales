@@ -3,10 +3,10 @@ import json
 import re
 import time
 import urllib.parse
-import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 import pytz
-from bs4 import BeautifulSoup
+import requests
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -53,15 +53,67 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, NOMBRE_PESTANA)
 
 # ==========================================
-# 2. SINOPSIS LOCAL Y EXTERNA (TMDB)
+# 2. LOCALIZADOR AUTOMÁTICO DE XML
+# ==========================================
+
+URL_DIRECTORIO = "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/"
+URL_FALLBACK_PAGINA = "https://tlmas.kift.live/inicio/"
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}
+
+def encontrar_url_xml_actualizada():
+    """
+    Busca automáticamente en el sitio web el archivo .xml de EPG más reciente.
+    """
+    xml_encontrados = []
+
+    # Intento 1: Escanear la carpeta de la EPG directamente
+    try:
+        res = requests.get(URL_DIRECTORIO, headers=headers, timeout=8)
+        if res.status_code == 200:
+            matches = re.findall(r'href=["\']?([^"\'>]+\.xml)["\']?', res.text, re.I)
+            for m in matches:
+                url_completa = urllib.parse.urljoin(URL_DIRECTORIO, m)
+                xml_encontrados.append(url_completa)
+    except Exception as e:
+        print(f"Aviso al listar directorio: {e}")
+
+    # Intento 2: Escanear la página de inicio en busca de referencias a archivos XML
+    if not xml_encontrados:
+        try:
+            res = requests.get(URL_FALLBACK_PAGINA, headers=headers, timeout=8)
+            if res.status_code == 200:
+                matches = re.findall(r'https?://[^\s"\']+\.xml|/assets/[^\s"\']+\.xml', res.text, re.I)
+                for m in matches:
+                    url_completa = urllib.parse.urljoin(URL_FALLBACK_PAGINA, m)
+                    xml_encontrados.append(url_completa)
+        except Exception as e:
+            print(f"Aviso al escanear inicio: {e}")
+
+    # Seleccionar el último archivo XML encontrado (normalmente el más reciente por orden alfabético/fecha)
+    if xml_encontrados:
+        xml_encontrados.sort()
+        url_optima = xml_encontrados[-1]
+        print(f" XML detectado automáticamente: {url_optima}")
+        return url_optima
+
+    # Fallback por defecto si la búsqueda automática no devuelve nada
+    print("⚠️ No se pudo autodetectar el XML. Usando URL fallback por defecto.")
+    return "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml"
+
+# ==========================================
+# 3. BASE DE SINOPSIS LOCAL Y EXTERNA (TMDB)
 # ==========================================
 
 SINOPSIS_DB = {
-    "komi-san no puede comunicarse": "Komi-san es una chica hermosa y admirada por todos, pero padece un severo trastorno de comunicación. Junto a Tadano, intentará cumplir su sueño de hacer 100 amigos.",
-    "bocchi the rock!": "Hitori Gotou es una chica extremadamente introvertida y solitaria que sueña con tocar en una banda de rock, enfrentando sus miedos sociales con su guitarra.",
-    "bleach": "Ichigo Kurosaki es un adolescente capaz de ver espíritus que obtiene los poderes de un Shinigami para proteger a los inocentes y combatir a los espíritus malignos llamados Hollows.",
-    "umamusume: pretty derby": "Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación y triunfar en la gran escena de las competencias.",
-    "love live": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su amada preparatoria y salvar su escuela.",
+    "komi-san no puede comunicarse": "Komi-san padece un severo trastorno de comunicación, pero junto a Tadano intentará cumplir su sueño de hacer 100 amigos.",
+    "bocchi the rock!": "Hitori Gotou es una chica introvertida que sueña con tocar en una banda de rock, enfrentando sus miedos sociales con su guitarra.",
+    "bleach": "Ichigo Kurosaki obtiene los poderes de un Shinigami para proteger a los inocentes de los espíritus malignos llamados Hollows.",
+    "umamusume: pretty derby": "Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación.",
+    "love live!": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su escuela.",
+    "amagami-san chi no enmusubi": "Uryu Kamiki intenta ingresar a la facultad de medicina mientras vive en un templo con tres hermanas sacerdotisas."
 }
 
 CACHE_SINOPSIS = {}
@@ -79,7 +131,7 @@ def buscar_en_tmdb_espanol(titulo):
         titulo_clean = re.sub(r'\b(BLOQUE|RUN A|RUN B|SEASON \d+|EPISODIO \d+)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
         
-        # Búsqueda en TV
+        # Búsqueda en Series TV
         url_tv = f"https://api.themoviedb.org/3/search/tv?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
         res = requests.get(url_tv, timeout=4)
         if res.status_code == 200:
@@ -119,11 +171,11 @@ def obtener_sinopsis(nombre_programa):
     return sinopsis
 
 # ==========================================
-# 3. CONVERSIÓN DE HORARIO (SV ➔ AR)
+# 4. CONVERSIÓN DE HORARIO (SV ➔ AR)
 # ==========================================
 
 def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
-    """Suma 3 horas (El Salvador UTC-6 a Argentina UTC-3)."""
+    """Suma 3 horas al horario recibido de El Salvador (UTC-6) a Argentina (UTC-3)."""
     try:
         dt = datetime.strptime(hora_str.strip(), "%H:%M")
         dt_ajustada = dt + timedelta(hours=diferencia_horas)
@@ -132,75 +184,48 @@ def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
         return hora_str
 
 # ==========================================
-# 4. EXTRACCIÓN DE DATOS DESDE ENDPOINTS
+# 5. DESCARGA Y PARSEO DEL XML
 # ==========================================
 
 tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
 fecha_hoy_str = datetime.now(tz_ar).strftime("%Y-%m-%d")
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Accept": "application/json, text/plain, */*",
-    "Referer": "https://tlmas.kift.live/"
-}
+url_xml_actual = encontrar_url_xml_actualizada()
+print(f"Descargando programación desde: {url_xml_actual}")
 
+res = requests.get(url_xml_actual, headers=headers, timeout=10)
 programas_raw = []
 
-print(f"Extrayendo programación para {fecha_hoy_str}...")
-
-# Posibles URLs de API / JSON del reproductor
-endpoints = [
-    "https://tlmas.kift.live/api/programacion",
-    "https://tlmas.kift.live/programacion.json",
-    "https://tlmas.kift.live/api/schedule",
-    "https://tlmas.kift.live/data/schedule.json",
-    "https://tlmas.kift.live/programacion/index.html"
-]
-
-for endpoint in endpoints:
-    try:
-        res = requests.get(endpoint, headers=headers, timeout=5)
-        if res.status_code == 200:
-            # Intento de parseo JSON
-            try:
-                data = res.json()
-                items = data.get("epg") or data.get("programacion") or data.get("schedule") or (data if isinstance(data, list) else [])
-                for item in items:
-                    hora_sv = item.get("time") or item.get("hora") or item.get("start")
-                    nombre = item.get("title") or item.get("programa") or item.get("name")
-                    if hora_sv and nombre:
-                        if len(hora_sv) == 4:
-                            hora_sv = "0" + hora_sv
-                        hora_ar = convertir_horario_sv_a_ar(hora_sv)
-                        programas_raw.append({"inicio": hora_ar, "programa": normalizar_nombre(nombre)})
-                if programas_raw:
-                    break
-            except Exception:
-                # Parseo HTML con BeautifulSoup si devuelve HTML
-                soup = BeautifulSoup(res.content, "html.parser")
-                # Extraer de tarjetas de guía o listas
-                elementos = soup.select(".guia, .schedule-item, .program-item, tr, div")
-                for elem in elementos:
-                    texto = elem.get_text(" ", strip=True)
-                    match = re.search(r'(\d{1,2}:\d{2})\s*-\s*\d{1,2}:\d{2}\s+(.+)', texto)
-                    if match:
-                        hora_sv = match.group(1)
-                        if len(hora_sv) == 4:
-                            hora_sv = "0" + hora_sv
-                        nombre_prog = match.group(2)
-                        hora_ar = convertir_horario_sv_a_ar(hora_sv)
-                        programas_raw.append({"inicio": hora_ar, "programa": normalizar_nombre(nombre_prog)})
-                if programas_raw:
-                    break
-    except Exception as e:
-        continue
+if res.status_code == 200:
+    root = ET.fromstring(res.content)
+    
+    # Extraer los elementos del XML
+    for elem in root.findall('.//programme') or root.findall('.//item') or root.findall('.//*'):
+        inicio_elem = elem.find('start') if elem.find('start') is not None else elem.find('time')
+        titulo_elem = elem.find('title') if elem.find('title') is not None else elem.find('name')
+        
+        hora_sv = elem.attrib.get('start') or elem.attrib.get('time') or (inicio_elem.text if inicio_elem is not None else None)
+        nombre_prog = elem.attrib.get('title') or elem.attrib.get('name') or (titulo_elem.text if titulo_elem is not None else None)
+            
+        if hora_sv and nombre_prog:
+            time_match = re.search(r'\d{1,2}:\d{2}', hora_sv)
+            if time_match:
+                hora_sv = time_match.group(0)
+                if len(hora_sv) == 4:
+                    hora_sv = "0" + hora_sv
+                
+                hora_ar = convertir_horario_sv_a_ar(hora_sv, diferencia_horas=3)
+                nombre_clean = normalizar_nombre(nombre_prog)
+                
+                if nombre_clean and (not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean):
+                    programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
 
 # ==========================================
-# 5. BLOQUES Y CARGA A GOOGLE SHEETS
+# 6. UNIFICACIÓN DE BLOQUES Y CARGA EN SHEETS
 # ==========================================
 
 if not programas_raw:
-    print("⚠️ No se pudo extraer información desde las peticiones directas. Verifica las peticiones de red (Fetch/XHR) en el navegador.")
+    print("⚠️ No se pudieron obtener datos del XML.")
 else:
     bloques_individuales = []
     for i in range(len(programas_raw)):
@@ -213,7 +238,7 @@ else:
             "programa": p_curr["programa"]
         })
 
-    # Unificar transmisiones consecutivas
+    # Unificar programas consecutivos
     bloques_unificados = []
     bloque_actual = None
     for b in bloques_individuales:
@@ -228,7 +253,7 @@ else:
     if bloque_actual:
         bloques_unificados.append(bloque_actual)
 
-    # Armado final de la tabla
+    # Confeccionar filas para la planilla
     filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
@@ -236,4 +261,4 @@ else:
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f"¡Éxito! Se actualizaron {len(filas_epg) - 1} registros para la fecha {fecha_hoy_str} en Google Sheets.")
+    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets para el {fecha_hoy_str}.")
