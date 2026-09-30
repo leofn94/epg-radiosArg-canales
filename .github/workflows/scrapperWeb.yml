@@ -57,6 +57,12 @@ jobs:
         run: python MITV_Clasica.py
 
       # --- EL RESTO DE LOS CANALES ---
+      - name: Ejecutar script de TL+
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: python tl+.py
+        
       - name: Ejecutar script de retroblast
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
