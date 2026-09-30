@@ -1756,10 +1756,6 @@
     <title lang="es">My Home Hero</title>
     <desc lang="es">Tetsuo Tosu descubre que su hija es víctima de violencia doméstica por parte de un miembro de la yakuza y toma medidas drásticas para proteger a su familia.</desc>
   </programme>
-  <programme start="20260929224500 -0300" stop="20260929231000 -0300" channel="retroblast">
-    <title lang="es">Teen Titans</title>
-    <desc lang="es">Cinco jóvenes superhéroes unen sus fuerzas para proteger Jump City de poderosos villanos mientras lidian con los altibajos de la adolescencia.</desc>
-  </programme>
   <programme start="20260929231000 -0300" stop="20260929233500 -0300" channel="retroblast">
     <title lang="es">DBZ (Run B)</title>
     <desc lang="es">Goku y los Guerreros Z protegen la Tierra de despiadados saiyajins, tiranos intergalácticos y androides en batallas de poder colosal.</desc>
@@ -5014,10 +5010,6 @@ DW Sendung MADE TeamDW Sendung MADE Team</desc>
 
 El cambio climático y la pérdida de biodiversidad exigen una nueva forma de economía. Algo va a tener que cambiar si queremos vivir, trabajar y alimentarnos de forma digna en el futuro. El progreso y los cambios tecnológicos pueden ayudarnos a conseguirlo. Global Es da ideas sorprendentes, muestra posibles soluciones y ofrece perspectivas para un mundo que cambia a toda velocidad. Y para ello, parte de personas que buscan e impulsan el cambio y, así, inspiran a los demás.</desc>
   </programme>
-  <programme start="20260928230000 -0300" stop="20260928231000 -0300" channel="0206">
-    <title lang="es">Noticias</title>
-    <desc lang="es">Cada hora, las veinticuatro horas del día, un programa con la última información sobre asuntos a nivel global.</desc>
-  </programme>
   <programme start="20260928231000 -0300" stop="20260928231600 -0300" channel="0206">
     <title lang="es">Enlace</title>
     <desc lang="es">Una cita semanal con los temas más importantes de los países del continente americano, presentada por los principales corresponsales.</desc>
@@ -6694,10 +6686,6 @@ El cambio climático y la pérdida de biodiversidad exigen una nueva forma de ec
     <title lang="es">Otra mañana</title>
     <desc lang="es">Un espacio que ofrece al público todos los detalles y noticias exclusivas sobre la realidad social y política argentina. A través de los informes y las entrevistas, el público podrá formar su opinión sobre los acontecimientos de relevancia.</desc>
   </programme>
-  <programme start="20260928221000 -0300" stop="20260928231000 -0300" channel="0318">
-    <title lang="es">High Card</title>
-    <desc lang="es">En el Reino de Fourland, 52 cartas X otorgan poderes sobrenaturales a sus jugadores. Cuando estas cartas se dispersan y causan caos, el rey encarga a la corporación Pinochle la misión secreta de recuperarlas.</desc>
-  </programme>
   <programme start="20260928231000 -0300" stop="20260929095000 -0300" channel="0318">
     <title lang="es">Sailor Moon R</title>
     <desc lang="es">Las Sailor Scouts luchan con nuevas amenazas contra la Tierra, a la vez que lidian con la presencia de una joven del futuro que quiere tomar el Cristal de Plata de Sailor Moon.</desc>
@@ -8145,10 +8133,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0621">
     <title lang="es">Eurochannel</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928230600 -0300" stop="20260928231200 -0300" channel="0629">
-    <title lang="es">Un mensaje a la conciencia</title>
-    <desc lang="es">Breves anécdotas para despertar la conciencia del pueblo hispano.</desc>
   </programme>
   <programme start="20260928231200 -0300" stop="20260928231500 -0300" channel="0629">
     <title lang="es">Aprender a vivir</title>
@@ -10577,6 +10561,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002060000 -0300" stop="20261002061100 -0300" channel="0308">
     <title lang="es">El campamento de Lazlo • Nada como el hogar</title>
     <desc lang="es">Nada como el hogar | Un gnomo de madera muerde a Edward y él descubre que no es una pequeña picadura de mosquito.</desc>
+  </programme>
+  <programme start="20261002061100 -0300" stop="20261002062200 -0300" channel="0308">
+    <title lang="es">El campamento de Lazlo • Esperando a Edward</title>
+    <desc lang="es">Esperando a Edward | Banano le asigna a Edward la responsabilidad de cuidar a los escarabajos, quienes lo vuelven absolutamente loco.</desc>
   </programme>
   <programme start="20260928223800 -0300" stop="20260928233000 -0300" channel="0705">
     <title lang="es">Guaridas con estilo • Un Espacio De Juego Para Las Cabras Pigmeas</title>
@@ -13583,10 +13571,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">MultiPremier</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928212000 -0300" stop="20260928231000 -0300" channel="0839">
-    <title lang="es">La divina locura de Alda Merini</title>
-    <desc lang="es">Esta producción narra la vida de la poeta Alda Merini. En el corazón palpitante de Milán, a lo largo de la sugerente Navigli, se encuentra un apartamento acogedor, con la puerta siempre abierta, que atrae a una variada gama de personalidades. Un viaje al pasado nos traslada al período posterior a la Segunda Guerra Mundial: Alda es una joven adolescente con una aguda sensibilidad y talento para la escritura poética. Pese a la falta de apoyo familiar, Alda persiste su pasión por la poesía, lo que la llevó a ganar reconocimiento en el mundo literario. Entre un amor abrumador y conflictos familiares, Alda encuentra la fuerza para recuperarse incluso en los momentos más oscuros.</desc>
-  </programme>
   <programme start="20260928231000 -0300" stop="20260929174000 -0300" channel="0839">
     <title lang="es">El recolector de almas</title>
     <desc lang="es">Un anciano, destinado a coleccionar almas por la eternidad, busca la expiación después de intercambiar el alma de su hija.</desc>
@@ -14655,6 +14639,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Clásicos de terror</title>
     <desc lang="es">Las películas más espeluznantes en este ciclo.</desc>
   </programme>
+  <programme start="20261002061000 -0300" stop="20261002075000 -0300" channel="0859">
+    <title lang="es">Il cinico, l&#x27;infame, il violento</title>
+    <desc lang="es">Leonardo Tanzi, cansado de su trabajo de inspector trabaja ahora corrigiendo novelas policiacas. Luigi Maietto, alias &quot;El chino&quot; sale de la carcel y quiere vengarse de Tanzi, que fue el que lo metio allí, enviando a dos matones para hacer el trabajo, estos fallan, pero la policía declara publicamente al policía como muerto. Tanzi decide irse a Roma, pero allí la delincuencia es muy grande, El chino se alia con el capo Frank Di Maggio, aunque ninguno se fia del otro...</desc>
+  </programme>
   <programme start="20260928225000 -0300" stop="20260928232000 -0300" channel="0812">
     <title lang="es">Frasier • Acosado</title>
     <desc lang="es">T10 E12 - Acosado | Un nuevo analista financiero en la estación pone a Frasier con el agua hasta el cuello.</desc>
@@ -15534,6 +15522,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002052400 -0300" stop="20261002061200 -0300" channel="1604">
     <title lang="es">La casa del mal: sombras de muerte • Lugar panorámico</title>
     <desc lang="es">Lugar panorámico | Los asesinatos de dos adolescentes en un mirador remoto y panorámico parecen aleatorios hasta que la policía descubre una red de secretos entre su red de amigos.</desc>
+  </programme>
+  <programme start="20261002061200 -0300" stop="20261002070000 -0300" channel="1604">
+    <title lang="es">Caso criminal • Desenmascarando la verdad</title>
+    <desc lang="es">Desenmascarando la verdad | Un asesino mata a tiros a un empresario durante una invasión domiciliaria. La evidencia parece indicar que el crimen fue bien planeado y altamente calculado. La policía explora diversos motivos antes de desenmascarar al autor intelectual del ataque.</desc>
   </programme>
   <programme start="20260928220000 -0300" stop="20260928234000 -0300" channel="0621">
     <title lang="es">La asesina perfecta</title>
@@ -18739,10 +18731,6 @@ Universo conurbano es una experiencia, un devenir, un encuentro con historias qu
     <title lang="es">HBO 2</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928222200 -0300" stop="20260928231000 -0300" channel="3701">
-    <title lang="es">Extracted • Una jugosa jugada poderosa</title>
-    <desc lang="es">Una jugosa jugada poderosa | Los supervivientes buscan comida usando las armas y herramientas que sus seres queridos seleccionaron para ellos. Un miembro de la familia en el Cuartel General debe decidir cuál de los siete supervivientes restantes recibirá suministros.</desc>
-  </programme>
   <programme start="20260928231000 -0300" stop="20260929091800 -0300" channel="3701">
     <title lang="es">Extracted • Bitter Cold Consequences</title>
     <desc lang="es">Bitter Cold Consequences | Los supervivientes compiten en una búsqueda del tesoro en la naturaleza con consecuencias decisivas, mientras una familia en la sede toma una decisión estratégica que lleva a uno de los supervivientes al límite.</desc>
@@ -21613,10 +21601,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0704">
     <title lang="es">Discovery Theater</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928222400 -0300" stop="20260928231200 -0300" channel="0703">
-    <title lang="es">Archivos inexplicables • La tumba del gladiador</title>
-    <desc lang="es">T1 E6 - La tumba del gladiador | Se desentierra una fosa común de esqueletos mutilados en la frontera del Imperio Romano. Los expertos usan un análisis digital avanzado para revelar el misterio detrás de los restos.</desc>
   </programme>
   <programme start="20260928231200 -0300" stop="20260929022400 -0300" channel="0703">
     <title lang="es">Reyes de la construcción • El teleférico de Hong Kong</title>
@@ -25510,10 +25494,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">EWTN</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928222000 -0300" stop="20260928231000 -0300" channel="0619">
-    <title lang="es">The Son • El segundo imperio</title>
-    <desc lang="es">El segundo imperio | El joven Eli entrena como guerrero. En 1915, Eli y Phineas luchan para ayudar a la familia en Austin mientras Pete se enfrenta a sus demonios.</desc>
-  </programme>
   <programme start="20260928231000 -0300" stop="20260929000000 -0300" channel="0619">
     <title lang="es">The Son • Canción de muerte</title>
     <desc lang="es">Canción de muerte | El joven Eli se enfrenta a una prueba de supervivencia de vida o muerte en 1849. En 1915, los McCulloughs promulgan un plan peligroso para enfrentarse a su enemigo.</desc>
@@ -28109,10 +28089,6 @@ Andrés Gil</desc>
   <programme start="20261002030000 -0300" stop="20261002070000 -0300" channel="0932">
     <title lang="es">C5N Canal 5 Noticias</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928224800 -0300" stop="20260928231200 -0300" channel="0607">
-    <title lang="es">Playas alrededor del mundo • El lugar perfecto en Portugal</title>
-    <desc lang="es">T1 E5 - El lugar perfecto en Portugal | Una pareja de Nueva York sueña con mudarse a Portugal después de enamorarse del país mientras viajaba por Europa. Deciden buscar un apartamento frente al mar donde puedan tener un estilo de vida relajado y disfrutar de una gran terraza.</desc>
   </programme>
   <programme start="20260928231200 -0300" stop="20260929024800 -0300" channel="0607">
     <title lang="es">1000 lugares que ver antes de morir • Hawái</title>
@@ -31692,10 +31668,6 @@ Andrés Gil</desc>
     <title lang="es">Stingray Classic Rock</title>
     <desc lang="es">Relive the wonders of classic rock, the sound that revolutionized the world of music from the ‘60s to the ‘80s. Listen to the genre&#x27;s biggest legends.</desc>
   </programme>
-  <programme start="20260929204241 -0300" stop="20260929213242 -0300" channel="US2600019IC">
-    <title lang="es">The Engineering That Built the World</title>
-    <desc lang="es">Two master roadbuilders aim to link every US city with a historic highway system.</desc>
-  </programme>
   <programme start="20260929213242 -0300" stop="20260929222547 -0300" channel="US2600019IC">
     <title lang="es">The Engineering That Built the World</title>
     <desc lang="es">France and America compete to build a 50-mile path connecting two oceans.</desc>
@@ -31724,9 +31696,9 @@ Andrés Gil</desc>
     <title lang="es">The Engineering That Built the World</title>
     <desc lang="es">Two master roadbuilders aim to link every US city with a historic highway system.</desc>
   </programme>
-  <programme start="20260929202305 -0300" stop="20260929220714 -0300" channel="USBD1200009JI">
-    <title lang="es">Battlefields</title>
-    <desc lang="es">June 5th, 1944, over 13,000 men from two American parachute divisions flew a nearly impossible mission.</desc>
+  <programme start="20260930033242 -0300" stop="20260930042547 -0300" channel="US2600019IC">
+    <title lang="es">The Engineering That Built the World</title>
+    <desc lang="es">France and America compete to build a 50-mile path connecting two oceans.</desc>
   </programme>
   <programme start="20260929220714 -0300" stop="20260930000606 -0300" channel="USBD1200009JI">
     <title lang="es">Battlefields</title>
@@ -31744,9 +31716,9 @@ Andrés Gil</desc>
     <title lang="es">Inside Hitler&#x27;s Killing Machine</title>
     <desc lang="es">Hjalmar Schacht is a largely forgotten figure. And yet, Hitler&#x27;s rise to power depended on him.</desc>
   </programme>
-  <programme start="20260929210054 -0300" stop="20260929215619 -0300" channel="US2200001IY">
-    <title lang="es">Reproducción</title>
-    <desc lang="es">Exploramos la reproducción en animales mayores como leones y elefantes, analizando cómo la edad afecta su éxito y las ventajas en la vejez</desc>
+  <programme start="20260930031650 -0300" stop="20260930041018 -0300" channel="USBD1200009JI">
+    <title lang="es">WW2 Treasure Hunters</title>
+    <desc lang="es">B17 relics uncover the sacrifice of the 95th Bomb Group.</desc>
   </programme>
   <programme start="20260929215619 -0300" stop="20260929225155 -0300" channel="US2200001IY">
     <title lang="es">Poder y Dominio</title>
@@ -31772,13 +31744,9 @@ Andrés Gil</desc>
     <title lang="es">Reproducción</title>
     <desc lang="es">Exploramos la reproducción en animales mayores como leones y elefantes, analizando cómo la edad afecta su éxito y las ventajas en la vejez</desc>
   </programme>
-  <programme start="20260929203300 -0300" stop="20260929211100 -0300" channel="US5000053YV">
-    <title lang="es">Compilations</title>
-    <desc lang="es">Steve Harvey watches the classic family competition.</desc>
-  </programme>
-  <programme start="20260929211100 -0300" stop="20260929215300 -0300" channel="US5000053YV">
-    <title lang="es">Fast Money</title>
-    <desc lang="es">Learn how you play fast money.</desc>
+  <programme start="20260930033003 -0300" stop="20260930042539 -0300" channel="US2200001IY">
+    <title lang="es">Poder y Dominio</title>
+    <desc lang="es">Ovejas, alces y elefantes luchan por su poder al envejecer, mientras marmotas dependen de la familia para conservar su estatus social</desc>
   </programme>
   <programme start="20260929215300 -0300" stop="20260929223100 -0300" channel="US5000053YV">
     <title lang="es">Best of Steve Harvey</title>
@@ -31792,13 +31760,9 @@ Andrés Gil</desc>
     <title lang="es">Fast Money</title>
     <desc lang="es">Learn how you play fast money.</desc>
   </programme>
-  <programme start="20260929210000 -0300" stop="20260929213000 -0300" channel="USAJ3504502A">
-    <title lang="es">Formidable Enemy x And x Clear Objective</title>
-    <desc lang="es">In order to recover his memory, the King heads to the palace with Shaiapouf and Menthuthuyoupi.</desc>
-  </programme>
-  <programme start="20260929213000 -0300" stop="20260929220000 -0300" channel="USAJ3504502A">
-    <title lang="es">Magic x To x Destroy</title>
-    <desc lang="es">Knuckle and Meleoron, as well as Palm and Ikalgo, look on as the King and his Guard return.</desc>
+  <programme start="20260930035600 -0300" stop="20260930043600 -0300" channel="US5000053YV">
+    <title lang="es">Funniest Answers</title>
+    <desc lang="es">The funniest &quot;Family Feud&quot; answers replayed.</desc>
   </programme>
   <programme start="20260929220000 -0300" stop="20260929223000 -0300" channel="USAJ3504502A">
     <title lang="es">Anger x And x Light</title>
@@ -31844,6 +31808,14 @@ Andrés Gil</desc>
     <title lang="es">Magician x And x Butler</title>
     <desc lang="es">The fourth round of voting to select the new chairman is held.</desc>
   </programme>
+  <programme start="20260930033000 -0300" stop="20260930040000 -0300" channel="USAJ3504502A">
+    <title lang="es">Needles x And x Debt</title>
+    <desc lang="es">Hisoka appears before Gotoh and the other butlers who are trying to protect Killua.</desc>
+  </programme>
+  <programme start="20260930040000 -0300" stop="20260930043000 -0300" channel="USAJ3504502A">
+    <title lang="es">Sin x And x Claw</title>
+    <desc lang="es">The remaining eight candidates now compete in the 5th round of voting to select the new chairman.</desc>
+  </programme>
   <programme start="20260929203600 -0300" stop="20260929221200 -0300" channel="US1900002QK">
     <title lang="es">The Atticus Institute</title>
     <desc lang="es">In the early 1970s, Dr. Henry West creates an institute to find people with supernatural abilities. When Judith Winstead comes to the facility, she exhibits amazing abilities that the military wants to turn into a weapon.</desc>
@@ -31863,10 +31835,6 @@ Andrés Gil</desc>
   <programme start="20260930030200 -0300" stop="20260930044400 -0300" channel="US1900002QK">
     <title lang="es">Blood Creek</title>
     <desc lang="es">Two brothers become entangled in a sinister Nazi&#x27;s occult experiment at an American farmhouse.</desc>
-  </programme>
-  <programme start="20260929210800 -0300" stop="20260929220400 -0300" channel="US1800014CG">
-    <title lang="es">Alfred Hitchcock Hour</title>
-    <desc lang="es">Professional killers (Jack Cassidy, Harry Townes) with the same employer find that each has the other as his next target.</desc>
   </programme>
   <programme start="20260929220400 -0300" stop="20260929230100 -0300" channel="US1800014CG">
     <title lang="es">Alfred Hitchcock Hour</title>
@@ -31892,6 +31860,18 @@ Andrés Gil</desc>
     <title lang="es">Alfred Hitchcock Presents</title>
     <desc lang="es">A miserly janitor (Oscar Homolka) keeps the contents of a lost wallet, despite the protests of his wife (Jo Van Fleet).</desc>
   </programme>
+  <programme start="20260930031400 -0300" stop="20260930034100 -0300" channel="US1800014CG">
+    <title lang="es">Alfred Hitchcock Presents</title>
+    <desc lang="es">Freed from prison, a thief (Steven Hill) leads his partner (Steve Brodie) to the mine shaft where he hid their loot.</desc>
+  </programme>
+  <programme start="20260930034100 -0300" stop="20260930040800 -0300" channel="US1800014CG">
+    <title lang="es">Alfred Hitchcock Presents</title>
+    <desc lang="es">About to be executed for a crime he didn&#x27;t commit, a man (Harry Guardino) decides to write his side of the story. With Hugh Marlowe.</desc>
+  </programme>
+  <programme start="20260930040800 -0300" stop="20260930043700 -0300" channel="US1800014CG">
+    <title lang="es">Alfred Hitchcock Presents</title>
+    <desc lang="es">A teen (Carol Lynley) devises a scheme to escape the influence of her domineering aunt (Jeanette Nolan).</desc>
+  </programme>
   <programme start="20260929210225 -0300" stop="20260929225538 -0300" channel="USBD12000255B">
     <title lang="es">Norway v Canada | Group B | FIFA Women&#x27;s World Cup Sweden 1995™ | Full Match Replay</title>
     <desc lang="es">Watch the full match replay between Norway and Canada played on 10 June 1995 in Gavle.</desc>
@@ -31907,10 +31887,6 @@ Andrés Gil</desc>
   <programme start="20260930024449 -0300" stop="20260930045437 -0300" channel="USBD12000255B">
     <title lang="es">Spain v Sweden | Semi-finals | FIFA Women&#x27;s World Cup Australia &amp; New Zealand 2023™ | Full Match Replay</title>
     <desc lang="es">Watch the full match replay between Spain and Sweden.</desc>
-  </programme>
-  <programme start="20260929205919 -0300" stop="20260929215915 -0300" channel="USAK3508705A">
-    <title lang="es">Redwood Coast: California</title>
-    <desc lang="es">Journey to lush and mysterious forests with some of the biggest trees in the world.</desc>
   </programme>
   <programme start="20260929215915 -0300" stop="20260929225911 -0300" channel="USAK3508705A">
     <title lang="es">Lakeside Campfire: Quebec</title>
@@ -31936,9 +31912,9 @@ Andrés Gil</desc>
     <title lang="es">Houhora Beach: New Zealand</title>
     <desc lang="es">The lovely seaside hamlet of Houhora is New Zealand&#x27;s best-kept secret. Enjoy the surrounding beaches that make this destination unforgettable.</desc>
   </programme>
-  <programme start="20260929204000 -0300" stop="20260929214800 -0300" channel="US700012OU">
-    <title lang="es">Ocean Vibes</title>
-    <desc lang="es">An exploration of marine wilderness and wildlife from around the world.</desc>
+  <programme start="20260930035947 -0300" stop="20260930045943 -0300" channel="USAK3508705A">
+    <title lang="es">Snake Island: Philippines</title>
+    <desc lang="es">Fly away to paradise and explore the lush forests and turquoise waters of Snake Island, in the Philippines.</desc>
   </programme>
   <programme start="20260929214800 -0300" stop="20260929225600 -0300" channel="US700012OU">
     <title lang="es">Ocean Vibes</title>
@@ -31960,9 +31936,9 @@ Andrés Gil</desc>
     <title lang="es">Clown Fish With Music &amp; Ocean Sounds</title>
     <desc lang="es">Clown Fish with Music and Tranquil Ocean Sounds any time of day  perfect for relaxing, studying, sleeping, meditating, date night, dinner parties and more.</desc>
   </programme>
-  <programme start="20260929201000 -0300" stop="20260929212000 -0300" channel="USBA3800004EL">
-    <title lang="es">Crackling Fireplace 4K</title>
-    <desc lang="es">Enjoy the crackling wood and warm flames of this 4K fireplace.</desc>
+  <programme start="20260930032300 -0300" stop="20260930043200 -0300" channel="US700012OU">
+    <title lang="es">Tropical Fish With Music &amp; Ocean Sounds</title>
+    <desc lang="es">Enjoy these tropical fish blended with island music and calming ocean sounds  perfect for relaxing, studying, sleeping, meditating, date night, dinner parties and more.</desc>
   </programme>
   <programme start="20260929212000 -0300" stop="20260929223100 -0300" channel="USBA3800004EL">
     <title lang="es">Wood Fireplace 4K</title>
@@ -31983,6 +31959,10 @@ Andrés Gil</desc>
   <programme start="20260930020200 -0300" stop="20260930031300 -0300" channel="USBA3800004EL">
     <title lang="es">Fireplace Hearth 4K</title>
     <desc lang="es">Sit back, relax and enjoy the fire, in crystal clear 4K.</desc>
+  </programme>
+  <programme start="20260930031300 -0300" stop="20260930042400 -0300" channel="USBA3800004EL">
+    <title lang="es">Crackling Fireplace 4K</title>
+    <desc lang="es">Enjoy the crackling wood and warm flames of this 4K fireplace.</desc>
   </programme>
   <programme start="20260929210000 -0300" stop="20260929230000 -0300" channel="USBD3500013DG">
     <title lang="es">Stingray SPA</title>
@@ -37215,6 +37195,10 @@ Andrés Gil</desc>
     <desc lang="es">Una experiencia llena de acción y emoción que mantendrá al público en vilo, con especial atención a procedimientos criminales y aventuras emocionantes.</desc>
   </programme>
   <programme start="20261002051132 -0300" stop="20261002061132 -0300" channel="643054b1fc3be59477853717-692235265cbe620c1f9b6bc7">
+    <title lang="es">Sony One | Series Thriller</title>
+    <desc lang="es">Una experiencia llena de acción y emoción que mantendrá al público en vilo, con especial atención a procedimientos criminales y aventuras emocionantes.</desc>
+  </programme>
+  <programme start="20261002061132 -0300" stop="20261002071132 -0300" channel="643054b1fc3be59477853717-692235265cbe620c1f9b6bc7">
     <title lang="es">Sony One | Series Thriller</title>
     <desc lang="es">Una experiencia llena de acción y emoción que mantendrá al público en vilo, con especial atención a procedimientos criminales y aventuras emocionantes.</desc>
   </programme>
