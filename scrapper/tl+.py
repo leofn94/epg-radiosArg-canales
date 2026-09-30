@@ -166,9 +166,8 @@ def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
         return dt_ajustada.strftime("%H:%M")
     except ValueError:
         return hora_str
-
 # ==========================================
-# 5. EXTRACCIÓN Y PARSEO DEL XML INTERCEPTADO
+# 5. PARSEO DEL XML CON ESTRUCTURA REAL XMLTV
 # ==========================================
 
 tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
@@ -188,42 +187,34 @@ if res.status_code == 200:
     try:
         root = ET.fromstring(res.content)
         
-        for elem in root.iter():
-            tag = elem.tag.lower()
-            if tag in ['programme', 'program', 'item', 'event']:
-                # 1. Obtener Hora
-                hora_sv = elem.attrib.get('start') or elem.attrib.get('time') or elem.attrib.get('begin')
-                if not hora_sv:
-                    sub_time = elem.find('start') or elem.find('time')
-                    if sub_time is not None:
-                        hora_sv = sub_time.text
+        for elem in root.findall('.//programme'):
+            start_attr = elem.attrib.get('start', '') # Ej: "20260901060000 -0600"
+            stop_attr = elem.attrib.get('stop', '')   # Ej: "20260901063000 -0600"
+            
+            title_elem = elem.find('title')
+            nombre_prog = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
 
-                # 2. Obtener Título
-                nombre_prog = elem.attrib.get('title') or elem.attrib.get('name')
-                if not nombre_prog:
-                    sub_title = elem.find('title') or elem.find('name') or elem.find('heading')
-                    if sub_title is not None:
-                        nombre_prog = sub_title.text
-
-                if hora_sv and nombre_prog:
-                    time_match = re.search(r'(\d{2}):(\d{2})', hora_sv)
-                    if not time_match:
-                        ts_match = re.search(r'\d{8}(\d{2})(\d{2})', hora_sv)
-                        if ts_match:
-                            hora_sv_formatted = f"{ts_match.group(1)}:{ts_match.group(2)}"
-                        else:
-                            hora_sv_formatted = None
-                    else:
-                        hora_sv_formatted = time_match.group(0)
-
-                    if hora_sv_formatted:
-                        if len(hora_sv_formatted) == 4:
-                            hora_sv_formatted = "0" + hora_sv_formatted
-                        
-                        hora_ar = convertir_horario_sv_a_ar(hora_sv_formatted, diferencia_horas=3)
-                        nombre_clean = normalizar_nombre(nombre_prog)
-                        
-                        if nombre_clean and (not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean):
+            if start_attr and nombre_prog:
+                # Extraer la parte YYYYMMDDHHMMSS sin el offset
+                raw_time = start_attr.split()[0]
+                
+                if len(raw_time) >= 12:
+                    # Convertir la hora del XML (UTC-6)
+                    dt_orig = datetime.strptime(raw_time[:14], "%Y%m%d%H%M%S")
+                    
+                    # Asignar la zona horaria UTC-6 (El Salvador)
+                    tz_sv = pytz.timezone("America/El_Salvador")
+                    dt_sv = tz_sv.localize(dt_orig)
+                    
+                    # Convertir a hora de Argentina (UTC-3)
+                    dt_ar = dt_sv.astimezone(tz_ar)
+                    
+                    hora_ar = dt_ar.strftime("%H:%M")
+                    nombre_clean = normalizar_nombre(nombre_prog)
+                    
+                    if nombre_clean:
+                        # Evitar duplicados seguidos exactos en la lista base
+                        if not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean:
                             programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
 
     except Exception as e:
@@ -247,7 +238,7 @@ else:
             "programa": p_curr["programa"]
         })
 
-    # Unificar programas consecutivos
+    # Unificar programas o episodios consecutivos de la misma serie
     bloques_unificados = []
     bloque_actual = None
     for b in bloques_individuales:
@@ -262,7 +253,7 @@ else:
     if bloque_actual:
         bloques_unificados.append(bloque_actual)
 
-    # Cargar datos en la hoja de Google Sheets
+    # Confeccionar filas para Google Sheets
     filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
