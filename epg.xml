@@ -9,6 +9,7 @@
   <channel id="ciudadmagica.ar"><display-name>Ciudad Magica</display-name></channel>
   <channel id="retromagico.ar"><display-name>Retro Magico</display-name></channel>
   <channel id="locomotion1.ar"><display-name>Locomotion 1</display-name></channel>
+  <channel id="mitv.ar"><display-name>MITV</display-name></channel>
   <channel id="tlmas"><display-name>TLMAS</display-name></channel>
   <channel id="retroblast"><display-name>retroblast</display-name></channel>
   <channel id="cncity"><display-name>cncity</display-name></channel>
@@ -788,10 +789,6 @@
     <title lang="es">Cine en Casa</title>
     <desc lang="es">Ciclo de películas para acompañar la madrugada.</desc>
   </programme>
-  <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="retromagico.ar">
-    <title lang="es">Pokemon</title>
-    <desc lang="es">Ash y Pikachu recorren el mundo capturando y entrenando Pokémon.</desc>
-  </programme>
   <programme start="20260929233000 -0300" stop="20260930000000 -0300" channel="retromagico.ar">
     <title lang="es">Digimon</title>
     <desc lang="es">Aventuras digitales de niños y sus compañeros monstruos en el mundo digital.</desc>
@@ -1232,9 +1229,9 @@
     <title lang="es">El Mundo de Beakman</title>
     <desc lang="es">El excéntrico científico Beakman explica de forma divertida los misterios de la ciencia.</desc>
   </programme>
-  <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="locomotion1.ar">
-    <title lang="es">Duckman</title>
-    <desc lang="es">Eric T. Duckman es un detective pato egocéntrico, irresponsable y radicalmente incompetente que sin embargo termina resolviendo los casos más disparatados. Junto a su tranquilo socio Cornfed y su disfuncional familia, Duckman protagoniza una comedia animada para adultos llena de humor ácido, crítica social y situaciones completamente fuera de control.</desc>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="retromagico.ar">
+    <title lang="es">Lady Oscar</title>
+    <desc lang="es">La historia de Oscar François de Jarjayes, una mujer criada como soldado en la Francia del siglo XVIII.</desc>
   </programme>
   <programme start="20260929233000 -0300" stop="20260930000000 -0300" channel="locomotion1.ar">
     <title lang="es">South Park</title>
@@ -1676,9 +1673,317 @@
     <title lang="es">Cowboy Bebop</title>
     <desc lang="es">En el año 2071, la humanidad colonizó el sistema solar tras un accidente que destruyó la Luna. Spike Spiegel y Jet Black son cazarrecompensas que viajan a bordo de la nave Bebop, persiguiendo criminales por créditos. A ellos se suman la jugadora Faye Valentine, el genio informático Ed y el perro corgi Ein, formando un equipo tan disfuncional como entrañable, marcado por un jazz inolvidable.</desc>
   </programme>
-  <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="tlmas">
-    <title lang="es">Umamusume: Pretty Derby</title>
-    <desc lang="es">Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación.</desc>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="locomotion1.ar">
+    <title lang="es">Ranma ½</title>
+    <desc lang="es">Ranma Saotome, experto en artes marciales, cae en una fuente mágica en China durante su entrenamiento y queda maldito: cada vez que lo salpica agua fría se transforma en chica, y el agua caliente lo devuelve a su forma masculina. Prometido contra su voluntad a Akane Tendo, Ranma debe lidiar con rivales, pretendientes y la propia Akane en esta comedia romántica y de acción.</desc>
+  </programme>
+  <programme start="20260929233000 -0300" stop="20260930003000 -0300" channel="mitv.ar">
+    <title lang="es">El Monk</title>
+    <desc lang="es">Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.</desc>
+  </programme>
+  <programme start="20260930003000 -0300" stop="20260930012000 -0300" channel="mitv.ar">
+    <title lang="es">Las Aventuras De Sinbad/ Cine Estelar Viernes</title>
+    <desc lang="es">Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.</desc>
+  </programme>
+  <programme start="20260930012000 -0300" stop="20260930021000 -0300" channel="mitv.ar">
+    <title lang="es">El Septimo Cielo De Lunes A Jueves</title>
+    <desc lang="es">El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.</desc>
+  </programme>
+  <programme start="20260930021000 -0300" stop="20260930030000 -0300" channel="mitv.ar">
+    <title lang="es">Documentales ( Dependiendo De Cine Estelar Los Viernes)</title>
+    <desc lang="es">La pantalla se ilumina con grandes producciones cinematográficas, éxitos de taquilla y memorables historias de acción, suspenso y romance protagonizadas por las estrellas más icónicas de la industria.</desc>
+  </programme>
+  <programme start="20260930030000 -0300" stop="20260930033000 -0300" channel="mitv.ar">
+    <title lang="es">Scooby Do</title>
+    <desc lang="es">A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.</desc>
+  </programme>
+  <programme start="20260930033000 -0300" stop="20260930040000 -0300" channel="mitv.ar">
+    <title lang="es">Sailor Moon</title>
+    <desc lang="es">Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.</desc>
+  </programme>
+  <programme start="20260930040000 -0300" stop="20260930043000 -0300" channel="mitv.ar">
+    <title lang="es">Caricaturas Clasicas</title>
+    <desc lang="es">Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.</desc>
+  </programme>
+  <programme start="20260930043000 -0300" stop="20260930050000 -0300" channel="mitv.ar">
+    <title lang="es">101 Dalmatas</title>
+    <desc lang="es">En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.</desc>
+  </programme>
+  <programme start="20260930050000 -0300" stop="20260930053000 -0300" channel="mitv.ar">
+    <title lang="es">Full House</title>
+    <desc lang="es">Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.</desc>
+  </programme>
+  <programme start="20260930053000 -0300" stop="20260930063000 -0300" channel="mitv.ar">
+    <title lang="es">El Hombre Del Maletin</title>
+    <desc lang="es">Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones impossibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.</desc>
+  </programme>
+  <programme start="20260930063000 -0300" stop="20260930070000 -0300" channel="mitv.ar">
+    <title lang="es">Degrassi Junior High</title>
+    <desc lang="es">Con una mirada cruda y realista a la etapa de la adolescencia, un grupo de estudiantes de secundaria se enfrenta a la presión social, los primeros amores, la búsqueda de identidad y los imprevistos dilemas de la juventud.</desc>
+  </programme>
+  <programme start="20260930070000 -0300" stop="20260930073000 -0300" channel="mitv.ar">
+    <title lang="es">El Chavo El 8</title>
+    <desc lang="es">Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.</desc>
+  </programme>
+  <programme start="20260930073000 -0300" stop="20260930080000 -0300" channel="mitv.ar">
+    <title lang="es">Area 12</title>
+    <desc lang="es">Los oficiales de patrulla Pete Malloy y Jim Reed recorren las calles de Los Ángeles velando por la seguridad ciudadana. Cada jornada los enfrenta a persecuciones a alta velocidad, robos armados y dramas humanos al límite.</desc>
+  </programme>
+  <programme start="20260930080000 -0300" stop="20260930090000 -0300" channel="mitv.ar">
+    <title lang="es">Babylon 5</title>
+    <desc lang="es">En una colosal estación espacial de cinco millas de largo diseñada como territorio neutral, diplomáticos humanos y alienígenas intentan mantener una frágil paz galáctica mientras oscuras conspiraciones amenazan con desatar la guerra.</desc>
+  </programme>
+  <programme start="20260930090000 -0300" stop="20260930100000 -0300" channel="mitv.ar">
+    <title lang="es">La Mujer Bionica</title>
+    <desc lang="es">Tras sufrir un trágico accidente de paracaidismo, la tenista Jaime Sommers es reconstruida con implantes cibernéticos que le otorgan fuerza, velocidad y un oído sobrehumanos, los cuales usa para trabajar como agente secreta.</desc>
+  </programme>
+  <programme start="20260930100000 -0300" stop="20260930110000 -0300" channel="mitv.ar">
+    <title lang="es">El Monk</title>
+    <desc lang="es">Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.</desc>
+  </programme>
+  <programme start="20260930110000 -0300" stop="20260930120000 -0300" channel="mitv.ar">
+    <title lang="es">El Septimo Cielo</title>
+    <desc lang="es">El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.</desc>
+  </programme>
+  <programme start="20260930120000 -0300" stop="20260930130000 -0300" channel="mitv.ar">
+    <title lang="es">Las Aventuras De Sinbad</title>
+    <desc lang="es">Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.</desc>
+  </programme>
+  <programme start="20260930130000 -0300" stop="20260930133000 -0300" channel="mitv.ar">
+    <title lang="es">Chico Listo</title>
+    <desc lang="es">TJ Henderson es un niño prodigio de solo 10 años cuya superinteligencia lo lleva directamente a la escuela secundaria. Allí deberá aprender a encajar entre estudiantes mucho mayores, incluyendo a sus propios hermanos.</desc>
+  </programme>
+  <programme start="20260930133000 -0300" stop="20260930140000 -0300" channel="mitv.ar">
+    <title lang="es">El Show De Los Muppets</title>
+    <desc lang="es">Kermit la Rana intenta coordinar entre bambalinas un disparatado programa de variedades repleto de marionetas chifladas, sketches cómicos, números musicales y estrellas invitadas internacionales de primer nivel.</desc>
+  </programme>
+  <programme start="20260930140000 -0300" stop="20260930150000 -0300" channel="mitv.ar">
+    <title lang="es">Viaje Al Fondo Del Mar</title>
+    <desc lang="es">El submarino nuclear Seaview explora las profundidades del océano bajo el mando del almirante Nelson y el capitán Crane, enfrentando no solo amenazas marinas y espías internacionales, sino también misteriosas criaturas.</desc>
+  </programme>
+  <programme start="20260930150000 -0300" stop="20260930153000 -0300" channel="mitv.ar">
+    <title lang="es">Scooby Do</title>
+    <desc lang="es">A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.</desc>
+  </programme>
+  <programme start="20260930153000 -0300" stop="20260930160000 -0300" channel="mitv.ar">
+    <title lang="es">Sailor Moon</title>
+    <desc lang="es">Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.</desc>
+  </programme>
+  <programme start="20260930160000 -0300" stop="20260930170000 -0300" channel="mitv.ar">
+    <title lang="es">Caricaturas Clasicas</title>
+    <desc lang="es">Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.</desc>
+  </programme>
+  <programme start="20260930170000 -0300" stop="20260930173000 -0300" channel="mitv.ar">
+    <title lang="es">101 Dalmatas</title>
+    <desc lang="es">En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.</desc>
+  </programme>
+  <programme start="20260930173000 -0300" stop="20260930180000 -0300" channel="mitv.ar">
+    <title lang="es">Blanco Y Negro</title>
+    <desc lang="es">Un adinerado viudo de la Quinta Avenida adopta a Arnold y Willis, dos hermanos afroamericanos huérfanos de Harlem, dando paso a una conmovedora comedia de adaptación, valores familiares y reflexiones sociales.</desc>
+  </programme>
+  <programme start="20260930180000 -0300" stop="20260930183000 -0300" channel="mitv.ar">
+    <title lang="es">Full House</title>
+    <desc lang="es">Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.</desc>
+  </programme>
+  <programme start="20260930183000 -0300" stop="20260930193000 -0300" channel="mitv.ar">
+    <title lang="es">Tierra De Gigantes</title>
+    <desc lang="es">Tras atravesar una tormenta espacial, la nave Spindrift realiza un aterrizaje forzoso en un planeta idéntico a la Tierra, pero donde todo tiene doce veces su tamaño normal y sus habitantes consideran a los viajeros como fugitivos.</desc>
+  </programme>
+  <programme start="20260930193000 -0300" stop="20260930203000 -0300" channel="mitv.ar">
+    <title lang="es">El Hombre Del Maletin</title>
+    <desc lang="es">Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones impossibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.</desc>
+  </programme>
+  <programme start="20260930203000 -0300" stop="20260930210000 -0300" channel="mitv.ar">
+    <title lang="es">El Chavo Del 8</title>
+    <desc lang="es">Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.</desc>
+  </programme>
+  <programme start="20260930210000 -0300" stop="20260930213000 -0300" channel="mitv.ar">
+    <title lang="es">Area 12</title>
+    <desc lang="es">Los oficiales de patrulla Pete Malloy y Jim Reed recorren las calles de Los Ángeles velando por la seguridad ciudadana. Cada jornada los enfrenta a persecuciones a alta velocidad, robos armados y dramas humanos al límite.</desc>
+  </programme>
+  <programme start="20260930213000 -0300" stop="20260930223000 -0300" channel="mitv.ar">
+    <title lang="es">Babylon 5</title>
+    <desc lang="es">En una colosal estación espacial de cinco millas de largo diseñada como territorio neutral, diplomáticos humanos y alienígenas intentan mantener una frágil paz galáctica mientras oscuras conspiraciones amenazan con desatar la guerra.</desc>
+  </programme>
+  <programme start="20260930223000 -0300" stop="20260930233000 -0300" channel="mitv.ar">
+    <title lang="es">La Mujer Bionica ( Documentales Lunes)</title>
+    <desc lang="es">Tras sufrir un trágico accidente de paracaidismo, la tenista Jaime Sommers es reconstruida con implantes cibernéticos que le otorgan fuerza, velocidad y un oído sobrehumanos, los cuales usa para trabajar como agente secreta.</desc>
+  </programme>
+  <programme start="20260930233000 -0300" stop="20261001003000 -0300" channel="mitv.ar">
+    <title lang="es">El Monk</title>
+    <desc lang="es">Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.</desc>
+  </programme>
+  <programme start="20261001003000 -0300" stop="20261001012000 -0300" channel="mitv.ar">
+    <title lang="es">Las Aventuras De Sinbad/ Cine Estelar Viernes</title>
+    <desc lang="es">Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.</desc>
+  </programme>
+  <programme start="20261001012000 -0300" stop="20261001021000 -0300" channel="mitv.ar">
+    <title lang="es">El Septimo Cielo De Lunes A Jueves</title>
+    <desc lang="es">El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.</desc>
+  </programme>
+  <programme start="20261001021000 -0300" stop="20261001030000 -0300" channel="mitv.ar">
+    <title lang="es">Documentales ( Dependiendo De Cine Estelar Los Viernes)</title>
+    <desc lang="es">La pantalla se ilumina con grandes producciones cinematográficas, éxitos de taquilla y memorables historias de acción, suspenso y romance protagonizadas por las estrellas más icónicas de la industria.</desc>
+  </programme>
+  <programme start="20261001030000 -0300" stop="20261001033000 -0300" channel="mitv.ar">
+    <title lang="es">Scooby Do</title>
+    <desc lang="es">A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.</desc>
+  </programme>
+  <programme start="20261001033000 -0300" stop="20261001040000 -0300" channel="mitv.ar">
+    <title lang="es">Sailor Moon</title>
+    <desc lang="es">Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.</desc>
+  </programme>
+  <programme start="20261001040000 -0300" stop="20261001043000 -0300" channel="mitv.ar">
+    <title lang="es">Caricaturas Clasicas</title>
+    <desc lang="es">Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.</desc>
+  </programme>
+  <programme start="20261001043000 -0300" stop="20261001050000 -0300" channel="mitv.ar">
+    <title lang="es">101 Dalmatas</title>
+    <desc lang="es">En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.</desc>
+  </programme>
+  <programme start="20261001050000 -0300" stop="20261001053000 -0300" channel="mitv.ar">
+    <title lang="es">Full House</title>
+    <desc lang="es">Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.</desc>
+  </programme>
+  <programme start="20261001053000 -0300" stop="20261001063000 -0300" channel="mitv.ar">
+    <title lang="es">El Hombre Del Maletin</title>
+    <desc lang="es">Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones impossibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.</desc>
+  </programme>
+  <programme start="20261001063000 -0300" stop="20261001070000 -0300" channel="mitv.ar">
+    <title lang="es">Degrassi Junior High</title>
+    <desc lang="es">Con una mirada cruda y realista a la etapa de la adolescencia, un grupo de estudiantes de secundaria se enfrenta a la presión social, los primeros amores, la búsqueda de identidad y los imprevistos dilemas de la juventud.</desc>
+  </programme>
+  <programme start="20261001070000 -0300" stop="20261001073000 -0300" channel="mitv.ar">
+    <title lang="es">El Chavo El 8</title>
+    <desc lang="es">Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.</desc>
+  </programme>
+  <programme start="20261001073000 -0300" stop="20261001080000 -0300" channel="mitv.ar">
+    <title lang="es">Area 12</title>
+    <desc lang="es">Los oficiales de patrulla Pete Malloy y Jim Reed recorren las calles de Los Ángeles velando por la seguridad ciudadana. Cada jornada los enfrenta a persecuciones a alta velocidad, robos armados y dramas humanos al límite.</desc>
+  </programme>
+  <programme start="20261001080000 -0300" stop="20261001090000 -0300" channel="mitv.ar">
+    <title lang="es">Babylon 5</title>
+    <desc lang="es">En una colosal estación espacial de cinco millas de largo diseñada como territorio neutral, diplomáticos humanos y alienígenas intentan mantener una frágil paz galáctica mientras oscuras conspiraciones amenazan con desatar la guerra.</desc>
+  </programme>
+  <programme start="20261001090000 -0300" stop="20261001100000 -0300" channel="mitv.ar">
+    <title lang="es">La Mujer Bionica</title>
+    <desc lang="es">Tras sufrir un trágico accidente de paracaidismo, la tenista Jaime Sommers es reconstruida con implantes cibernéticos que le otorgan fuerza, velocidad y un oído sobrehumanos, los cuales usa para trabajar como agente secreta.</desc>
+  </programme>
+  <programme start="20261001100000 -0300" stop="20261001110000 -0300" channel="mitv.ar">
+    <title lang="es">El Monk</title>
+    <desc lang="es">Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.</desc>
+  </programme>
+  <programme start="20261001110000 -0300" stop="20261001120000 -0300" channel="mitv.ar">
+    <title lang="es">El Septimo Cielo</title>
+    <desc lang="es">El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.</desc>
+  </programme>
+  <programme start="20261001120000 -0300" stop="20261001130000 -0300" channel="mitv.ar">
+    <title lang="es">Las Aventuras De Sinbad</title>
+    <desc lang="es">Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.</desc>
+  </programme>
+  <programme start="20261001130000 -0300" stop="20261001133000 -0300" channel="mitv.ar">
+    <title lang="es">Chico Listo</title>
+    <desc lang="es">TJ Henderson es un niño prodigio de solo 10 años cuya superinteligencia lo lleva directamente a la escuela secundaria. Allí deberá aprender a encajar entre estudiantes mucho mayores, incluyendo a sus propios hermanos.</desc>
+  </programme>
+  <programme start="20261001133000 -0300" stop="20261001140000 -0300" channel="mitv.ar">
+    <title lang="es">El Show De Los Muppets</title>
+    <desc lang="es">Kermit la Rana intenta coordinar entre bambalinas un disparatado programa de variedades repleto de marionetas chifladas, sketches cómicos, números musicales y estrellas invitadas internacionales de primer nivel.</desc>
+  </programme>
+  <programme start="20261001140000 -0300" stop="20261001150000 -0300" channel="mitv.ar">
+    <title lang="es">Viaje Al Fondo Del Mar</title>
+    <desc lang="es">El submarino nuclear Seaview explora las profundidades del océano bajo el mando del almirante Nelson y el capitán Crane, enfrentando no solo amenazas marinas y espías internacionales, sino también misteriosas criaturas.</desc>
+  </programme>
+  <programme start="20261001150000 -0300" stop="20261001153000 -0300" channel="mitv.ar">
+    <title lang="es">Scooby Do</title>
+    <desc lang="es">A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.</desc>
+  </programme>
+  <programme start="20261001153000 -0300" stop="20261001160000 -0300" channel="mitv.ar">
+    <title lang="es">Sailor Moon</title>
+    <desc lang="es">Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.</desc>
+  </programme>
+  <programme start="20261001160000 -0300" stop="20261001170000 -0300" channel="mitv.ar">
+    <title lang="es">Caricaturas Clasicas</title>
+    <desc lang="es">Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.</desc>
+  </programme>
+  <programme start="20261001170000 -0300" stop="20261001173000 -0300" channel="mitv.ar">
+    <title lang="es">101 Dalmatas</title>
+    <desc lang="es">En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.</desc>
+  </programme>
+  <programme start="20261001173000 -0300" stop="20261001180000 -0300" channel="mitv.ar">
+    <title lang="es">Blanco Y Negro</title>
+    <desc lang="es">Un adinerado viudo de la Quinta Avenida adopta a Arnold y Willis, dos hermanos afroamericanos huérfanos de Harlem, dando paso a una conmovedora comedia de adaptación, valores familiares y reflexiones sociales.</desc>
+  </programme>
+  <programme start="20261001180000 -0300" stop="20261001183000 -0300" channel="mitv.ar">
+    <title lang="es">Full House</title>
+    <desc lang="es">Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.</desc>
+  </programme>
+  <programme start="20261001183000 -0300" stop="20261001193000 -0300" channel="mitv.ar">
+    <title lang="es">Tierra De Gigantes</title>
+    <desc lang="es">Tras atravesar una tormenta espacial, la nave Spindrift realiza un aterrizaje forzoso en un planeta idéntico a la Tierra, pero donde todo tiene doce veces su tamaño normal y sus habitantes consideran a los viajeros como fugitivos.</desc>
+  </programme>
+  <programme start="20261001193000 -0300" stop="20261001203000 -0300" channel="mitv.ar">
+    <title lang="es">El Hombre Del Maletin</title>
+    <desc lang="es">Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones impossibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.</desc>
+  </programme>
+  <programme start="20261001203000 -0300" stop="20261001210000 -0300" channel="mitv.ar">
+    <title lang="es">El Chavo Del 8</title>
+    <desc lang="es">Las disparatadas vivencias de un niño huérfano que vive dentro de un barril y desata toda clase de enredos, malentendidos y momentos cómicos junto a Don Ramón, Quico, La Chilindrina y los peculiares habitantes de la vecindad.</desc>
+  </programme>
+  <programme start="20261001210000 -0300" stop="20261001213000 -0300" channel="mitv.ar">
+    <title lang="es">Area 12</title>
+    <desc lang="es">Los oficiales de patrulla Pete Malloy y Jim Reed recorren las calles de Los Ángeles velando por la seguridad ciudadana. Cada jornada los enfrenta a persecuciones a alta velocidad, robos armados y dramas humanos al límite.</desc>
+  </programme>
+  <programme start="20261001213000 -0300" stop="20261001223000 -0300" channel="mitv.ar">
+    <title lang="es">Babylon 5</title>
+    <desc lang="es">En una colosal estación espacial de cinco millas de largo diseñada como territorio neutral, diplomáticos humanos y alienígenas intentan mantener una frágil paz galáctica mientras oscuras conspiraciones amenazan con desatar la guerra.</desc>
+  </programme>
+  <programme start="20261001223000 -0300" stop="20261001233000 -0300" channel="mitv.ar">
+    <title lang="es">La Mujer Bionica ( Documentales Lunes)</title>
+    <desc lang="es">Tras sufrir un trágico accidente de paracaidismo, la tenista Jaime Sommers es reconstruida con implantes cibernéticos que le otorgan fuerza, velocidad y un oído sobrehumanos, los cuales usa para trabajar como agente secreta.</desc>
+  </programme>
+  <programme start="20261001233000 -0300" stop="20261002003000 -0300" channel="mitv.ar">
+    <title lang="es">El Monk</title>
+    <desc lang="es">Adrian Monk es un brillante detective privado de San Francisco cuya agudeza inductiva es impecable, pero debe lidiar constantemente con su trastorno obsesivo-compulsivo y fobias para resolver los crímenes más intrincados.</desc>
+  </programme>
+  <programme start="20261002003000 -0300" stop="20261002012000 -0300" channel="mitv.ar">
+    <title lang="es">Las Aventuras De Sinbad/ Cine Estelar Viernes</title>
+    <desc lang="es">Zarpando hacia lo desconocido, el audaz capitán Sinbad y su diversa tripulación surcan mares mágicos enfrentando temibles monstruos marinos, poderosos hechiceros y mitos legendarios en busca de valiosos tesoros y la justicia.</desc>
+  </programme>
+  <programme start="20261002012000 -0300" stop="20261002021000 -0300" channel="mitv.ar">
+    <title lang="es">El Septimo Cielo De Lunes A Jueves</title>
+    <desc lang="es">El reverendo Eric Camden y su esposa Annie guían a sus siete hijos a través de las complejidades del crecimiento, la fe, las tentaciones de la adolescencia y los dilemas morales del día a día en una conmovedora historia familiar.</desc>
+  </programme>
+  <programme start="20261002021000 -0300" stop="20261002030000 -0300" channel="mitv.ar">
+    <title lang="es">Documentales ( Dependiendo De Cine Estelar Los Viernes)</title>
+    <desc lang="es">La pantalla se ilumina con grandes producciones cinematográficas, éxitos de taquilla y memorables historias de acción, suspenso y romance protagonizadas por las estrellas más icónicas de la industria.</desc>
+  </programme>
+  <programme start="20261002030000 -0300" stop="20261002033000 -0300" channel="mitv.ar">
+    <title lang="es">Scooby Do</title>
+    <desc lang="es">A bordo de la Máquina del Misterio, Fred, Daphne, Velma, Shaggy y el asustadizo perro Scooby-Doo recorren el país investigando apariciones sobrenaturales para desenmascarar a los villanos reales que se esconden tras las máscaras.</desc>
+  </programme>
+  <programme start="20261002033000 -0300" stop="20261002040000 -0300" channel="mitv.ar">
+    <title lang="es">Sailor Moon</title>
+    <desc lang="es">Usagi Tsukino es una estudiante ordinaria cuya vida cambia por completo al descubrir que es la reencarnación de una legendaria guerrera. Junto a las demás Sailor Guardians, defenderá a la Tierra y al universo de las fuerzas de la oscuridad.</desc>
+  </programme>
+  <programme start="20261002040000 -0300" stop="20261002043000 -0300" channel="mitv.ar">
+    <title lang="es">Caricaturas Clasicas</title>
+    <desc lang="es">Una cuidada selección con los cortometrajes inolvidables que marcaron la época dorada de la animación. Disfruta de la persecución constante, el humor slapstick y las locuras inolvidables de tus personajes favoritos de la infancia.</desc>
+  </programme>
+  <programme start="20261002043000 -0300" stop="20261002050000 -0300" channel="mitv.ar">
+    <title lang="es">101 Dalmatas</title>
+    <desc lang="es">En una colorida granja, los intrépidos cachorros dálmatas Lucky, Rolly y Cadpig exploran su entorno y viven emocionantes aventuras diarias, ingeniándoselas para eludir las malévolas estratagemas de la obsesiva Cruella de Vil.</desc>
+  </programme>
+  <programme start="20261002050000 -0300" stop="20261002053000 -0300" channel="mitv.ar">
+    <title lang="es">Full House</title>
+    <desc lang="es">Tras la trágica pérdida de su esposa, el presentador de noticias Danny Tanner recluta a su cuñado roquero Jesse y a su mejor amigo comediante Joey para ayudarlo a criar a sus tres dinámicas hijas: DJ, Stephanie y la pequeña Michelle.</desc>
+  </programme>
+  <programme start="20261002053000 -0300" stop="20261002063000 -0300" channel="mitv.ar">
+    <title lang="es">El Hombre Del Maletin</title>
+    <desc lang="es">Un enigmático exagente de inteligencia viaja por el mundo resolviendo misiones impossibles y casos de alto riesgo. Su única herramienta es su agudo intelecto y un maletín repleto de dispositivos de alta tecnología e identidades falsas.</desc>
+  </programme>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="mitv.ar">
+    <title lang="es">Degrassi Junior High</title>
+    <desc lang="es">Con una mirada cruda y realista a la etapa de la adolescencia, un grupo de estudiantes de secundaria se enfrenta a la presión social, los primeros amores, la búsqueda de identidad y los imprevistos dilemas de la juventud.</desc>
   </programme>
   <programme start="20260929233000 -0300" stop="20260930000000 -0300" channel="tlmas">
     <title lang="es">Bleach</title>
@@ -2320,9 +2625,9 @@
     <title lang="es">Lupin the Third Part II</title>
     <desc lang="es">El carismático ladrón internacional Arsène Lupin III planea atrevidos robos alrededor del mundo mientras esquiva al inspector Zenigata.</desc>
   </programme>
-  <programme start="20260929225500 -0300" stop="20260929232500 -0300" channel="cncity">
-    <title lang="es">The Grim Adventures of Billy &amp; Mandy</title>
-    <desc lang="es">Billy, un niño extremadamente despistado, y Mandy, una niña cínica y dominante, le ganan una apuesta a la Muerte (Puro Hueso), obligándolo a ser su mejor amigo para siempre.</desc>
+  <programme start="20261002063000 -0300" stop="20261002065500 -0300" channel="retroblast">
+    <title lang="es">Case Closed</title>
+    <desc lang="es">El brillante detective adolescente Shinichi Kudo es encogido al cuerpo de un niño de primaria y adopta la identidad del Detective Conan.</desc>
   </programme>
   <programme start="20260929232500 -0300" stop="20260929235500 -0300" channel="cncity">
     <title lang="es">Xiaolin Showdown</title>
@@ -2380,521 +2685,505 @@
     <title lang="es">Clone High</title>
     <desc lang="es">Clones genéticos de figuras históricas como Abraham Lincoln, Cleopatra y Gandhi asisten juntos a la escuela secundaria mientras atraviesan los dramas típicos de la adolescencia.</desc>
   </programme>
-  <programme start="20260929222000 -0300" stop="20260930222000 -0300" channel="janimotion">
-    <title lang="es">South Park</title>
-    <desc lang="es">Ep. 18 — The Mexican Staring Frog of Southern Sri Lanka Los chicos se vengan de Jimbo y Ned por inventar historias falsas sobre Vietnam, mientras un productor reinventa el programa de Jesús para salvarlo de la cancelación.</desc>
-  </programme>
-  <programme start="20260929222000 -0300" stop="20260929231500 -0300" channel="janimotion">
-    <title lang="es">Blue Seed</title>
-    <desc lang="es">Ep. 1 — La chica destinada Momiji Fujimiya descubre que desciende de la princesa Kushinada de la mitologia japonesa y que su sangre tiene el poder de enviar al sueno eterno a los monstruos Aragami, sellando asi su destino como protectora de la humanidad.</desc>
-  </programme>
-  <programme start="20260929231500 -0300" stop="20260929234400 -0300" channel="janimotion">
+  <programme start="20260929225000 -0300" stop="20260929234800 -0300" channel="janimotion">
     <title lang="es">Silent Möbius</title>
     <desc lang="es">Ep. 1 — Awake En 2023, Rally Cheyenne, jefa de la AMP, atrae a Katsumi Liqueur a Tokio con la promesa de revelarle la verdad sobre la muerte de su madre, cuando en realidad intenta reclutarla. Antes de aterrizar, un demonio Lucifer Hawk ataca su avión y Katsumi lo destruye con una hoja mágica heredada de su madre.</desc>
   </programme>
-  <programme start="20260929234400 -0300" stop="20260930000000 -0300" channel="janimotion">
+  <programme start="20260930000000 -0300" stop="20260930001600 -0300" channel="janimotion">
     <title lang="es">Zenki</title>
     <desc lang="es">Ep. 30 — Stolen Faces. Beware of the Pick-up Artist! La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
   </programme>
-  <programme start="20260930000000 -0300" stop="20260930001300 -0300" channel="janimotion">
-    <title lang="es">Zenki</title>
-    <desc lang="es">Ep. 30 — Stolen Faces. Beware of the Pick-up Artist! La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
-  </programme>
-  <programme start="20260930001300 -0300" stop="20260930004300 -0300" channel="janimotion">
+  <programme start="20260930001600 -0300" stop="20260930004600 -0300" channel="janimotion">
     <title lang="es">Beast Fighter The Apocalypse</title>
     <desc lang="es">Ep. 1 — Monstruos en la pesadilla Un experimento mata a su madre y convierte a Shin&#x27;ichi en una bestia; su padre lidera una secta dispuesta a despertar a Dios mientras monstruos arrasan ciudades. El remake del manga de Ken Ishikawa, emitido por Animax Latinoamérica.</desc>
   </programme>
-  <programme start="20260930004300 -0300" stop="20260930005700 -0300" channel="janimotion">
+  <programme start="20260930004600 -0300" stop="20260930010000 -0300" channel="janimotion">
     <title lang="es">The Ren &amp; Stimpy Show</title>
     <desc lang="es">Ep. 1 — El Blues de la Perrera El episodio piloto: Ren y Stimpy son encerrados en la perrera municipal, donde conocen a otros perros abandonados y enfrentan la adopción por un extraño dueño.</desc>
   </programme>
-  <programme start="20260930005700 -0300" stop="20260930012500 -0300" channel="janimotion">
+  <programme start="20260930010000 -0300" stop="20260930012800 -0300" channel="janimotion">
     <title lang="es">Duckman</title>
     <desc lang="es">Ep. 39 — The Road to Dendron Parodia de las películas &#x27;Camino de...&#x27; ambientada en Sudán, con Duckman y Cornfed viviendo una aventura de viaje al estilo de las clásicas road movies cómicas.</desc>
   </programme>
-  <programme start="20260930012500 -0300" stop="20260930015300 -0300" channel="janimotion">
+  <programme start="20260930012800 -0300" stop="20260930015700 -0300" channel="janimotion">
     <title lang="es">Quads!</title>
     <desc lang="es">Ep. 1 — Maimed Manor Reilly O&#x27;Reilly queda paralítico de cuello para abajo tras ser atropellado por su vecino Mort Bromberg, quien como acuerdo le entrega una lujosa mansión que Reilly compartirá con sus amigos discapacitados.</desc>
   </programme>
-  <programme start="20260930015300 -0300" stop="20260930021000 -0300" channel="janimotion">
+  <programme start="20260930015700 -0300" stop="20260930021300 -0300" channel="janimotion">
     <title lang="es">The Maxx</title>
     <desc lang="es">Ep. 1 — Episodio 1 El Maxx trata de salvar a una mujer de unos matones, pero termina arrestado y ella queda a merced del asesino en serie Mr. Gone. Julie Winters, trabajadora social, lo saca de la cárcel.</desc>
   </programme>
-  <programme start="20260930021000 -0300" stop="20260930023700 -0300" channel="janimotion">
+  <programme start="20260930021300 -0300" stop="20260930024000 -0300" channel="janimotion">
     <title lang="es">The Critic</title>
     <desc lang="es">Ep. 14 — Jay se enamora Jay se hace amigo de Alice, una madre soltera de la que se enamora, pero la reaparición de su esposo infiel Cyrus amenaza su naciente relación.</desc>
   </programme>
-  <programme start="20260930023700 -0300" stop="20260930030600 -0300" channel="janimotion">
+  <programme start="20260930024000 -0300" stop="20260930030900 -0300" channel="janimotion">
     <title lang="es">Divergence Eve</title>
     <desc lang="es">Ep. 1 — Mission 2 Tras abrir portales hacia un universo paralelo para viajar entre las estrellas, la humanidad despierta la atención de los ghouls, criaturas que amenazan con invadir nuestro universo. Las reclutas de la estación Watcher&#x27;s Nest se enfrentan a ellas… y a secretos aún más oscuros.</desc>
   </programme>
-  <programme start="20260930030600 -0300" stop="20260930033500 -0300" channel="janimotion">
+  <programme start="20260930030900 -0300" stop="20260930033800 -0300" channel="janimotion">
     <title lang="es">Pilot Candidate</title>
     <desc lang="es">Ep. 1 — Conexión Zero Enna llega a la academia GOA para formarse como piloto de las Diosas; al poco tiempo cae por accidente en la cabina del Ingrid Eeva-Leena y alcanza una sincronización total inédita con la Diosa, algo que cambiará su destino.</desc>
   </programme>
-  <programme start="20260930033500 -0300" stop="20260930040500 -0300" channel="janimotion">
+  <programme start="20260930033800 -0300" stop="20260930040800 -0300" channel="janimotion">
     <title lang="es">Bubblegum Crisis: Tokyo 2040</title>
     <desc lang="es">Ep. 12 — Made in Japan Priss combate en solitario un arma secreta masiva del ejército, Nene trabaja horas extra desde su puesto y otra de las Sabers toma una difícil decisión. Las manipulaciones de Genom se profundizan mientras un agente doble cierra su último trato.</desc>
   </programme>
-  <programme start="20260930040500 -0300" stop="20260930043300 -0300" channel="janimotion">
+  <programme start="20260930040800 -0300" stop="20260930043600 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J to X</title>
     <desc lang="es">Ep. 2 — Fase 02: La batalla se lleva a cabo Se celebra una colorida batalla de carrozas en la que los participantes compiten por ver cumplidos sus deseos. Las marionetas de Otaru se ven envueltas en el concurso.</desc>
   </programme>
-  <programme start="20260930043300 -0300" stop="20260930050100 -0300" channel="janimotion">
+  <programme start="20260930043600 -0300" stop="20260930050400 -0300" channel="janimotion">
     <title lang="es">Lost Universe</title>
     <desc lang="es">Ep. 2 — La Super Espada Kain Blueriver, la holograma Canal y la aspirante a detective Millie tripulan la Swordbreaker, una nave con secretos, en un universo compartido con Slayers. Contratos imposibles, contrabando y el ejército de las pesadillas: la aventura espacial de Hajime Kanzaka y Rui Araizumi, remasterizada.</desc>
   </programme>
-  <programme start="20260930050100 -0300" stop="20260930053100 -0300" channel="janimotion">
+  <programme start="20260930050400 -0300" stop="20260930053500 -0300" channel="janimotion">
     <title lang="es">If I See You in My Dreams</title>
     <desc lang="es">Ep. 3 — Episodios 9 al 12 Masuo profundiza en sus sentimientos y reflexiona sobre lo que realmente desea para su futuro. Entre sueños y revelaciones, la tensión romántica entre él y Nagisa crece hasta culminar en un beso decisivo que transforma la dinámica entre ambos.</desc>
   </programme>
-  <programme start="20260930053100 -0300" stop="20260930060000 -0300" channel="janimotion">
+  <programme start="20260930053500 -0300" stop="20260930060400 -0300" channel="janimotion">
     <title lang="es">Let&#x27;s Dance with Papa</title>
     <desc lang="es">Ep. 3 — El hombre estable / Engañando brutos Nueva tanda de sketches absurdos con el estilo de humor ácido y grosero característico de la serie, centrada en las rarezas de la familia Amachi.</desc>
   </programme>
-  <programme start="20260930060000 -0300" stop="20260930062900 -0300" channel="janimotion">
+  <programme start="20260930060400 -0300" stop="20260930063200 -0300" channel="janimotion">
     <title lang="es">Red Baron</title>
     <desc lang="es">Ep. 2 — La batalla por el campeonato Red Baron disputa su primer combate oficial contra el campeón reinante del torneo de robots.</desc>
   </programme>
-  <programme start="20260930062900 -0300" stop="20260930064100 -0300" channel="janimotion">
+  <programme start="20260930063200 -0300" stop="20260930064400 -0300" channel="janimotion">
     <title lang="es">The Adventures of the Mini-Goddess</title>
     <desc lang="es">Ep. 2 — Aquellos que creen encontrarán la salvación Keiichi y Belldandy afrontan las dudas y los primeros obstáculos de su nueva convivencia, demostrando que la fe y la bondad pueden superar cualquier desconfianza. ATP</desc>
   </programme>
-  <programme start="20260930064100 -0300" stop="20260930071100 -0300" channel="janimotion">
+  <programme start="20260930064400 -0300" stop="20260930071400 -0300" channel="janimotion">
     <title lang="es">Lupin III</title>
     <desc lang="es">Ep. 2 — Chacal El Mago Fujiko roba unas láminas con la fórmula de una sustancia irrompible e ignífuga a Pycal, un mago capaz de levitar y lanzar fuego por los dedos. Lupin descubre que los supuestos poderes son ilusiones basadas en química y vidrio, y lo desenmascara.</desc>
   </programme>
-  <programme start="20260930071100 -0300" stop="20260930073500 -0300" channel="janimotion">
+  <programme start="20260930071400 -0300" stop="20260930073800 -0300" channel="janimotion">
     <title lang="es">Sakura Diaries</title>
     <desc lang="es">Ep. 2 — Mi prima es una chica de citas Se revela que Urara trabaja como chica de compañía, un secreto que complica su relación con Touma mientras él sigue fingiendo ser estudiante de Keio para impresionar a Mieko.</desc>
   </programme>
-  <programme start="20260930073500 -0300" stop="20260930080400 -0300" channel="janimotion">
+  <programme start="20260930073800 -0300" stop="20260930080700 -0300" channel="janimotion">
     <title lang="es">Soul Hunter</title>
     <desc lang="es">Ep. 17 — Chi Chan, su viola mueve al enemigo La melodía de la viola china de Chi Chan resuena hasta el castillo de Suu y conmueve al enemigo. El título del listado traía una letra suelta corrupta (&quot;s&quot;).</desc>
   </programme>
-  <programme start="20260930080400 -0300" stop="20260930083300 -0300" channel="janimotion">
+  <programme start="20260930080700 -0300" stop="20260930083600 -0300" channel="janimotion">
     <title lang="es">Azumanga Daioh</title>
     <desc lang="es">Ep. 3 — Nyamo/Habatsu toso/Yukari ga kita - Warukunaimon/Dokomademo Tres años de secundaria con un grupo de chicas imposibles: la niña prodigio Chiyo, la despistada Osaka, la violenta Yukari-sensei y compañía. La comedia cotidiana que definió el slice of life moderno, episodio a episodio.</desc>
   </programme>
-  <programme start="20260930083300 -0300" stop="20260930090100 -0300" channel="janimotion">
+  <programme start="20260930083600 -0300" stop="20260930090500 -0300" channel="janimotion">
     <title lang="es">Neon Genesis Evangelion</title>
     <desc lang="es">Ep. 16 — Al borde de la muerte Shinji es absorbido por el ángel Leliel y queda atrapado dentro de un Mar de Dirac, una dimensión oscura donde enfrenta sus propios miedos y comienza a percibir el alma de su madre dentro del EVA-01.</desc>
   </programme>
-  <programme start="20260930090100 -0300" stop="20260930093100 -0300" channel="janimotion">
+  <programme start="20260930090500 -0300" stop="20260930093400 -0300" channel="janimotion">
     <title lang="es">Robotech</title>
     <desc lang="es">Ep. 2 — Cuenta Regresiva As the Zentraedi attack moves to its ground advance phase, Rick struggles to survive with Minmei in a fighting vehicle frustratingly alien to him.</desc>
   </programme>
-  <programme start="20260930093100 -0300" stop="20260930095800 -0300" channel="janimotion">
+  <programme start="20260930093400 -0300" stop="20260930100100 -0300" channel="janimotion">
     <title lang="es">Cowboy Bebop</title>
     <desc lang="es">Ep. 2 — El paso del perro callejero Spike y Jet viajan a Marte tras un ladrón que robó un corgi galés modificado genéticamente, un valioso perro de datos, y acaban adoptándolo con el nombre de Ein.</desc>
   </programme>
-  <programme start="20260930095800 -0300" stop="20260930102400 -0300" channel="janimotion">
+  <programme start="20260930100100 -0300" stop="20260930102700 -0300" channel="janimotion">
     <title lang="es">Initial D: First Stage</title>
     <desc lang="es">Ep. 2 — Derrape con cuatro ruedas Los Speedstars buscan desesperadamente al piloto del AE86 que humilló a Keisuke, creyendo que se trata del legendario Bunta Fujiwara. Mientras tanto, Keisuke exige la revancha y los motores vuelven a rugir en Akina.</desc>
   </programme>
-  <programme start="20260930102400 -0300" stop="20260930104700 -0300" channel="janimotion">
+  <programme start="20260930102700 -0300" stop="20260930105100 -0300" channel="janimotion">
     <title lang="es">Tekkaman Blade</title>
     <desc lang="es">Ep. 2 — Invasión La Tierra cae ante los radam, enjambres alienígenas que esclavizan humanos. D-Boy, un sobreviviente capaz de transformarse en Tekkaman Blade, se une a los Space Knights con un secreto que lo une al enemigo. Uno de los mechas más celebrados de los 90.</desc>
   </programme>
-  <programme start="20260930104700 -0300" stop="20260930111600 -0300" channel="janimotion">
+  <programme start="20260930105100 -0300" stop="20260930112000 -0300" channel="janimotion">
     <title lang="es">Boogiepop Phantom</title>
     <desc lang="es">Ep. 1 — Retratos del recuerdo Moto Tonomura confiesa sus sentimientos a un chico que desapareció tiempo atrás. Sin embargo, la aparición es eliminada por Boogiepop, la legendaria entidad que acecha entre los estudiantes.</desc>
   </programme>
-  <programme start="20260930111600 -0300" stop="20260930114600 -0300" channel="janimotion">
+  <programme start="20260930112000 -0300" stop="20260930114900 -0300" channel="janimotion">
     <title lang="es">Black Cat</title>
     <desc lang="es">Ep. 15 — Tôzakaru neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
   </programme>
-  <programme start="20260930114600 -0300" stop="20260930121300 -0300" channel="janimotion">
+  <programme start="20260930114900 -0300" stop="20260930121600 -0300" channel="janimotion">
     <title lang="es">Pet Shop of Horrors</title>
     <desc lang="es">Ep. 3 — Desesperación Robin Hendrix, actor encasillado por su único éxito, compra al Conde D una criatura de torso femenino y cola de reptil que debe mantener oculta. Al intentar retomar su carrera para conservarla, choca con una realidad que no coincide con sus expectativas.</desc>
   </programme>
-  <programme start="20260930121300 -0300" stop="20260930124100 -0300" channel="janimotion">
+  <programme start="20260930121600 -0300" stop="20260930124500 -0300" channel="janimotion">
     <title lang="es">Blue Seed</title>
     <desc lang="es">Ep. 2 — El despertar del poder Un mitama, el alma de un Aragami, se incrusta en el pecho de Momiji despertando en ella la capacidad de sentir la presencia de estas criaturas y un nuevo poder para combatirlas junto a la organizacion TAC.</desc>
   </programme>
-  <programme start="20260930124100 -0300" stop="20260930131000 -0300" channel="janimotion">
+  <programme start="20260930124500 -0300" stop="20260930131300 -0300" channel="janimotion">
     <title lang="es">Silent Möbius</title>
     <desc lang="es">Ep. 2 — Decide Katsumi rechaza unirse a la AMP, pero un Lucifer Hawk de Categoría 1 le ofrece información sobre su padre Gigelf. La policía recupera un fragmento del demonio que se regenera y abre un portal, dejando entrar a una horda que devasta la ciudad.</desc>
   </programme>
-  <programme start="20260930131000 -0300" stop="20260930133700 -0300" channel="janimotion">
+  <programme start="20260930131300 -0300" stop="20260930134000 -0300" channel="janimotion">
     <title lang="es">Aeon Flux</title>
     <desc lang="es">Ep. 7 — Reraizure Æon recupera unas fotografías comprometedoras de Trevor y se encuentra con Rorty, la expareja de Muriel, quien había sido traicionada por ella. Finalmente, Rorty toma una píldora de felicidad que le borra todos los recuerdos.</desc>
   </programme>
-  <programme start="20260930133700 -0300" stop="20260930140500 -0300" channel="janimotion">
+  <programme start="20260930134000 -0300" stop="20260930140900 -0300" channel="janimotion">
     <title lang="es">CUTTLAS</title>
     <desc lang="es">Ep. 1 — Con cien cañones por banda Parodia del cine de piratas cuyo título rinde homenaje al célebre poema &quot;La canción del pirata&quot; de José de Espronceda. Producido inicialmente como cortometraje independiente en 1993, dirigido por Sonia Llera con guion de Calpurnio, fue posteriormente integrado como episodio de la serie Cuttlas Microfilms. ATP</desc>
   </programme>
-  <programme start="20260930140500 -0300" stop="20260930142200 -0300" channel="janimotion">
+  <programme start="20260930140900 -0300" stop="20260930142500 -0300" channel="janimotion">
     <title lang="es">Crapston Villas</title>
     <desc lang="es">Ep. 10 — Episodio 10 Sophie planea su venganza mientras tres okupas se instalan en el sótano y se celebra una fiesta insoportablemente ruidosa en el edificio.</desc>
   </programme>
-  <programme start="20260930142200 -0300" stop="20260930143600 -0300" channel="janimotion">
+  <programme start="20260930142500 -0300" stop="20260930143900 -0300" channel="janimotion">
     <title lang="es">The Ren &amp; Stimpy Show</title>
     <desc lang="es">Ep. 2 — ¡El Gran Día de Stimpy! Stimpy gana un concurso del programa de Muddy Mudskipper y se convierte en una estrella repentina, dejando a Ren a un lado.</desc>
   </programme>
-  <programme start="20260930143600 -0300" stop="20260930150400 -0300" channel="janimotion">
+  <programme start="20260930143900 -0300" stop="20260930150700 -0300" channel="janimotion">
     <title lang="es">Duckman</title>
     <desc lang="es">Ep. 40 — Dammit, Hollywood Duckman se convierte en ejecutivo de un estudio cinematográfico, donde su nulo criterio artístico y su mal genio causan estragos en la industria del cine.</desc>
   </programme>
-  <programme start="20260930150400 -0300" stop="20260930153400 -0300" channel="janimotion">
+  <programme start="20260930150700 -0300" stop="20260930153700 -0300" channel="janimotion">
     <title lang="es">Divergence Eve</title>
     <desc lang="es">Ep. 1 — Mission 2 Tras abrir portales hacia un universo paralelo para viajar entre las estrellas, la humanidad despierta la atención de los ghouls, criaturas que amenazan con invadir nuestro universo. Las reclutas de la estación Watcher&#x27;s Nest se enfrentan a ellas… y a secretos aún más oscuros.</desc>
   </programme>
-  <programme start="20260930153400 -0300" stop="20260930160300 -0300" channel="janimotion">
+  <programme start="20260930153700 -0300" stop="20260930160600 -0300" channel="janimotion">
     <title lang="es">Pilot Candidate</title>
     <desc lang="es">Ep. 1 — Conexión Zero Enna llega a la academia GOA para formarse como piloto de las Diosas; al poco tiempo cae por accidente en la cabina del Ingrid Eeva-Leena y alcanza una sincronización total inédita con la Diosa, algo que cambiará su destino.</desc>
   </programme>
-  <programme start="20260930160300 -0300" stop="20260930163200 -0300" channel="janimotion">
+  <programme start="20260930160600 -0300" stop="20260930163600 -0300" channel="janimotion">
     <title lang="es">Bubblegum Crisis: Tokyo 2040</title>
     <desc lang="es">Ep. 12 — Made in Japan Priss combate en solitario un arma secreta masiva del ejército, Nene trabaja horas extra desde su puesto y otra de las Sabers toma una difícil decisión. Las manipulaciones de Genom se profundizan mientras un agente doble cierra su último trato.</desc>
   </programme>
-  <programme start="20260930163200 -0300" stop="20260930170100 -0300" channel="janimotion">
+  <programme start="20260930163600 -0300" stop="20260930170400 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J to X</title>
     <desc lang="es">Ep. 2 — Fase 02: La batalla se lleva a cabo Se celebra una colorida batalla de carrozas en la que los participantes compiten por ver cumplidos sus deseos. Las marionetas de Otaru se ven envueltas en el concurso.</desc>
   </programme>
-  <programme start="20260930170100 -0300" stop="20260930172800 -0300" channel="janimotion">
+  <programme start="20260930170400 -0300" stop="20260930173100 -0300" channel="janimotion">
     <title lang="es">Lost Universe</title>
     <desc lang="es">Ep. 2 — La Super Espada Kain Blueriver, la holograma Canal y la aspirante a detective Millie tripulan la Swordbreaker, una nave con secretos, en un universo compartido con Slayers. Contratos imposibles, contrabando y el ejército de las pesadillas: la aventura espacial de Hajime Kanzaka y Rui Araizumi, remasterizada.</desc>
   </programme>
-  <programme start="20260930172800 -0300" stop="20260930175900 -0300" channel="janimotion">
+  <programme start="20260930173100 -0300" stop="20260930180200 -0300" channel="janimotion">
     <title lang="es">If I See You in My Dreams</title>
     <desc lang="es">Ep. 3 — Episodios 9 al 12 Masuo profundiza en sus sentimientos y reflexiona sobre lo que realmente desea para su futuro. Entre sueños y revelaciones, la tensión romántica entre él y Nagisa crece hasta culminar en un beso decisivo que transforma la dinámica entre ambos.</desc>
   </programme>
-  <programme start="20260930175900 -0300" stop="20260930182800 -0300" channel="janimotion">
+  <programme start="20260930180200 -0300" stop="20260930183100 -0300" channel="janimotion">
     <title lang="es">Let&#x27;s Dance with Papa</title>
     <desc lang="es">Ep. 3 — El hombre estable / Engañando brutos Nueva tanda de sketches absurdos con el estilo de humor ácido y grosero característico de la serie, centrada en las rarezas de la familia Amachi.</desc>
   </programme>
-  <programme start="20260930182800 -0300" stop="20260930185600 -0300" channel="janimotion">
+  <programme start="20260930183100 -0300" stop="20260930190000 -0300" channel="janimotion">
     <title lang="es">Red Baron</title>
     <desc lang="es">Ep. 2 — La batalla por el campeonato Red Baron disputa su primer combate oficial contra el campeón reinante del torneo de robots.</desc>
   </programme>
-  <programme start="20260930185600 -0300" stop="20260930190900 -0300" channel="janimotion">
+  <programme start="20260930190000 -0300" stop="20260930191200 -0300" channel="janimotion">
     <title lang="es">The Adventures of the Mini-Goddess</title>
     <desc lang="es">Ep. 2 — Aquellos que creen encontrarán la salvación Keiichi y Belldandy afrontan las dudas y los primeros obstáculos de su nueva convivencia, demostrando que la fe y la bondad pueden superar cualquier desconfianza. ATP</desc>
   </programme>
-  <programme start="20260930190900 -0300" stop="20260930193900 -0300" channel="janimotion">
+  <programme start="20260930191200 -0300" stop="20260930194200 -0300" channel="janimotion">
     <title lang="es">Lupin III</title>
     <desc lang="es">Ep. 2 — Chacal El Mago Fujiko roba unas láminas con la fórmula de una sustancia irrompible e ignífuga a Pycal, un mago capaz de levitar y lanzar fuego por los dedos. Lupin descubre que los supuestos poderes son ilusiones basadas en química y vidrio, y lo desenmascara.</desc>
   </programme>
-  <programme start="20260930193900 -0300" stop="20260930200300 -0300" channel="janimotion">
+  <programme start="20260930194200 -0300" stop="20260930200600 -0300" channel="janimotion">
     <title lang="es">Sakura Diaries</title>
     <desc lang="es">Ep. 2 — Mi prima es una chica de citas Se revela que Urara trabaja como chica de compañía, un secreto que complica su relación con Touma mientras él sigue fingiendo ser estudiante de Keio para impresionar a Mieko.</desc>
   </programme>
-  <programme start="20260930200300 -0300" stop="20260930203100 -0300" channel="janimotion">
+  <programme start="20260930200600 -0300" stop="20260930203500 -0300" channel="janimotion">
     <title lang="es">Soul Hunter</title>
     <desc lang="es">Ep. 17 — Chi Chan, su viola mueve al enemigo La melodía de la viola china de Chi Chan resuena hasta el castillo de Suu y conmueve al enemigo. El título del listado traía una letra suelta corrupta (&quot;s&quot;).</desc>
   </programme>
-  <programme start="20260930203100 -0300" stop="20260930210100 -0300" channel="janimotion">
+  <programme start="20260930203500 -0300" stop="20260930210400 -0300" channel="janimotion">
     <title lang="es">Azumanga Daioh</title>
     <desc lang="es">Ep. 3 — Nyamo/Habatsu toso/Yukari ga kita - Warukunaimon/Dokomademo Tres años de secundaria con un grupo de chicas imposibles: la niña prodigio Chiyo, la despistada Osaka, la violenta Yukari-sensei y compañía. La comedia cotidiana que definió el slice of life moderno, episodio a episodio.</desc>
   </programme>
-  <programme start="20260930210100 -0300" stop="20260930212900 -0300" channel="janimotion">
+  <programme start="20260930210400 -0300" stop="20260930213200 -0300" channel="janimotion">
     <title lang="es">Neon Genesis Evangelion</title>
     <desc lang="es">Ep. 16 — Al borde de la muerte Shinji es absorbido por el ángel Leliel y queda atrapado dentro de un Mar de Dirac, una dimensión oscura donde enfrenta sus propios miedos y comienza a percibir el alma de su madre dentro del EVA-01.</desc>
   </programme>
-  <programme start="20260930212900 -0300" stop="20260930215800 -0300" channel="janimotion">
+  <programme start="20260930213200 -0300" stop="20260930220200 -0300" channel="janimotion">
     <title lang="es">Robotech</title>
     <desc lang="es">Ep. 2 — Cuenta Regresiva As the Zentraedi attack moves to its ground advance phase, Rick struggles to survive with Minmei in a fighting vehicle frustratingly alien to him.</desc>
   </programme>
-  <programme start="20260930215800 -0300" stop="20260930222600 -0300" channel="janimotion">
+  <programme start="20260930220200 -0300" stop="20260930222900 -0300" channel="janimotion">
     <title lang="es">Cowboy Bebop</title>
     <desc lang="es">Ep. 2 — El paso del perro callejero Spike y Jet viajan a Marte tras un ladrón que robó un corgi galés modificado genéticamente, un valioso perro de datos, y acaban adoptándolo con el nombre de Ein.</desc>
   </programme>
-  <programme start="20260930222600 -0300" stop="20260930225200 -0300" channel="janimotion">
+  <programme start="20260930222900 -0300" stop="20260930225500 -0300" channel="janimotion">
     <title lang="es">Initial D: First Stage</title>
     <desc lang="es">Ep. 2 — Derrape con cuatro ruedas Los Speedstars buscan desesperadamente al piloto del AE86 que humilló a Keisuke, creyendo que se trata del legendario Bunta Fujiwara. Mientras tanto, Keisuke exige la revancha y los motores vuelven a rugir en Akina.</desc>
   </programme>
-  <programme start="20260930225200 -0300" stop="20260930231500 -0300" channel="janimotion">
+  <programme start="20260930225500 -0300" stop="20260930231800 -0300" channel="janimotion">
     <title lang="es">Tekkaman Blade</title>
     <desc lang="es">Ep. 2 — Invasión La Tierra cae ante los radam, enjambres alienígenas que esclavizan humanos. D-Boy, un sobreviviente capaz de transformarse en Tekkaman Blade, se une a los Space Knights con un secreto que lo une al enemigo. Uno de los mechas más celebrados de los 90.</desc>
   </programme>
-  <programme start="20260930231500 -0300" stop="20260930234400 -0300" channel="janimotion">
+  <programme start="20260930231800 -0300" stop="20260930234700 -0300" channel="janimotion">
     <title lang="es">Boogiepop Phantom</title>
     <desc lang="es">Ep. 1 — Retratos del recuerdo Moto Tonomura confiesa sus sentimientos a un chico que desapareció tiempo atrás. Sin embargo, la aparición es eliminada por Boogiepop, la legendaria entidad que acecha entre los estudiantes.</desc>
   </programme>
-  <programme start="20260930234400 -0300" stop="20261001000000 -0300" channel="janimotion">
+  <programme start="20261001000000 -0300" stop="20261001001600 -0300" channel="janimotion">
     <title lang="es">Black Cat</title>
     <desc lang="es">Ep. 15 — Tôzakaru neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
   </programme>
-  <programme start="20261001000000 -0300" stop="20261001001300 -0300" channel="janimotion">
-    <title lang="es">Black Cat</title>
-    <desc lang="es">Ep. 15 — Tôzakaru neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
-  </programme>
-  <programme start="20261001001300 -0300" stop="20261001004000 -0300" channel="janimotion">
+  <programme start="20261001001600 -0300" stop="20261001004400 -0300" channel="janimotion">
     <title lang="es">Pet Shop of Horrors</title>
     <desc lang="es">Ep. 3 — Desesperación Robin Hendrix, actor encasillado por su único éxito, compra al Conde D una criatura de torso femenino y cola de reptil que debe mantener oculta. Al intentar retomar su carrera para conservarla, choca con una realidad que no coincide con sus expectativas.</desc>
   </programme>
-  <programme start="20261001004000 -0300" stop="20261001010900 -0300" channel="janimotion">
+  <programme start="20261001004400 -0300" stop="20261001011200 -0300" channel="janimotion">
     <title lang="es">Blue Seed</title>
     <desc lang="es">Ep. 2 — El despertar del poder Un mitama, el alma de un Aragami, se incrusta en el pecho de Momiji despertando en ella la capacidad de sentir la presencia de estas criaturas y un nuevo poder para combatirlas junto a la organizacion TAC.</desc>
   </programme>
-  <programme start="20261001010900 -0300" stop="20261001013700 -0300" channel="janimotion">
+  <programme start="20261001011200 -0300" stop="20261001014000 -0300" channel="janimotion">
     <title lang="es">Silent Möbius</title>
     <desc lang="es">Ep. 2 — Decide Katsumi rechaza unirse a la AMP, pero un Lucifer Hawk de Categoría 1 le ofrece información sobre su padre Gigelf. La policía recupera un fragmento del demonio que se regenera y abre un portal, dejando entrar a una horda que devasta la ciudad.</desc>
   </programme>
-  <programme start="20261001013700 -0300" stop="20261001020500 -0300" channel="janimotion">
+  <programme start="20261001014000 -0300" stop="20261001020800 -0300" channel="janimotion">
     <title lang="es">Aeon Flux</title>
     <desc lang="es">Ep. 7 — Reraizure Æon recupera unas fotografías comprometedoras de Trevor y se encuentra con Rorty, la expareja de Muriel, quien había sido traicionada por ella. Finalmente, Rorty toma una píldora de felicidad que le borra todos los recuerdos.</desc>
   </programme>
-  <programme start="20261001020500 -0300" stop="20261001023300 -0300" channel="janimotion">
+  <programme start="20261001020800 -0300" stop="20261001023600 -0300" channel="janimotion">
     <title lang="es">CUTTLAS</title>
     <desc lang="es">Ep. 1 — Con cien cañones por banda Parodia del cine de piratas cuyo título rinde homenaje al célebre poema &quot;La canción del pirata&quot; de José de Espronceda. Producido inicialmente como cortometraje independiente en 1993, dirigido por Sonia Llera con guion de Calpurnio, fue posteriormente integrado como episodio de la serie Cuttlas Microfilms. ATP</desc>
   </programme>
-  <programme start="20261001023300 -0300" stop="20261001025000 -0300" channel="janimotion">
+  <programme start="20261001023600 -0300" stop="20261001025300 -0300" channel="janimotion">
     <title lang="es">Crapston Villas</title>
     <desc lang="es">Ep. 10 — Episodio 10 Sophie planea su venganza mientras tres okupas se instalan en el sótano y se celebra una fiesta insoportablemente ruidosa en el edificio.</desc>
   </programme>
-  <programme start="20261001025000 -0300" stop="20261001030400 -0300" channel="janimotion">
+  <programme start="20261001025300 -0300" stop="20261001030700 -0300" channel="janimotion">
     <title lang="es">The Ren &amp; Stimpy Show</title>
     <desc lang="es">Ep. 2 — ¡El Gran Día de Stimpy! Stimpy gana un concurso del programa de Muddy Mudskipper y se convierte en una estrella repentina, dejando a Ren a un lado.</desc>
   </programme>
-  <programme start="20261001030400 -0300" stop="20261001033300 -0300" channel="janimotion">
+  <programme start="20261001030700 -0300" stop="20261001033600 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J</title>
     <desc lang="es">Ep. 2 — Marioneta chica: La problemática Lime se adapta a la vida cotidiana junto a Otaru, provocando situaciones caóticas con su personalidad impulsiva y su enorme afecto por él.</desc>
   </programme>
-  <programme start="20261001033300 -0300" stop="20261001035900 -0300" channel="janimotion">
+  <programme start="20261001033600 -0300" stop="20261001040200 -0300" channel="janimotion">
     <title lang="es">Gasaraki</title>
     <desc lang="es">Ep. 2 — Primeros Movimientos Las fuerzas de la ONU son derrotadas en Belgistán por los TA enemigos. Mientras tanto, la familia Gowa interroga a Yushiro sobre por qué interrumpió su danza ceremonial de invocación.</desc>
   </programme>
-  <programme start="20261001035900 -0300" stop="20261001042600 -0300" channel="janimotion">
+  <programme start="20261001040200 -0300" stop="20261001042900 -0300" channel="janimotion">
     <title lang="es">Divergence Eve</title>
     <desc lang="es">Ep. 2 — Quantum Barrier Tras abrir portales hacia un universo paralelo para viajar entre las estrellas, la humanidad despierta la atención de los ghouls, criaturas que amenazan con invadir nuestro universo. Las reclutas de la estación Watcher&#x27;s Nest se enfrentan a ellas… y a secretos aún más oscuros.</desc>
   </programme>
-  <programme start="20261001042600 -0300" stop="20261001045500 -0300" channel="janimotion">
+  <programme start="20261001042900 -0300" stop="20261001045800 -0300" channel="janimotion">
     <title lang="es">Pilot Candidate</title>
     <desc lang="es">Ep. 2 — Alineación Comienza el duro entrenamiento de los candidatos en la GOA. Zero debe adaptarse a la disciplina de la academia y aprender a alinear su capacidad EX con los sistemas de las Diosas junto a su repairer.</desc>
   </programme>
-  <programme start="20261001045500 -0300" stop="20261001050600 -0300" channel="janimotion">
+  <programme start="20261001045800 -0300" stop="20261001051000 -0300" channel="janimotion">
     <title lang="es">Ninja Hattori</title>
     <desc lang="es">Ep. 15 — El Nuevo Alumno Hattori, aprendiz de ninja del pueblo de Iga, llega a la ciudad y se instala en casa de Kenichi. Entre tareas, inventos de Shinzo y las trampas del rival Kemumaki, la vida cotidiana se vuelve una misión ninja. El remake del clásico, en doblaje latino.</desc>
   </programme>
-  <programme start="20261001050600 -0300" stop="20261001053700 -0300" channel="janimotion">
+  <programme start="20261001051000 -0300" stop="20261001054000 -0300" channel="janimotion">
     <title lang="es">Burn-Up Excess</title>
     <desc lang="es">Ep. 9 — Slam Tank Parte 1 El Equipo Guerrero asalta la Torre Neo Tokyo y destruye el núcleo lógico que controla a los androides de batalla. Masato es derrotado y se nombra a un nuevo jefe de policía, cerrando la historia.</desc>
   </programme>
-  <programme start="20261001053700 -0300" stop="20261001060600 -0300" channel="janimotion">
+  <programme start="20261001054000 -0300" stop="20261001060900 -0300" channel="janimotion">
     <title lang="es">Eat-Man &#x27;98</title>
     <desc lang="es">Ep. 9 — Mega Mix Primera Parte Can Bolt assist a client with halting an abandoned airship on a deadly spiral?</desc>
   </programme>
-  <programme start="20261001060600 -0300" stop="20261001063600 -0300" channel="janimotion">
+  <programme start="20261001060900 -0300" stop="20261001063900 -0300" channel="janimotion">
     <title lang="es">If I See You in My Dreams</title>
     <desc lang="es">Ep. 4 — Episodios 13 al 16 Los protagonistas afrontan una nueva etapa llena de emociones contradictorias y noches de insomnio. En el desenque, el deseo de detener el tiempo refleja la intensidad de un romance marcado por la indecisión, los celos y la esperanza de estar juntos.</desc>
   </programme>
-  <programme start="20261001063600 -0300" stop="20261001070600 -0300" channel="janimotion">
+  <programme start="20261001063900 -0300" stop="20261001070900 -0300" channel="janimotion">
     <title lang="es">Let&#x27;s Dance with Papa</title>
     <desc lang="es">Ep. 4 — La invasión de las cobras / El culo valiente La familia Amachi se enfrenta a otra de las situaciones grotescas y disparatadas típicas de la serie, manteniento su tono de comedia adulta.</desc>
   </programme>
-  <programme start="20261001070600 -0300" stop="20261001073400 -0300" channel="janimotion">
+  <programme start="20261001070900 -0300" stop="20261001073700 -0300" channel="janimotion">
     <title lang="es">Red Baron</title>
     <desc lang="es">Ep. 3 — El golpe de la muerte (Cobra) El robot Cobra pone en aprietos a Red Baron con su devastador puño asesino de un solo golpe.</desc>
   </programme>
-  <programme start="20261001073400 -0300" stop="20261001074600 -0300" channel="janimotion">
+  <programme start="20261001073700 -0300" stop="20261001075000 -0300" channel="janimotion">
     <title lang="es">The Adventures of the Mini-Goddess</title>
     <desc lang="es">Ep. 3 — Aprendizaje, hogar y la diosa Belldandy restaura el viejo templo que será su nuevo hogar y ambos se instalan allí, mientras Keiichi retoma su rutina universitaria en el club de automóviles. ATP</desc>
   </programme>
-  <programme start="20261001074600 -0300" stop="20261001081600 -0300" channel="janimotion">
+  <programme start="20261001075000 -0300" stop="20261001082000 -0300" channel="janimotion">
     <title lang="es">Lupin III</title>
     <desc lang="es">Ep. 3 — Adios mi Bella Flor Una colisión de embarcaciones conduce a Lupin y Fujiko hasta Linda, asistente de un experto en fisión nuclear que vive recluido en una isla. Lupin y Jigen asaltan la isla para rescatar al científico y descubrir el oscuro secreto de Linda.</desc>
   </programme>
-  <programme start="20261001081600 -0300" stop="20261001084500 -0300" channel="janimotion">
+  <programme start="20261001082000 -0300" stop="20261001084900 -0300" channel="janimotion">
     <title lang="es">Serial Experiments Lain</title>
     <desc lang="es">Ep. 2 — GIRLS En la discoteca Cyberia, Lain presencia un tiroteo y sorprende a todos al decirle a un hombre bajo los efectos de la droga Accela que todos están conectados en la Red.</desc>
   </programme>
-  <programme start="20261001084500 -0300" stop="20261001091300 -0300" channel="janimotion">
+  <programme start="20261001084900 -0300" stop="20261001091600 -0300" channel="janimotion">
     <title lang="es">South Park</title>
     <desc lang="es">Ep. 19 — City on the Edge of Forever La Srta. Crabtree se convierte en una comediante famosa mientras los niños de South Park recuerdan sus aventuras atrapados en un autobús al borde de un precipicio.</desc>
   </programme>
-  <programme start="20261001091300 -0300" stop="20261001094200 -0300" channel="janimotion">
+  <programme start="20261001091600 -0300" stop="20261001094500 -0300" channel="janimotion">
     <title lang="es">Azumanga Daioh</title>
     <desc lang="es">Ep. 7 — Otogi no gumi/Jinkakusha/Norinori go!/Masukotto/Kataki? Tres años de secundaria con un grupo de chicas imposibles: la niña prodigio Chiyo, la despistada Osaka, la violenta Yukari-sensei y compañía. La comedia cotidiana que definió el slice of life moderno, episodio a episodio.</desc>
   </programme>
-  <programme start="20261001094200 -0300" stop="20261001101000 -0300" channel="janimotion">
+  <programme start="20261001094500 -0300" stop="20261001101300 -0300" channel="janimotion">
     <title lang="es">Neon Genesis Evangelion</title>
     <desc lang="es">Ep. 17 — El cuarto niño El EVA-04 desaparece en un accidente en Estados Unidos y el EVA-03 es trasladado a Japón. Se revela que Toji Suzuhara ha sido elegido como el Cuarto Niño, el nuevo piloto destinado a la unidad recién llegada.</desc>
   </programme>
-  <programme start="20261001101000 -0300" stop="20261001103900 -0300" channel="janimotion">
+  <programme start="20261001101300 -0300" stop="20261001104300 -0300" channel="janimotion">
     <title lang="es">Robotech</title>
     <desc lang="es">Ep. 3 — Pliegue Espacial To outmaneuver their enemy, the SDF-1 crew use the ship&#x27;s untested hyperspace fold system, only for it to go near-disastrously awry.</desc>
   </programme>
-  <programme start="20261001103900 -0300" stop="20261001110900 -0300" channel="janimotion">
+  <programme start="20261001104300 -0300" stop="20261001111200 -0300" channel="janimotion">
     <title lang="es">Cowboy Bebop</title>
     <desc lang="es">Ep. 3 — La mujer de Honky Tonk Sin dinero, Spike y Jet visitan un casino donde conocen a Faye Valentine, una bella fugitiva ahogada en deudas que se cruza en su camino durante un golpe.</desc>
   </programme>
-  <programme start="20261001110900 -0300" stop="20261001113700 -0300" channel="janimotion">
+  <programme start="20261001111200 -0300" stop="20261001114100 -0300" channel="janimotion">
     <title lang="es">Zenki</title>
     <desc lang="es">Ep. 31 — Corazones de muñecas La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
   </programme>
-  <programme start="20261001113700 -0300" stop="20261001120700 -0300" channel="janimotion">
+  <programme start="20261001114100 -0300" stop="20261001121000 -0300" channel="janimotion">
     <title lang="es">Beast Fighter The Apocalypse</title>
     <desc lang="es">Ep. 2 — Criaturas en el complejo subterráneo Un experimento mata a su madre y convierte a Shin&#x27;ichi en una bestia; su padre lidera una secta dispuesta a despertar a Dios mientras monstruos arrasan ciudades. El remake del manga de Ken Ishikawa, emitido por Animax Latinoamérica.</desc>
   </programme>
-  <programme start="20261001120700 -0300" stop="20261001123600 -0300" channel="janimotion">
+  <programme start="20261001121000 -0300" stop="20261001123900 -0300" channel="janimotion">
     <title lang="es">Boogiepop Phantom</title>
     <desc lang="es">Ep. 2 — Luz en la oscuridad Hisashi Jounouchi es capaz de ver insectos con forma de araña que se adhieren al corazón de las personas, representando sus traumas. Pronto desarrolla una peligrosa adicción a devorarlos.</desc>
   </programme>
-  <programme start="20261001123600 -0300" stop="20261001130500 -0300" channel="janimotion">
+  <programme start="20261001123900 -0300" stop="20261001130900 -0300" channel="janimotion">
     <title lang="es">Black Cat</title>
     <desc lang="es">Ep. 16 — Ryû wo karu neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
   </programme>
-  <programme start="20261001130500 -0300" stop="20261001133400 -0300" channel="janimotion">
+  <programme start="20261001130900 -0300" stop="20261001133700 -0300" channel="janimotion">
     <title lang="es">Quads!</title>
     <desc lang="es">Ep. 2 — Bad Manors Para conseguir dinero extra, el grupo decide alquilar la mansión para fiestas y convenciones, lo que desata el caos entre los inquilinos.</desc>
   </programme>
-  <programme start="20261001133400 -0300" stop="20261001134900 -0300" channel="janimotion">
+  <programme start="20261001133700 -0300" stop="20261001135300 -0300" channel="janimotion">
     <title lang="es">The Maxx</title>
     <desc lang="es">Ep. 2 — Episodio 2 El Maxx se muda con Julie y le revela que es su protector en otro mundo llamado el Outback. Tras matar a otra joven, Mr. Gone intenta llegar a Julie pero se cruza con el Maxx.</desc>
   </programme>
-  <programme start="20261001134900 -0300" stop="20261001141600 -0300" channel="janimotion">
+  <programme start="20261001135300 -0300" stop="20261001142000 -0300" channel="janimotion">
     <title lang="es">The Critic</title>
     <desc lang="es">Ep. 15 — Sherman de Arabia Durante la fiesta de pijamas de Marty, Jay relata la increíble historia de cómo terminó perdido en Irak en plena Guerra del Golfo.</desc>
   </programme>
-  <programme start="20261001141600 -0300" stop="20261001144500 -0300" channel="janimotion">
+  <programme start="20261001142000 -0300" stop="20261001144800 -0300" channel="janimotion">
     <title lang="es">Aeon Flux</title>
     <desc lang="es">Ep. 8 — Cronofasia Æon experimenta bucles temporales dentro de una base de investigación de virus junto a un enigmático niño místico. Tras el encuentro final, la escena se traslada a un mundo cotidiano donde Æon lleva al niño a un partido de béisbol.</desc>
   </programme>
-  <programme start="20261001144500 -0300" stop="20261001151400 -0300" channel="janimotion">
+  <programme start="20261001144800 -0300" stop="20261001151700 -0300" channel="janimotion">
     <title lang="es">CUTTLAS</title>
     <desc lang="es">Ep. 2 — El enigma poligonal Episodio con guion de Calpurnio cuyo título alude a un misterio de carácter geométrico. Como el resto de la serie, cada capítulo constituye una historia independiente que parodia un género cinematográfico distinto con el característico humor y minimalismo visual del universo Cuttlas. ATP</desc>
   </programme>
-  <programme start="20261001151400 -0300" stop="20261001154200 -0300" channel="janimotion">
+  <programme start="20261001151700 -0300" stop="20261001154600 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J</title>
     <desc lang="es">Ep. 2 — Marioneta chica: La problemática Lime se adapta a la vida cotidiana junto a Otaru, provocando situaciones caóticas con su personalidad impulsiva y su enorme afecto por él.</desc>
   </programme>
-  <programme start="20261001154200 -0300" stop="20261001160900 -0300" channel="janimotion">
+  <programme start="20261001154600 -0300" stop="20261001161200 -0300" channel="janimotion">
     <title lang="es">Gasaraki</title>
     <desc lang="es">Ep. 2 — Primeros Movimientos Las fuerzas de la ONU son derrotadas en Belgistán por los TA enemigos. Mientras tanto, la familia Gowa interroga a Yushiro sobre por qué interrumpió su danza ceremonial de invocación.</desc>
   </programme>
-  <programme start="20261001160900 -0300" stop="20261001163600 -0300" channel="janimotion">
+  <programme start="20261001161200 -0300" stop="20261001163900 -0300" channel="janimotion">
     <title lang="es">Divergence Eve</title>
     <desc lang="es">Ep. 2 — Quantum Barrier Tras abrir portales hacia un universo paralelo para viajar entre las estrellas, la humanidad despierta la atención de los ghouls, criaturas que amenazan con invadir nuestro universo. Las reclutas de la estación Watcher&#x27;s Nest se enfrentan a ellas… y a secretos aún más oscuros.</desc>
   </programme>
-  <programme start="20261001163600 -0300" stop="20261001170500 -0300" channel="janimotion">
+  <programme start="20261001163900 -0300" stop="20261001170800 -0300" channel="janimotion">
     <title lang="es">Pilot Candidate</title>
     <desc lang="es">Ep. 2 — Alineación Comienza el duro entrenamiento de los candidatos en la GOA. Zero debe adaptarse a la disciplina de la academia y aprender a alinear su capacidad EX con los sistemas de las Diosas junto a su repairer.</desc>
   </programme>
-  <programme start="20261001170500 -0300" stop="20261001171600 -0300" channel="janimotion">
+  <programme start="20261001170800 -0300" stop="20261001172000 -0300" channel="janimotion">
     <title lang="es">Ninja Hattori</title>
     <desc lang="es">Ep. 15 — El Nuevo Alumno Hattori, aprendiz de ninja del pueblo de Iga, llega a la ciudad y se instala en casa de Kenichi. Entre tareas, inventos de Shinzo y las trampas del rival Kemumaki, la vida cotidiana se vuelve una misión ninja. El remake del clásico, en doblaje latino.</desc>
   </programme>
-  <programme start="20261001171600 -0300" stop="20261001174700 -0300" channel="janimotion">
+  <programme start="20261001172000 -0300" stop="20261001175000 -0300" channel="janimotion">
     <title lang="es">Burn-Up Excess</title>
     <desc lang="es">Ep. 9 — Slam Tank Parte 1 El Equipo Guerrero asalta la Torre Neo Tokyo y destruye el núcleo lógico que controla a los androides de batalla. Masato es derrotado y se nombra a un nuevo jefe de policía, cerrando la historia.</desc>
   </programme>
-  <programme start="20261001174700 -0300" stop="20261001181600 -0300" channel="janimotion">
+  <programme start="20261001175000 -0300" stop="20261001181900 -0300" channel="janimotion">
     <title lang="es">Eat-Man &#x27;98</title>
     <desc lang="es">Ep. 9 — Mega Mix Primera Parte Can Bolt assist a client with halting an abandoned airship on a deadly spiral?</desc>
   </programme>
-  <programme start="20261001181600 -0300" stop="20261001184600 -0300" channel="janimotion">
+  <programme start="20261001181900 -0300" stop="20261001184900 -0300" channel="janimotion">
     <title lang="es">If I See You in My Dreams</title>
     <desc lang="es">Ep. 4 — Episodios 13 al 16 Los protagonistas afrontan una nueva etapa llena de emociones contradictorias y noches de insomnio. En el desenque, el deseo de detener el tiempo refleja la intensidad de un romance marcado por la indecisión, los celos y la esperanza de estar juntos.</desc>
   </programme>
-  <programme start="20261001184600 -0300" stop="20261001191500 -0300" channel="janimotion">
+  <programme start="20261001184900 -0300" stop="20261001191900 -0300" channel="janimotion">
     <title lang="es">Let&#x27;s Dance with Papa</title>
     <desc lang="es">Ep. 4 — La invasión de las cobras / El culo valiente La familia Amachi se enfrenta a otra de las situaciones grotescas y disparatadas típicas de la serie, manteniento su tono de comedia adulta.</desc>
   </programme>
-  <programme start="20261001191500 -0300" stop="20261001194400 -0300" channel="janimotion">
+  <programme start="20261001191900 -0300" stop="20261001194700 -0300" channel="janimotion">
     <title lang="es">Red Baron</title>
     <desc lang="es">Ep. 3 — El golpe de la muerte (Cobra) El robot Cobra pone en aprietos a Red Baron con su devastador puño asesino de un solo golpe.</desc>
   </programme>
-  <programme start="20261001194400 -0300" stop="20261001195600 -0300" channel="janimotion">
+  <programme start="20261001194700 -0300" stop="20261001200000 -0300" channel="janimotion">
     <title lang="es">The Adventures of the Mini-Goddess</title>
     <desc lang="es">Ep. 3 — Aprendizaje, hogar y la diosa Belldandy restaura el viejo templo que será su nuevo hogar y ambos se instalan allí, mientras Keiichi retoma su rutina universitaria en el club de automóviles. ATP</desc>
   </programme>
-  <programme start="20261001195600 -0300" stop="20261001202600 -0300" channel="janimotion">
+  <programme start="20261001200000 -0300" stop="20261001202900 -0300" channel="janimotion">
     <title lang="es">Lupin III</title>
     <desc lang="es">Ep. 3 — Adios mi Bella Flor Una colisión de embarcaciones conduce a Lupin y Fujiko hasta Linda, asistente de un experto en fisión nuclear que vive recluido en una isla. Lupin y Jigen asaltan la isla para rescatar al científico y descubrir el oscuro secreto de Linda.</desc>
   </programme>
-  <programme start="20261001202600 -0300" stop="20261001205500 -0300" channel="janimotion">
+  <programme start="20261001202900 -0300" stop="20261001205800 -0300" channel="janimotion">
     <title lang="es">Serial Experiments Lain</title>
     <desc lang="es">Ep. 2 — GIRLS En la discoteca Cyberia, Lain presencia un tiroteo y sorprende a todos al decirle a un hombre bajo los efectos de la droga Accela que todos están conectados en la Red.</desc>
   </programme>
-  <programme start="20261001205500 -0300" stop="20261001212300 -0300" channel="janimotion">
+  <programme start="20261001205800 -0300" stop="20261001212600 -0300" channel="janimotion">
     <title lang="es">South Park</title>
     <desc lang="es">Ep. 19 — City on the Edge of Forever La Srta. Crabtree se convierte en una comediante famosa mientras los niños de South Park recuerdan sus aventuras atrapados en un autobús al borde de un precipicio.</desc>
   </programme>
-  <programme start="20261001212300 -0300" stop="20261001215200 -0300" channel="janimotion">
+  <programme start="20261001212600 -0300" stop="20261001215500 -0300" channel="janimotion">
     <title lang="es">Azumanga Daioh</title>
     <desc lang="es">Ep. 7 — Otogi no gumi/Jinkakusha/Norinori go!/Masukotto/Kataki? Tres años de secundaria con un grupo de chicas imposibles: la niña prodigio Chiyo, la despistada Osaka, la violenta Yukari-sensei y compañía. La comedia cotidiana que definió el slice of life moderno, episodio a episodio.</desc>
   </programme>
-  <programme start="20261001215200 -0300" stop="20261001222000 -0300" channel="janimotion">
+  <programme start="20261001215500 -0300" stop="20261001222300 -0300" channel="janimotion">
     <title lang="es">Neon Genesis Evangelion</title>
     <desc lang="es">Ep. 17 — El cuarto niño El EVA-04 desaparece en un accidente en Estados Unidos y el EVA-03 es trasladado a Japón. Se revela que Toji Suzuhara ha sido elegido como el Cuarto Niño, el nuevo piloto destinado a la unidad recién llegada.</desc>
   </programme>
-  <programme start="20261001222000 -0300" stop="20261001224900 -0300" channel="janimotion">
+  <programme start="20261001222300 -0300" stop="20261001225300 -0300" channel="janimotion">
     <title lang="es">Robotech</title>
     <desc lang="es">Ep. 3 — Pliegue Espacial To outmaneuver their enemy, the SDF-1 crew use the ship&#x27;s untested hyperspace fold system, only for it to go near-disastrously awry.</desc>
   </programme>
-  <programme start="20261001224900 -0300" stop="20261001231900 -0300" channel="janimotion">
+  <programme start="20261001225300 -0300" stop="20261001232200 -0300" channel="janimotion">
     <title lang="es">Cowboy Bebop</title>
     <desc lang="es">Ep. 3 — La mujer de Honky Tonk Sin dinero, Spike y Jet visitan un casino donde conocen a Faye Valentine, una bella fugitiva ahogada en deudas que se cruza en su camino durante un golpe.</desc>
   </programme>
-  <programme start="20261001231900 -0300" stop="20261001234700 -0300" channel="janimotion">
+  <programme start="20261001232200 -0300" stop="20261001235000 -0300" channel="janimotion">
     <title lang="es">Zenki</title>
     <desc lang="es">Ep. 31 — Corazones de muñecas La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
   </programme>
-  <programme start="20261001234700 -0300" stop="20261002000000 -0300" channel="janimotion">
+  <programme start="20261002000000 -0300" stop="20261002002000 -0300" channel="janimotion">
     <title lang="es">Beast Fighter The Apocalypse</title>
     <desc lang="es">Ep. 2 — Criaturas en el complejo subterráneo Un experimento mata a su madre y convierte a Shin&#x27;ichi en una bestia; su padre lidera una secta dispuesta a despertar a Dios mientras monstruos arrasan ciudades. El remake del manga de Ken Ishikawa, emitido por Animax Latinoamérica.</desc>
   </programme>
-  <programme start="20261002000000 -0300" stop="20261002001700 -0300" channel="janimotion">
-    <title lang="es">Beast Fighter The Apocalypse</title>
-    <desc lang="es">Ep. 2 — Criaturas en el complejo subterráneo Un experimento mata a su madre y convierte a Shin&#x27;ichi en una bestia; su padre lidera una secta dispuesta a despertar a Dios mientras monstruos arrasan ciudades. El remake del manga de Ken Ishikawa, emitido por Animax Latinoamérica.</desc>
-  </programme>
-  <programme start="20261002001700 -0300" stop="20261002004600 -0300" channel="janimotion">
+  <programme start="20261002002000 -0300" stop="20261002004900 -0300" channel="janimotion">
     <title lang="es">Boogiepop Phantom</title>
     <desc lang="es">Ep. 2 — Luz en la oscuridad Hisashi Jounouchi es capaz de ver insectos con forma de araña que se adhieren al corazón de las personas, representando sus traumas. Pronto desarrolla una peligrosa adicción a devorarlos.</desc>
   </programme>
-  <programme start="20261002004600 -0300" stop="20261002011500 -0300" channel="janimotion">
+  <programme start="20261002004900 -0300" stop="20261002011900 -0300" channel="janimotion">
     <title lang="es">Black Cat</title>
     <desc lang="es">Ep. 16 — Ryû wo karu neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
   </programme>
-  <programme start="20261002011500 -0300" stop="20261002014400 -0300" channel="janimotion">
+  <programme start="20261002011900 -0300" stop="20261002014700 -0300" channel="janimotion">
     <title lang="es">Quads!</title>
     <desc lang="es">Ep. 2 — Bad Manors Para conseguir dinero extra, el grupo decide alquilar la mansión para fiestas y convenciones, lo que desata el caos entre los inquilinos.</desc>
   </programme>
-  <programme start="20261002014400 -0300" stop="20261002015900 -0300" channel="janimotion">
+  <programme start="20261002014700 -0300" stop="20261002020300 -0300" channel="janimotion">
     <title lang="es">The Maxx</title>
     <desc lang="es">Ep. 2 — Episodio 2 El Maxx se muda con Julie y le revela que es su protector en otro mundo llamado el Outback. Tras matar a otra joven, Mr. Gone intenta llegar a Julie pero se cruza con el Maxx.</desc>
   </programme>
-  <programme start="20261002015900 -0300" stop="20261002022600 -0300" channel="janimotion">
+  <programme start="20261002020300 -0300" stop="20261002023000 -0300" channel="janimotion">
     <title lang="es">The Critic</title>
     <desc lang="es">Ep. 15 — Sherman de Arabia Durante la fiesta de pijamas de Marty, Jay relata la increíble historia de cómo terminó perdido en Irak en plena Guerra del Golfo.</desc>
   </programme>
-  <programme start="20261002022600 -0300" stop="20261002025400 -0300" channel="janimotion">
+  <programme start="20261002023000 -0300" stop="20261002025800 -0300" channel="janimotion">
     <title lang="es">Aeon Flux</title>
     <desc lang="es">Ep. 8 — Cronofasia Æon experimenta bucles temporales dentro de una base de investigación de virus junto a un enigmático niño místico. Tras el encuentro final, la escena se traslada a un mundo cotidiano donde Æon lleva al niño a un partido de béisbol.</desc>
   </programme>
-  <programme start="20261002025400 -0300" stop="20261002032400 -0300" channel="janimotion">
+  <programme start="20261002025800 -0300" stop="20261002032700 -0300" channel="janimotion">
     <title lang="es">Bubblegum Crisis: Tokyo 2040</title>
     <desc lang="es">Ep. 13 — Atom Heart Mother Sylia recluta a las Knight Sabers para desenterrar el laboratorio de su padre antes de que Genom lo encuentre, pero Nene presiona a su líder para revelar hechos inquietantes sobre la historia familiar de los Stingray.</desc>
   </programme>
-  <programme start="20261002032400 -0300" stop="20261002035200 -0300" channel="janimotion">
+  <programme start="20261002032700 -0300" stop="20261002035600 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J to X</title>
     <desc lang="es">Ep. 3 — Fase 03: ¡Viene papá! ¡Viene papá! La llegada inesperada de una figura paterna altera la vida de Otaru y las marionetas. El episodio explora los lazos familiares en un mundo habitado únicamente por hombres.</desc>
   </programme>
-  <programme start="20261002035200 -0300" stop="20261002042000 -0300" channel="janimotion">
+  <programme start="20261002035600 -0300" stop="20261002042300 -0300" channel="janimotion">
     <title lang="es">Lost Universe</title>
     <desc lang="es">Ep. 3 — False Witness Latin Kain Blueriver, la holograma Canal y la aspirante a detective Millie tripulan la Swordbreaker, una nave con secretos, en un universo compartido con Slayers. Contratos imposibles, contrabando y el ejército de las pesadillas: la aventura espacial de Hajime Kanzaka y Rui Araizumi, remasterizada.</desc>
   </programme>
-  <programme start="20261002042000 -0300" stop="20261002044900 -0300" channel="janimotion">
+  <programme start="20261002042300 -0300" stop="20261002045200 -0300" channel="janimotion">
     <title lang="es">Saber Marionette J</title>
     <desc lang="es">Ep. 3 — Gran problema en el castillo Japoness Un conflicto estalla en el castillo de Japoness, poniendo a prueba a Otaru y a sus marionetas en medio de la creciente tensión con otras naciones.</desc>
   </programme>
-  <programme start="20261002044900 -0300" stop="20261002051300 -0300" channel="janimotion">
+  <programme start="20261002045200 -0300" stop="20261002051600 -0300" channel="janimotion">
     <title lang="es">Sakura Diaries</title>
     <desc lang="es">Ep. 3 — ¿Falso estudiante y esclavo del amor? Touma continúa su engaño como falso estudiante universitario mientras se ve arrastrado por sus deseos románticos, y la mentira sobre su admisión en Keio empieza a complicar su vida cotidiana.</desc>
   </programme>
-  <programme start="20261002051300 -0300" stop="20261002054200 -0300" channel="janimotion">
+  <programme start="20261002051600 -0300" stop="20261002054500 -0300" channel="janimotion">
     <title lang="es">Soul Hunter</title>
     <desc lang="es">Ep. 18 — La vuelta de príncipes Los príncipes exiliados regresan a las tierras salvajes de las que provenían.</desc>
   </programme>
-  <programme start="20261002054200 -0300" stop="20261002055300 -0300" channel="janimotion">
+  <programme start="20261002054500 -0300" stop="20261002055600 -0300" channel="janimotion">
     <title lang="es">Ninja Hattori</title>
     <desc lang="es">Ep. 16 — Béisbol Al Estilo Ninja Hattori, aprendiz de ninja del pueblo de Iga, llega a la ciudad y se instala en casa de Kenichi. Entre tareas, inventos de Shinzo y las trampas del rival Kemumaki, la vida cotidiana se vuelve una misión ninja. El remake del clásico, en doblaje latino.</desc>
   </programme>
-  <programme start="20261002055300 -0300" stop="20261002062500 -0300" channel="janimotion">
+  <programme start="20261002055600 -0300" stop="20261002062800 -0300" channel="janimotion">
     <title lang="es">Burn-Up Excess</title>
     <desc lang="es">Ep. 10 — Slam Tank Parte 2 Las agentes del equipo Warrior —Rio, Maki, Lilica y los demás— vuelven a la carga en una comedia de acción llena de persecuciones, fuego cruzado y fanservice. Secuela televisiva de Burn Up W.</desc>
+  </programme>
+  <programme start="20261002062800 -0300" stop="20261002065700 -0300" channel="janimotion">
+    <title lang="es">Eat-Man &#x27;98</title>
+    <desc lang="es">Ep. 10 — Mega Mix Segunda Parte Bolt must work with a Major to navigate a deadly voyage.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930000000 -0300" channel="telered.ar">
     <title lang="es">Coqui TV</title>
@@ -3527,10 +3816,6 @@
   <programme start="20261002053000 -0300" stop="20261002070000 -0300" channel="doble.c.tv">
     <title lang="es">Amanecer Andino</title>
     <desc lang="es">Clasificación: Familiar</desc>
-  </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="0204">
-    <title lang="es">El punto en la I</title>
-    <desc lang="es">Un equipo de investigación periodístico aborda temas de interés para América Latina y los pueblos del Sur, fuera de la inmediatez de las coyunturas mediáticas, presentando hipótesis sobre determinados hechos, procesos o conflictos, acompañados de un panorama actual del país en cuestión y con invitados especiales, quienes podrán validar, confrontar o sustentar las teorías expuestas.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929000000 -0300" channel="0204">
     <title lang="es">[En vivo] Te lo cuento</title>
@@ -4304,6 +4589,10 @@
     <title lang="es">El mapa</title>
     <desc lang="es">Repetición ║ Un espacio para el análisis con el objetivo de ampliar la geopolítica global.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0204">
+    <title lang="es">[En vivo] Telesur Noticias</title>
+    <desc lang="es">En vivo ║ Noticias al momento desde los diversos escenarios de interés de la vida política, económica y social de toda América Latina, integrando así al mundo en una sola voz informativa. Con 12 corresponsalías y colaboradores especializados, extendidos a lo largo y ancho del continente, teleSUR Noticias emite minuto a minuto una perspectiva global de los procesos que deciden la historia de los pueblos de América Latina.</desc>
+  </programme>
   <programme start="20260928230000 -0300" stop="20260929000000 -0300" channel="0205">
     <title lang="es">Zona docu</title>
     <desc lang="es">Historias de distintos temas de diversas partes del mundo que dan énfasis en sus aspectos y características principales.</desc>
@@ -5010,13 +5299,9 @@ DW Sendung MADE TeamDW Sendung MADE Team</desc>
 
 El cambio climático y la pérdida de biodiversidad exigen una nueva forma de economía. Algo va a tener que cambiar si queremos vivir, trabajar y alimentarnos de forma digna en el futuro. El progreso y los cambios tecnológicos pueden ayudarnos a conseguirlo. Global Es da ideas sorprendentes, muestra posibles soluciones y ofrece perspectivas para un mundo que cambia a toda velocidad. Y para ello, parte de personas que buscan e impulsan el cambio y, así, inspiran a los demás.</desc>
   </programme>
-  <programme start="20260928231000 -0300" stop="20260928231600 -0300" channel="0206">
-    <title lang="es">Enlace</title>
-    <desc lang="es">Una cita semanal con los temas más importantes de los países del continente americano, presentada por los principales corresponsales.</desc>
-  </programme>
-  <programme start="20260928231600 -0300" stop="20260928233000 -0300" channel="0206">
-    <title lang="es">Aquí América</title>
-    <desc lang="es">Programa donde se ofrece una mirada diferente de la información del continente americano.</desc>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0205">
+    <title lang="es">Fuerza latina, mujeres inspiradoras de América Latina</title>
+    <desc lang="es">Las mujeres latinoamericanas ganan protagonismo en todos los ámbitos. Con tenacidad y perseverancia, se proponen mejorar el mundo que les rodea y alzan su voz para reclamar derechos, denunciar injusticias y un mayor protagonismo en la sociedad.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260928234000 -0300" channel="0206">
     <title lang="es">Noticias</title>
@@ -5513,10 +5798,6 @@ El cambio climático y la pérdida de biodiversidad exigen una nueva forma de ec
   <programme start="20261002030000 -0300" stop="20261002070000 -0300" channel="0206">
     <title lang="es">France 24 Español</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="0209">
-    <title lang="es">Noticias</title>
-    <desc lang="es">Toda la información sobre política, economía, sociedad, tecnología, espectáculos y mucho más.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929000000 -0300" channel="0209">
     <title lang="es">Señal recibida - Parte II</title>
@@ -6185,6 +6466,10 @@ El cambio climático y la pérdida de biodiversidad exigen una nueva forma de ec
   <programme start="20261002060000 -0300" stop="20261002063000 -0300" channel="0209">
     <title lang="es">Entrevista • Rurion Melo, profesor del departamento de ciencia política de la Universidad de Sao Paulo</title>
     <desc lang="es">Rurion Melo, profesor del departamento de ciencia política de la Universidad de Sao Paulo | Políticos, deportistas, artistas y gente de las más variadas esferas se dan cita en este segmento para contar a los espectadores la historia de su vida, con detalles reveladores, interesantes e impactantes.</desc>
+  </programme>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0209">
+    <title lang="es">Código abierto • El teatro del pánico</title>
+    <desc lang="es">El teatro del pánico | Cristina Martín Jiménez pone a prueba los titulares de prensa y la IA para entender hasta qué punto puede acercarnos a la verdad o, por el contrario, confundirnos.</desc>
   </programme>
   <programme start="20260928230000 -0300" stop="20260929090000 -0300" channel="0210">
     <title lang="es">Deportes CNN</title>
@@ -7138,10 +7423,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">DSports noticias</title>
     <desc lang="es">Repetición ║ Todas las novedades y la información de la actualidad deportiva.</desc>
   </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="0432">
-    <title lang="es">DSports historias • 100pre Messi - Parte 4</title>
-    <desc lang="es">Repetición ║ 100pre Messi - Parte 4 | Ciclo que repasa las grandes gestas del deporte y los sucesos más gloriosos.</desc>
-  </programme>
   <programme start="20260928233000 -0300" stop="20260929010000 -0300" channel="0432">
     <title lang="es">CONMEBOL Sub-20 Futsal • Colombia vs. Paraguay</title>
     <desc lang="es">Repetición ║ Colombia vs. Paraguay | Disfruta las emociones de los partidos correspondientes al torneo Sub-20 de futsal de la CONMEBOL. Se disputará en el Domo Bolivariano Barquisimeto, en Venezuela, y participan las 10 selecciones pertenecientes a la confederación.</desc>
@@ -7726,6 +8007,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Urban Sessions • Brussels</title>
     <desc lang="es">Repetición ║ Brussels | Un importante festival de deportes de acción y cultura urbana que se celebra anualmente en Bruselas, Bélgica.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0433">
+    <title lang="es">Hilos • Michael Phelps</title>
+    <desc lang="es">Repetición ║ Michael Phelps | Juan Pablo Varsky recorre los perfiles e historias de las grandes figuras del deporte mundial.</desc>
+  </programme>
   <programme start="20260928200000 -0300" stop="20260929000000 -0300" channel="0528">
     <title lang="es">OLD Music</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
@@ -8133,10 +8418,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0621">
     <title lang="es">Eurochannel</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928231200 -0300" stop="20260928231500 -0300" channel="0629">
-    <title lang="es">Aprender a vivir</title>
-    <desc lang="es">Situado en los años 70, dos familias se desmoronan cuando malas relaciones, problemas de bienes raíces y nuevas enfermedades atacan el corazón de los suburbios.</desc>
   </programme>
   <programme start="20260928231500 -0300" stop="20260928234500 -0300" channel="0629">
     <title lang="es">Cartas abiertas</title>
@@ -8598,9 +8879,9 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">La puerta abierta</title>
     <desc lang="es">Rosa es prostituta, heredó el oficio de Antonia, su madre, quien ahora se cree Sara Montiel y convierte su vida cotidiana en un infierno. Rosa no sabe ser feliz. No puede. Pero la llegada inesperada de un nuevo integrante a su particular (y absurda) familia le dará una oportunidad única para lograrlo.</desc>
   </programme>
-  <programme start="20260928220100 -0300" stop="20260928231400 -0300" channel="0302">
-    <title lang="es">Kamen Rider Saber: Trío del pecado profundo</title>
-    <desc lang="es">Ocho años después de la batalla por el Libro de la Omnisciencia, la vida pacífica de Touma, Rintaro, Mei y Kento se ve perturbada por un misterioso nuevo Falchion que aparentemente puede borrar a la gente de la existencia por completo.</desc>
+  <programme start="20261002063000 -0300" stop="20261002064500 -0300" channel="0629">
+    <title lang="es">Un mensaje a la conciencia</title>
+    <desc lang="es">Breves anécdotas para despertar la conciencia del pueblo hispano.</desc>
   </programme>
   <programme start="20260928231400 -0300" stop="20260929015700 -0300" channel="0302">
     <title lang="es">Ataque a los Titanes: El arco y la flecha escarlatas</title>
@@ -9005,14 +9286,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0302">
     <title lang="es">ETC TV</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928230400 -0300" stop="20260928231400 -0300" channel="0308">
-    <title lang="es">Los pequeños Looney Tunes • For Whom the Toll Calls</title>
-    <desc lang="es">For Whom the Toll Calls | Petunia y Piolín aprenden hacer llamadas de larga distancia... y reciben una enorme factura de teléfono.</desc>
-  </programme>
-  <programme start="20260928231400 -0300" stop="20260928232500 -0300" channel="0308">
-    <title lang="es">Los pequeños Looney Tunes • The Sandman Is Coming</title>
-    <desc lang="es">The Sandman Is Coming | Daffy piensa que el Hombre de Arena es un monstruo que arroja arena a los ojos de los niños.</desc>
   </programme>
   <programme start="20260928232500 -0300" stop="20260928233600 -0300" channel="0308">
     <title lang="es">Los pequeños Looney Tunes • Cock-a-Doodle-Doo-It!</title>
@@ -10566,9 +10839,9 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">El campamento de Lazlo • Esperando a Edward</title>
     <desc lang="es">Esperando a Edward | Banano le asigna a Edward la responsabilidad de cuidar a los escarabajos, quienes lo vuelven absolutamente loco.</desc>
   </programme>
-  <programme start="20260928223800 -0300" stop="20260928233000 -0300" channel="0705">
-    <title lang="es">Guaridas con estilo • Un Espacio De Juego Para Las Cabras Pigmeas</title>
-    <desc lang="es">Un Espacio De Juego Para Las Cabras Pigmeas | Una familia tiene dos cabras enanas nigerianas que causan estragos en su patio trasero. El diseñador Antonio transformará el espacio en un sitio de juegos para cabras, con torres para escalar, una terraza y una casa de tres pisos fácil de limpiar.</desc>
+  <programme start="20261002062200 -0300" stop="20261002063500 -0300" channel="0308">
+    <title lang="es">El campamento de Lazlo • Los cocineros</title>
+    <desc lang="es">Los cocineros | Los Jelly Beans descubren que son unos genios haciendo perros calientes y la fama en el campamento se les sube a la cabeza.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929002200 -0300" channel="0705">
     <title lang="es">Unión Salvaje • Un Invitado Salvaje</title>
@@ -10946,6 +11219,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Operación Tanzania • Éxito En La Costa</title>
     <desc lang="es">Éxito En La Costa | Se descubrió un grupo sospechoso que mata animales en la Reserva Natural de Rungwa. Una vez que el equipo de VETPAW y los guardabosques saquen las armas, no hay vuelta atrás.</desc>
   </programme>
+  <programme start="20261002062400 -0300" stop="20261002071200 -0300" channel="0705">
+    <title lang="es">El zoológico del Bronx • Nuevos Felinos</title>
+    <desc lang="es">Nuevos Felinos | Sydney, la cría de foca rescatada, encuentra una nueva familia en el Acuario de Nueva York. El personal del zoológico se ve desafiado cuando la tigresa siberiana, Aurora, lucha por adaptarse a su nuevo hogar.</desc>
+  </programme>
   <programme start="20260928230000 -0300" stop="20260929013000 -0300" channel="0829">
     <title lang="es">Arma mortal 4</title>
     <desc lang="es">Cuando un grupo de mercenarios sedientos de sangre comienzan a ir tras sus pasos, el dúo Riggs- Murtaugh deberá unirse a Leo Getz, Lorna Cole y un nuevo detective para ponerles fin a las Tríadas de una vez por todas.</desc>
@@ -11265,10 +11542,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002050000 -0300" stop="20261002090000 -0300" channel="0636">
     <title lang="es">TVE Internacional</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="0643">
-    <title lang="es">Brecha económica</title>
-    <desc lang="es">Se analizan asuntos sobre la influencia de las compañías en la economía de distintos países del mundo.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929000000 -0300" channel="0643">
     <title lang="es">Dice Israel</title>
@@ -12042,6 +12315,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">El porqué de las noticias</title>
     <desc lang="es">Un resumen de las noticias y los acontecimientos más destacados del día junto a la opinión de los analistas internacionales. Desarrollamos el análisis internacional sobre el tema y otros hechos y acontecimientos destacados.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0643">
+    <title lang="es">Por confirmar</title>
+    <desc lang="es">La información de este programa no se encuentra disponible.</desc>
+  </programme>
   <programme start="20260928220000 -0300" stop="20260929001000 -0300" channel="0707">
     <title lang="es">Constructores de imperios</title>
     <desc lang="es">Se repasa la historia de los más grandes imperios, cuyos creadores han gobernado naciones y continentes durante cientos y miles de años.</desc>
@@ -12389,10 +12666,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002055500 -0300" stop="20261002064500 -0300" channel="0707">
     <title lang="es">La ruta</title>
     <desc lang="es">&#x27;La Ruta&#x27; es el viaje de un grupo de amigos de El Perelló, desde su despedida en una masificada Ruta Destroy, en 1993, hasta el día que entraron en Barraca por primera vez, en 1981, cuando tanto ellos como &quot;la fiesta&quot; aún conservaban su inocencia. &#x27;La Ruta&#x27; cuenta los más de diez años que Valencia se pasó bailando, unos años que todos querríamos vivir y que solo algunos pueden recordar.</desc>
-  </programme>
-  <programme start="20260928230000 -0300" stop="20260928232700 -0300" channel="0808">
-    <title lang="es">Clientes en furia • Confrontación por turnos</title>
-    <desc lang="es">Confrontación por turnos | En una tienda de conveniencia en Reno, Nevada, un intercambio entre dos empleados se convierte en una acalorada discusión. En un restaurante de comida rápida en Santa Mónica, California, un guardia de seguridad se ve asediado mientras los transeúntes intentan calmar la situación.</desc>
   </programme>
   <programme start="20260928232700 -0300" stop="20260928235400 -0300" channel="0808">
     <title lang="es">Clientes en furia • Leccion de estacionamiento</title>
@@ -12873,6 +13146,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002054000 -0300" stop="20261002062500 -0300" channel="0808">
     <title lang="es">Las primeras 48 horas • Venganza / Cuenta saldada</title>
     <desc lang="es">Venganza / Cuenta saldada | En Tulsa, un tiroteo cuádruple deja dos personas muertas mientras un vigilante busca venganza por el hecho de que su casa fuera el objetivo de un tiroteo desde un vehículo. En Mobile, un hombre recibe un disparo frente a su prometida cuando una disputa por el dinero toma un giro mortal.</desc>
+  </programme>
+  <programme start="20261002062500 -0300" stop="20261002071000 -0300" channel="0808">
+    <title lang="es">Las primeras 48 horas • Fin del juego</title>
+    <desc lang="es">Fin del juego | En Mobile, un profesor de economía es hallado muerto a tiros frente a su habitación en la residencia estudiantil tras no presentarse a clase.</desc>
   </programme>
   <programme start="20260928230000 -0300" stop="20260929004800 -0300" channel="0821">
     <title lang="es">Un golpe con estilo</title>
@@ -13703,10 +13980,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Multicinema</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928224500 -0300" stop="20260928233000 -0300" channel="0842">
-    <title lang="es">Crímenes en Nueva York • Una investigación internacional</title>
-    <desc lang="es">Una investigación internacional | Cuando una disputa entre hermanos por dinero se convierte en un doble asesinato, todo Brooklyn está en alerta por la desaparición del asesino. Pero los días se convierten en meses y luego en años, mientras la búsqueda del fugitivo por parte de la policía de Nueva York se transforma en una persecución nacional e internacional.</desc>
-  </programme>
   <programme start="20260928233000 -0300" stop="20260928235500 -0300" channel="0842">
     <title lang="es">It Takes a Killer • El hijo de Sam</title>
     <desc lang="es">El hijo de Sam | Un hombre trastornado, con un apodo inolvidable, aterroriza a la Ciudad de Nueva York en la década de 1970, dejando un reguero de muertos y heridos a su paso. El asesino opera con impunidad durante casi trece meses, hasta que una serie de cartas, un testigo renuente y una multa por mal estacionamiento conducen a su captura.</desc>
@@ -14154,6 +14427,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002053000 -0300" stop="20261002061500 -0300" channel="0842">
     <title lang="es">Exhumed: Killer Revealed • Delaware preparado para el asesinato</title>
     <desc lang="es">Delaware preparado para el asesinato | La policía responde a un incendio en un hipódromo en el norte del estado de Nueva York y se sorprende al descubrir que una peluquera se ha quitado la vida. Años más tarde, la muerte inquietantemente similar de otro peluquero lleva a los investigadores a solicitar una segunda autopsia para poder descubrir la verdad.</desc>
+  </programme>
+  <programme start="20261002061500 -0300" stop="20261002070000 -0300" channel="0842">
+    <title lang="es">Exhumed: Killer Revealed • Descubriendo a un asesino</title>
+    <desc lang="es">Descubriendo a un asesino | El impactante asesinato de la agente inmobiliaria Virginia Ginger Freeman, en 1981, parecía condenado a desaparecer para siempre. Las pistas van y vienen durante los siguientes 38 años hasta que una nueva tecnología de ADN descubre una pista que exige la exhumación de un cuerpo... pero no el de Ginger.</desc>
   </programme>
   <programme start="20260928220000 -0300" stop="20260928234000 -0300" channel="0851">
     <title lang="es">Foyle&#x27;s War • Lucharon en los campos</title>
@@ -14642,10 +14919,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002061000 -0300" stop="20261002075000 -0300" channel="0859">
     <title lang="es">Il cinico, l&#x27;infame, il violento</title>
     <desc lang="es">Leonardo Tanzi, cansado de su trabajo de inspector trabaja ahora corrigiendo novelas policiacas. Luigi Maietto, alias &quot;El chino&quot; sale de la carcel y quiere vengarse de Tanzi, que fue el que lo metio allí, enviando a dos matones para hacer el trabajo, estos fallan, pero la policía declara publicamente al policía como muerto. Tanzi decide irse a Roma, pero allí la delincuencia es muy grande, El chino se alia con el capo Frank Di Maggio, aunque ninguno se fia del otro...</desc>
-  </programme>
-  <programme start="20260928225000 -0300" stop="20260928232000 -0300" channel="0812">
-    <title lang="es">Frasier • Acosado</title>
-    <desc lang="es">T10 E12 - Acosado | Un nuevo analista financiero en la estación pone a Frasier con el agua hasta el cuello.</desc>
   </programme>
   <programme start="20260928232000 -0300" stop="20260928234500 -0300" channel="0812">
     <title lang="es">Frasier • Lilith necesita un favor</title>
@@ -15642,10 +15915,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0621">
     <title lang="es">Eurochannel</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928200000 -0300" stop="20260928231500 -0300" channel="1412">
-    <title lang="es">[En vivo] NFL • Philadelphia Eagles vs. Chicago Bears, Fecha 3, Soldier Field</title>
-    <desc lang="es">En vivo ║ Philadelphia Eagles vs. Chicago Bears, Fecha 3, Soldier Field | Los Philadelphia Eagles se enfrentan a los Chicago Bears en un emocionante encuentro por la fecha 3 de la NFL. Ambos equipos buscarán sumar puntos clave en esta intensa competencia.</desc>
   </programme>
   <programme start="20260928231500 -0300" stop="20260929001000 -0300" channel="1412">
     <title lang="es">ESPN Compact - UEFA Nations League • Bélgica vs. Francia, Fecha Grupo 1, King Baudouin Stadium</title>
@@ -18895,10 +19164,6 @@ Universo conurbano es una experiencia, un devenir, un encuentro con historias qu
     <title lang="es">Discovery Channel</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928210900 -0300" stop="20260928231300 -0300" channel="1832">
-    <title lang="es">47 Ronin: la leyenda del samurai</title>
-    <desc lang="es">Cuarenta y siete samuráis sin líderes deben unir sus fuerzas con un mestizo marginado para vencer a un jefe supremo traicionero que mató a sus maestros y los hizo desaparecer.</desc>
-  </programme>
   <programme start="20260928231300 -0300" stop="20260929092400 -0300" channel="1832">
     <title lang="es">El último samurai</title>
     <desc lang="es">1870. El capitán Nathan Algren es un hombre a la deriva. Las batallas que libró en otro tiempo parecen ahora lejanas e inútiles. Una vez arriesgó su vida por el honor y por la patria, pero, en los años transcurridos desde la Guerra de Secesión estadounidense, el mundo ha cambiado. El pragmatismo ha reemplazado al valor, el interés personal ha ocupado el lugar del sacrificio y el honor no se encuentra en ninguna parte, especialmente en el Oeste, donde su papel en las campañas contra los indios acabó en desilusión y tristeza. En algún lugar de las implacables llanuras junto a la ribera del río Washita, Algren perdió su alma. En un mundo completamente distinto, otro soldado ve como su modo de vida está a punto de desintegrarse.</desc>
@@ -19243,10 +19508,6 @@ Universo conurbano es una experiencia, un devenir, un encuentro con historias qu
     <title lang="es">SportsCenter</title>
     <desc lang="es">El noticiero de ESPN con la más amplia cobertura y noticias de los eventos deportivos.</desc>
   </programme>
-  <programme start="20260928223000 -0300" stop="20260928233000 -0300" channel="2413">
-    <title lang="es">Wimbledon Official Film</title>
-    <desc lang="es">Grabado ║ Torneo de Wimbledon de 2007. La llegada del ojo de Halcón, un nuevo título de Roger Federer (quinto consecutivo). En femenino, Venus Williams alcanza su quinto no consecutivo</desc>
-  </programme>
   <programme start="20260928233000 -0300" stop="20260929003000 -0300" channel="2413">
     <title lang="es">Fórmula 2 • Gran Premio de Azerbaiyán, Carrera 2, Circuito callejero de Bakú</title>
     <desc lang="es">Grabado ║ Gran Premio de Azerbaiyán, Carrera 2, Circuito callejero de Bakú | Vive las emociones de las carreras de la 10º edición de la Fórmula 2, la competición de automovilismo de velocidad creada en el año 2017.</desc>
@@ -19471,6 +19732,10 @@ Universo conurbano es una experiencia, un devenir, un encuentro con historias qu
     <title lang="es">Torneo Metropolitano de Hockey Femenino • Ciudad de Buenos Aires vs. Club Italiano</title>
     <desc lang="es">Grabado ║ Ciudad de Buenos Aires vs. Club Italiano | Vive las emociones del torneo Metropolitano de Hockey Femenino.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002065700 -0300" channel="2413">
+    <title lang="es">ESPN Polo • Triple corona</title>
+    <desc lang="es">Grabado ║ Triple corona | Los mejores torneos de un deporte en el que la Argentina es líder indiscutido en el mundo.</desc>
+  </programme>
   <programme start="20260928225500 -0300" stop="20260929093000 -0300" channel="1836">
     <title lang="es">Tomb Raider</title>
     <desc lang="es">La joven Lara Croft, cansada de su vida como mensajera en bicicleta, lo abandona todo para ir en busca de su padre, quien desapareció de una isla ubicada en algún lugar de la costa de Japón.</desc>
@@ -19562,10 +19827,6 @@ Universo conurbano es una experiencia, un devenir, un encuentro con historias qu
   <programme start="20261002030000 -0300" stop="20261002070000 -0300" channel="1836">
     <title lang="es">AMC</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928212200 -0300" stop="20260928231400 -0300" channel="2813">
-    <title lang="es">Beetlejuice Beetlejuice</title>
-    <desc lang="es">Después de una tragedia, tres generaciones de la familia Deetz regresan a Winter River. Aún atormentada por Beetlejuice, la vida de Lydia da un vuelco cuando su rebelde hija adolescente, Astrid, descubre el misterioso modelo de la ciudad en el ático.</desc>
   </programme>
   <programme start="20260928231400 -0300" stop="20260929090000 -0300" channel="2813">
     <title lang="es">Anaconda</title>
@@ -20493,10 +20754,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002060000 -0300" stop="20261002100000 -0300" channel="0622">
     <title lang="es">Europa Europa</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928230100 -0300" stop="20260928232600 -0300" channel="0850">
-    <title lang="es">Jujutsu Kaisen • Black Flash</title>
-    <desc lang="es">Black Flash | Hanami, el espíritu maldito de grado especial, se inmiscuye en el Evento de Intercambio. Fushiguro, Inumaki y Kamo se enfrentan a Hanami y tratan de defenderse mientras se apresuran a intentar cruzar el velo.</desc>
   </programme>
   <programme start="20260928232600 -0300" stop="20260928235200 -0300" channel="0850">
     <title lang="es">The Apothecary Diaries • La fortaleza</title>
@@ -21858,10 +22115,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Discovery Science</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928213500 -0300" stop="20260928232000 -0300" channel="1841">
-    <title lang="es">Dora y la ciudad perdida</title>
-    <desc lang="es">Tras haber pasado la mayor parte de su vida explorando la jungla junto a sus padres, nada podría haber preparado a Dora para la aventura más peligrosa a la que jamás se ha enfrentado: ¡el instituto!. Exploradora hasta el final, Dora no tarda en ponerse al frente de un equipo formado por Botas (su mejor amigo, un mono), Diego, un misterioso habitante de la jungla y un desorganizado grupo de adolescentes en una aventura en la que deberán salvar a sus padres y resolver el misterio oculto tras una ciudad perdida de oro.</desc>
-  </programme>
   <programme start="20260928232000 -0300" stop="20260929093000 -0300" channel="1841">
     <title lang="es">Sonic: la película</title>
     <desc lang="es">Sonic intenta atravesar las complejidades de la vida en la Tierra con su nuevo mejor amigo, un humano llamado Tom Wachowski. Deberán unir sus fuerzas para evitar que el malvado Dr. Robotnik capture a Sonic y use sus poderes para dominar el mundo.</desc>
@@ -21989,10 +22242,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002060000 -0300" stop="20261002100000 -0300" channel="1841">
     <title lang="es">Universal Cinema</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928214500 -0300" stop="20260928233000 -0300" channel="1418">
-    <title lang="es">Liga Profesional 2026 • Racing Club vs. Sarmiento, Fecha Grupo B, Estadio Juan Domingo Perón</title>
-    <desc lang="es">Grabado ║ Racing Club vs. Sarmiento, Fecha Grupo B, Estadio Juan Domingo Perón | Racing Club se enfrenta a Sarmiento en el Estadio Juan Domingo Perón por la fecha 10 del Grupo B de la Liga Profesional 2026. Un duelo clave para ambos equipos en busca de puntos vitales.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929012000 -0300" channel="1418">
     <title lang="es">Liga Profesional 2026 • San Lorenzo vs. Boca Jrs., Fecha Grupo A, Estadio Pedro Bidegain</title>
@@ -23570,10 +23819,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Todo pelota</title>
     <desc lang="es">Repetición ║ Actualidad y análisis de las principales competencias del mundo, con foco en la UEFA Champions League y en CONMEBOL Libertadores como solo Fox Sports te lo puede mostrar.</desc>
   </programme>
-  <programme start="20260928213000 -0300" stop="20260928233000 -0300" channel="0401">
-    <title lang="es">Todos somos técnicos • 28-09-2026</title>
-    <desc lang="es">28-09-2026 | Un espacio para analizar todos los detalles del fútbol nacional e internacional.</desc>
-  </programme>
   <programme start="20260928233000 -0300" stop="20260929013000 -0300" channel="0401">
     <title lang="es">Copa Chile 2026 • Universidad de Chile vs Everton</title>
     <desc lang="es">Universidad de Chile vs Everton | La información de este programa no se encuentra disponible.</desc>
@@ -23954,10 +24199,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Fútbol Colombiano • Supercopa Juvenil: Millonarios vs. Deportes Tolima</title>
     <desc lang="es">Supercopa Juvenil: Millonarios vs. Deportes Tolima | Partido de ida de los octavos de final de la Supercopa Juvenil FCF 2026. Millonarios se enfrenta a Deportes Tolima. Desde la Sede Deportiva FCF, en Bogotá.</desc>
   </programme>
-  <programme start="20260928214800 -0300" stop="20260928232500 -0300" channel="1824">
-    <title lang="es">Los renegados</title>
-    <desc lang="es">Los Renegados, la primera película de The ParguelsHD. Esta película dará pie a una nueva y emocionante saga de películas sobre la lucha de MC y Skorpion, dos persistentes visionarios que tratarán de devolverle la isla al pueblo, y arrebatársela a la perversa Svetlana Ekaterina, para impedir el apocalipsis a la que ella la quiere llevar...</desc>
-  </programme>
   <programme start="20260928232500 -0300" stop="20260929091000 -0300" channel="1824">
     <title lang="es">Los indestructibles 2</title>
     <desc lang="es">El líder mercenario Barney Ross, Lee Christmas y el resto del equipo se reúnen con el Sr. Church, quien los contrata para un aparente trabajo sencillo. Pero las cosas salen muy mal, lo que obliga a los mercenarios a buscar venganza por la muerte de un camarada. Con la suerte en su contra, Barney y su equipo enfrentan una ola de destrucción de las fuerzas opositoras, solo para encontrarse con una amenaza inesperada: seis libras de plutonio para armas.</desc>
@@ -24073,10 +24314,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002050000 -0300" stop="20261002090000 -0300" channel="1824">
     <title lang="es">Golden Premier 2</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928225500 -0300" stop="20260928232000 -0300" channel="0845">
-    <title lang="es">The Office • Venta de objetos usados</title>
-    <desc lang="es">Venta de objetos usados | Michael planea proponerle matrimonio a Holly el día de la feria americana de Dunder Mifflin, pero Holly tendrá que tomarse una licencia prolongada para viajar a Colorado porque su padre está enfermo.</desc>
   </programme>
   <programme start="20260928232000 -0300" stop="20260928234500 -0300" channel="0845">
     <title lang="es">The Good Place • La respuesta</title>
@@ -25098,6 +25335,10 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">House M.D. • Vidas privadas</title>
     <desc lang="es">Vidas privadas | El equipo trata de diagnosticar a una famosa blogger pero descubre que su insistencia en comunicar su caso por Internet interfiere con la posibilidad de curarla. Entretanto, House y Wilson descubren secretos el uno del otro.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002071500 -0300" channel="0844">
+    <title lang="es">House M.D. • El agujero negro</title>
+    <desc lang="es">El agujero negro | House y su equipo tratan de diagnosticar a un adolescente que sufre desmayos y alucinaciones, y se ven obligados a intentar un enfoque controvertido. Entretanto, Wilson trata de amueblar su nuevo apartamento y Taub trae su vida personal al trabajo.</desc>
+  </programme>
   <programme start="20260928220000 -0300" stop="20260929002900 -0300" channel="0805">
     <title lang="es">El contador</title>
     <desc lang="es">Christian Wolff es un sabio matemático con más afinidad por los números que las personas. Detrás de la fachada de una oficina de CPA de una pequeña ciudad, trabaja como contador independiente para algunas de las organizaciones delictivas más peligrosas del mundo. Cuando la División de Control del Crimen del Departamento del Tesoro, dirigida por Ray King, comienza a acercarse, Christian se enfrenta a un cliente legítimo: una empresa de robótica de vanguardia donde un empleado de contabilidad ha descubierto una discrepancia que involucra millones de dólares. Pero a medida que Christian descifra los libros y se acerca a la verdad, es el recuento corporal el que comienza a aumentar.</desc>
@@ -26002,10 +26243,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Terremoto 8.5</title>
     <desc lang="es">Una inesperada erupción del volcán más alto de Corea, ubicado en la frontera entre China y Corea del Norte, deja la península coreana en ruinas. Los sismólogos advierten que aún está por llegar una erupción mucho más devastadora. Yukyung, Secretario Jefe del Presidente de Corea del Sur, se reúne con el renombrado sismólogo coreano-estadounidense Bongrae, que tiene una teoría que podría detener la explosión volcánica. Inchang está a pocos días de terminar su servicio en la Unidad de Desactivación de Explosivos del Ejército de Corea del Sur. Es llamado a su última misión antes de regresar a casa con su mujer, Jiyoung. El equipo de Inchang contacta en secreto a un oficial de élite norcoreano, Junpyung, que es clave en la misión para detener la erupción volcánica.</desc>
   </programme>
-  <programme start="20260928225600 -0300" stop="20260928232700 -0300" channel="3801">
-    <title lang="es">Los Simpson • Bart, el desobediente</title>
-    <desc lang="es">T22 E3 - Bart, el desobediente | Lisa asume el cargo de gerente del equipo de béisbol de Bart y utiliza el análisis estadístico para formar un ganador, pero ella quita toda la diversión y hace que Bart abandone el equipo.</desc>
-  </programme>
   <programme start="20260928232700 -0300" stop="20260929022000 -0300" channel="3801">
     <title lang="es">Los Simpson • La casita del horror XXI</title>
     <desc lang="es">T22 E4 - La casita del horror XXI | Bart y Milhouse usan sus habilidades en los videojuegos para salvar a Springfield. En una parodia de &quot;Calma Total&quot;, Homero y Marge rescatan a un extraño que podría ser un asesino.</desc>
@@ -26666,10 +26903,6 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Detective Dee: The Four Heavenly Kings</title>
     <desc lang="es">El detective Dee se ve obligado a defenderse de las acusaciones de la emperatriz Wu mientras investiga una juerga delictiva.</desc>
   </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="0623">
-    <title lang="es">Show de la fe</title>
-    <desc lang="es">Declaraciones, testimonios e historias asombrosas que tienen un elemento en común: la muestra de amor y superación. Todo ello, desde una perspectiva cristiana que difunde la palabra de Jesucristo.</desc>
-  </programme>
   <programme start="20260928233000 -0300" stop="20260929093000 -0300" channel="0623">
     <title lang="es">Casa de Dios</title>
     <desc lang="es">La Casa de Dios es un hospital donde un grupo de estrafalarios médicos internos residentes en prácticas intentan lidiar con la presión que va asociada a su profesión. Después de que Jo, el jefe de los residentes, sufra una crisis, deciden colocar a los internos bajo la tutela del médico residente más veterano, un curioso personaje conocido con el sobrenombre de Fatman. Aunque fue rodada en 1979, esta comedia negra sobre el día a día del personal médico de un hospital no fue estrenada en salas comerciales hasta que algunos de sus protagonistas ya habían alcanzado una cierta popularidad, como es el caso de Tim Matheson (&quot;Los albóndigas en remojo&quot;) o Bess Armstrong (&quot;La gran ruta hacia China&quot;). En papeles secundarios participan también intérpretes como Sandra Bernhard (&quot;El rey de la comedia&quot;) o Michael Richards(&quot;Seinfeld&quot;).</desc>
@@ -27261,6 +27494,10 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002054500 -0300" stop="20261002063000 -0300" channel="0706">
     <title lang="es">Increíble con Dan Aykroyd • Castigos peculiares</title>
     <desc lang="es">Castigos peculiares | Los crímenes singulares suelen recibir castigos singulares. Como un cerdo cuya sangrienta matanza lo lleva a los tribunales, o un aficionado a la música cuyos ritmos ensordecedores lo obligan a escuchar horas de sinfonías clásicas. O un borracho cuya embriaguez pública lo convierte en un espectáculo público. Todos estos castigos peculiares tienen algo en común: son completamente inverosímiles.</desc>
+  </programme>
+  <programme start="20261002063000 -0300" stop="20261002071500 -0300" channel="0706">
+    <title lang="es">Increíble con Dan Aykroyd • Rituales inusuales</title>
+    <desc lang="es">Rituales inusuales | Examinamos algunos de los rituales más sorprendentes. Desde huesos humanos milagrosos para curar la gota, hasta momias enterradas vivas. Luego, una dieta victoriana verdaderamente extraña. Estas costumbres diarias o ritos únicos, comprueban la singularidad de los seres humanos.</desc>
   </programme>
   <programme start="20260928230500 -0300" stop="20260929000500 -0300" channel="0702">
     <title lang="es">Traficantes • Túnel desde Tijuana</title>
@@ -31218,10 +31455,6 @@ Andrés Gil</desc>
     <title lang="es">2019 FIFA Women&#x27;s World Cup</title>
     <desc lang="es">Watch the full match replay between Australia and Brazil played at Stade de la Mosson, Montpellier on Thursday, 13 June 2019 at 18:00.</desc>
   </programme>
-  <programme start="20260929220000 -0300" stop="20260929230000 -0300" channel="ES3400004SS">
-    <title lang="es">Sky News</title>
-    <desc lang="es">A look at the latest local and international news, financial updates, top sporting headlines, and weather summaries.</desc>
-  </programme>
   <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="ES3400004SS">
     <title lang="es">Sky News International</title>
   </programme>
@@ -31256,9 +31489,13 @@ Andrés Gil</desc>
     <title lang="es">Mornings with Ridge and Frost</title>
     <desc lang="es">All the big stories of the morning plus news making interviews, analysis and eyewitness reports from around the world.</desc>
   </programme>
-  <programme start="20260929220100 -0300" stop="20260929231000 -0300" channel="ESBC1700004PX">
-    <title lang="es">Estamos Rodando</title>
-    <desc lang="es">Jon nos llevará hasta el pueblo navarro de Lesaka, población donde se rodó &#x27;Akelarre&#x27;.</desc>
+  <programme start="20260930043000 -0300" stop="20260930050000 -0300" channel="ES3400004SS">
+    <title lang="es">Mornings with Ridge and Frost</title>
+    <desc lang="es">All the big stories of the morning plus news making interviews, analysis and eyewitness reports from around the world.</desc>
+  </programme>
+  <programme start="20260930050000 -0300" stop="20260930053000 -0300" channel="ES3400004SS">
+    <title lang="es">Mornings with Ridge and Frost</title>
+    <desc lang="es">All the big stories of the morning plus news making interviews, analysis and eyewitness reports from around the world.</desc>
   </programme>
   <programme start="20260929231000 -0300" stop="20260930002100 -0300" channel="ESBC1700004PX">
     <title lang="es">Estamos Rodando</title>
@@ -31292,9 +31529,9 @@ Andrés Gil</desc>
     <title lang="es">Ultimate Countdown</title>
     <desc lang="es">Los momentos más memorables del cine y las celebridades se clasifican en este divertido programa.</desc>
   </programme>
-  <programme start="20260929205723 -0300" stop="20260929224122 -0300" channel="ESBC2700003T8">
-    <title lang="es">Una novia muy especial</title>
-    <desc lang="es">Dos amigos de la infancia se reencuentran para ayudarse a conquistar a las mujeres de sus sueños. Chris finge ser judío para enamorar a Allison, mientras Adam duda de su inminente boda. Entre mentiras y choques culturales, todo se complica.</desc>
+  <programme start="20260930041400 -0300" stop="20260930052200 -0300" channel="ESBC1700004PX">
+    <title lang="es">Estamos Rodando</title>
+    <desc lang="es">Jon se desplaza a Antoñana: el pueblo protagonista de &#x27;Errementari&#x27;, y a Irún, donde se rodó &#x27;La isla Faisán&#x27;.</desc>
   </programme>
   <programme start="20260929224122 -0300" stop="20260930002308 -0300" channel="ESBC2700003T8">
     <title lang="es">El hombre del presidente 2</title>
@@ -31307,6 +31544,10 @@ Andrés Gil</desc>
   <programme start="20260930022432 -0300" stop="20260930042254 -0300" channel="ESBC2700003T8">
     <title lang="es">Corazón de melón</title>
     <desc lang="es">Rosa, una mujer alegre con un don para la cocina, aprovecha un accidente que deja amnésico al chef Tomás para acercarse a él. Mientras la familia cree que son pareja, surge el amor verdadero entre recetas y ternura. Pero cuando la arrogante Fernanda descubre la verdad, la venganza amenaza con arruinarlo todo.</desc>
+  </programme>
+  <programme start="20260930042254 -0300" stop="20260930060340 -0300" channel="ESBC2700003T8">
+    <title lang="es">Insignis</title>
+    <desc lang="es">La vida de Jorge y Felipe, dos jóvenes amigos, da un vuelco el día que encuentran un cráneo.</desc>
   </programme>
   <programme start="20260929214804 -0300" stop="20260929215644 -0300" channel="ESBC40000248">
     <title lang="es">Silent Rage</title>
@@ -31368,13 +31609,25 @@ Andrés Gil</desc>
     <title lang="es">Billy The Kid Versus Dracula</title>
     <desc lang="es">Dracula travels to the American West, intent on making a beautiful ranch owner his next victim. Her fiance, outlaw Billy the Kid, finds out about it and rushes to save her.</desc>
   </programme>
-  <programme start="20260930032609 -0300" stop="20260930045742 -0300" channel="ESBC40000248">
+  <programme start="20260930032609 -0300" stop="20260930044610 -0300" channel="ESBC40000248">
     <title lang="es">Billy The Kid Versus Dracula</title>
     <desc lang="es">Dracula travels to the American West, intent on making a beautiful ranch owner his next victim. Her fiance, outlaw Billy the Kid, finds out about it and rushes to save her.</desc>
   </programme>
-  <programme start="20260929213630 -0300" stop="20260929230936 -0300" channel="ESBC2700002LO">
-    <title lang="es">The Warrant</title>
-    <desc lang="es">Después de luchar en la Guerra Civil, dos amigos del Ejército de la Unión se encuentran en lados opuestos de la ley con la paz de la posguerra en peligro.</desc>
+  <programme start="20260930044610 -0300" stop="20260930045451 -0300" channel="ESBC40000248">
+    <title lang="es">Technotise: Edit y Yo</title>
+    <desc lang="es">Tras reprobar algunos exámenes, una alumna decide implantarse un chip de memoria, pero algo extraño le empieza a pasar.</desc>
+  </programme>
+  <programme start="20260930045451 -0300" stop="20260930045742 -0300" channel="ESBC40000248">
+    <title lang="es">Technotise: Edit y Yo</title>
+    <desc lang="es">Tras reprobar algunos exámenes, una alumna decide implantarse un chip de memoria, pero algo extraño le empieza a pasar.</desc>
+  </programme>
+  <programme start="20260930045742 -0300" stop="20260930045743 -0300" channel="ESBC40000248">
+    <title lang="es">Technotise: Edit y Yo</title>
+    <desc lang="es">Tras reprobar algunos exámenes, una alumna decide implantarse un chip de memoria, pero algo extraño le empieza a pasar.</desc>
+  </programme>
+  <programme start="20260930045743 -0300" stop="20260930064934 -0300" channel="ESBC40000248">
+    <title lang="es">Technotise: Edit y Yo</title>
+    <desc lang="es">Tras reprobar algunos exámenes, una alumna decide implantarse un chip de memoria, pero algo extraño le empieza a pasar.</desc>
   </programme>
   <programme start="20260929230936 -0300" stop="20260930005517 -0300" channel="ESBC2700002LO">
     <title lang="es">Mad Morgan</title>
@@ -31388,13 +31641,9 @@ Andrés Gil</desc>
     <title lang="es">Furia al amanecer</title>
     <desc lang="es">Un agente especial de Chicago es enviado al oeste para traer a los famosos hermanos Reno.</desc>
   </programme>
-  <programme start="20260929220925 -0300" stop="20260929223539 -0300" channel="ES300029LP">
-    <title lang="es">Determinación vacilante</title>
-    <desc lang="es">Yona, Hak y Yoon se dirigen a una aldea fantasma donde se dice que está uno de los Cuatro Dragones, el Dragón Blanco. Yona quiere protegerse sola y ayudar a Hak en todo lo que pueda, por lo que le pide que le enseñe a usar las armas.</desc>
-  </programme>
-  <programme start="20260929223539 -0300" stop="20260929230152 -0300" channel="ES300029LP">
-    <title lang="es">La larga espera</title>
-    <desc lang="es">Yona y sus amigos llegan a la aldea del Dragón Blanco, donde consideran el cabello rojo como un presagio. Más tarde, Kija, conocido como el Dragón Blanco, aparece ante Yona y los otros para eliminar a los intrusos con sus propias manos.</desc>
+  <programme start="20260930042053 -0300" stop="20260930061801 -0300" channel="ESBC2700002LO">
+    <title lang="es">Entre Lobos</title>
+    <desc lang="es">Dos misioneras huyen tras presenciar un asesinato y buscan refugio con exasesinos que les ofrecen protección. Sin embargo, para sobrevivir, deberán conseguir armas, enfrentándose a un mundo peligroso donde la fe y la violencia chocan.</desc>
   </programme>
   <programme start="20260929230152 -0300" stop="20260929232656 -0300" channel="ES300029LP">
     <title lang="es">La partida</title>
@@ -31444,17 +31693,17 @@ Andrés Gil</desc>
     <title lang="es">Altair de la invariancia</title>
     <desc lang="es">Mientras el caos se desata alrededor de la máquina del tiempo, Leskinen revela que es un miembro de StratFor que supo acerca del futuro por Kagari y construyó a Amadeus para preservar la teoría del viaje en el tiempo de Kurisu.</desc>
   </programme>
-  <programme start="20260929214629 -0300" stop="20260929221117 -0300" channel="ES3000288I">
-    <title lang="es">¡En el lugar correcto! ¡Amelia en la Villa de la Justicia!</title>
-    <desc lang="es">Mientras buscan a Lina y los otros, Gourry y Amelia se topan con unos defensores acérrimos de la justicia que les llevan a su Centro de Investigación de la Justicia y les piden ayuda para acabar con unos demonios.</desc>
+  <programme start="20260930041145 -0300" stop="20260930043753 -0300" channel="ES300029LP">
+    <title lang="es">Altair de las coordenadas cíclicas</title>
+    <desc lang="es">Después de que la máquina del tiempo haya sido destruida con Mayuri y Suzuha dentro, Rintaro toma la decisión de confiar en sus amigos y proporcionar a Daru y a Maho la información que necesitan para reparar el teléfono microondas.</desc>
   </programme>
-  <programme start="20260929221117 -0300" stop="20260929223728 -0300" channel="ES3000288I">
-    <title lang="es">Naraku: deseo incierto</title>
-    <desc lang="es">Inuyasha y Sesshomaru combinan los poderes de sus espadas para derrotar de una vez por todas a Naraku. En medio de la batalla, Kagome pregunta a Naraku, un demonio con corazón humano, cuál es su verdadero deseo.</desc>
+  <programme start="20260930043753 -0300" stop="20260930050401 -0300" channel="ES300029LP">
+    <title lang="es">Renacimiento del juramento</title>
+    <desc lang="es">En lugar de viajar al 7 de julio, Rintaro despierta en el año 2036 en el que el mundo ha sido devastado por la Tercera Guerra Mundial y sus amigos forman Valquiria, un grupo de resistencia que trata de construir una máquina del tiempo.</desc>
   </programme>
-  <programme start="20260929223728 -0300" stop="20260929230411 -0300" channel="ES3000288I">
-    <title lang="es">Prólogo de la leyenda</title>
-    <desc lang="es">Beld, el emperador de Marmo, planea conquistar la isla maldita de Lodoss con el apoyo de la bruja Karla. ¿Podrán el caballero Parn, el sacerdote Etoh, el enano Ghim, el mago Slayn, la elfa Deedlit y el ladrón Woodchuck proteger Lodoss?</desc>
+  <programme start="20260930050401 -0300" stop="20260930053009 -0300" channel="ES300029LP">
+    <title lang="es">Renacimiento de la formación de imágenes</title>
+    <desc lang="es">Con la ayuda de Kurisu Amadeus, Rintaro viaja desde 2036 hasta 2011 cargando con las esperanzas de todos. Después de 3000 saltos y a pesar del desgaste mental, llega al 7 de julio de 2011 como el científico loco que una vez fue.</desc>
   </programme>
   <programme start="20260929230411 -0300" stop="20260929232858 -0300" channel="ES3000288I">
     <title lang="es">El sacerdote travieso</title>
@@ -31504,13 +31753,17 @@ Andrés Gil</desc>
     <title lang="es">Un techo desconocido</title>
     <desc lang="es">Tras pilotar el EVA-01 y sobrevivir a la feroz batalla con el Ángel, Shinji es acogido por Misato. Una ciudad desconocida con gente desconocida. Incluso el techo que observa en el apartamento de Misato le resulta desconocido. Shinji está atormentado por recuerdos de la desesperada lucha contra el Ángel. Lo que vio después de eso fue...</desc>
   </programme>
-  <programme start="20260929220000 -0300" stop="20260929223000 -0300" channel="ES260000968">
-    <title lang="es">Euronews EN DIRECTO</title>
-    <desc lang="es">El canal Europeo líder en noticias internacionales. Noticias en directo las 24 horas del día, gratis, de la mano de Rakuten TV.</desc>
+  <programme start="20260930041356 -0300" stop="20260930044109 -0300" channel="ES3000288I">
+    <title lang="es">La muchacha de la Luna de las Ilusiones</title>
+    <desc lang="es">En el planeta Gaia, en el que la Tierra puede verse en el cielo, hay seres humanos, hombres lobo, hombres gato e incluso Dragones. Guiada por una tribu de hombres lobo, Hitomi descubre que Van es el heredero al trono de Fanelia, su destino. Encuentra a Merle, una joven chica gato que adora a Van tanto como detesta a Hitomi. Tras haber cumplido con éxito el ritual de la caza del dragón, Van es coronado y tienen lugar celebraciones en todo el reino. De repente, atacan enemigos invisibles. Estos destruyen la ciudad y aterrorizan a los habitantes, exactamente como Hitomi había predicho. Estos enemigos invisibles son los Alseides, armaduras mecánicas gigantescas del imperio Zaibacher. Los generales samuráis caen uno tras otro. Para proteger su patria, Van utiliza su Drag Energist para despertar al dios protector de Fanelia, el Guymelef Escaflowne. Hitomi ya había tenido una visión de esta batalla. Esta puede ver al enemigo invisible y ayuda a Van a contrarrestar el ataque de los Guymelefs. Pero Vargas, su guerrero más fiel, es abatido. Hitomi y Van son aspirados de nuevo por una columna de luz que les transporta a otro lugar junto al Escaflowne.</desc>
   </programme>
-  <programme start="20260929223000 -0300" stop="20260929230000 -0300" channel="ES260000968">
-    <title lang="es">Euronews EN DIRECTO</title>
-    <desc lang="es">El canal Europeo líder en noticias internacionales. Noticias en directo las 24 horas del día, gratis, de la mano de Rakuten TV.</desc>
+  <programme start="20260930044109 -0300" stop="20260930050708 -0300" channel="ES3000288I">
+    <title lang="es">Desenlace</title>
+    <desc lang="es">Ha dado comienzo el ataque a gran escala del Doctor Infierno contra el laboratorio de energía fotónica, que se opone a sus planes de conquista del mundo. Los únicos que pueden hacer frente a esta amenaza son el equipo Mazinger.</desc>
+  </programme>
+  <programme start="20260930050708 -0300" stop="20260930053156 -0300" channel="ES3000288I">
+    <title lang="es">¿Peligro y calamidad? ¡Esta es la isla de las maravillas!</title>
+    <desc lang="es">Tras su choque con Dark Star, Lina se despierta sola en una playa y comienza a buscar a sus amigos. En su periplo conoce a un cerdo que le explica que está atrapada en un laberinto dimensional y la guía a través de varios mundos.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="ES260000968">
     <title lang="es">Euronews EN DIRECTO</title>
@@ -31556,9 +31809,13 @@ Andrés Gil</desc>
     <title lang="es">Euronews EN DIRECTO</title>
     <desc lang="es">El canal Europeo líder en noticias internacionales. Noticias en directo las 24 horas del día, gratis, de la mano de Rakuten TV.</desc>
   </programme>
-  <programme start="20260929210831 -0300" stop="20260929224114 -0300" channel="ESAJ3800001KT">
-    <title lang="es">Aprendiz de gigoló</title>
-    <desc lang="es">Dos amigos judíos de edad avanzada (Allen y Turturro) se encuentran ante una desesperada situación financiera. Deciden entonces probar suerte con el negocio de la prostitución masculina, uno como gigoló y el otro como &quot;representante&quot;. Pero el asunto no será bien visto en la comunidad judía en la que viven.</desc>
+  <programme start="20260930043000 -0300" stop="20260930050000 -0300" channel="ES260000968">
+    <title lang="es">Euronews EN DIRECTO</title>
+    <desc lang="es">El canal Europeo líder en noticias internacionales. Noticias en directo las 24 horas del día, gratis, de la mano de Rakuten TV.</desc>
+  </programme>
+  <programme start="20260930050000 -0300" stop="20260930053000 -0300" channel="ES260000968">
+    <title lang="es">Euronews EN DIRECTO</title>
+    <desc lang="es">El canal Europeo líder en noticias internacionales. Noticias en directo las 24 horas del día, gratis, de la mano de Rakuten TV.</desc>
   </programme>
   <programme start="20260929224114 -0300" stop="20260930000607 -0300" channel="ESAJ3800001KT">
     <title lang="es">Juerga de mamis</title>
@@ -31572,9 +31829,9 @@ Andrés Gil</desc>
     <title lang="es">El gran McLintock</title>
     <desc lang="es">Un adinerado ranchero esa su poder e influencia en el territorio para mantener la paz entre granjeros, rancheros, nativos americanos y funcionarios corruptos.</desc>
   </programme>
-  <programme start="20260929210334 -0300" stop="20260929224553 -0300" channel="ES2600004BD">
-    <title lang="es">Una noche de venganza</title>
-    <desc lang="es">Thriller de venganza y secuestros cargado de acción con Morgan Freeman interpretando a un expolicía corrupto que  recluta a Victoria (Ruby Rose) para que recolecte millones en dinero blanqueado. Pero ella pronto descubre los siniestros planes de Damon.</desc>
+  <programme start="20260930041307 -0300" stop="20260930060607 -0300" channel="ESAJ3800001KT">
+    <title lang="es">Mi pie izquierdo</title>
+    <desc lang="es">Ganadora de Oscars (1989): Mejor Actor y Actriz secundaria. Basada en la biografía de Christy Brown. Aquejado de parálisis cerebral, gracias a su tenacidad y al incondicional apoyo de su madre, consiguió su integración en la sociedad.</desc>
   </programme>
   <programme start="20260929224553 -0300" stop="20260930003007 -0300" channel="ES2600004BD">
     <title lang="es">Sin escapatoria</title>
@@ -31588,9 +31845,9 @@ Andrés Gil</desc>
     <title lang="es">El gran golpe</title>
     <desc lang="es">Un grupo de ladrones internacionales liderado por Macao-Park se dispone a poner en marcha un plan maestro para dar el golpe del siglo en un casino. Pero como el honor no existe entre ladrones, cada uno de ellos organiza por separado su propio y personal plan para quedarse con el botín.</desc>
   </programme>
-  <programme start="20260929210505 -0300" stop="20260929230654 -0300" channel="ES4100002WB">
-    <title lang="es">El Traficante</title>
-    <desc lang="es">Utah y Opal son dos adictos que viven en las calles de la zona rural de Ohio hasta que un encuentro aparentemente casual con el enigmático Wood los lleva a Los Ángeles para recibir tratamiento. Mientras Utah recibe ayuda, pronto descubre que ahí hay gato encerrado.</desc>
+  <programme start="20260930043725 -0300" stop="20260930062318 -0300" channel="ES2600004BD">
+    <title lang="es">Tracers</title>
+    <desc lang="es">Un mensajero de Nueva York (Taylor Lautner) se ve envuelto en una trama criminal. &#x27;Tracers&#x27; está ambientada en el espectacular mundo del parkour, una técnica de desplazamiento en la que hay que superar todos los obstáculos usando las habilidades del cuerpo humano: saltando vallas, muros, etc.</desc>
   </programme>
   <programme start="20260929230654 -0300" stop="20260930004552 -0300" channel="ES4100002WB">
     <title lang="es">Bajo amenaza</title>
@@ -31604,9 +31861,9 @@ Andrés Gil</desc>
     <title lang="es">El escritor</title>
     <desc lang="es">Oso de Plata al Mejor Director en el Festival de Berlín 2010. Roman Polanski dirige un apasionado thriller político cargado de suspense en un mundo en el que nada es lo que parece.</desc>
   </programme>
-  <programme start="20260929211142 -0300" stop="20260929225947 -0300" channel="ES500004NO">
-    <title lang="es">Dredd</title>
-    <desc lang="es">Conocido y temido en toda la ciudad  Dredd es el juez definitivo y su trabajo es limpiar la ciudad de la última amenaza: una peligrosa droga llamada “Slo-Mo” y la sádica criminal Ma-Ma  que usa la droga para apoderarse de la ciudad. Basada en el famoso personaje de cómics Juez Dredd.</desc>
+  <programme start="20260930044717 -0300" stop="20260930062854 -0300" channel="ES4100002WB">
+    <title lang="es">Blind man</title>
+    <desc lang="es">Comienza con el descubrimiento de un cadáver. Un solitario policía sospecha rápidamente de un hombre ciego, cuya minusvalía le resulta una ventaja. Empieza así una carrera contrarreloj y un duelo a muerte entre dos hombres a cuál más enigmático.</desc>
   </programme>
   <programme start="20260929225947 -0300" stop="20260930003502 -0300" channel="ES500004NO">
     <title lang="es">No Way to Escape</title>
@@ -31620,9 +31877,9 @@ Andrés Gil</desc>
     <title lang="es">Gantz</title>
     <desc lang="es">Dos jóvenes mueren atropellados y reaparecen en un apartamento con otras personas. Una esfera negra, Gantz, los recluta para un juego de supervivencia. Deberán luchar contra alienígenas invisibles usando trajes y armas especiales con superpoderes.</desc>
   </programme>
-  <programme start="20260929210000 -0300" stop="20260929230000 -0300" channel="USBD3500008IJ">
-    <title lang="es">Stingray Flashback 70&#x27;s</title>
-    <desc lang="es">Relive the era of platforms, Studio 54, flower power, and all the boldness of the &#x27;70s. Flashback to one of the most explosive decades in music history when Woodstock and the last days of disco reigned supreme.</desc>
+  <programme start="20260930050146 -0300" stop="20260930073325 -0300" channel="ES500004NO">
+    <title lang="es">Gantz: Perfect Answer</title>
+    <desc lang="es">El detective Shigeta investiga misteriosas desapariciones. Mientras, Kei Kurono lucha contra alienígenas por la máxima puntuación en Gantz. La esfera Gantz comienza a actuar de forma extraña, rompiendo las reglas del juego y llevando a una guerra abierta.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930010000 -0300" channel="USBD3500008IJ">
     <title lang="es">Stingray Flashback 70&#x27;s</title>
@@ -31636,9 +31893,9 @@ Andrés Gil</desc>
     <title lang="es">Stingray Flashback 70&#x27;s</title>
     <desc lang="es">Relive the era of platforms, Studio 54, flower power, and all the boldness of the &#x27;70s. Flashback to one of the most explosive decades in music history when Woodstock and the last days of disco reigned supreme.</desc>
   </programme>
-  <programme start="20260929210000 -0300" stop="20260929230000 -0300" channel="USBD35000149S">
-    <title lang="es">Stingray Nothin&#x27; But &#x27;90s</title>
-    <desc lang="es">The ‘90s was a decade like no other. Grunge, pop, hip-hop, and contemporary country music battled it out on the charts. This mix samples the variety of genres from this unforgettable era.</desc>
+  <programme start="20260930050000 -0300" stop="20260930070000 -0300" channel="USBD3500008IJ">
+    <title lang="es">Stingray Flashback 70&#x27;s</title>
+    <desc lang="es">Relive the era of platforms, Studio 54, flower power, and all the boldness of the &#x27;70s. Flashback to one of the most explosive decades in music history when Woodstock and the last days of disco reigned supreme.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930010000 -0300" channel="USBD35000149S">
     <title lang="es">Stingray Nothin&#x27; But &#x27;90s</title>
@@ -31652,9 +31909,9 @@ Andrés Gil</desc>
     <title lang="es">Stingray Nothin&#x27; But &#x27;90s</title>
     <desc lang="es">The ‘90s was a decade like no other. Grunge, pop, hip-hop, and contemporary country music battled it out on the charts. This mix samples the variety of genres from this unforgettable era.</desc>
   </programme>
-  <programme start="20260929210000 -0300" stop="20260929230000 -0300" channel="USBD35000180U">
-    <title lang="es">Stingray Classic Rock</title>
-    <desc lang="es">Relive the wonders of classic rock, the sound that revolutionized the world of music from the ‘60s to the ‘80s. Listen to the genre&#x27;s biggest legends.</desc>
+  <programme start="20260930050000 -0300" stop="20260930070000 -0300" channel="USBD35000149S">
+    <title lang="es">Stingray Nothin&#x27; But &#x27;90s</title>
+    <desc lang="es">The ‘90s was a decade like no other. Grunge, pop, hip-hop, and contemporary country music battled it out on the charts. This mix samples the variety of genres from this unforgettable era.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930010000 -0300" channel="USBD35000180U">
     <title lang="es">Stingray Classic Rock</title>
@@ -31668,9 +31925,9 @@ Andrés Gil</desc>
     <title lang="es">Stingray Classic Rock</title>
     <desc lang="es">Relive the wonders of classic rock, the sound that revolutionized the world of music from the ‘60s to the ‘80s. Listen to the genre&#x27;s biggest legends.</desc>
   </programme>
-  <programme start="20260929213242 -0300" stop="20260929222547 -0300" channel="US2600019IC">
-    <title lang="es">The Engineering That Built the World</title>
-    <desc lang="es">France and America compete to build a 50-mile path connecting two oceans.</desc>
+  <programme start="20260930050000 -0300" stop="20260930070000 -0300" channel="USBD35000180U">
+    <title lang="es">Stingray Classic Rock</title>
+    <desc lang="es">Relive the wonders of classic rock, the sound that revolutionized the world of music from the ‘60s to the ‘80s. Listen to the genre&#x27;s biggest legends.</desc>
   </programme>
   <programme start="20260929222547 -0300" stop="20260929231703 -0300" channel="US2600019IC">
     <title lang="es">The Engineering That Built the World</title>
@@ -31700,6 +31957,10 @@ Andrés Gil</desc>
     <title lang="es">The Engineering That Built the World</title>
     <desc lang="es">France and America compete to build a 50-mile path connecting two oceans.</desc>
   </programme>
+  <programme start="20260930042547 -0300" stop="20260930051703 -0300" channel="US2600019IC">
+    <title lang="es">The Engineering That Built the World</title>
+    <desc lang="es">Visionary engineers in NY and Boston vie to build the first subway in America.</desc>
+  </programme>
   <programme start="20260929220714 -0300" stop="20260930000606 -0300" channel="USBD1200009JI">
     <title lang="es">Battlefields</title>
     <desc lang="es">There is no equal on the battlefield to the indomitable presence of the tank.</desc>
@@ -31720,9 +31981,13 @@ Andrés Gil</desc>
     <title lang="es">WW2 Treasure Hunters</title>
     <desc lang="es">B17 relics uncover the sacrifice of the 95th Bomb Group.</desc>
   </programme>
-  <programme start="20260929215619 -0300" stop="20260929225155 -0300" channel="US2200001IY">
-    <title lang="es">Poder y Dominio</title>
-    <desc lang="es">Ovejas, alces y elefantes luchan por su poder al envejecer, mientras marmotas dependen de la familia para conservar su estatus social</desc>
+  <programme start="20260930041018 -0300" stop="20260930050613 -0300" channel="USBD1200009JI">
+    <title lang="es">WW2 Treasure Hunters</title>
+    <desc lang="es">Finds reveal a D-Day camp linked to Operation Overlord.</desc>
+  </programme>
+  <programme start="20260930050613 -0300" stop="20260930060011 -0300" channel="USBD1200009JI">
+    <title lang="es">WW2 Treasure Hunters</title>
+    <desc lang="es">Relics show hidden munitions stores in the countryside.</desc>
   </programme>
   <programme start="20260929225155 -0300" stop="20260929234729 -0300" channel="US2200001IY">
     <title lang="es">Sabiduría</title>
@@ -31748,9 +32013,9 @@ Andrés Gil</desc>
     <title lang="es">Poder y Dominio</title>
     <desc lang="es">Ovejas, alces y elefantes luchan por su poder al envejecer, mientras marmotas dependen de la familia para conservar su estatus social</desc>
   </programme>
-  <programme start="20260929215300 -0300" stop="20260929223100 -0300" channel="US5000053YV">
-    <title lang="es">Best of Steve Harvey</title>
-    <desc lang="es">Moments from &quot;Family Feud&quot; with the man, Steve Harvey.</desc>
+  <programme start="20260930042539 -0300" stop="20260930052114 -0300" channel="US2200001IY">
+    <title lang="es">Sabiduría</title>
+    <desc lang="es">En muchas culturas, los ancianos transmiten conocimientos. En el reino animal, orcas, elefantes y lobos enseñan a sobrevivir y adaptarse</desc>
   </programme>
   <programme start="20260929223100 -0300" stop="20260930023700 -0300" channel="US5000053YV">
     <title lang="es">Family Feud</title>
@@ -31764,13 +32029,9 @@ Andrés Gil</desc>
     <title lang="es">Funniest Answers</title>
     <desc lang="es">The funniest &quot;Family Feud&quot; answers replayed.</desc>
   </programme>
-  <programme start="20260929220000 -0300" stop="20260929223000 -0300" channel="USAJ3504502A">
-    <title lang="es">Anger x And x Light</title>
-    <desc lang="es">Gon pleads with Pitou to return Kite back to normal.</desc>
-  </programme>
-  <programme start="20260929223000 -0300" stop="20260929230000 -0300" channel="USAJ3504502A">
-    <title lang="es">Flash x And x Start</title>
-    <desc lang="es">Pouf worries that Meruem might start remembering Komugi.</desc>
+  <programme start="20260930043600 -0300" stop="20260930063100 -0300" channel="US5000053YV">
+    <title lang="es">Best of Steve Harvey</title>
+    <desc lang="es">Moments from &quot;Family Feud&quot; with the man, Steve Harvey.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260929233000 -0300" channel="USAJ3504502A">
     <title lang="es">Deadline x To x Live</title>
@@ -31816,9 +32077,13 @@ Andrés Gil</desc>
     <title lang="es">Sin x And x Claw</title>
     <desc lang="es">The remaining eight candidates now compete in the 5th round of voting to select the new chairman.</desc>
   </programme>
-  <programme start="20260929203600 -0300" stop="20260929221200 -0300" channel="US1900002QK">
-    <title lang="es">The Atticus Institute</title>
-    <desc lang="es">In the early 1970s, Dr. Henry West creates an institute to find people with supernatural abilities. When Judith Winstead comes to the facility, she exhibits amazing abilities that the military wants to turn into a weapon.</desc>
+  <programme start="20260930043000 -0300" stop="20260930050000 -0300" channel="USAJ3504502A">
+    <title lang="es">Approval x And x Coalition</title>
+    <desc lang="es">The 7th round of voting is held and the field narrows to the remaining 4 candidates.</desc>
+  </programme>
+  <programme start="20260930050000 -0300" stop="20260930053000 -0300" channel="USAJ3504502A">
+    <title lang="es">Defeat x And x Reunion</title>
+    <desc lang="es">Beans counts the votes and the winner is revealed.</desc>
   </programme>
   <programme start="20260929221200 -0300" stop="20260929235300 -0300" channel="US1900002QK">
     <title lang="es">Beneath</title>
@@ -31836,9 +32101,9 @@ Andrés Gil</desc>
     <title lang="es">Blood Creek</title>
     <desc lang="es">Two brothers become entangled in a sinister Nazi&#x27;s occult experiment at an American farmhouse.</desc>
   </programme>
-  <programme start="20260929220400 -0300" stop="20260929230100 -0300" channel="US1800014CG">
-    <title lang="es">Alfred Hitchcock Hour</title>
-    <desc lang="es">Only hours before his wedding, a London detective discovers that his American fiancée has disappeared.</desc>
+  <programme start="20260930044400 -0300" stop="20260930055300 -0300" channel="US1900002QK">
+    <title lang="es">Captive Wild Woman</title>
+    <desc lang="es">A mad doctor (John Carradine) turns an animal trainer&#x27;s (Milburn Stone) ape into Paula the ape-woman (Acquanetta).</desc>
   </programme>
   <programme start="20260929230100 -0300" stop="20260929235700 -0300" channel="US1800014CG">
     <title lang="es">Alfred Hitchcock Hour</title>
@@ -31872,9 +32137,13 @@ Andrés Gil</desc>
     <title lang="es">Alfred Hitchcock Presents</title>
     <desc lang="es">A teen (Carol Lynley) devises a scheme to escape the influence of her domineering aunt (Jeanette Nolan).</desc>
   </programme>
-  <programme start="20260929210225 -0300" stop="20260929225538 -0300" channel="USBD12000255B">
-    <title lang="es">Norway v Canada | Group B | FIFA Women&#x27;s World Cup Sweden 1995™ | Full Match Replay</title>
-    <desc lang="es">Watch the full match replay between Norway and Canada played on 10 June 1995 in Gavle.</desc>
+  <programme start="20260930043700 -0300" stop="20260930050400 -0300" channel="US1800014CG">
+    <title lang="es">Alfred Hitchcock Presents</title>
+    <desc lang="es">A lonely woman (Dorothy Stickney) believes she has murdered the man (Fred Graham) who killed her cat.</desc>
+  </programme>
+  <programme start="20260930050400 -0300" stop="20260930053200 -0300" channel="US1800014CG">
+    <title lang="es">Alfred Hitchcock Presents</title>
+    <desc lang="es">A prosecutor (Pat Hingle) considering a run for Congress is told that he may have convicted an innocent man.</desc>
   </programme>
   <programme start="20260929225538 -0300" stop="20260930004834 -0300" channel="USBD12000255B">
     <title lang="es">USA v Sweden | Group D | FIFA Women&#x27;s World Cup Canada 2015™ | Full Match Replay</title>
@@ -31888,9 +32157,9 @@ Andrés Gil</desc>
     <title lang="es">Spain v Sweden | Semi-finals | FIFA Women&#x27;s World Cup Australia &amp; New Zealand 2023™ | Full Match Replay</title>
     <desc lang="es">Watch the full match replay between Spain and Sweden.</desc>
   </programme>
-  <programme start="20260929215915 -0300" stop="20260929225911 -0300" channel="USAK3508705A">
-    <title lang="es">Lakeside Campfire: Quebec</title>
-    <desc lang="es">Enjoy the elegance and warmth of the crackling amber fire in Entrelacs, Quebec.</desc>
+  <programme start="20260930045437 -0300" stop="20260930051218 -0300" channel="USBD12000255B">
+    <title lang="es">25 Memorable FIFA U-17 Women&#x27;s World Cup Goals</title>
+    <desc lang="es">Remember some of the best strikes in the history of the tournament.</desc>
   </programme>
   <programme start="20260929225911 -0300" stop="20260929235907 -0300" channel="USAK3508705A">
     <title lang="es">Tropical Rain Relaxation</title>
@@ -31916,9 +32185,9 @@ Andrés Gil</desc>
     <title lang="es">Snake Island: Philippines</title>
     <desc lang="es">Fly away to paradise and explore the lush forests and turquoise waters of Snake Island, in the Philippines.</desc>
   </programme>
-  <programme start="20260929214800 -0300" stop="20260929225600 -0300" channel="US700012OU">
-    <title lang="es">Ocean Vibes</title>
-    <desc lang="es">A dive into the crystalline waters surrounding the pristine coral reefs of Indonesia, Fiji, the Philippines and the Maldives.</desc>
+  <programme start="20260930045943 -0300" stop="20260930055939 -0300" channel="USAK3508705A">
+    <title lang="es">Ruby Beach Sunset</title>
+    <desc lang="es">Relax for a full hour as a golden, soothing sunset slowly unfolds and turns to dusk as seen from Ruby Beach, on Washington state&#x27;s Olympic Peninsula. You&#x27;ll be lulled into a state of tranquil relaxation thanks to the sounds of rhythmic ocean waves gently crashing over the pebbly beach paired with the dazzling collage of 4 different sunset scenes shot in 4K.</desc>
   </programme>
   <programme start="20260929225600 -0300" stop="20260930000300 -0300" channel="US700012OU">
     <title lang="es">Ocean Vibes</title>
@@ -31940,9 +32209,9 @@ Andrés Gil</desc>
     <title lang="es">Tropical Fish With Music &amp; Ocean Sounds</title>
     <desc lang="es">Enjoy these tropical fish blended with island music and calming ocean sounds  perfect for relaxing, studying, sleeping, meditating, date night, dinner parties and more.</desc>
   </programme>
-  <programme start="20260929212000 -0300" stop="20260929223100 -0300" channel="USBA3800004EL">
-    <title lang="es">Wood Fireplace 4K</title>
-    <desc lang="es">Feel the warmth of this natural wood burning fireplace during this winter season, in stunning 4K.</desc>
+  <programme start="20260930043200 -0300" stop="20260930054000 -0300" channel="US700012OU">
+    <title lang="es">Relaxing Jellyfish With Music &amp; Ocean Sounds</title>
+    <desc lang="es">Enjoy these relaxing jellyfish blended with calming music and ambient ocean sounds  perfect for relaxing, studying, sleeping, meditating, date night, dinner parties and more.</desc>
   </programme>
   <programme start="20260929223100 -0300" stop="20260929234100 -0300" channel="USBA3800004EL">
     <title lang="es">Fireplace Hearth 4K</title>
@@ -31964,9 +32233,9 @@ Andrés Gil</desc>
     <title lang="es">Crackling Fireplace 4K</title>
     <desc lang="es">Enjoy the crackling wood and warm flames of this 4K fireplace.</desc>
   </programme>
-  <programme start="20260929210000 -0300" stop="20260929230000 -0300" channel="USBD3500013DG">
-    <title lang="es">Stingray SPA</title>
-    <desc lang="es">Calm your soul, soothe your body, and inspire your mind with purely instrumental electro-acoustic music. The Spa is home to new age and instrumental music, creating an aural landscape that will transport you to a peaceful and tranquil place.</desc>
+  <programme start="20260930042400 -0300" stop="20260930053400 -0300" channel="USBA3800004EL">
+    <title lang="es">Wood Fireplace 4K</title>
+    <desc lang="es">Feel the warmth of this natural wood burning fireplace during this winter season, in stunning 4K.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930010000 -0300" channel="USBD3500013DG">
     <title lang="es">Stingray SPA</title>
@@ -31980,9 +32249,9 @@ Andrés Gil</desc>
     <title lang="es">Stingray SPA</title>
     <desc lang="es">Calm your soul, soothe your body, and inspire your mind with purely instrumental electro-acoustic music. The Spa is home to new age and instrumental music, creating an aural landscape that will transport you to a peaceful and tranquil place.</desc>
   </programme>
-  <programme start="20260929220000 -0300" stop="20260929230000 -0300" channel="GB2300005ML">
-    <title lang="es">Let&#x27;s Focus</title>
-    <desc lang="es">Designed for viewers seeking context, depth and clarity, Let&#x27;s Focus unpacks the U.S. midterm elections and treats audiences as citizens rather than spectators.</desc>
+  <programme start="20260930050000 -0300" stop="20260930070000 -0300" channel="USBD3500013DG">
+    <title lang="es">Stingray SPA</title>
+    <desc lang="es">Calm your soul, soothe your body, and inspire your mind with purely instrumental electro-acoustic music. The Spa is home to new age and instrumental music, creating an aural landscape that will transport you to a peaceful and tranquil place.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930000000 -0300" channel="GB2300005ML">
     <title lang="es">Newshour</title>
@@ -32024,6 +32293,10 @@ Andrés Gil</desc>
     <title lang="es">Newshour</title>
     <desc lang="es">Latest news and in-depth analysis from around the world.</desc>
   </programme>
+  <programme start="20260930050000 -0300" stop="20260930053000 -0300" channel="GB2300005ML">
+    <title lang="es">News Live</title>
+    <desc lang="es">Up-to-date news and analysis from around the world.</desc>
+  </programme>
   <programme start="20260929220000 -0300" stop="20260930000000 -0300" channel="GBBD4900001RG">
     <title lang="es">Reuters</title>
     <desc lang="es">Reuters delivers fast, accurate, unbiased and trusted news around the globe.</desc>
@@ -32039,10 +32312,6 @@ Andrés Gil</desc>
   <programme start="20260930040000 -0300" stop="20260930060000 -0300" channel="GBBD4900001RG">
     <title lang="es">Reuters</title>
     <desc lang="es">Reuters delivers fast, accurate, unbiased and trusted news around the globe.</desc>
-  </programme>
-  <programme start="20260929220000 -0300" stop="20260929230000 -0300" channel="GBBD1900009UD">
-    <title lang="es">&#x27;80s Party</title>
-    <desc lang="es">The biggest party hits of the decade.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930000000 -0300" channel="GBBD1900009UD">
     <title lang="es">&#x27;80s Movie Soundtrack</title>
@@ -32068,9 +32337,9 @@ Andrés Gil</desc>
     <title lang="es">Mellow Classics</title>
     <desc lang="es">Power ballads and mellow classics to help you unwind.</desc>
   </programme>
-  <programme start="20260929220000 -0300" stop="20260929230000 -0300" channel="GBBC2100002HP">
-    <title lang="es">Britpop Classics</title>
-    <desc lang="es">All of your favourite Britpop Bangers from the &#x27;90s and &#x27;00s.</desc>
+  <programme start="20260930050000 -0300" stop="20260930060000 -0300" channel="GBBD1900009UD">
+    <title lang="es">British Legends</title>
+    <desc lang="es">The most influential music icons of the &#x27;70s &amp; &#x27;80s.</desc>
   </programme>
   <programme start="20260929230000 -0300" stop="20260930000000 -0300" channel="GBBC2100002HP">
     <title lang="es">Alt &amp; Rock Hits</title>
@@ -32096,17 +32365,9 @@ Andrés Gil</desc>
     <title lang="es">Nostalgic Chill Morning</title>
     <desc lang="es">Start your morning with best videos from both decades.</desc>
   </programme>
-  <programme start="20260929215728 -0300" stop="20260929222138 -0300" channel="GB500007VM">
-    <title lang="es">Episode 42</title>
-    <desc lang="es">Episode 42</desc>
-  </programme>
-  <programme start="20260929222138 -0300" stop="20260929224548 -0300" channel="GB500007VM">
-    <title lang="es">Episode 43</title>
-    <desc lang="es">Episode 43</desc>
-  </programme>
-  <programme start="20260929224548 -0300" stop="20260929230957 -0300" channel="GB500007VM">
-    <title lang="es">Episode 44</title>
-    <desc lang="es">Episode 44</desc>
+  <programme start="20260930050000 -0300" stop="20260930060000 -0300" channel="GBBC2100002HP">
+    <title lang="es">&#x27;90s UK Number Ones</title>
+    <desc lang="es">Every UK Number 1 from the &#x27;90s.</desc>
   </programme>
   <programme start="20260929230957 -0300" stop="20260929233407 -0300" channel="GB500007VM">
     <title lang="es">Episode 45</title>
@@ -32159,6 +32420,14 @@ Andrés Gil</desc>
   <programme start="20260930040155 -0300" stop="20260930042605 -0300" channel="GB500007VM">
     <title lang="es">Episode 57</title>
     <desc lang="es">Episode 57</desc>
+  </programme>
+  <programme start="20260930042605 -0300" stop="20260930045014 -0300" channel="GB500007VM">
+    <title lang="es">Episode 58</title>
+    <desc lang="es">Episode 58</desc>
+  </programme>
+  <programme start="20260930045014 -0300" stop="20260930051424 -0300" channel="GB500007VM">
+    <title lang="es">Episode 59</title>
+    <desc lang="es">Episode 59</desc>
   </programme>
   <programme start="20260929210000 -0300" stop="20260929213000 -0300" channel="6a1610bebdf296985fd95603-6478acb5c83f56da796f166c">
     <title lang="es">Noticias AHORA con Julio Vaqueiro</title>
@@ -35742,6 +36011,10 @@ Andrés Gil</desc>
     <title lang="es">Deal or No Deal Australia</title>
     <desc lang="es">The hit game show where contestants must beat the Banker to win a huge cash prize of $100,000.</desc>
   </programme>
+  <programme start="20261002061900 -0300" stop="20261002064400 -0300" channel="plex.tv.Deal.Or.No.Deal.plex">
+    <title lang="es">Deal or No Deal Australia (Reboot)</title>
+    <desc lang="es">The hit game show where contestants must beat the Banker to win a huge cash prize of $100,000.</desc>
+  </programme>
   <programme start="20260928225500 -0300" stop="20260928235500 -0300" channel="plex.tv.Family.Feud.plex">
     <title lang="es">Family Feud</title>
     <desc lang="es">Discover everything about America&#x27;s hottest game show, hosted by Steve Harvey.</desc>
@@ -36125,10 +36398,6 @@ Andrés Gil</desc>
   <programme start="20261002060200 -0300" stop="20261002070200 -0300" channel="plex.tv.Family.Feud.plex">
     <title lang="es">Family Feud</title>
     <desc lang="es">Discover everything about America&#x27;s hottest game show, hosted by Steve Harvey.</desc>
-  </programme>
-  <programme start="20260928222100 -0300" stop="20260928232100 -0300" channel="plex.tv.FIFA+.plex">
-    <title lang="es">One to Eleven</title>
-    <desc lang="es">Diego Maradona, Paolo Rossi, Carles Puyol and several other FIFA World Cup™ winners tell the untold stories of how they won the most coveted prize in the beautiful game.</desc>
   </programme>
   <programme start="20260928232100 -0300" stop="20260928233800 -0300" channel="plex.tv.FIFA+.plex">
     <title lang="es">Rising Star: Messi at U20 FIFA World Cup 2005™</title>
@@ -37650,6 +37919,10 @@ Andrés Gil</desc>
     <title lang="es">Bewitched (Colorized)</title>
     <desc lang="es">Darrin está luchando por crear una campaña publicitaria para un modelo de barco de juguete fabricado por el Sr. Herding.</desc>
   </programme>
+  <programme start="20261002063005 -0300" stop="20261002070034 -0300" channel="643054b1fc3be59477853717-692234015028288613484a8a">
+    <title lang="es">Bewitched (Colorized)</title>
+    <desc lang="es">La tía Clara les dice a Samantha y a Endora que se esconde del brujo Hedley Partridge porque teme que su antiguo novio descubra que su magia ya no funciona.</desc>
+  </programme>
   <programme start="20260929191425 -0300" stop="20260929210733 -0300" channel="643054b1fc3be59477853717-6922322350fe592fd6d5b7e6">
     <title lang="es">Resident Evil: Extinción</title>
     <desc lang="es">Tercera entrega de la saga &#x27;Resident Evil&#x27;. En esta ocasión nuestra heroína, junto con los supervivientes de la catástrofe acontecida en la ciudad de Raccoon, deben atravesar el desierto de Nevada con la esperanza de llegar a Alaska, antes de que los de la &#x27;Corporación Umbrella&#x27; les alcancen.</desc>
@@ -38650,6 +38923,10 @@ Andrés Gil</desc>
     <title lang="es">The Nanny</title>
     <desc lang="es">Maxwell le pide a Fran que se casen.</desc>
   </programme>
+  <programme start="20261002062041 -0300" stop="20261002064756 -0300" channel="643054b1fc3be59477853717-6922338150fe592fd6d5b7e8">
+    <title lang="es">The Nanny</title>
+    <desc lang="es">Fran y Maxwell están emocionados porque fueron invitados a una cena de alta sociedad, pero luego se dan cuenta de que se burlan de ellos.</desc>
+  </programme>
   <programme start="20260929210000 -0300" stop="20260929224157 -0300" channel="643054b1fc3be59477853717-6683fcdf702b9db9f8177252">
     <title lang="es">Hasta Tu Última Muerte</title>
     <desc lang="es">Para salvar a sus hermanos, una joven tendrá que luchar contra su padre y la poderosa entidad llamada Gamemaster, que atrapa a los humanos en diabólicos complots.</desc>
@@ -39554,6 +39831,10 @@ Andrés Gil</desc>
     <title lang="es">Euronews Ahora</title>
     <desc lang="es">Las noticias internacionales y regionales de última hora, análisis y entrevistas.</desc>
   </programme>
+  <programme start="20261002063000 -0300" stop="20261002064621 -0300" channel="643054b1fc3be59477853717-60089d97f682a3002c34829d">
+    <title lang="es">Euronews Ahora</title>
+    <desc lang="es">Las noticias internacionales y regionales de última hora, análisis y entrevistas.</desc>
+  </programme>
   <programme start="20260929202841 -0300" stop="20260929212717 -0300" channel="643054b1fc3be59477853717-64d79408e5f67b0fab47ff24">
     <title lang="es">Misterios sin resolver</title>
     <desc lang="es">Este episodio incluye: El Barco Fantasma Queen Mary, Actualización: Carlucci, Dos Strikes.</desc>
@@ -39997,6 +40278,10 @@ Andrés Gil</desc>
   <programme start="20261002052226 -0300" stop="20261002062732 -0300" channel="643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79">
     <title lang="es">Ási Se Escriben Un Crimen</title>
     <desc lang="es">El 11 de abril de 2019, Jesús Mari, un vecino de Barakaldo residente en Castro Urdiales desaparece de su domicilio sin motivo aparente.</desc>
+  </programme>
+  <programme start="20261002062732 -0300" stop="20261002073124 -0300" channel="643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79">
+    <title lang="es">Cómo Resolver Un Crimen</title>
+    <desc lang="es">El 18 de enero de 2011, Laetitia Perrais, una camarera en prácticas de 18 años, desaparece tras el servicio nocturno en un hotel de Pornic</desc>
   </programme>
   <programme start="20260929193035 -0300" stop="20260929212741 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
     <title lang="es">Brasil vs Serbia | Grupo G | Copa Mundial de la FIFA Catar 2022™ | Partido Completo</title>
@@ -40622,9 +40907,9 @@ Andrés Gil</desc>
     <title lang="es">See no evil</title>
     <desc lang="es">Una mujer secuestrada en su casa y la carrera contrarreloj de los detectives para encontrar a su agresor, antes de que ataque de nuevo.</desc>
   </programme>
-  <programme start="20260928230000 -0300" stop="20260928233000 -0300" channel="Magic Kids Tv">
-    <title lang="es">Le Temes a la Oscuridad?</title>
-    <desc lang="es">Solo Por Magic Kids TV</desc>
+  <programme start="20261002062647 -0300" stop="20261002071836 -0300" channel="643054b1fc3be59477853717-69a1fe1b0f8d297b3f6ac0f0">
+    <title lang="es">Wives with knives</title>
+    <desc lang="es">Wives with knives presenta historias fascinantes de mujeres que lucharon de cerca. Ya sea motivadas por la codicia y los celos o provocadas por años de abuso físico, cada episodio revela los eventos traumáticos que llevaron a estos enfrentamientos mortales.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929000000 -0300" channel="Magic Kids Tv">
     <title lang="es">Historias de Fantasmas</title>
@@ -42065,10 +42350,6 @@ Andrés Gil</desc>
     <title lang="es">Max Reload y los Desintegradores Abisales</title>
     <desc lang="es">El empleado de una tienda de videojuegos de un pequeño pueblo debe pasar de cero a héroe después de desatar accidentalmente las fuerzas del mal de un cartucho de videojuego maldito.</desc>
   </programme>
-  <programme start="20260928212454 -0300" stop="20260928232018 -0300" channel="ES:.Películas.de.Acción.-.Rakuten.TV.be">
-    <title lang="es">Amenaza terrorista</title>
-    <desc lang="es">Ewan es un agente del Servicio Secreto cuya misión consiste en capturar y eliminar a Ash, un terrorista suicida, y a la célula a la que pertenece. Mientras tanto, Ash se enfrenta a un dilema moral.</desc>
-  </programme>
   <programme start="20260928232019 -0300" stop="20260929012252 -0300" channel="ES:.Películas.de.Acción.-.Rakuten.TV.be">
     <title lang="es">El origen del justiciero</title>
     <desc lang="es">Zaid, un exitoso doctor, ve como su hermano pequeño muere en un asalto relacionado con una peligrosa banda criminal. Corroído por la rabia, abandonará su privilegiada vida para convertirse en un justiciero enmascarado y vengar la muerte de su hermano dando caza a todos..</desc>
@@ -42240,10 +42521,6 @@ Andrés Gil</desc>
   <programme start="20261002013421 -0300" stop="20261002032948 -0300" channel="ES:.Películas.de.Acción.-.Rakuten.TV.be">
     <title lang="es">Blood Money</title>
     <desc lang="es">Un cártel de droga colombiano se alía con un grupo de Triads de Hong Kong y con el sicario más atactivo del planeta para enviar dos toneladas de cocaína a Australia y a China.</desc>
-  </programme>
-  <programme start="20260928224315 -0300" stop="20260928232446 -0300" channel="ES:.FIFA+.be">
-    <title lang="es">FACTS: Alemania vs Brasil Corea/Japón 2002</title>
-    <desc lang="es">Alemania deslumbra y conquista su cuarto título histórico ante Brasil en Yokohama.</desc>
   </programme>
   <programme start="20260928232451 -0300" stop="20260929000621 -0300" channel="ES:.FIFA+.be">
     <title lang="es">FACTS: Italia vs. Francia Alemania 2006</title>
@@ -42865,10 +43142,6 @@ Andrés Gil</desc>
     <title lang="es">Volvemos pronto con más contenido</title>
     <desc lang="es">¡Estamos recuperando el sueño perdido! Permanece atento a la magnífica selección de entretenimiento de Rakuten TV.</desc>
   </programme>
-  <programme start="20260928225907 -0300" stop="20260928233019 -0300" channel="ES:.Mr..Bean.-.Live.Action.be">
-    <title lang="es">Mr Bean</title>
-    <desc lang="es">Mr Bean wants to give a busker some money until he realises he has no change.</desc>
-  </programme>
   <programme start="20260928233020 -0300" stop="20260928235907 -0300" channel="ES:.Mr..Bean.-.Live.Action.be">
     <title lang="es">Mr Bean</title>
     <desc lang="es">Mr Bean goes to a swimming pool but finds himself terrified of the high diving board.</desc>
@@ -43464,10 +43737,6 @@ Andrés Gil</desc>
   <programme start="20261002014250 -0300" stop="20261002021121 -0300" channel="ES:.Mr..Bean.-.Live.Action.be">
     <title lang="es">Mr Bean</title>
     <desc lang="es">Mr Bean goes back to school.</desc>
-  </programme>
-  <programme start="20260928225814 -0300" stop="20260928233009 -0300" channel="ES:.The.Pet.Collective.be">
-    <title lang="es">TPC That&#x27;s My Pet</title>
-    <desc lang="es">Did you know that Great Danes can run up to 30 miles per hour.</desc>
   </programme>
   <programme start="20260928233014 -0300" stop="20260929000109 -0300" channel="ES:.The.Pet.Collective.be">
     <title lang="es">Countdown: The Funniest Pets</title>
