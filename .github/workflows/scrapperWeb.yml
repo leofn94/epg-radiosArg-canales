@@ -26,19 +26,17 @@ jobs:
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install playwright beautifulsoup4 gspread google-auth pandas openpyxl requests
+          pip install playwright beautifulsoup4 gspread google-auth pandas openpyxl requests pytz
           playwright install chromium
-          playwright install-deps
+          playwright install-deps chromium
 
       # --- VERIFICACIÓN DE FRECUENCIA PARA MITV ---
       - name: Verificar si corresponde ejecutar MITV (Cada 3 días)
         id: check_mitv
         run: |
-          # Si se dispara manualmente (workflow_dispatch) o el día del año es múltiplo de 3, se activa.
           DAY_OF_YEAR=$(date +%j)
           
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((10#$DAY_OF_YEAR % 3)) -eq 0 ]; then
-            # Solo corre a la medianoche (00:00 UTC) del día correspondiente para no repetir 8 veces ese día
             HOUR=$(date +%H)
             if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$HOUR" -eq "00" ]; then
               echo "run_mitv=true" >> $GITHUB_OUTPUT
@@ -61,7 +59,7 @@ jobs:
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-        run: python tl+.py
+        run: python "tl+.py"
         
       - name: Ejecutar script de retroblast
         env:
