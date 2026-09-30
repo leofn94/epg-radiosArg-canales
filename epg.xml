@@ -2061,10 +2061,6 @@
     <title lang="es">My Home Hero</title>
     <desc lang="es">Tetsuo Tosu descubre que su hija es víctima de violencia doméstica por parte de un miembro de la yakuza y toma medidas drásticas para proteger a su familia.</desc>
   </programme>
-  <programme start="20260929231000 -0300" stop="20260929233500 -0300" channel="retroblast">
-    <title lang="es">DBZ (Run B)</title>
-    <desc lang="es">Goku y los Guerreros Z protegen la Tierra de despiadados saiyajins, tiranos intergalácticos y androides en batallas de poder colosal.</desc>
-  </programme>
   <programme start="20260929233500 -0300" stop="20260930000000 -0300" channel="retroblast">
     <title lang="es">Naruto</title>
     <desc lang="es">Naruto Uzumaki, un joven ninja marginado que alberga en su interior al Zorro de Nueve Colas, sueña con convertirse en el líder de su aldea.</desc>
@@ -2689,6 +2685,10 @@
     <title lang="es">Silent Möbius</title>
     <desc lang="es">Ep. 1 — Awake En 2023, Rally Cheyenne, jefa de la AMP, atrae a Katsumi Liqueur a Tokio con la promesa de revelarle la verdad sobre la muerte de su madre, cuando en realidad intenta reclutarla. Antes de aterrizar, un demonio Lucifer Hawk ataca su avión y Katsumi lo destruye con una hoja mágica heredada de su madre.</desc>
   </programme>
+  <programme start="20260929234800 -0300" stop="20260930000000 -0300" channel="janimotion">
+    <title lang="es">Zenki</title>
+    <desc lang="es">Ep. 30 — Stolen Faces. Beware of the Pick-up Artist! La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
+  </programme>
   <programme start="20260930000000 -0300" stop="20260930001600 -0300" channel="janimotion">
     <title lang="es">Zenki</title>
     <desc lang="es">Ep. 30 — Stolen Faces. Beware of the Pick-up Artist! La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
@@ -2905,6 +2905,10 @@
     <title lang="es">Boogiepop Phantom</title>
     <desc lang="es">Ep. 1 — Retratos del recuerdo Moto Tonomura confiesa sus sentimientos a un chico que desapareció tiempo atrás. Sin embargo, la aparición es eliminada por Boogiepop, la legendaria entidad que acecha entre los estudiantes.</desc>
   </programme>
+  <programme start="20260930234700 -0300" stop="20261001000000 -0300" channel="janimotion">
+    <title lang="es">Black Cat</title>
+    <desc lang="es">Ep. 15 — Tôzakaru neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
+  </programme>
   <programme start="20261001000000 -0300" stop="20261001001600 -0300" channel="janimotion">
     <title lang="es">Black Cat</title>
     <desc lang="es">Ep. 15 — Tôzakaru neko Train Heartnet, el temido asesino &#x27;Black Cat&#x27; de la organización Chronos, cambia de bando para vivir como cazador de recompensas junto al tramposo Sven Vollfied y la misteriosa Eve. La adaptación del manga de Kentaro Yabuki, subtitulada.</desc>
@@ -3120,6 +3124,10 @@
   <programme start="20261001232200 -0300" stop="20261001235000 -0300" channel="janimotion">
     <title lang="es">Zenki</title>
     <desc lang="es">Ep. 31 — Corazones de muñecas La estudiante Chiaki hereda el sello de su abuelo: dentro duerme Zenki, el demonio guerrero que el clan Enno invocaba hace 1200 años. Despierto —y de mal humor—, debe enfrentar las semillas del mal que resurgen en el Japón moderno. El clásico de acción y horror sobrenatural de los 90, con doblaje latino.</desc>
+  </programme>
+  <programme start="20261001235000 -0300" stop="20261002000000 -0300" channel="janimotion">
+    <title lang="es">Beast Fighter The Apocalypse</title>
+    <desc lang="es">Ep. 2 — Criaturas en el complejo subterráneo Un experimento mata a su madre y convierte a Shin&#x27;ichi en una bestia; su padre lidera una secta dispuesta a despertar a Dios mientras monstruos arrasan ciudades. El remake del manga de Ken Ishikawa, emitido por Animax Latinoamérica.</desc>
   </programme>
   <programme start="20261002000000 -0300" stop="20261002002000 -0300" channel="janimotion">
     <title lang="es">Beast Fighter The Apocalypse</title>
@@ -5302,10 +5310,6 @@ El cambio climático y la pérdida de biodiversidad exigen una nueva forma de ec
   <programme start="20261002063000 -0300" stop="20261002070000 -0300" channel="0205">
     <title lang="es">Fuerza latina, mujeres inspiradoras de América Latina</title>
     <desc lang="es">Las mujeres latinoamericanas ganan protagonismo en todos los ámbitos. Con tenacidad y perseverancia, se proponen mejorar el mundo que les rodea y alzan su voz para reclamar derechos, denunciar injusticias y un mayor protagonismo en la sociedad.</desc>
-  </programme>
-  <programme start="20260928233000 -0300" stop="20260928234000 -0300" channel="0206">
-    <title lang="es">Noticias</title>
-    <desc lang="es">Cada hora, las veinticuatro horas del día, un programa con la última información sobre asuntos a nivel global.</desc>
   </programme>
   <programme start="20260928234000 -0300" stop="20260928235300 -0300" channel="0206">
     <title lang="es">La entrevista</title>
@@ -8303,10 +8307,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Liszt &amp; R. Strauss, con Erin Morley, Orquesta Estatal de Berlín &amp; Christian Thielemann</title>
     <desc lang="es">La información de este programa no se encuentra disponible.</desc>
   </programme>
-  <programme start="20260928220000 -0300" stop="20260928234000 -0300" channel="0621">
-    <title lang="es">La asesina perfecta</title>
-    <desc lang="es">La principal sospechosa de un asesinato podría ser la responsable de la muerte de la hija del detective, pero él, ¿busca justicia o venganza?</desc>
-  </programme>
   <programme start="20260928234000 -0300" stop="20260929092000 -0300" channel="0621">
     <title lang="es">Presas</title>
     <desc lang="es">Román, su hermano Albert y sus amigos se van de excursión. El grupo pronto se encuentra en un intento desesperado por sobrevivir cuando se dan cuenta de que han sido víctimas de un misterioso tirador.</desc>
@@ -9286,10 +9286,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002040000 -0300" stop="20261002080000 -0300" channel="0302">
     <title lang="es">ETC TV</title>
     <desc lang="es">La informacion de este programa no se encuentra disponible.</desc>
-  </programme>
-  <programme start="20260928232500 -0300" stop="20260928233600 -0300" channel="0308">
-    <title lang="es">Los pequeños Looney Tunes • Cock-a-Doodle-Doo-It!</title>
-    <desc lang="es">Cock-a-Doodle-Doo-It! | En su primera visita a la granja, los pequeños Looney Tunes conocen a un gallo desanimado llamado Foghorn. Los Looney trabajan juntos para fortalecer la confianza del joven gallo en sí mismo.</desc>
   </programme>
   <programme start="20260928233600 -0300" stop="20260928235600 -0300" channel="0308">
     <title lang="es">Scooby Doo, ¿dónde estás? • El fantasma del castillo</title>
@@ -10842,6 +10838,10 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002062200 -0300" stop="20261002063500 -0300" channel="0308">
     <title lang="es">El campamento de Lazlo • Los cocineros</title>
     <desc lang="es">Los cocineros | Los Jelly Beans descubren que son unos genios haciendo perros calientes y la fama en el campamento se les sube a la cabeza.</desc>
+  </programme>
+  <programme start="20261002063500 -0300" stop="20261002064700 -0300" channel="0308">
+    <title lang="es">El campamento de Lazlo • Órbitas de queso</title>
+    <desc lang="es">Órbitas de queso | Tres extraterrestres pondrán a prueba la amistad entre Patsy y Nina.</desc>
   </programme>
   <programme start="20260928233000 -0300" stop="20260929002200 -0300" channel="0705">
     <title lang="es">Unión Salvaje • Un Invitado Salvaje</title>
@@ -14432,10 +14432,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
     <title lang="es">Exhumed: Killer Revealed • Descubriendo a un asesino</title>
     <desc lang="es">Descubriendo a un asesino | El impactante asesinato de la agente inmobiliaria Virginia Ginger Freeman, en 1981, parecía condenado a desaparecer para siempre. Las pistas van y vienen durante los siguientes 38 años hasta que una nueva tecnología de ADN descubre una pista que exige la exhumación de un cuerpo... pero no el de Ginger.</desc>
   </programme>
-  <programme start="20260928220000 -0300" stop="20260928234000 -0300" channel="0851">
-    <title lang="es">Foyle&#x27;s War • Lucharon en los campos</title>
-    <desc lang="es">T3 E3 - Lucharon en los campos | Tras el asesinato de un agricultor local, Foyle se ve envuelto en el complejo sistema agrícola británico, que depende tanto de trabajadores extranjeros como de mujeres del Land Army.</desc>
-  </programme>
   <programme start="20260928234000 -0300" stop="20260929024500 -0300" channel="0851">
     <title lang="es">El show debe seguir</title>
     <desc lang="es">Joe Gideon es un coreógrafo obsesionado con la perfección del arte y la idea de la muerte. Su vida, entregada a los vicios, el cigarro, las píldoras y los romances ocasionales, pareciera estar pasándole factura..</desc>
@@ -15799,10 +15795,6 @@ Toei Animation la describe como &quot;Una Historia Original de Anime&quot;, y es
   <programme start="20261002061200 -0300" stop="20261002070000 -0300" channel="1604">
     <title lang="es">Caso criminal • Desenmascarando la verdad</title>
     <desc lang="es">Desenmascarando la verdad | Un asesino mata a tiros a un empresario durante una invasión domiciliaria. La evidencia parece indicar que el crimen fue bien planeado y altamente calculado. La policía explora diversos motivos antes de desenmascarar al autor intelectual del ataque.</desc>
-  </programme>
-  <programme start="20260928220000 -0300" stop="20260928234000 -0300" channel="0621">
-    <title lang="es">La asesina perfecta</title>
-    <desc lang="es">La principal sospechosa de un asesinato podría ser la responsable de la muerte de la hija del detective, pero él, ¿busca justicia o venganza?</desc>
   </programme>
   <programme start="20260928234000 -0300" stop="20260929092000 -0300" channel="0621">
     <title lang="es">Presas</title>
@@ -24947,6 +24939,10 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
     <title lang="es">Girlfriends&#x27; Guide to Divorce • Regla 67: No mates a la princesa</title>
     <desc lang="es">Regla 67: No mates a la princesa | Abby organiza una fiesta de cumpleaños para su hija Lilly solo para que la novia de Jake, la actriz de CW Becca Riley, aparezca sin ser invitada. Abby se pregunta si está embarazada... y piensa en lo que haría si lo estuviera. Mientras tanto, Delia se ocupa del divorcio de Gordon Beech, esposo de la aclamada diseñadora de moda Courtney Beech.</desc>
   </programme>
+  <programme start="20261002064000 -0300" stop="20261002073000 -0300" channel="0845">
+    <title lang="es">Girlfriends&#x27; Guide to Divorce • Regla 17: Pregúntale a la dama de las respuestas</title>
+    <desc lang="es">Regla 17: Pregúntale a la dama de las respuestas | Abby se prepara para lanzar su nueva marca a su agencia cuando Jo, una vieja amiga de la universidad llega con su actitud contundente y atrevida. Las cosas se complican cuando Jake consigue un trabajo dirigiendo un episodio del programa de televisión de Becca, &#x27;Blood Sisters&#x27;.</desc>
+  </programme>
   <programme start="20260928230500 -0300" stop="20260928235500 -0300" channel="0844">
     <title lang="es">The Lazarus Project</title>
     <desc lang="es">Cuando George se despierta un día y se encuentra reviviendo un día de hace meses, piensa que ha perdido la cabeza. Todos sus hitos recientes se han deshecho, incluido su éxito en el trabajo y su matrimonio con el amor de su vida. Lo peor de todo es que parece ser el único que se ha dado cuenta de lo que ha pasado. Es decir, hasta que conoce a Archie, quien recluta a George para el Proyecto Lazarus, una organización secreta que ha aprovechado la capacidad de retroceder en el tiempo cada vez que el mundo está en peligro de extinción. Al igual que George, quienes trabajan en Lazarus son las pocas personas en la tierra con la capacidad de recordar los eventos que se deshacen cuando el tiempo retrocede.</desc>
@@ -26102,6 +26098,10 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002054000 -0300" stop="20261002064000 -0300" channel="0619">
     <title lang="es">The Walking Dead • Los límites que cruzamos</title>
     <desc lang="es">Los límites que cruzamos | El grupo en Oceanside continúa entrenando en caso de que los Susurradores regresen. Además, las tensiones se elevan mientras los héroes luchan por aferrarse a su concepto de civilización.</desc>
+  </programme>
+  <programme start="20261002064000 -0300" stop="20261002073500 -0300" channel="0619">
+    <title lang="es">The Walking Dead • Nosotros somos el fin del mundo</title>
+    <desc lang="es">Nosotros somos el fin del mundo | Un flashback revela los orígenes de Alpha y Beta. Alpha intenta endurecer a Lydia mientras se preparan para caminar con los muertos. Mientras tanto, los Susurradores crean sus manadas.</desc>
   </programme>
   <programme start="20260928213700 -0300" stop="20260929000000 -0300" channel="0846">
     <title lang="es">Ciudades de papel</title>
@@ -27842,6 +27842,10 @@ Harry es un joven inglés de clase alta que trabaja como traductor de la Embajad
   <programme start="20261002054500 -0300" stop="20261002063200 -0300" channel="0702">
     <title lang="es">Secreto en los océanos • Las profundidades de Nueva York</title>
     <desc lang="es">Las profundidades de Nueva York | La última tecnología de sonar revela naufragios nunca vistos. A medida que el agua y la tierra se desvanecen descubrimos un secreto bajo Manhattan, una hazaña de ingeniería.</desc>
+  </programme>
+  <programme start="20261002063200 -0300" stop="20261002070000 -0300" channel="0702">
+    <title lang="es">Hacia lo desconocido • Aguas mortales</title>
+    <desc lang="es">Aguas mortales | Los kayakistas Ben Stookesberry y Chris Korbuic fueron a explorar los ríos de África Central con su mentor, Hendri Coetzee. Hendri nunca regresó.</desc>
   </programme>
   <programme start="20260928220000 -0300" stop="20260929000000 -0300" channel="0430">
     <title lang="es">Amistosos de fútbol de clubes masculinos • Atlético Nacional vs. Chapecoense</title>
@@ -36399,10 +36403,6 @@ Andrés Gil</desc>
     <title lang="es">Family Feud</title>
     <desc lang="es">Discover everything about America&#x27;s hottest game show, hosted by Steve Harvey.</desc>
   </programme>
-  <programme start="20260928232100 -0300" stop="20260928233800 -0300" channel="plex.tv.FIFA+.plex">
-    <title lang="es">Rising Star: Messi at U20 FIFA World Cup 2005™</title>
-    <desc lang="es">Witness the beginnings of Lionel Messi in FIFA competitions when he was crowned in the Netherlands 2005™.</desc>
-  </programme>
   <programme start="20260928233800 -0300" stop="20260929002000 -0300" channel="plex.tv.FIFA+.plex">
     <title lang="es">FACTS: Germany v Brazil - China 2007</title>
     <desc lang="es">Germany wins its second title, defeating Marta&#x27;s Brazil.</desc>
@@ -36726,6 +36726,10 @@ Andrés Gil</desc>
   <programme start="20261002045301 -0300" stop="20261002063201 -0300" channel="608049aefa2b8ae93c2c3a63-6684374320f405b792a3b6b3">
     <title lang="es">Rápido Rescate</title>
     <desc lang="es">Cuando una investigación financiada por un rico empresario está a punto de poner fin a la operación de un cártel peligroso, su hija y un valiente soldado deben unirse para entregar pruebas a la policía.</desc>
+  </programme>
+  <programme start="20261002063201 -0300" stop="20261002090209 -0300" channel="608049aefa2b8ae93c2c3a63-6684374320f405b792a3b6b3">
+    <title lang="es">Balas en Furia</title>
+    <desc lang="es">En la China de la década de 1920, un bandido llega a una remota ciudad de provincia haciéndose pasar por su nuevo alcalde, donde se enfrenta a un tiránico noble local.</desc>
   </programme>
   <programme start="20260929200904 -0300" stop="20260929213706 -0300" channel="608049aefa2b8ae93c2c3a63-66843a1f20f405b792a3b6b5">
     <title lang="es">La Sucesión</title>
@@ -40067,6 +40071,10 @@ Andrés Gil</desc>
     <title lang="es">Misterios sin resolver</title>
     <desc lang="es">Este episodio incluye: Ness, La Maldición Genética de Mamá, Los Secretos de Salem e Hijo Autista.</desc>
   </programme>
+  <programme start="20261002063955 -0300" stop="20261002074155 -0300" channel="643054b1fc3be59477853717-64d79408e5f67b0fab47ff24">
+    <title lang="es">Misterios sin resolver</title>
+    <desc lang="es">Este episodio incluye: El Oro de Victorio Partes 1 &amp; 2, ¿Dónde Está Kari?</desc>
+  </programme>
   <programme start="20260929204654 -0300" stop="20260929214150 -0300" channel="643054b1fc3be59477853717-666e23e4d91d13cb4c8cbb79">
     <title lang="es">Secretos de los Museos</title>
     <desc lang="es">Dentro de la Galería de los Uffizi Florencia.</desc>
@@ -40426,6 +40434,10 @@ Andrés Gil</desc>
   <programme start="20261002044334 -0300" stop="20261002063650 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
     <title lang="es">Alemania vs EE. UU. | Cuartos de final | Copa Mundial de la FIFA Corea/Japón 2002™ | Partido Completo</title>
     <desc lang="es">Vídeo del partido completo entre Alemania y EE. UU. jugado en el Estadio de Fútbol Ulsan Munsu, Ulsan el viernes, 21 de junio de 2002 a las 20:30 (hora local).</desc>
+  </programme>
+  <programme start="20261002063650 -0300" stop="20261002082808 -0300" channel="643054b1fc3be59477853717-6662984e346b86608532dbdf">
+    <title lang="es">Bulgaria vs Alemania | Cuartos de final | Copa Mundial de la FIFA Estados Unidos 1994™ | Partido completo</title>
+    <desc lang="es">Vídeo del partido completo entre Bulgaria y Alemania jugado en el Giants Stadium, New Jersey, el domingo 10 de julio de 1994.</desc>
   </programme>
   <programme start="20260929210000 -0300" stop="20260929220000 -0300" channel="643054b1fc3be59477853717-66ea174c9502c5778b828d47">
     <title lang="es">Cine Western</title>
@@ -42729,10 +42741,6 @@ Andrés Gil</desc>
   <programme start="20261002005336 -0300" stop="20261002025010 -0300" channel="ES:.FIFA+.be">
     <title lang="es">EEUU vs Alemania Semifinales Copa Mundial Femenina de la FIFA Canadá 2015™ Partido Completo</title>
     <desc lang="es">Vídeo del partido completo entre EEUU y Alemania jugado en Olympic Stadium, Montreal el martes, 30 de junio de 2015 a las 19:00 (hora local).</desc>
-  </programme>
-  <programme start="20260928215557 -0300" stop="20260928233557 -0300" channel="ES:.Thrillers.-.Rakuten.TV.be">
-    <title lang="es">Chicago Overcoat</title>
-    <desc lang="es">Lou Marazano, antiguo asesino de la Organización de Chicago, ve en un nuevo encargo la oportunidad de financiar su retiro. Pero entre testigos a silenciar, detectives implacables y jefes que lo traicionan, debe demostrar que aún es el sicario más letal del sindicato.</desc>
   </programme>
   <programme start="20260928233558 -0300" stop="20260929011829 -0300" channel="ES:.Thrillers.-.Rakuten.TV.be">
     <title lang="es">Peppergrass</title>
