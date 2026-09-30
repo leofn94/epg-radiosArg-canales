@@ -93,7 +93,7 @@ OFFSET_CONFIG = {
  #   "0217": -4, #fox news us
 #    "0932": -4, #c5n
   #  "0619": -3 #amc series
-    "locomotion1.ar": 1,
+ #   "locomotion1.ar": 1,
     "ES:.Pelis.Top.-.Rakuten.TV.be": 2,
     "ES:.Grjngo.be": 4,
     "ES:.Sci-Fi.-.Rakuten.TV.be": 2,
@@ -121,6 +121,7 @@ CHANNELS = [
     {"id": "locomotion1.ar", "name": "Locomotion 1", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=309534154&single=true&output=csv"},
    # {"id": "aztv.ar", "name": "AZTV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=955136670&single=true&output=csv"},
     {"id": "mitv.ar", "name": "MITV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoaVOmEUs9dT2eRhSAoRmxtgBY6IKP0sgJafidJrzs48xy7ndV-KBLP_c7wIi0dDpp7fPJseFUnXLo/pub?gid=1462061483&single=true&output=csv"},
+     {"id": "tlmas", "name": "TLMAS", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoaVOmEUs9dT2eRhSAoRmxtgBY6IKP0sgJafidJrzs48xy7ndV-KBLP_c7wIi0dDpp7fPJseFUnXLo/pub?gid=847582857&single=true&output=csv"},
   #  {"id": "animestation.ar", "name": "Animestation", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1YPyXdfmd2n7W6tAEnS_7aPb1r9j8fmdF_XP-jxi5cYdcZwkx_4t5OEIqYpGzr98wcF4nHUzhbval/pub?gid=446220036&single=true&output=csv"},
     {"id": "retroblast", "name": "retroblast", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoaVOmEUs9dT2eRhSAoRmxtgBY6IKP0sgJafidJrzs48xy7ndV-KBLP_c7wIi0dDpp7fPJseFUnXLo/pub?gid=2127871874&single=true&output=csv"},
     {"id": "cncity", "name": "cncity", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoaVOmEUs9dT2eRhSAoRmxtgBY6IKP0sgJafidJrzs48xy7ndV-KBLP_c7wIi0dDpp7fPJseFUnXLo/pub?gid=1238408252&single=true&output=csv"},
