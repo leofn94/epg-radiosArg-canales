@@ -11,7 +11,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 # ==========================================
-# 1. CONFIGURACIÓN Y GOOGLE SHEETS
+# 1. CONFIGURACIÓN Y CONEXIÓN CON GOOGLE SHEETS
 # ==========================================
 
 SCOPES = [
@@ -53,55 +53,32 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, NOMBRE_PESTANA)
 
 # ==========================================
-# 2. LOCALIZADOR AUTOMÁTICO DE XML
+# 2. CONSTRUCTOR DE URL DINÁMICA POR FECHA DE SEMANA
 # ==========================================
 
-URL_DIRECTORIO = "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/"
-URL_FALLBACK_PAGINA = "https://tlmas.kift.live/inicio/"
+tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
+hoy = datetime.now(tz_ar)
+fecha_hoy_str = hoy.strftime("%Y-%m-%d")
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-}
-
-def encontrar_url_xml_actualizada():
+def obtener_urls_candidatas_xml(fecha_ref):
     """
-    Busca automáticamente en el sitio web el archivo .xml de EPG más reciente.
+    Calcula el lunes de la semana actual y genera las URLs probables
+    siguiendo el patrón DD.MM.YY.12.00.xml
     """
-    xml_encontrados = []
-
-    # Intento 1: Escanear la carpeta de la EPG directamente
-    try:
-        res = requests.get(URL_DIRECTORIO, headers=headers, timeout=8)
-        if res.status_code == 200:
-            matches = re.findall(r'href=["\']?([^"\'>]+\.xml)["\']?', res.text, re.I)
-            for m in matches:
-                url_completa = urllib.parse.urljoin(URL_DIRECTORIO, m)
-                xml_encontrados.append(url_completa)
-    except Exception as e:
-        print(f"Aviso al listar directorio: {e}")
-
-    # Intento 2: Escanear la página de inicio en busca de referencias a archivos XML
-    if not xml_encontrados:
-        try:
-            res = requests.get(URL_FALLBACK_PAGINA, headers=headers, timeout=8)
-            if res.status_code == 200:
-                matches = re.findall(r'https?://[^\s"\']+\.xml|/assets/[^\s"\']+\.xml', res.text, re.I)
-                for m in matches:
-                    url_completa = urllib.parse.urljoin(URL_FALLBACK_PAGINA, m)
-                    xml_encontrados.append(url_completa)
-        except Exception as e:
-            print(f"Aviso al escanear inicio: {e}")
-
-    # Seleccionar el último archivo XML encontrado (normalmente el más reciente por orden alfabético/fecha)
-    if xml_encontrados:
-        xml_encontrados.sort()
-        url_optima = xml_encontrados[-1]
-        print(f" XML detectado automáticamente: {url_optima}")
-        return url_optima
-
-    # Fallback por defecto si la búsqueda automática no devuelve nada
-    print("⚠️ No se pudo autodetectar el XML. Usando URL fallback por defecto.")
-    return "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml"
+    # Obtener el lunes de esta semana
+    lunes_semana = fecha_ref - timedelta(days=fecha_ref.weekday())
+    lunes_anterior = lunes_semana - timedelta(days=7)
+    
+    patron_semana_actual = lunes_semana.strftime("%d.%m.%y.12.00.xml")
+    patron_semana_anterior = lunes_anterior.strftime("%d.%m.%y.12.00.xml")
+    
+    base_url = "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/"
+    
+    return [
+        base_url + patron_semana_actual,
+        base_url + patron_semana_anterior,
+        "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml" # Fallback
+    ]
 
 # ==========================================
 # 3. BASE DE SINOPSIS LOCAL Y EXTERNA (TMDB)
@@ -131,7 +108,6 @@ def buscar_en_tmdb_espanol(titulo):
         titulo_clean = re.sub(r'\b(BLOQUE|RUN A|RUN B|SEASON \d+|EPISODIO \d+)\b', '', titulo, flags=re.I).strip()
         query = urllib.parse.quote(titulo_clean)
         
-        # Búsqueda en Series TV
         url_tv = f"https://api.themoviedb.org/3/search/tv?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
         res = requests.get(url_tv, timeout=4)
         if res.status_code == 200:
@@ -139,7 +115,6 @@ def buscar_en_tmdb_espanol(titulo):
             if results and results[0].get("overview"):
                 return results[0]["overview"].strip()
 
-        # Búsqueda en Películas
         url_movie = f"https://api.themoviedb.org/3/search/movie?api_key={TMDB_API_KEY}&query={query}&language=es-MX"
         res_movie = requests.get(url_movie, timeout=4)
         if res_movie.status_code == 200:
@@ -175,7 +150,7 @@ def obtener_sinopsis(nombre_programa):
 # ==========================================
 
 def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
-    """Suma 3 horas al horario recibido de El Salvador (UTC-6) a Argentina (UTC-3)."""
+    """Suma 3 horas (El Salvador UTC-6 a Argentina UTC-3)."""
     try:
         dt = datetime.strptime(hora_str.strip(), "%H:%M")
         dt_ajustada = dt + timedelta(hours=diferencia_horas)
@@ -184,48 +159,87 @@ def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
         return hora_str
 
 # ==========================================
-# 5. DESCARGA Y PARSEO DEL XML
+# 5. DESCARGA Y PARSEO ROBUSTO DE XMLTV
 # ==========================================
 
-tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
-fecha_hoy_str = datetime.now(tz_ar).strftime("%Y-%m-%d")
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}
 
-url_xml_actual = encontrar_url_xml_actualizada()
-print(f"Descargando programación desde: {url_xml_actual}")
+urls_candidatas = obtener_urls_candidatas_xml(hoy)
+xml_content = None
+url_usada = ""
 
-res = requests.get(url_xml_actual, headers=headers, timeout=10)
+for url in urls_candidatas:
+    try:
+        print(f"Probando descargar XML desde: {url}")
+        res = requests.get(url, headers=headers, timeout=8)
+        if res.status_code == 200 and len(res.content) > 100:
+            xml_content = res.content
+            url_usada = url
+            print(f" Descargado con éxito desde: {url_usada}")
+            break
+    except Exception as e:
+        continue
+
 programas_raw = []
 
-if res.status_code == 200:
-    root = ET.fromstring(res.content)
-    
-    # Extraer los elementos del XML
-    for elem in root.findall('.//programme') or root.findall('.//item') or root.findall('.//*'):
-        inicio_elem = elem.find('start') if elem.find('start') is not None else elem.find('time')
-        titulo_elem = elem.find('title') if elem.find('title') is not None else elem.find('name')
+if xml_content:
+    try:
+        root = ET.fromstring(xml_content)
         
-        hora_sv = elem.attrib.get('start') or elem.attrib.get('time') or (inicio_elem.text if inicio_elem is not None else None)
-        nombre_prog = elem.attrib.get('title') or elem.attrib.get('name') or (titulo_elem.text if titulo_elem is not None else None)
-            
-        if hora_sv and nombre_prog:
-            time_match = re.search(r'\d{1,2}:\d{2}', hora_sv)
-            if time_match:
-                hora_sv = time_match.group(0)
-                if len(hora_sv) == 4:
-                    hora_sv = "0" + hora_sv
+        # Parseo flexible de formato XML / XMLTV
+        for elem in root.iter():
+            tag = elem.tag.lower()
+            if tag in ['programme', 'program', 'item', 'event']:
+                # 1. Obtener Hora
+                hora_sv = elem.attrib.get('start') or elem.attrib.get('time') or elem.attrib.get('begin')
                 
-                hora_ar = convertir_horario_sv_a_ar(hora_sv, diferencia_horas=3)
-                nombre_clean = normalizar_nombre(nombre_prog)
-                
-                if nombre_clean and (not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean):
-                    programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
+                # Si la hora está en una subetiqueta
+                if not hora_sv:
+                    sub_time = elem.find('start') or elem.find('time')
+                    if sub_time is not None:
+                        hora_sv = sub_time.text
+
+                # 2. Obtener Título
+                nombre_prog = elem.attrib.get('title') or elem.attrib.get('name')
+                if not nombre_prog:
+                    sub_title = elem.find('title') or elem.find('name') or elem.find('heading')
+                    if sub_title is not None:
+                        nombre_prog = sub_title.text
+
+                if hora_sv and nombre_prog:
+                    # Extraer patrones HH:MM o marcas de tiempo YYYYMMDDHHMMSS
+                    time_match = re.search(r'(\d{2}):(\d{2})', hora_sv)
+                    if not time_match:
+                        # Formato timestamp XMLTV: 20260914190000
+                        ts_match = re.search(r'\d{8}(\d{2})(\d{2})', hora_sv)
+                        if ts_match:
+                            hora_sv_formatted = f"{ts_match.group(1)}:{ts_match.group(2)}"
+                        else:
+                            hora_sv_formatted = None
+                    else:
+                        hora_sv_formatted = time_match.group(0)
+
+                    if hora_sv_formatted:
+                        if len(hora_sv_formatted) == 4:
+                            hora_sv_formatted = "0" + hora_sv_formatted
+                        
+                        hora_ar = convertir_horario_sv_a_ar(hora_sv_formatted, diferencia_horas=3)
+                        nombre_clean = normalizar_nombre(nombre_prog)
+                        
+                        if nombre_clean and (not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean):
+                            programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
+
+    except Exception as e:
+        print(f"Error procesando XML: {e}")
 
 # ==========================================
-# 6. UNIFICACIÓN DE BLOQUES Y CARGA EN SHEETS
+# 6. UNIFICACIÓN DE BLOQUES Y GOOGLE SHEETS
 # ==========================================
 
 if not programas_raw:
-    print("⚠️ No se pudieron obtener datos del XML.")
+    print("⚠️ No se pudieron procesar los registros del XML. Revisa la estructura del archivo descargado.")
 else:
     bloques_individuales = []
     for i in range(len(programas_raw)):
@@ -253,7 +267,7 @@ else:
     if bloque_actual:
         bloques_unificados.append(bloque_actual)
 
-    # Confeccionar filas para la planilla
+    # Armado final
     filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
@@ -261,4 +275,4 @@ else:
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets para el {fecha_hoy_str}.")
+    print(f"¡Éxito! Se actualizaron {len(filas_epg) - 1} programas para el {fecha_hoy_str} en Google Sheets.")
