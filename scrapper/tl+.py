@@ -9,9 +9,10 @@ import pytz
 import requests
 import gspread
 from google.oauth2.service_account import Credentials
+from playwright.sync_api import sync_playwright
 
 # ==========================================
-# 1. CONFIGURACIÓN Y CONEXIÓN CON GOOGLE SHEETS
+# 1. CONFIGURACIÓN Y GOOGLE SHEETS
 # ==========================================
 
 SCOPES = [
@@ -53,35 +54,43 @@ def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=
 sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, NOMBRE_PESTANA)
 
 # ==========================================
-# 2. CONSTRUCTOR DE URL DINÁMICA POR FECHA DE SEMANA
+# 2. INTERCEPTAR FETCH/XHR DEL XML ACTIVO
 # ==========================================
 
-tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
-hoy = datetime.now(tz_ar)
-fecha_hoy_str = hoy.strftime("%Y-%m-%d")
+def obtener_xml_activo_por_intercepcion():
+    """
+    Abre la página con un navegador headless y captura la URL del .xml
+    solicitado por Fetch/XHR en tiempo real.
+    """
+    xml_url_encontrada = []
 
-def obtener_urls_candidatas_xml(fecha_ref):
-    """
-    Calcula el lunes de la semana actual y genera las URLs probables
-    siguiendo el patrón DD.MM.YY.12.00.xml
-    """
-    # Obtener el lunes de esta semana
-    lunes_semana = fecha_ref - timedelta(days=fecha_ref.weekday())
-    lunes_anterior = lunes_semana - timedelta(days=7)
+    def manejar_peticion(request):
+        url = request.url
+        if ".xml" in url.lower() and "m3u8" not in url.lower():
+            print(f"Petición de red XML capturada: {url}")
+            xml_url_encontrada.append(url)
+
+    print("Iniciando navegador invisible para capturar peticiones Fetch/XHR...")
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.on("request", manejar_peticion)
+        
+        try:
+            page.goto("https://tlmas.kift.live/inicio/", timeout=15000, wait_until="networkidle")
+        except Exception as e:
+            print("Página cargada o interrupción de tiempo de espera recibida.")
+        
+        browser.close()
+
+    if xml_url_encontrada:
+        return xml_url_encontrada[0]
     
-    patron_semana_actual = lunes_semana.strftime("%d.%m.%y.12.00.xml")
-    patron_semana_anterior = lunes_anterior.strftime("%d.%m.%y.12.00.xml")
-    
-    base_url = "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/"
-    
-    return [
-        base_url + patron_semana_actual,
-        base_url + patron_semana_anterior,
-        "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml" # Fallback
-    ]
+    print("⚠️ No se interceptó ningún .xml en las peticiones. Usando URL fallback.")
+    return "https://tlmas.kift.live/assets/xml/epg/Telemas/Semana/14.09.26.12.00.xml"
 
 # ==========================================
-# 3. BASE DE SINOPSIS LOCAL Y EXTERNA (TMDB)
+# 3. SINOPSIS LOCAL Y EXTERNA (TMDB)
 # ==========================================
 
 SINOPSIS_DB = {
@@ -159,43 +168,31 @@ def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
         return hora_str
 
 # ==========================================
-# 5. DESCARGA Y PARSEO ROBUSTO DE XMLTV
+# 5. EXTRACCIÓN Y PARSEO DEL XML INTERCEPTADO
 # ==========================================
+
+tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
+fecha_hoy_str = datetime.now(tz_ar).strftime("%Y-%m-%d")
+
+url_xml_activo = obtener_xml_activo_por_intercepcion()
+print(f"Descargando programación activa desde: {url_xml_activo}")
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 }
 
-urls_candidatas = obtener_urls_candidatas_xml(hoy)
-xml_content = None
-url_usada = ""
-
-for url in urls_candidatas:
-    try:
-        print(f"Probando descargar XML desde: {url}")
-        res = requests.get(url, headers=headers, timeout=8)
-        if res.status_code == 200 and len(res.content) > 100:
-            xml_content = res.content
-            url_usada = url
-            print(f" Descargado con éxito desde: {url_usada}")
-            break
-    except Exception as e:
-        continue
-
 programas_raw = []
+res = requests.get(url_xml_activo, headers=headers, timeout=10)
 
-if xml_content:
+if res.status_code == 200:
     try:
-        root = ET.fromstring(xml_content)
+        root = ET.fromstring(res.content)
         
-        # Parseo flexible de formato XML / XMLTV
         for elem in root.iter():
             tag = elem.tag.lower()
             if tag in ['programme', 'program', 'item', 'event']:
                 # 1. Obtener Hora
                 hora_sv = elem.attrib.get('start') or elem.attrib.get('time') or elem.attrib.get('begin')
-                
-                # Si la hora está en una subetiqueta
                 if not hora_sv:
                     sub_time = elem.find('start') or elem.find('time')
                     if sub_time is not None:
@@ -209,10 +206,8 @@ if xml_content:
                         nombre_prog = sub_title.text
 
                 if hora_sv and nombre_prog:
-                    # Extraer patrones HH:MM o marcas de tiempo YYYYMMDDHHMMSS
                     time_match = re.search(r'(\d{2}):(\d{2})', hora_sv)
                     if not time_match:
-                        # Formato timestamp XMLTV: 20260914190000
                         ts_match = re.search(r'\d{8}(\d{2})(\d{2})', hora_sv)
                         if ts_match:
                             hora_sv_formatted = f"{ts_match.group(1)}:{ts_match.group(2)}"
@@ -232,14 +227,14 @@ if xml_content:
                             programas_raw.append({"inicio": hora_ar, "programa": nombre_clean})
 
     except Exception as e:
-        print(f"Error procesando XML: {e}")
+        print(f"Error procesando el contenido XML: {e}")
 
 # ==========================================
-# 6. UNIFICACIÓN DE BLOQUES Y GOOGLE SHEETS
+# 6. UNIFICACIÓN DE BLOQUES Y CARGA A SHEETS
 # ==========================================
 
 if not programas_raw:
-    print("⚠️ No se pudieron procesar los registros del XML. Revisa la estructura del archivo descargado.")
+    print("⚠️ No se pudieron procesar programas del XML interceptado.")
 else:
     bloques_individuales = []
     for i in range(len(programas_raw)):
@@ -267,7 +262,7 @@ else:
     if bloque_actual:
         bloques_unificados.append(bloque_actual)
 
-    # Armado final
+    # Cargar datos en la hoja de Google Sheets
     filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
@@ -275,4 +270,4 @@ else:
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f"¡Éxito! Se actualizaron {len(filas_epg) - 1} programas para el {fecha_hoy_str} en Google Sheets.")
+    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets para el {fecha_hoy_str}.")
