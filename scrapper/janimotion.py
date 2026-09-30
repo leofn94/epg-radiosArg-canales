@@ -65,7 +65,6 @@ with sync_playwright() as p:
     )
     page = context.new_page()
     
-    # Cambiado a domcontentloaded para evitar time out por peticiones residuales
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
     page.wait_for_timeout(5000)
 
@@ -152,31 +151,48 @@ with sync_playwright() as p:
 
     browser.close()
 
-# 3. Post-procesamiento
-programas_procesados = []
-
-for i in range(len(programas_totales)):
-    p_curr = programas_totales[i]
-    
-    if p_curr["inicio"] == "AHORA":
-        if i > 0 and programas_totales[i-1]["dia"] == p_curr["dia"] and programas_totales[i-1]["inicio"] != "AHORA":
-            p_curr["inicio"] = programas_totales[i-1]["inicio"]
+# 3. Post-procesamiento corregido
+# Step 3.1: Reemplazar 'AHORA' por hora actual o del programa contiguo
+hora_actual_str = datetime.now(tz_local).strftime("%H:%M")
+for i, p in enumerate(programas_totales):
+    if p["inicio"] == "AHORA":
+        if i > 0 and programas_totales[i-1]["dia"] == p["dia"] and programas_totales[i-1]["inicio"] != "AHORA":
+            p["inicio"] = programas_totales[i-1]["inicio"]
         elif i < len(programas_totales) - 1 and programas_totales[i+1]["inicio"] != "AHORA":
-            p_curr["inicio"] = programas_totales[i+1]["inicio"]
+            p["inicio"] = programas_totales[i+1]["inicio"]
         else:
-            p_curr["inicio"] = "00:00"
+            p["inicio"] = hora_actual_str
 
-    if i < len(programas_totales) - 1:
-        fin_str = programas_totales[i+1]["inicio"]
-        if fin_str == "AHORA":
-            fin_str = p_curr["inicio"]
-    else:
-        fin_str = "00:00"
-
-    if programas_procesados:
-        p_prev = programas_procesados[-1]
-        if p_prev["dia"] == p_curr["dia"] and p_prev["inicio"] == p_curr["inicio"] and p_prev["programa"] == p_curr["programa"]:
+# Step 3.2: Filtrar elementos idénticos o consecutivos con la misma hora de inicio
+programas_depurados = []
+for p in programas_totales:
+    if programas_depurados:
+        ultimo = programas_depurados[-1]
+        if ultimo["dia"] == p["dia"] and ultimo["inicio"] == p["inicio"]:
+            # Si se repite el inicio en el mismo día, conserva el programa más reciente
+            programas_depurados[-1] = p
             continue
+    programas_depurados.append(p)
+
+# Step 3.3: Asignar hora de fin evitando duraciones nulas o errores a medianoche
+programas_procesados = []
+cant = len(programas_depurados)
+
+for i in range(cant):
+    p_curr = programas_depurados[i]
+    
+    if i < cant - 1:
+        p_sig = programas_depurados[i+1]
+        fin_str = p_sig["inicio"]
+        # Si el programa termina a medianoche (00:00), se asigna 24:00 para no romper duraciones
+        if fin_str == "00:00":
+            fin_str = "24:00"
+    else:
+        fin_str = "24:00"
+
+    # Ignorar si el horario de inicio es idéntico al de fin
+    if p_curr["inicio"] == fin_str:
+        continue
 
     programas_procesados.append({
         "dia": p_curr["dia"],
@@ -196,4 +212,4 @@ for p in programas_procesados:
 
 sheet.clear()
 sheet.update(range_name='A1', values=filas_epg)
-print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros sin texto duplicado.")
+print(f"¡Éxito! Se actualizaron {len(filas_epg)-1} registros sin texto duplicado ni bloques corruptos.")
