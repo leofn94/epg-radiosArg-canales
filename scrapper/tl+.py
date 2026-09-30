@@ -33,7 +33,7 @@ TMDB_API_KEY = os.environ.get("TMDB_API_KEY", "")
 
 # ID de tu Google Spreadsheet
 SPREADSHEET_ID = "1JKs0R5aFs4uWMBFDAuVtf2-hDDYd87ZkibTqFV600Rs"
-NOMBRE_PESTANA = "TLMAS"
+NOMBRE_PESTANA = "TL+"
 
 def abrir_sheet_con_reintento(spreadsheet_id, nombre_pestana=None, max_intentos=5):
     for intento in range(1, max_intentos + 1):
