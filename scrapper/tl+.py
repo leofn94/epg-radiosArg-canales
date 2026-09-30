@@ -57,7 +57,11 @@ sheet = abrir_sheet_con_reintento(SPREADSHEET_ID, NOMBRE_PESTANA)
 # ==========================================
 
 SINOPSIS_DB = {
-    "ejemplo programa": "Sinopsis de prueba local.",
+    "komi-san no puede comunicarse": "Komi-san es una chica hermosa y admirada por todos, pero padece un severo trastorno de comunicación. Junto a Tadano, intentará cumplir su sueño de hacer 100 amigos.",
+    "bocchi the rock!": "Hitori Gotou es una chica extremadamente introvertida y solitaria que sueña con tocar en una banda de rock, enfrentando sus miedos sociales con su guitarra.",
+    "bleach": "Ichigo Kurosaki es un adolescente capaz de ver espíritus que obtiene los poderes de un Shinigami para proteger a los inocentes y combatir a los espíritus malignos llamados Hollows.",
+    "umamusume: pretty derby": "Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación y triunfar en la gran escena de las competencias.",
+    "love live": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su amada preparatoria y salvar su escuela.",
 }
 
 CACHE_SINOPSIS = {}
@@ -128,70 +132,75 @@ def convertir_horario_sv_a_ar(hora_str, diferencia_horas=3):
         return hora_str
 
 # ==========================================
-# 4. SCRAPING AVANZADO Y EXTRACCIÓN
+# 4. EXTRACCIÓN DE DATOS DESDE ENDPOINTS
 # ==========================================
 
 tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
 fecha_hoy_str = datetime.now(tz_ar).strftime("%Y-%m-%d")
 
-URL_BASE = "https://tlmas.kift.live/programacion/"
-URL_INDEX = "https://tlmas.kift.live/programacion/index.html"
-
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "https://tlmas.kift.live/"
 }
 
 programas_raw = []
 
 print(f"Extrayendo programación para {fecha_hoy_str}...")
 
-# Intento 1: Intentar leer archivo JSON interno si la web usa API
-try:
-    url_json = "https://tlmas.kift.live/programacion/data.json" # o schedule.json
-    res_json = requests.get(url_json, headers=headers, timeout=5)
-    if res_json.status_code == 200:
-        data = res_json.json()
-        for item in data:
-            hora_sv = item.get("time") or item.get("hora")
-            nombre = item.get("title") or item.get("programa")
-            if hora_sv and nombre:
-                hora_ar = convertir_horario_sv_a_ar(hora_sv)
-                programas_raw.append({"inicio": hora_ar, "programa": normalizar_nombre(nombre)})
-except Exception:
-    pass
+# Posibles URLs de API / JSON del reproductor
+endpoints = [
+    "https://tlmas.kift.live/api/programacion",
+    "https://tlmas.kift.live/programacion.json",
+    "https://tlmas.kift.live/api/schedule",
+    "https://tlmas.kift.live/data/schedule.json",
+    "https://tlmas.kift.live/programacion/index.html"
+]
 
-# Intento 2: Parseo directo HTML (Tabla/Estructura flexible)
-if not programas_raw:
-    res = requests.get(URL_INDEX, headers=headers, timeout=10)
-    soup = BeautifulSoup(res.content, "html.parser")
-
-    # Buscar filas o contenedores
-    filas = soup.find_all(['tr', 'div', 'li', 'article'])
-    for f in filas:
-        texto = f.get_text(" ", strip=True)
-        # Coincidencia con formato HH:MM o H:MM
-        match = re.search(r'(\d{1,2}:\d{2})\s*(?:AM|PM|hs)?\s*[-–—]?\s*(.+)', texto, re.I)
-        if match:
-            hora_sv = match.group(1)
-            if len(hora_sv) == 4:
-                hora_sv = "0" + hora_sv
-            
-            nombre_prog = match.group(2)
-            # Limpiar textos basura
-            nombre_prog = re.sub(r'\b(AM|PM|hs)\b', '', nombre_prog, flags=re.I)
-            nombre_prog = normalizar_nombre(nombre_prog)
-            
-            if nombre_prog and len(nombre_prog) > 2 and len(nombre_prog) < 90:
-                hora_ar = convertir_horario_sv_a_ar(hora_sv)
-                if not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_prog:
-                    programas_raw.append({"inicio": hora_ar, "programa": nombre_prog})
+for endpoint in endpoints:
+    try:
+        res = requests.get(endpoint, headers=headers, timeout=5)
+        if res.status_code == 200:
+            # Intento de parseo JSON
+            try:
+                data = res.json()
+                items = data.get("epg") or data.get("programacion") or data.get("schedule") or (data if isinstance(data, list) else [])
+                for item in items:
+                    hora_sv = item.get("time") or item.get("hora") or item.get("start")
+                    nombre = item.get("title") or item.get("programa") or item.get("name")
+                    if hora_sv and nombre:
+                        if len(hora_sv) == 4:
+                            hora_sv = "0" + hora_sv
+                        hora_ar = convertir_horario_sv_a_ar(hora_sv)
+                        programas_raw.append({"inicio": hora_ar, "programa": normalizar_nombre(nombre)})
+                if programas_raw:
+                    break
+            except Exception:
+                # Parseo HTML con BeautifulSoup si devuelve HTML
+                soup = BeautifulSoup(res.content, "html.parser")
+                # Extraer de tarjetas de guía o listas
+                elementos = soup.select(".guia, .schedule-item, .program-item, tr, div")
+                for elem in elementos:
+                    texto = elem.get_text(" ", strip=True)
+                    match = re.search(r'(\d{1,2}:\d{2})\s*-\s*\d{1,2}:\d{2}\s+(.+)', texto)
+                    if match:
+                        hora_sv = match.group(1)
+                        if len(hora_sv) == 4:
+                            hora_sv = "0" + hora_sv
+                        nombre_prog = match.group(2)
+                        hora_ar = convertir_horario_sv_a_ar(hora_sv)
+                        programas_raw.append({"inicio": hora_ar, "programa": normalizar_nombre(nombre_prog)})
+                if programas_raw:
+                    break
+    except Exception as e:
+        continue
 
 # ==========================================
 # 5. BLOQUES Y CARGA A GOOGLE SHEETS
 # ==========================================
 
 if not programas_raw:
-    print("⚠️ No se pudo extraer información. Revisa si el sitio requiere renderizado de JavaScript.")
+    print("⚠️ No se pudo extraer información desde las peticiones directas. Verifica las peticiones de red (Fetch/XHR) en el navegador.")
 else:
     bloques_individuales = []
     for i in range(len(programas_raw)):
@@ -204,7 +213,7 @@ else:
             "programa": p_curr["programa"]
         })
 
-    # Unificar bloques continuos
+    # Unificar transmisiones consecutivas
     bloques_unificados = []
     bloque_actual = None
     for b in bloques_individuales:
@@ -219,7 +228,7 @@ else:
     if bloque_actual:
         bloques_unificados.append(bloque_actual)
 
-    # Armado final
+    # Armado final de la tabla
     filas_epg = [["Fecha", "Inicio", "Fin", "Programa", "Descripcion"]]
     for b in bloques_unificados:
         sinopsis = obtener_sinopsis(b["programa"])
@@ -227,4 +236,4 @@ else:
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f"¡Éxito! Se actualizaron {len(filas_epg) - 1} registros para la fecha {fecha_hoy_str}.")
+    print(f"¡Éxito! Se actualizaron {len(filas_epg) - 1} registros para la fecha {fecha_hoy_str} en Google Sheets.")
