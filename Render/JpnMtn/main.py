@@ -1,14 +1,13 @@
 import urllib.parse
 from flask import Flask, Response, request
-import requests
+from curl_cffi import requests
 
 app = Flask(__name__)
 
 STREAM_URL = "https://tv.japanmotion.com/iptv/session/1/hls.m3u8"
 
-# Cabeceras completas requeridas por Cloudflare / Japanmotion
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept": "*/*",
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
     "Origin": "https://japanmotion.com",
@@ -21,11 +20,10 @@ HEADERS = {
 @app.route('/')
 @app.route('/japanmotion.m3u8')
 def proxy_m3u8():
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    
     try:
-        res = session.get(STREAM_URL, timeout=10)
+        # impersonate="chrome" emula la huella TLS/JA3 exacta de un navegador Chrome real
+        res = requests.get(STREAM_URL, headers=HEADERS, impersonate="chrome", timeout=10)
+        
         if res.status_code != 200:
             return Response(f"Error desde el origen: {res.status_code}", status=res.status_code)
 
@@ -57,13 +55,12 @@ def proxy_segment():
     if not target_url:
         return Response("URL no proporcionada", status=400)
     
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    
     try:
-        req = session.get(target_url, stream=True, timeout=10)
+        # Petición emulando Chrome para descargar cada segmento .ts
+        req = requests.get(target_url, headers=HEADERS, impersonate="chrome", stream=True, timeout=10)
+        
         return Response(
-            req.iter_content(chunk_size=1024*64),
+            req.content,
             content_type=req.headers.get('Content-Type', 'video/MP2T')
         )
     except Exception as e:
