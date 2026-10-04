@@ -3,7 +3,6 @@ import json
 import re
 import time
 import urllib.parse
-import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 import pytz
 import requests
@@ -100,56 +99,51 @@ def obtener_xml_activo_por_intercepcion():
 # ==========================================
 
 SINOPSIS_DB = {
-    "inuyasha": "Kagome Higurashi es una joven moderna que cae en un pozo sagrado y viaja al Japón feudal, donde libera al semidemonio Inuyasha para recolectar los fragmentos de la Joya de las Cuatro Almas.",
-    "hitoribocchi no seikatsu": "Hitori Bocchi sufre de extrema ansiedad social. Al entrar a la secundaria, intenta cumplir la promesa a su única amiga de la infancia: hacerse amiga de todos sus compañeros de clase.",
-    "yuru camp": "Rin es una chica que disfruta acampando sola en el monte Fuji, pero su vida cambia cuando conoce a Nadeshiko, una entusiasta joven que ama acampar en grupo.",
-    "kono subarashii sekai ni shukufuku wo!": "Kazuma Satou muere de forma ridícula y renace en un mundo de fantasía junto a una diosa inútil llamada Aqua, formando un grupo de aventureros muy peculiar.",
-    "my deer friend nokotan": "Torako Koshi es una estudiante perfecta de preparatoria cuya vida cambia drásticamente cuando rescata a Nokotan, una extraña chica con astas de ciervo.",
-    "one piece": "Monkey D. Luffy se embarca en un viaje por el mar junto a su tripulación de Piratas de Sombrero de Paja para encontrar el tesoro legendario One Piece y convertirse en el Rey de los Piratas.",
-    "naruto": "Naruto Uzumaki es un joven ninja hiperactivo que busca el reconocimiento de su aldea y sueña con convertirse en el Hokage, el líder de su comunidad.",
-    "lucky star": "Sigue las divertidas e ingeniosas vivencias cotidianas de un grupo de cuatro chicas de secundaria encabezadas por Konata Izumi, una chica otaku y perezosa.",
-    "city the animation": "Una comedia disparatada ambientada en una ciudad común y corriente pero llena de habitantes excéntricos cuyas vidas se entrelazan en situaciones cómicas.",
-    "nichijou": "La vida diaria de un grupo de estudiantes de secundaria e inusuales residentes, desde una robot hasta un gato parlante, enfrentando situaciones absurdas y exageradas.",
-    "girls' last tour": "Chito y Yuuri viajan sobre su vehículo Kettenkrad a través de las ruinas desoladas de una civilización futurista colapsada, buscando comida y combustible día a día.",
-    "frieren: más allá del final del viaje": "Décadas después de derrotar al Rey Demonio, la elfa Frieren emprende un viaje de autodescubrimiento para comprender mejor los sentimientos humanos tras la muerte de un viejo compañero.",
-    "shijou saikyou no deshi kenichi": "Kenichi Shirahama sufre acoso escolar, pero decide entrenar en un dojo donde se concentran maestros legendarios de diversas artes marciales.",
-    "jujutsu kaisen": "Yuji Itadori se traga un amuleto maldito con la fuerza de un poderoso demonio y se une a la Academia de Hechicería para eliminar maldiciones de este mundo.",
-    "kirakira☆pretty cure": "Un grupo de chicas pastelera de secundaria se transforma en las legendarias guerreras Precure para proteger los dulces y el poder del 'KiraKiraru'.",
-    "las quintillizas": "Futaro Uesugi es contratado como tutor académico privado para cinco hermanas idénticas que odian estudiar pero deben aprobar la preparatoria.",
-    "heartcatch precure": "Tsubomi Hanasaki y Erika Kurumi se transforman en las legendarias guerreras Pretty Cure para proteger el Árbol del Corazón y los sueños de la gente de los Apóstoles del Desierto.",
-    "initial d": "Takumi Fujiwara es un joven repartidor de tofu que demuestra un talento innato conduciendo su Toyota AE86 por las carreteras de montaña de Akina.",
-    "full metal alchemists": "Los hermanos Edward y Alphonse Elric utilizan la alquimia prohibida para intentar resucitar a su madre, pagando un alto precio que intentarán reparar buscando la Piedra Filosofal.",
-    "kiteretsu: el primo mas listo de debita": "Kiteretsu es un niño genio inventor que usa el libro de sus antepasados para construir inventos increíbles junto a su robot Korosuke.",
-    "kiteretsu: el primo mas listo de nobita": "Kiteretsu es un niño genio inventor que usa el libro de sus antepasados para construir inventos increíbles junto a su robot Korosuke.",
-    "k-on!": "Cuatro chicas de preparatoria se unen al club de música ligera de su escuela para salvarlo de ser desmantelado, formando la banda Ho-kago Tea Time.",
-    "adachi to shimamura": "Adachi y Shimamura se conocen en el segundo piso del gimnasio escolar y desarrollan una amistad muy cercana que lentamente evoluciona.",
-    "los justicieros": "Lina Inverse, una poderosa y codiciosa hechicera, viaja por el mundo enfrentándose a monstruos, bandidos y fuerzas oscuras con poderosos hechizos mágicos.",
-    "re:zero kara hajimeru isekai seikatsu": "Subaru Natsuki es transportado repentinamente a un mundo fantástico donde descubre que tiene la habilidad de 'Regreso por Muerte' cada vez que fallece.",
-    "evangelion": "Shinji Ikari es reclutado por su padre para pilotar un bio-meca gigante llamado Evangelion y defender a la humanidad del ataque de misteriosos seres conocidos como Ángeles.",
-    "amagami-san chi no enmusubi": "Uryu Kamiki intenta ingresar a la facultad de medicina mientras vive en un templo con tres hermanas sacerdotisas.",
-    "komi-san no puede comunicarse": "Komi-san padece un severo trastorno de comunicación, pero junto a Tadano intentará cumplir su sueño de hacer 100 amigos.",
-    "bocchi the rock!": "Hitori Gotou es una chica introvertida que sueña con tocar en una banda de rock, enfrentando sus miedos sociales con su guitarra.",
-    "umamusume: pretty derby": "Chicas caballo con habilidades de carrera sobrehumanas entrenan para convertirse en las mejores atletas de la nación.",
-    "bleach": "Ichigo Kurosaki obtiene los poderes de un Shinigami para proteger a los inocentes de los espíritus malignos llamados Hollows.",
-    "love live": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su escuela.",
-    "love live!": "Un grupo de estudiantes decide convertirse en idols escolares para evitar el cierre de su escuela.",
-    "onimai: i'm now your sister!": "Mahiro Oyama es un otaku encerrado en su casa cuya vida cambia cuando su hermana menor Mahiro lo transforma experimentalmente en una chica.",
-    "puella magi madoka magica": "Madoka Kaname y Sayaka Miki reciben la oferta de convertirse en chicas mágicas a cambio de concederles un deseo, pero descubren la oscura realidad detrás de ese contrato.",
-    "kao ni denai kashiwada-san": "Kashiwada-san es una chica con una expresión totalmente inexpresiva, mientras que Oota intenta constantemente sacarle una reacción.",
-    "devil may cry": "Dante regenta una agencia que acepta trabajos relacionados con cazas de demonios y misterios sobrenaturales.",
-    "alya sometimes hides her feelings in russian": "Alya es una estudiante transferida ruso-japonesa que suele hacer comentarios cariñosos en ruso a su compañero Kuze pensando que no le entiende.",
-    "black lagoon": "Rokuro Okajima es secuestrado por un grupo de mercenarios piratas modernos en Tailandia y decide unirse a ellos adoptando el apodo 'Rock'.",
-    "monster": "El Dr. Kenzo Tenma salva la vida de un niño herido en lugar de un político relevante, desencadenando una cadena de eventos macabros al descubrir que el niño creció para convertirse en un sociópata.",
-    "91 days": "Angelo Lagusa regresa a su ciudad natal bajo el nombre de Avilio Bruno para vengarse de la familia de la mafia que asesinó a sus padres y a su hermano.",
-    "ajin": "Kei Nagai descubre que es un 'Ajin', un ser inmortal perseguido por los gobiernos del mundo para experimentar con sus poderes.",
-    "planetes": "Sigue a un grupo de recolectores de basura espacial que trabajan a bordo de la nave DS-12 recopilando desechos orbitales para proteger las naves espaciales.",
-    "death note": "Light Yagami encuentra un cuaderno sobrenatural que permite matar a cualquiera cuyo nombre sea escrito en él, comenzando una cruzada para purgar el crimen.",
-    "mononoke": "Un misterioso boticario viaja por el Japón feudal resolviendo casos sobrenaturales y exorcizando espíritus malignos conocidos como Mononoke.",
-    "another": "Kouichi Sakakibara se traslada a la escuela de Yomiyama y descubre una extraña maldición en la clase 3-3 relacionada con una misteriosa chica con un parche.",
-    "phantom: requiem for the phantom": "Un turista estadounidense es secuestrado por una organización criminal llamada Inferno y entrenado para convertirse en un asesino a sueldo implacable llamado 'Two'.",
-    "rahxephon": "Ayato Kamina vive en un Tokio aislado del mundo exterior hasta que descubre la verdad detrás de las barreras y despierta al gigante RahXephon.",
-    "berserk": "Guts, conocido como el Espadachín Negro, viaja por un oscuro mundo medieval buscando venganza contra su antiguo comandante Griffith.",
-    "my home hero": "Tetsuo Tosu descubre que su hija es víctima de violencia doméstica por parte de un miembro de la yakuza y toma medidas drásticas para proteger a su familia."
+    "horimiya": "Aunque admirada en la escuela por su amabilidad y destreza académica, Hori oculta su faceta de ama de casa. Miyamura, un chico tranquilo con piercings y tatuajes secretos, comparte un vínculo inesperado al descubrir sus verdaderos ser.",
+    "na nare hana nare": "Seis chicas de preparatoria con diversos pasatiempos, habilidades y personalidades se unen para formar un grupo de animación y apoyo mutuo.",
+    "hibike! euphonium": "Kumiko Oumae decide unirse al club de banda de música de la preparatoria Kitauji, enfrentando exigencias y desafíos para clasificar en el torneo nacional.",
+    "blend s": "Maika Sakuranomiya es una chica que busca trabajo pero suele dar una impresión aterradora involuntariamente. Es contratada en una cafetería temática donde interpreta un papel sádico.",
+    "spy x family": "El espía Loid Forger debe formar una familia falsa para cumplir una misión crucial, sin saber que su esposa es una asesina a sueldo y su hija adoptiva tiene poderes telepáticos.",
+    "make heroine ga oosugiru!": "Kazuhiko Nukumizu observa cómo las chicas populares de su clase terminan siendo rechazadas sentimentalmente por sus amigos de la infancia, involucrándose en sus vidas de formas cómicas.",
+    "hidamari sketch": "Yuno es una joven que ingresa al bachillerato de artes de Yamabuki y vive en el complejo de apartamentos Hidamari, compartiendo experiencias con sus amigas creativas.",
+    "kemono friends": "Japari Park es un enorme zoológico donde los animales se transforman en chicas antropomórficas tras el contacto con una misteriosa sustancia llamada Sandstar.",
+    "bloque chronicstereo": "Bloque especial de programación musical y temática de animación continua.",
+    "toradora!": "Ryuuji Takasu y Taiga Aisaka deciden ayudarse mutuamente para conquistar a sus respectivos mejores amigos, creando una relación tan tensa como entrañable.",
+    "new game!": "Aoba Suzukaze se gradúa de la preparatoria y entra a trabajar como diseñadora de personajes en Eagle Jump, la empresa desarrolladora de sus videojuegos favoritos.",
+    "gamers!": "Keita Amano es un estudiante amante de los videojuegos que se ve envuelto en un enredo de relaciones malinterpretadas junto a otros compañeros de preparatoria.",
+    "school rumble": "Tenma Tsukamoto intenta declarar su amor a Karasuma, mientras que el delincuente Kenji Harima intenta infructuosamente declarar sus sentimientos por Tenma.",
+    "bang dream": "Kasumi Toyama busca un sonido brillante y conmovedor que escuchó de niña, lo que la lleva a fundar la banda escolar Poppin'Party.",
+    "tonari no kaibutsu-kun": "Shizuku Mizutani solo se preocupa por sus calificaciones, pero su perspectiva cambia cuando conoce a Haru Yoshida, un chico problemático e impredecible.",
+    "engage kiss": "Shu opera una pequeña empresa privada para exterminar demonios en Veyron City con la ayuda de Kisara, un demonio femenino con quien mantiene un contrato especial.",
+    "kaichou wa maid-sama!": "Misaki Ayuzawa es la estricta presidenta del consejo estudiantil que oculta un trabajo secreto a tiempo parcial en un Maid Café, descubierto por el chico más popular del colegio, Takumi Usui.",
+    "suzumiya haruhi no yūutsu": "Kyon conoce a la excéntrica Haruhi Suzumiya, quien crea la Brigada SOS para investigar fenómenos sobrenaturales, sin saber que ella posee el poder de alterar el universo.",
+    "gekkan shoujo nozaki-kun": "Chiyo Sakura intenta confesarse al chico que le gusta, Umetaro Nozaki, solo para descubrir que es un famoso creador de manga shoujo y terminar siendo su asistente.",
+    "assassination classroom": "Los estudiantes de la clase 3-E tienen la tarea de asesinar a su nuevo profesor, un ser alienígena con tentáculos capaz de destruir la Tierra si no es derrotado.",
+    "slam dunk": "Hanamichi Sakuragi ingresa al equipo de baloncesto de la preparatoria Shohoku para impresionar a una chica, descubriendo gradualmente una verdadera pasión por el deporte.",
+    "absolute duo": "Toru Kokonoe se inscribe en la Academia Koryo, donde los estudiantes luchan usando sus almas manifestadas como armas llamadas Blaze.",
+    "honzuki no gekokujō": "Una joven bibliotecaria muere y renace en un mundo medieval con poco acceso a libros, por lo que decide fabricarlos ella misma.",
+    "jojo no kimyou na bouken": "La saga épica de la familia Joestar en su lucha contra fuerzas sobrenaturales a lo largo de diversas generaciones.",
+    "hikikomari kyuuketsuki no monmon": "Terakomari Gandesblood es una vampira recluida que es nombrada comandante del ejército a pesar de no poder beber sangre ni usar magia.",
+    "suki na ko ga megane wo wasureta": "Mie-san suele olvidar sus anteojos, por lo que su compañero de clase Komura siempre intenta ayudarla mientras lidia con sus sentimientos por ella.",
+    "flcl": "Naota Nandaba ve su vida alterada cuando Haruko Haruhara aparece en un motoneta, lo golpea con un bajo eléctrico y hace que le salgan robots de la cabeza.",
+    "my dress-up darling": "Wakana Gojo fabrica muñecas Hina y conoce a Marin Kitagawa, una chica alegre que le pide ayuda para confeccionar sus trajes de cosplay.",
+    "seitokai yakuindomo": "Takatoshi Tsuda se une al consejo estudiantil de una antigua escuela de chicas que recién se volvió mixta, rodeado de compañeras con un humor particular.",
+    "ao haru ride": "Futaba Yoshioka se reencuentra en la preparatoria con su primer amor Kou Tanaka, descubriendo que ambos han cambiado sustancialmente desde la secundaria.",
+    "masamune-kun no revenge": "Masamune Makabe entrena físicamente durante años para vengarse de Aki Adagaki, la chica rica que lo rechazó e insultó cuando era niño.",
+    "sakura-sou no pet na kanojo": "Sorata Kanda vive en el dormitorio Sakurasou para estudiantes problemáticos y debe cuidar de Mashiro Shiina, una brillante pintora sin habilidades cotidianas.",
+    "3d kanojo: real girl": "Hikaru Tsutsui es un otaku que prefiere las chicas 2D hasta que termina saliendo con Iroha Igarashi, una chica real e impactante.",
+    "toaru kagaku no railgun s": "Mikoto Misaka investiga el oscuro experimento del proyecto 'Sisters' que involucra la creación de miles de sus clones en Ciudad Academia.",
+    "ore no kanojo to osananajimi ga shuraba sugiru": "Eita Kidou finge ser el novio de Masuzu Natsukawa para evitar llamados de atención, generando un enredo con su amiga de la infancia.",
+    "renai boukun": "Guri posee una libreta mágica que obliga a cualquier pareja a besarse para convertirse en novios, involucrando al estudiante Seiji Aino.",
+    "urasekai picnic": "Sorawo y Toriko exploran un mundo paralelo lleno de monstruos del folclore de internet a través de puertas misteriosas.",
+    "niehime to kemono no ou": "Saliphie es enviada como sacrificio para el Rey de las Bestias, pero descubre la bondad del rey y decide convertirse en su reina.",
+    "ao no orchestra": "Hajime Aono es un prodigio del violín que dejó de tocar tras un problema familiar, recuperando su pasión al unirse al club de orquesta de la escuela.",
+    "keroro gunsou": "El sargento Keroro es un alienígena con forma de rana enviada a conquistar la Tierra, pero termina viviendo con la familia Hinata realizando tareas domésticas.",
+    "sasameki koto": "Sumika Murasame está enamorada en secreto de su mejor amiga Ushio Kazama, a quien solo le gustan las chicas 'lindas y frágiles'.",
+    "yahari ore no seishun love comedy wa machigatteiru. zoku": "Hachiman Hikigaya continúa navegando las complejas dinámicas del Club de Servicio mientras intenta mantener sus ideales desilusionados.",
+    "youkoso jitsuryoku shijou shugi no kyoushitsu e": "Kiyotaka Ayanokouji ingresa a una escuela de élite donde los estudiantes compiten mediante un sistema de puntos que define su estatus social.",
+    "sewayaki kitsune no senko-san": "Senko-san, una zorro espiritual de 800 años, llega a la vida del estresado oficinista Kuroto Nakano para cuidar de él y aliviar su agotamiento.",
+    "tensei shitara ken deshita": "Un joven renace en otro mundo transformado en una espada mágica consciente y se convierte en la herramienta protectora de Fran, una chica gato."
 }
 
 CACHE_SINOPSIS = {}
@@ -205,13 +199,18 @@ def obtener_sinopsis(nombre_programa):
     return sinopsis
 
 # ==========================================
-# 4. PARSEO DEL XML CON ZONA HORARIA Y DÍA
+# 4. PARSEO ROBUSTO DE XML MALFORMADO
 # ==========================================
 
 tz_ar = pytz.timezone("America/Argentina/Buenos_Aires")
+ahora_ar = datetime.now(tz_ar)
 
 url_xml_activo = obtener_xml_activo_por_intercepcion()
 print(f"Descargando programación activa desde: {url_xml_activo}")
+
+# Mapeo del día real actual en Argentina
+dia_hoy_eng = ahora_ar.strftime("%A").lower()
+dia_hoy_es = DIAS_SEMANA_ES.get(dia_hoy_eng, "Lunes")
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
@@ -221,43 +220,41 @@ programas_raw = []
 res = requests.get(url_xml_activo, headers=headers, timeout=10)
 
 if res.status_code == 200:
-    try:
-        root = ET.fromstring(res.content)
-        
-        for elem in root.findall('.//programme'):
-            start_attr = elem.attrib.get('start', '') # Ej: "20260901060000 -0600"
-            
-            title_elem = elem.find('title')
-            nombre_prog = title_elem.text.strip() if title_elem is not None and title_elem.text else ""
-
-            if start_attr and nombre_prog:
-                raw_time = start_attr.split()[0]
+    xml_text = res.text
+    
+    # Extraer bloques <programme ...> ... </title> tolerante a errores sintácticos
+    patron_programa = re.compile(
+        r'<programme\s+start=["\'](\d{14})\s*[-+]\d{4}["\'][^>]*>\s*<title>([^<]+)</title>',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    coincidencias = patron_programa.findall(xml_text)
+    
+    for raw_time, nombre_prog in coincidencias:
+        if raw_time and nombre_prog:
+            try:
+                # Convertir HH:MM desde la estampa de tiempo
+                dt_orig = datetime.strptime(raw_time, "%Y%m%d%H%M%S")
                 
-                if len(raw_time) >= 12:
-                    dt_orig = datetime.strptime(raw_time[:14], "%Y%m%d%H%M%S")
-                    
-                    tz_sv = pytz.timezone("America/El_Salvador")
-                    dt_sv = tz_sv.localize(dt_orig)
-                    
-                    dt_ar = dt_sv.astimezone(tz_ar)
-                    
-                    # Extraer el día de la semana en español
-                    dia_semana_eng = dt_ar.strftime("%A").lower()
-                    dia_semana_es = DIAS_SEMANA_ES.get(dia_semana_eng, dt_ar.strftime("%A"))
-                    
-                    hora_ar = dt_ar.strftime("%H:%M")
-                    nombre_clean = normalizar_nombre(nombre_prog)
-                    
-                    if nombre_clean:
-                        if not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean:
-                            programas_raw.append({
-                                "dia": dia_semana_es,
-                                "inicio": hora_ar,
-                                "programa": nombre_clean
-                            })
-
-    except Exception as e:
-        print(f"Error procesando el contenido XML: {e}")
+                # Asignar huso horario UTC-6 (El Salvador)
+                tz_sv = pytz.timezone("America/El_Salvador")
+                dt_sv = tz_sv.localize(dt_orig)
+                
+                # Convertir a hora de Argentina (UTC-3)
+                dt_ar = dt_sv.astimezone(tz_ar)
+                
+                hora_ar = dt_ar.strftime("%H:%M")
+                nombre_clean = normalizar_nombre(nombre_prog)
+                
+                if nombre_clean:
+                    if not programas_raw or programas_raw[-1]["inicio"] != hora_ar or programas_raw[-1]["programa"] != nombre_clean:
+                        programas_raw.append({
+                            "dia": dia_hoy_es,
+                            "inicio": hora_ar,
+                            "programa": nombre_clean
+                        })
+            except Exception as ex:
+                continue
 
 # ==========================================
 # 5. UNIFICACIÓN DE BLOQUES Y CARGA A SHEETS
@@ -277,7 +274,7 @@ else:
             "programa": p_curr["programa"]
         })
 
-    # Unificar episodios o bloques consecutivos de la misma serie
+    # Unificar episodios o bloques consecutivos
     bloques_unificados = []
     bloque_actual = None
     for b in bloques_individuales:
@@ -300,4 +297,4 @@ else:
 
     sheet.clear()
     sheet.update(range_name='A1', values=filas_epg)
-    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets con la columna 'Dia'.")
+    print(f" ¡Éxito! Se actualizaron {len(filas_epg) - 1} filas en Google Sheets correctamente para el día {dia_hoy_es}.")
